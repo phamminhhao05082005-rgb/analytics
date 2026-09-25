@@ -132,6 +132,211 @@ const categories = [
 <!-- 3. Bootstrap Icons (Đặt trong <head>) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">`,
                 depNote: `<strong>Lưu ý cho Dev:</strong> Thẻ dạng banner responsive, tự động chuyển đổi bố cục flex dạng cột trên màn hình hẹp (dưới 900px).`
+            },
+            {
+                sampleId: 'card-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Chart Card (Thẻ biểu đồ trượt số liệu người dùng & popover điểm dữ liệu)',
+                htmlFile: 'card3.html',
+                cssFile: 'card3.css',
+                jsFile: 'card3.js',
+                previewId: 'preview-card3',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ trực quan kèm thanh trượt chọn các chỉ số phân tích (Metrics) và popover hiển thị giá trị khi rê chuột qua các điểm dữ liệu.`
+            },
+            {
+                sampleId: 'card-mau-4',
+                badgeText: 'Mẫu 4',
+                badgeClass: 'text-bg-success',
+                title: 'Analytics Detailed Chart Card (Thẻ biểu đồ đường chi tiết theo thời gian kèm bảng dữ liệu)',
+                htmlFile: 'card4.html',
+                cssFile: 'card4.css',
+                jsFile: 'card4.js',
+                previewId: 'preview-card4',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Thẻ phân tích tổng số người dùng theo thời gian với tooltip tương tác trên đường SVG và bảng thống kê chi tiết phía dưới.`
+            },
+            {
+                sampleId: 'card-mau-5',
+                badgeText: 'Mẫu 5',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Funnel Chart Card (Thẻ biểu đồ phễu chuyển đổi & tỷ lệ bỏ ngang qua từng bước)',
+                htmlFile: 'card5.html',
+                cssFile: 'card5.css',
+                jsFile: null,
+                previewId: 'preview-card5',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ phễu (Funnel) phân tích hành trình khách hàng từ bắt đầu phiên, thêm vào giỏ hàng đến mua hàng với công tắc đóng/mở phễu.`
+            },
+            {
+                sampleId: 'card-mau-6',
+                badgeText: 'Mẫu 6',
+                badgeClass: 'text-bg-secondary',
+                title: 'Analytics Event Table Card (Thẻ bảng sự kiện & thanh tiến trình tỷ lệ theo tên sự kiện)',
+                htmlFile: 'card6.html',
+                cssFile: 'card6.css',
+                jsFile: null,
+                previewId: 'preview-card6',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Thẻ hiển thị danh sách các sự kiện theo tên (page_view, scroll, session_start...) với thanh tiến trình trực quan và dropdown kiểm tra dữ liệu.`
+            },
+            {
+                sampleId: 'card-mau-7',
+                badgeText: 'Mẫu 7',
+                badgeClass: 'text-bg-info text-white',
+                title: 'Analytics Dynamic Interactive Chart Card (Thẻ biểu đồ động chuyển đổi tập dữ liệu tương tác)',
+                htmlFile: 'card7.html',
+                cssFile: 'card7.css',
+                jsFile: 'card7.js',
+                previewId: 'preview-card7',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ động cho phép chọn tab số liệu (Thời gian tương tác, số phiên...) để tự động vẽ lại đường biểu đồ SVG và dải giá trị tương ứng.`
+            },
+            {
+                sampleId: 'card-mau-8',
+                badgeText: 'Mẫu 8',
+                badgeClass: 'text-bg-dark',
+                title: 'Analytics Detailed Multi-Line Chart Card (Thẻ biểu đồ đa đường phân tích theo Ngày/Tuần/Tháng)',
+                htmlFile: 'card8.html',
+                cssFile: 'card8.css',
+                jsFile: 'card8.js',
+                previewId: 'preview-card8',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Biểu đồ đa đường phân tích xu hướng nhiều sự kiện cùng lúc qua thời gian, hỗ trợ chuyển đổi chu kỳ Ngày/Tuần/Tháng linh hoạt.`
+            },
+            {
+                sampleId: 'card-mau-9',
+                badgeText: 'Mẫu 9',
+                badgeClass: 'text-bg-danger',
+                title: 'Analytics Bubble Card (Thẻ phân tích tỷ lệ người dùng mới dạng bong bóng trực quan)',
+                htmlFile: 'card9.html',
+                cssFile: 'card9.css',
+                jsFile: null,
+                previewId: 'preview-card9',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Thẻ hiển thị phân bố người dùng mới theo nền tảng dạng bong bóng tròn ấn tượng kèm tỷ lệ phần trăm chi tiết.`
             }
         ]
     },
@@ -389,6 +594,37 @@ const categories = [
 <!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
                 depNote: `<strong>Lưu ý cho Dev:</strong> Cần script <code>offcanvas3.js</code> để quản lý trạng thái chọn checkbox, lọc tìm kiếm bảng và hiển thị các tag pill đã chọn.`
+            },
+            {
+                sampleId: 'offcanvas-mau-4',
+                badgeText: 'Mẫu 4',
+                badgeClass: 'text-bg-secondary',
+                title: 'Analytics Settings Offcanvas (Bảng trượt cấu hình cài đặt phân tích và trực quan hóa)',
+                htmlFile: 'offcanvas4.html',
+                cssFile: 'offcanvas4.css',
+                jsFile: null,
+                previewId: 'preview-offcanvas4',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Bảng điều khiển cài đặt trượt từ cạnh phải (Offcanvas End) phục vụ cấu hình biểu mẫu, chọn dạng trực quan và thả phân đoạn so sánh.`
             }
         ]
     },
@@ -533,6 +769,47 @@ const categories = [
                 depNote: `<strong>Lưu ý cho Dev:</strong> Topbar tiêu chuẩn với logo Analytics động, ô chọn tài khoản, thanh tìm kiếm mở rộng và khu vực profile cá nhân.`
             }
         ]
+    },
+    {
+        id: 'tab-tabs',
+        btnId: 'tab-tabs-btn',
+        title: '10. Tabs Components',
+        desc: 'Các mẫu Tab điều hướng và quản lý tab khám phá dữ liệu nâng cao',
+        icon: 'bi-segmented-nav text-success',
+        active: false,
+        items: [
+            {
+                sampleId: 'tabs-mau-1',
+                badgeText: 'Mẫu 1',
+                badgeClass: 'text-bg-success',
+                title: 'Analytics Exploration Tabs (Thanh tab khám phá dữ liệu linh hoạt, thêm/xóa/nhân bản tab)',
+                htmlFile: 'tabs1.html',
+                cssFile: 'tabs1.css',
+                jsFile: 'tabs1.js',
+                previewId: 'preview-tabs1',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Hệ thống tab khám phá nâng cao cho phép chuyển đổi loại báo cáo (Biểu mẫu tùy ý, Phễu, Khám phá người dùng...), thêm tab mới qua dropdown, xóa và nhân bản tab tức thì.`
+            }
+        ]
     }
 ];
 
@@ -561,6 +838,15 @@ categories.forEach(cat => {
     cat.items.forEach((item, idx) => {
         const rawHtml = fs.readFileSync(path.join(DIR, item.htmlFile), 'utf-8');
         const componentHtml = extractComponentHtml(rawHtml);
+        let previewHtml = componentHtml;
+        if (item.sampleId === 'card-mau-8') {
+            previewHtml = previewHtml
+                .replace(/id="interactiveLayer"/g, 'id="interactiveLayer8"')
+                .replace(/id="chartTooltip"/g, 'id="chartTooltip8"')
+                .replace(/id="ttDate"/g, 'id="ttDate8"')
+                .replace(/id="ttContent"/g, 'id="ttContent8"')
+                .replace(/id="mainChart"/g, 'id="mainChart8"');
+        }
         const cssContent = item.cssFile ? fs.readFileSync(path.join(DIR, item.cssFile), 'utf-8') : '';
         const jsContent = item.jsFile ? fs.readFileSync(path.join(DIR, item.jsFile), 'utf-8') : '';
 
@@ -636,7 +922,7 @@ categories.forEach(cat => {
                                     <span class="badge bg-light text-secondary border">Interactive</span>
                                 </div>
                                 <div class="preview-container ${item.previewClass}" id="${item.previewId}">
-                                    ${componentHtml}
+                                    ${previewHtml}
                                 </div>
                             </div>
 
@@ -766,6 +1052,13 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="accordion1.css">
     <link rel="stylesheet" href="card1.css">
     <link rel="stylesheet" href="card2.css">
+    <link rel="stylesheet" href="card3.css">
+    <link rel="stylesheet" href="card4.css">
+    <link rel="stylesheet" href="card5.css">
+    <link rel="stylesheet" href="card6.css">
+    <link rel="stylesheet" href="card7.css">
+    <link rel="stylesheet" href="card8.css">
+    <link rel="stylesheet" href="card9.css">
     <link rel="stylesheet" href="carousel1.css">
     <link rel="stylesheet" href="dropdown1.css">
     <link rel="stylesheet" href="dropdown2.css">
@@ -773,9 +1066,11 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="offcanvas1.css">
     <link rel="stylesheet" href="offcanvas2.css">
     <link rel="stylesheet" href="offcanvas3.css">
+    <link rel="stylesheet" href="offcanvas4.css">
     <link rel="stylesheet" href="popover1.css">
     <link rel="stylesheet" href="sidebar1.css">
     <link rel="stylesheet" href="sidebar2.css">
+    <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
 
     <!-- CSS Gốc Layout & Navigation Portal -->

@@ -348,7 +348,12 @@ body > .container-fluid > .row > main.main-content {
 /* Tránh cắt Dropdown và Popover trong preview-card */
 .preview-card:has(#preview-popover1),
 .preview-card:has(#preview-dropdown1),
-.preview-card:has(#preview-dropdown2) {
+.preview-card:has(#preview-dropdown2),
+.preview-card:has(#preview-card4),
+.preview-card:has(#preview-card6),
+.preview-card:has(#preview-card8),
+.preview-card:has(#preview-card9),
+.preview-card:has(#preview-tabs1) {
     overflow: visible !important;
 }
 
@@ -376,6 +381,32 @@ body > .container-fluid > .row > main.main-content {
     justify-content: center;
     border-radius: 0 0 12px 12px;
     padding: 2rem 1.5rem;
+    overflow-x: auto;
+}
+
+/* Card 3, 5, 6, 7, 9 Previews */
+#preview-card3,
+#preview-card5,
+#preview-card6,
+#preview-card7,
+#preview-card9 {
+    background-color: #f1f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+    padding: 2.5rem 1.5rem;
+}
+
+/* Card 4 & 8 Previews */
+#preview-card4,
+#preview-card8 {
+    background-color: #f1f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+    padding: 2.5rem 1.5rem;
     overflow-x: auto;
 }
 
@@ -449,10 +480,11 @@ body > .container-fluid > .row > main.main-content {
     border-radius: 0 0 12px 12px;
 }
 
-/* Offcanvas 1, 2, 3 */
+/* Offcanvas 1, 2, 3, 4 */
 #preview-offcanvas1,
 #preview-offcanvas2,
-#preview-offcanvas3 {
+#preview-offcanvas3,
+#preview-offcanvas4 {
     background-color: #f8fafc;
     min-height: 160px;
     display: flex;
@@ -460,6 +492,17 @@ body > .container-fluid > .row > main.main-content {
     justify-content: center;
     padding: 2.5rem 1.5rem;
     border-radius: 0 0 12px 12px;
+}
+
+/* Tabs 1 Preview */
+#preview-tabs1 {
+    background-color: #f1f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+    padding: 2rem 1.5rem;
+    overflow-x: auto;
 }
 
 /* Popover 1 */

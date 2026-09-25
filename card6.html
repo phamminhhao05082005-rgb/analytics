@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Event Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="card6.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<div class="event-card shadow-sm">
+    
+    <div class="card-header d-flex justify-content-between align-items-start">
+        <h3 class="card-title">
+            Số lượng sự kiện theo <span class="dashed-header">Tên sự kiện</span>
+        </h3>
+        
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,5">
+                <i class="bi bi-check-circle text-success"></i>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </button>
+            <div class="dropdown-menu shadow-sm info-dropdown p-0">
+                <div class="info-item d-flex gap-3 p-3 border-bottom">
+                    <i class="bi bi-check-square text-success fs-5"></i>
+                    <div>
+                        <div class="info-title">Chưa lấy mẫu thẻ</div>
+                        <div class="info-desc">thẻ này là dựa trên 100,0% dữ liệu có sẵn.</div>
+                    </div>
+                </div>
+                <div class="info-item d-flex gap-3 p-3">
+                    <i class="bi bi-calendar4 text-secondary fs-5"></i>
+                    <div>
+                        <div class="info-title">Nguồn dữ liệu</div>
+                        <div class="info-desc">Báo cáo đang hiển thị dữ liệu trong ngày. <a href="#">Tìm hiểu thêm về độ mới của dữ liệu</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body p-0">
+        <table class="table event-table mb-0">
+            <thead>
+                <tr>
+                    <th class="w-75"><span class="dashed-header text-secondary">TÊN SỰ KIỆN</span></th>
+                    <th class="text-end"><span class="dashed-header text-secondary">SỐ LƯỢNG SỰ KIỆN</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="event-name">page_view</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </td>
+                    <td class="text-end align-middle">59</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="event-name">scroll</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 88%;"></div>
+                        </div>
+                    </td>
+                    <td class="text-end align-middle">52</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="event-name">user_engagement</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 45%;"></div>
+                        </div>
+                    </td>
+                    <td class="text-end align-middle">27</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="event-name">session_start</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 5%;"></div>
+                        </div>
+                    </td>
+                    <td class="text-end align-middle">3</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="event-name">first_visit</div>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 1.5%;"></div>
+                        </div>
+                    </td>
+                    <td class="text-end align-middle">1</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer d-flex justify-content-end bg-white border-top-0 p-3 pt-4">
+        <a href="#" class="view-report-link d-flex align-items-center gap-2">
+            Xem báo cáo sự kiện <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

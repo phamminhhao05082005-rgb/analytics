@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Chart Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="card3.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<div class="chart-card shadow-sm">
+    
+    <div class="chart-header d-flex align-items-center">
+        <button class="metric-nav-btn" id="metricPrevBtn">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        
+        <div class="metric-track-container flex-grow-1" id="metricTrackContainer">
+            <div class="metric-track d-flex" id="metricTrack">
+                <div class="metric-item active">
+                    <div class="metric-title text-primary">Số người dùng mới <i class="bi bi-question-circle text-secondary"></i></div>
+                    <div class="metric-value">1</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-title text-secondary">Người dùng cũ <i class="bi bi-question-circle"></i></div>
+                    <div class="metric-value">0</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-title text-secondary">Số lượng khách hàng ti... <i class="bi bi-question-circle"></i></div>
+                    <div class="metric-value">0</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-title text-secondary">Lượt chuyển đổi <i class="bi bi-question-circle"></i></div>
+                    <div class="metric-value">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="metric-nav-btn" id="metricNextBtn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+        <div class="header-actions d-flex align-items-center gap-3 ms-2 ps-3 border-start">
+            <div class="medal-icon-wrapper">
+                <i class="bi bi-award text-primary"></i>
+            </div>
+            <i class="bi bi-exclamation-triangle text-danger fs-5"></i>
+        </div>
+    </div>
+
+    <div class="chart-body position-relative">
+        <svg class="chart-svg" viewBox="0 0 800 280" preserveAspectRatio="none">
+            <line x1="0" y1="20" x2="750" y2="20" class="grid-line" />
+            <line x1="0" y1="58" x2="750" y2="58" class="grid-line" />
+            <line x1="0" y1="96" x2="750" y2="96" class="grid-line" />
+            <line x1="0" y1="134" x2="750" y2="134" class="grid-line" />
+            <line x1="0" y1="172" x2="750" y2="172" class="grid-line" />
+            <line x1="0" y1="210" x2="750" y2="210" class="grid-line" />
+            <line x1="0" y1="248" x2="750" y2="248" class="grid-line" />
+
+            <text x="760" y="25" class="axis-text">1,2</text>
+            <text x="760" y="63" class="axis-text">1</text>
+            <text x="760" y="101" class="axis-text">0,8</text>
+            <text x="760" y="139" class="axis-text">0,6</text>
+            <text x="760" y="177" class="axis-text">0,4</text>
+            <text x="760" y="215" class="axis-text">0,2</text>
+            <text x="760" y="253" class="axis-text">0</text>
+
+            <text x="100" y="265" class="axis-text text-center" text-anchor="middle">30<tspan x="100" dy="14">thg</tspan></text>
+            <text x="280" y="265" class="axis-text text-center" text-anchor="middle">06</text>
+            <text x="460" y="265" class="axis-text text-center" text-anchor="middle">13</text>
+            <text x="640" y="265" class="axis-text text-center" text-anchor="middle">20</text>
+
+            <polyline points="0,248 100,248 280,248 460,248 640,248 720,248 740,63" class="data-line" />
+
+            <circle cx="100" cy="248" r="6" class="chart-point" data-date="Thứ 2 30 thg 8" data-val="0" />
+            <circle cx="280" cy="248" r="6" class="chart-point" data-date="Thứ 3 6 thg 9" data-val="0" />
+            <circle cx="460" cy="248" r="6" class="chart-point" data-date="Thứ 5 10 thg 9" data-val="0" />
+            <circle cx="640" cy="248" r="6" class="chart-point" data-date="Thứ 4 20 thg 9" data-val="0" />
+            <circle cx="720" cy="248" r="6" class="chart-point" data-date="Thứ 6 25 thg 9" data-val="0" />
+            <circle cx="740" cy="63" r="6" class="chart-point" data-date="Chủ nhật 27 thg 9" data-val="1" />
+        </svg>
+    </div>
+
+    <div class="chart-legend d-flex align-items-center flex-wrap gap-4 px-4 pb-4">
+        <div class="legend-item d-flex align-items-center gap-2">
+            <div class="legend-color bg-primary"></div>
+            <span class="legend-text">28 ngày trước</span>
+        </div>
+        <div class="legend-item d-flex align-items-center gap-2">
+            <div class="legend-color" style="background-color: #a8d5e2;"></div>
+            <span class="legend-text">Trung vị và phạm vi của nhóm doanh nghiệp tương tự: Internet và viễn thông</span>
+        </div>
+    </div>
+
+</div>
+
+<div class="chart-popover shadow" id="chartPopover">
+    <div class="popover-date" id="popDate">Thứ 5 10 thg 9</div>
+    <div class="popover-content d-flex justify-content-between align-items-center gap-4 mt-2">
+        <div class="d-flex align-items-center gap-2">
+            <div class="popover-dot bg-primary"></div>
+            <span class="popover-label">Số người dùng mới</span>
+        </div>
+        <span class="popover-val fw-bold" id="popVal">0</span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="card3.js"></script>
+</body>
+</html>
