@@ -130,6 +130,37 @@ const categories = [
 <!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
                 depNote: `<strong>Lưu ý quan trọng cho Dev:</strong> Accordion kết hợp đồ họa vector SVG minh họa trực quan cùng khung thông tin <code>.bordered-box</code> và tính năng thu gọn/mở rộng chuẩn Bootstrap 5.`
+            },
+            {
+                sampleId: 'acc-mau-4',
+                badgeText: 'Mẫu 4',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Consent Signals Accordion (Tín hiệu đồng ý liên quan đến quảng cáo & mức độ tác động)',
+                htmlFile: 'accordion4.html',
+                cssFile: 'accordion4.css',
+                jsFile: null,
+                previewId: 'preview-accordion4',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý quan trọng cho Dev:</strong> Accordion hiển thị trạng thái tín hiệu đồng ý kèm lưới 2 cột phân tích chi tiết mức độ tác động (đo lường, tái tiếp thị, xuất chuyển đổi); đóng mở mượt mà bằng <code>data-bs-toggle="collapse"</code>.`
             }
         ]
     },
@@ -1279,6 +1310,7 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="accordion1.css">
     <link rel="stylesheet" href="accordion2.css">
     <link rel="stylesheet" href="accordion3.css">
+    <link rel="stylesheet" href="accordion4.css">
     <link rel="stylesheet" href="card1.css">
     <link rel="stylesheet" href="card2.css">
     <link rel="stylesheet" href="card3.css">
