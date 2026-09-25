@@ -1,0 +1,514 @@
+/* ==========================================================================
+   Analytics Components Library - Main Layout & Navigation Styles (testcss.css)
+   ========================================================================== */
+
+:root {
+    --crm-sidebar-width: 260px;
+    --crm-primary: #0d6efd;
+    --crm-primary-light: #e7f1ff;
+    --crm-text-main: #1e293b;
+    --crm-text-muted: #64748b;
+    --crm-border-color: #e2e8f0;
+    --crm-bg-code: #1e1e2e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f8fafc !important;
+    background-color: #f8fafc !important;
+    color: var(--crm-text-main);
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    justify-content: normal !important;
+    height: auto !important;
+    overflow-y: auto !important;
+}
+
+/* SIDEBAR TRÁI */
+.custom-sidebar {
+    width: var(--crm-sidebar-width, 260px) !important;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0;
+    background-color: #ffffff;
+    border-right: 1px solid var(--crm-border-color);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.03);
+    overflow-y: auto;
+}
+
+/* Brand header trên sidebar */
+.brand-header {
+    background: linear-gradient(to bottom, #ffffff, #fbfcfd);
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+/* Nav Pills danh sách component */
+.custom-sidebar-nav .nav-link {
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    border: 1px solid transparent;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.custom-sidebar-nav .nav-link:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    transform: translateX(2px);
+}
+
+.custom-sidebar-nav .nav-link.active {
+    background-color: #eef2ff !important;
+    color: #3b82f6 !important;
+    font-weight: 600;
+    border-color: #c7d2fe;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.08);
+}
+
+.custom-sidebar-nav .nav-link.active i {
+    color: #2563eb !important;
+}
+
+/* VÙNG NỘI DUNG CHÍNH (BÊN PHẢI) */
+body > .container-fluid > .row > main.main-content {
+    margin-left: var(--crm-sidebar-width, 260px) !important;
+    width: calc(100% - var(--crm-sidebar-width, 260px)) !important;
+    flex: 0 0 calc(100% - var(--crm-sidebar-width, 260px)) !important;
+    max-width: calc(100% - var(--crm-sidebar-width, 260px)) !important;
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+/* Khối xem trước Component (Preview box) */
+.preview-card {
+    border-radius: 12px;
+    border: 1px solid var(--crm-border-color);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.preview-container {
+    background-color: #ffffff;
+    min-height: 120px;
+}
+
+/* Khối hiển thị Code (HTML, CSS, JS) */
+.code-card {
+    border-radius: 12px;
+    border: 1px solid #334155;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.code-header {
+    background-color: #181825;
+    border-bottom: 1px solid #2a2b3d;
+}
+
+.code-pre {
+    font-family: 'Fira Code', 'Consolas', 'Menlo', monospace;
+    font-size: 0.85rem;
+    background-color: var(--crm-bg-code);
+    max-height: 380px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+/* Tùy chỉnh thanh cuộn cho khối code */
+.code-pre::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.code-pre::-webkit-scrollbar-track {
+    background: #181825;
+}
+.code-pre::-webkit-scrollbar-thumb {
+    background: #45475a;
+    border-radius: 3px;
+}
+.code-pre::-webkit-scrollbar-thumb:hover {
+    background: #585b70;
+}
+
+/* Nút copy code */
+.copy-btn {
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.copy-btn.btn-copied {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+}
+
+/* Toast thông báo chung khi copy */
+.copy-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #10b981;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.copy-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   KHỐI THƯ VIỆN & PHỤ THUỘC (DEPENDENCIES) CHO TỪNG COMPONENT
+   ========================================================================== */
+.dependency-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.dependency-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.dependency-header {
+    background: linear-gradient(to right, #f8fafc, #f1f5f9);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 11px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dependency-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.2px;
+}
+
+.dependency-body {
+    padding: 16px 18px;
+}
+
+.dep-badges-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.dep-badge-pill {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid transparent;
+}
+
+.dep-badge-req {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    border-color: #bfdbfe;
+}
+
+.dep-badge-rec {
+    background-color: #f1f5f9;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.dep-code-box {
+    border-radius: 8px;
+    background-color: #181825;
+    border: 1px solid #2a2b3d;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.dep-code-box pre {
+    margin: 0;
+    padding: 12px 14px;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+    max-height: 220px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.dep-note-box {
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.83rem;
+    line-height: 1.55;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.dep-note-box.alert-warning-soft {
+    background-color: #fffbeb;
+    border: 1px solid #fde68a;
+    color: #92400e;
+}
+
+.dep-note-box.alert-info-soft {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1e40af;
+}
+
+.dep-template-details summary {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.15s ease;
+    padding: 4px 0;
+}
+
+.dep-template-details summary:hover {
+    color: #0d6efd;
+}
+
+.dep-template-box {
+    margin-top: 8px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dep-template-box pre {
+    margin: 0;
+    padding: 12px 14px;
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.78rem;
+    color: #cbd5e1;
+    max-height: 240px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+/* ==========================================================================
+   COMPONENT PREVIEW CUSTOM SCOPING & ISOLATION
+   ========================================================================== */
+
+/* Tránh cắt Dropdown và Popover trong preview-card */
+.preview-card:has(#preview-popover1),
+.preview-card:has(#preview-dropdown1),
+.preview-card:has(#preview-dropdown2) {
+    overflow: visible !important;
+}
+
+/* Accordion 1 */
+#preview-accordion1 {
+    background-color: #f8f9fa;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Card 1 */
+#preview-card1 {
+    background-color: #f1f3f4;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+    padding: 2rem;
+}
+
+/* Card 2 */
+#preview-card2 {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 12px 12px;
+    padding: 2rem 1.5rem;
+    overflow-x: auto;
+}
+
+/* Carousel 1 */
+#preview-carousel1 {
+    background-color: #f8f9fa;
+    border-radius: 0 0 12px 12px;
+    padding: 2rem 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dropdown 1 & 2 */
+#preview-dropdown1 {
+    background-color: #f1f3f4;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible !important;
+    border-radius: 0 0 12px 12px;
+}
+
+#preview-dropdown2 {
+    background-color: #f1f3f4;
+    min-height: 450px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible !important;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Modal 1 */
+#preview-modal1 {
+    background-color: #f8fafc;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Offcanvas 1, 2, 3 */
+#preview-offcanvas1,
+#preview-offcanvas2,
+#preview-offcanvas3 {
+    background-color: #f8fafc;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Popover 1 */
+#preview-popover1 {
+    background-color: #f1f3f4;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible !important;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Sidebar 1 Preview (Cách ly container để không chiếm toàn màn hình) */
+#preview-sidebar1 {
+    background-color: #f1f3f4;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+    padding: 0;
+}
+
+#preview-sidebar1 .layout-wrapper {
+    height: 100% !important;
+    min-height: 480px !important;
+    position: relative;
+}
+
+#preview-sidebar1 .hover-sidebar {
+    height: 100% !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#preview-sidebar1 .main-content {
+    margin-left: 64px;
+    height: 100% !important;
+    min-height: auto !important;
+}
+
+/* Sidebar 2 Preview (Cách ly layout container) */
+#preview-sidebar2 {
+    background-color: #f1f3f4;
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+    padding: 0;
+}
+
+#preview-sidebar2 .layout-container {
+    height: 100% !important;
+    position: relative;
+}
+
+#preview-sidebar2 .ga-sidebar {
+    height: 100% !important;
+    position: relative !important;
+}
+
+#preview-sidebar2 .main-content {
+    min-height: auto !important;
+}
+
+/* Topbar 1 Preview */
+#preview-topbar1 {
+    background-color: #ffffff;
+    padding: 0;
+    border-radius: 0 0 12px 12px;
+    overflow: visible;
+}
