@@ -1,0 +1,81 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.custom-accordion {
+    max-width: 1000px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.custom-accordion .accordion-item {
+    border-radius: 0;
+}
+
+.custom-accordion .accordion-button {
+    font-size: 15px;
+    color: #202124;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    font-weight: 400;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #202124;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadce0;
+}
+
+.custom-accordion .accordion-button::after {
+    color: #5f6368;
+    background-size: 12px;
+}
+
+.custom-accordion .accordion-body {
+    padding: 20px 24px;
+    background-color: #ffffff;
+}
+
+.content-text {
+    font-size: 13px;
+    color: #3c4043;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.custom-link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+}
+
+.info-banner {
+    background-color: #f0f4ff;
+    border-radius: 4px;
+    padding: 14px 16px;
+    color: #3949ab;
+}
+
+.banner-text {
+    font-size: 13px;
+    color: #303f9f;
+}
+
+.info-banner i {
+    color: #5f6368;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.info-banner i:hover {
+    color: #202124;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.custom-accordion {
+    max-width: 1000px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.custom-accordion .accordion-item {
+    border-radius: 0;
+}
+
+.custom-accordion .accordion-button {
+    font-size: 15px;
+    color: #202124;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    font-weight: 400;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #202124;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadce0;
+}
+
+.custom-accordion .accordion-button::after {
+    color: #5f6368;
+    background-size: 12px;
+}
+
+.custom-accordion .accordion-body {
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+.content-text {
+    font-size: 13px;
+    color: #3c4043;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.title-bold {
+    font-size: 14px;
+    font-weight: 500;
+    color: #202124;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.custom-link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+}
+
+.svg-container {
+    width: 140px;
+    height: 120px;
+}
+
+.bordered-box {
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 24px;
+    background-color: #ffffff;
+}

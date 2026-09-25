@@ -16,6 +16,8 @@
 
     <!-- CSS từng Component -->
     <link rel="stylesheet" href="accordion1.css">
+    <link rel="stylesheet" href="accordion2.css">
+    <link rel="stylesheet" href="accordion3.css">
     <link rel="stylesheet" href="card1.css">
     <link rel="stylesheet" href="card2.css">
     <link rel="stylesheet" href="card3.css">
@@ -197,6 +199,8 @@
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#acc-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Analytics Tasks Accordion</a>
+                                <a href="#acc-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Advanced Ads Settings Accordion</a>
+                                <a href="#acc-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: User ID & Data Collection Accordion</a>
                             </div>
                         </div>
 
@@ -719,6 +723,574 @@
 
 .task-group-header[aria-expanded=&quot;false&quot;] .toggle-icon-sm {
     transform: rotate(180deg);
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 2: Advanced Ads Settings Accordion (Chế độ cài đặt nâng cao để bật tính năng cá nhân hoá quảng cáo) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="acc-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Advanced Ads Settings Accordion (Chế độ cài đặt nâng cao để bật tính năng cá nhân hoá quảng cáo)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-accordion2">
+                                    <div class="accordion custom-accordion shadow-sm w-100" id="accordionAds">
+    <div class="accordion-item border-0">
+        <h2 class="accordion-header">
+            <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAds" aria-expanded="true">
+                Chế độ cài đặt nâng cao để bật tính năng cá nhân hoá quảng cáo
+            </button>
+        </h2>
+        <div id="collapseAds" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+                <p class="content-text">Khi bật chế độ cài đặt cá nhân hoá quảng cáo, bạn có thể xuất đối tượng và sự kiện quan trọng trong Google Analytics sang tài khoản Google Ads mà bạn đã liên kết nhằm cung cấp trải nghiệm phù hợp, dành riêng cho từng người dùng cuối.</p>
+                
+                <div class="info-banner d-flex justify-content-between align-items-center mb-3">
+                    <span class="banner-text">Bạn được phép bật chế độ cá nhân hoá quảng cáo trong <strong>307/307</strong> khu vực.</span>
+                    <i class="bi bi-gear cursor-pointer"></i>
+                </div>
+                
+                <p class="content-text">Ngoài việc đo lường, bạn có thể thiết lập Google Analytics ở cấp tài sản để thu thập dữ liệu nhằm mục đích cá nhân hoá quảng cáo. Việc này có liên quan đến việc bạn sử dụng các tính năng như tín hiệu của Google, User-ID, tích hợp với Google Ads và/hoặc trường hợp bạn bật tính năng chia sẻ dữ liệu với Google. Nếu bạn tắt chế độ cài đặt Cá nhân hoá quảng cáo, danh sách đối tượng dùng chung hiện tại sẽ được đánh dấu là không hoạt động, do đó, sẽ không có người dùng mới nào được chia sẻ thông qua danh sách đối tượng và mọi dữ liệu đã xuất (dù đối tượng được xuất thông qua việc tích hợp mối liên kết hay dữ liệu được chia sẻ trong phần cài đặt cách chia sẻ cho sản phẩm và dịch vụ của Google) sẽ được chỉ định là không được dùng để cá nhân hoá quảng cáo. <a href="#" class="custom-link">Tìm hiểu thêm</a></p>
+                
+                <p class="content-text mb-0">Để tìm hiểu thêm về cách tắt chế độ cài đặt cá nhân hoá quảng cáo dựa trên dữ liệu Analytics được thu thập từ người dùng của bạn trong tương lai thông qua SDK hoặc thẻ Google, vui lòng tham khảo các tài nguyên sau đây: <a href="#" class="custom-link">Sử dụng Google Analytics cho Firebase</a> và <a href="#" class="custom-link">Sử dụng thẻ Google cho Google Analytics</a>.</p>
+            </div>
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-accordion2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Roboto (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-accordion2">&lt;!-- 1. Google Font Roboto (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 3. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Tính năng mở rộng / thu gọn dựa trên thuộc tính <code>data-bs-toggle="collapse"</code> và <code>data-bs-target="#collapseAds"</code> của <strong>Bootstrap 5 JS Bundle</strong>.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_accordion2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-accordion2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-accordion2">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Advanced Ads Settings Accordion&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS accordion2.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-accordion2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-accordion2">&lt;div class=&quot;accordion custom-accordion shadow-sm w-100&quot; id=&quot;accordionAds&quot;&gt;
+    &lt;div class=&quot;accordion-item border-0&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot;&gt;
+            &lt;button class=&quot;accordion-button shadow-none&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseAds&quot; aria-expanded=&quot;true&quot;&gt;
+                Chế độ cài đặt nâng cao để bật tính năng cá nhân hoá quảng cáo
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id=&quot;collapseAds&quot; class=&quot;accordion-collapse collapse show&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                &lt;p class=&quot;content-text&quot;&gt;Khi bật chế độ cài đặt cá nhân hoá quảng cáo, bạn có thể xuất đối tượng và sự kiện quan trọng trong Google Analytics sang tài khoản Google Ads mà bạn đã liên kết nhằm cung cấp trải nghiệm phù hợp, dành riêng cho từng người dùng cuối.&lt;/p&gt;
+                
+                &lt;div class=&quot;info-banner d-flex justify-content-between align-items-center mb-3&quot;&gt;
+                    &lt;span class=&quot;banner-text&quot;&gt;Bạn được phép bật chế độ cá nhân hoá quảng cáo trong &lt;strong&gt;307/307&lt;/strong&gt; khu vực.&lt;/span&gt;
+                    &lt;i class=&quot;bi bi-gear cursor-pointer&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                
+                &lt;p class=&quot;content-text&quot;&gt;Ngoài việc đo lường, bạn có thể thiết lập Google Analytics ở cấp tài sản để thu thập dữ liệu nhằm mục đích cá nhân hoá quảng cáo. Việc này có liên quan đến việc bạn sử dụng các tính năng như tín hiệu của Google, User-ID, tích hợp với Google Ads và/hoặc trường hợp bạn bật tính năng chia sẻ dữ liệu với Google. Nếu bạn tắt chế độ cài đặt Cá nhân hoá quảng cáo, danh sách đối tượng dùng chung hiện tại sẽ được đánh dấu là không hoạt động, do đó, sẽ không có người dùng mới nào được chia sẻ thông qua danh sách đối tượng và mọi dữ liệu đã xuất (dù đối tượng được xuất thông qua việc tích hợp mối liên kết hay dữ liệu được chia sẻ trong phần cài đặt cách chia sẻ cho sản phẩm và dịch vụ của Google) sẽ được chỉ định là không được dùng để cá nhân hoá quảng cáo. &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/p&gt;
+                
+                &lt;p class=&quot;content-text mb-0&quot;&gt;Để tìm hiểu thêm về cách tắt chế độ cài đặt cá nhân hoá quảng cáo dựa trên dữ liệu Analytics được thu thập từ người dùng của bạn trong tương lai thông qua SDK hoặc thẻ Google, vui lòng tham khảo các tài nguyên sau đây: &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Sử dụng Google Analytics cho Firebase&lt;/a&gt; và &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Sử dụng thẻ Google cho Google Analytics&lt;/a&gt;.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-accordion2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-accordion2">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.custom-accordion {
+    max-width: 1000px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.custom-accordion .accordion-item {
+    border-radius: 0;
+}
+
+.custom-accordion .accordion-button {
+    font-size: 15px;
+    color: #202124;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    font-weight: 400;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #202124;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadce0;
+}
+
+.custom-accordion .accordion-button::after {
+    color: #5f6368;
+    background-size: 12px;
+}
+
+.custom-accordion .accordion-body {
+    padding: 20px 24px;
+    background-color: #ffffff;
+}
+
+.content-text {
+    font-size: 13px;
+    color: #3c4043;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.custom-link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+}
+
+.info-banner {
+    background-color: #f0f4ff;
+    border-radius: 4px;
+    padding: 14px 16px;
+    color: #3949ab;
+}
+
+.banner-text {
+    font-size: 13px;
+    color: #303f9f;
+}
+
+.info-banner i {
+    color: #5f6368;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.info-banner i:hover {
+    color: #202124;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 3: User ID & Data Collection Accordion (Tính năng User-ID và thu thập dữ liệu do người dùng cung cấp) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="acc-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">User ID & Data Collection Accordion (Tính năng User-ID và thu thập dữ liệu do người dùng cung cấp)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-accordion3">
+                                    <div class="accordion custom-accordion shadow-sm w-100" id="accordionUser">
+    <div class="accordion-item border-0">
+        <h2 class="accordion-header">
+            <button class="accordion-button shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUser" aria-expanded="true">
+                Tính năng User-ID và tính năng thu thập dữ liệu do người dùng cung cấp
+            </button>
+        </h2>
+        <div id="collapseUser" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+                
+                <div class="d-flex align-items-start gap-4 mb-4">
+                    <div class="svg-container flex-shrink-0">
+                        <svg viewBox="0 0 140 120" width="100%" height="100%">
+                            <rect x="40" y="20" width="30" height="40" fill="none" stroke="#5f6368" stroke-width="1.5"/>
+                            <rect x="45" y="25" width="20" height="15" fill="#f1f3f4" stroke="#5f6368" stroke-width="1"/>
+                            <circle cx="55" cy="32" r="3" fill="none" stroke="#34a853" stroke-width="1.5"/>
+                            <rect x="45" y="45" width="20" height="2" fill="#dadce0"/>
+                            <rect x="45" y="50" width="15" height="2" fill="#dadce0"/>
+                            
+                            <rect x="80" y="25" width="40" height="20" fill="none" stroke="#5f6368" stroke-width="1.5"/>
+                            <line x1="85" y1="32" x2="115" y2="32" stroke="#4285f4" stroke-width="2"/>
+                            <line x1="85" y1="38" x2="105" y2="38" stroke="#dadce0" stroke-width="2"/>
+
+                            <rect x="80" y="55" width="40" height="25" fill="none" stroke="#5f6368" stroke-width="1.5"/>
+                            <polygon points="95,62 105,67 95,72" fill="#ea4335"/>
+
+                            <path d="M20,85 C20,85 25,60 28,55 C32,50 36,50 36,50 L40,65 L30,90 Z" fill="#d2e3fc"/>
+                            <circle cx="30" cy="40" r="5" fill="#a0522d"/>
+                            <path d="M24,45 C24,45 28,43 34,45 C40,47 40,55 40,55 L26,55 Z" fill="#ffffff" stroke="#5f6368" stroke-width="1"/>
+                            <path d="M28,47 L40,38 L45,38" fill="none" stroke="#a0522d" stroke-width="1.5"/>
+                            <path d="M32,50 L45,45 L45,48" fill="none" stroke="#a0522d" stroke-width="1.5"/>
+                            <line x1="10" y1="95" x2="130" y2="95" stroke="#dadce0" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h6 class="title-bold">Cải thiện kết quả đo lường và bật thêm các chức năng khác thông qua các tính năng tích hợp với Google Ads.</h6>
+                        <p class="content-text mb-0">Nhờ tính năng User-ID và dữ liệu do người dùng cung cấp, bạn có thể sử dụng dữ liệu của bên thứ nhất để hiểu rõ hơn về cách người dùng tương tác với trang web và ứng dụng của bạn, cải thiện kết quả đo lường lượt chuyển đổi và bổ sung chức năng chia sẻ đối tượng khi bạn liên kết tài sản Analytics với tài khoản Google Ads. <a href="#" class="custom-link">Tìm hiểu thêm về tính năng User-ID.</a></p>
+                    </div>
+                </div>
+
+                <div class="bordered-box">
+                    <h6 class="title-bold">Thu thập User-ID</h6>
+                    <p class="content-text">Tính năng User-ID cho phép bạn cung cấp giá trị nhận dạng riêng cho người dùng trên trang web và ứng dụng của bạn. Nhờ đó, bạn có thể kết nối hành vi của người dùng trong nhiều phiên, cũng như trên nhiều thiết bị và nền tảng mà họ truy cập. Google Analytics diễn giải mỗi mã nhận dạng người dùng là một người dùng riêng biệt. Vì vậy, bạn có thể nhận được dữ liệu chính xác hơn về số người dùng và hiểu rõ hơn về hoạt động tương tác của người dùng với doanh nghiệp của bạn. <a href="#" class="custom-link">Tìm hiểu thêm về tính năng User-ID.</a></p>
+                    
+                    <p class="content-text mb-0">Bạn có trách nhiệm đảm bảo rằng bạn sử dụng tính năng User-ID theo <a href="#" class="custom-link">Điều khoản dịch vụ của Google Analytics</a>. Điều này bao gồm việc không gửi thông tin nhận dạng cá nhân đến Google Analytics dưới dạng mã nhận dạng người dùng và đưa ra thông báo thích hợp về việc bạn sử dụng giá trị nhận dạng trong chính sách quyền riêng tư. Để xem hướng dẫn về cách gửi mã nhận dạng người dùng đến Google Analytics, hãy tham khảo bài viết <a href="#" class="custom-link">Gửi mã nhận dạng người dùng</a>.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-accordion3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Roboto (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-accordion3">&lt;!-- 1. Google Font Roboto (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 3. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Accordion kết hợp đồ họa vector SVG minh họa trực quan cùng khung thông tin <code>.bordered-box</code> và tính năng thu gọn/mở rộng chuẩn Bootstrap 5.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_accordion3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-accordion3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-accordion3">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test User ID &amp; Data Collection Accordion&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS accordion3.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-accordion3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-accordion3">&lt;div class=&quot;accordion custom-accordion shadow-sm w-100&quot; id=&quot;accordionUser&quot;&gt;
+    &lt;div class=&quot;accordion-item border-0&quot;&gt;
+        &lt;h2 class=&quot;accordion-header&quot;&gt;
+            &lt;button class=&quot;accordion-button shadow-none&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#collapseUser&quot; aria-expanded=&quot;true&quot;&gt;
+                Tính năng User-ID và tính năng thu thập dữ liệu do người dùng cung cấp
+            &lt;/button&gt;
+        &lt;/h2&gt;
+        &lt;div id=&quot;collapseUser&quot; class=&quot;accordion-collapse collapse show&quot;&gt;
+            &lt;div class=&quot;accordion-body&quot;&gt;
+                
+                &lt;div class=&quot;d-flex align-items-start gap-4 mb-4&quot;&gt;
+                    &lt;div class=&quot;svg-container flex-shrink-0&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 140 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;rect x=&quot;40&quot; y=&quot;20&quot; width=&quot;30&quot; height=&quot;40&quot; fill=&quot;none&quot; stroke=&quot;#5f6368&quot; stroke-width=&quot;1.5&quot;/&gt;
+                            &lt;rect x=&quot;45&quot; y=&quot;25&quot; width=&quot;20&quot; height=&quot;15&quot; fill=&quot;#f1f3f4&quot; stroke=&quot;#5f6368&quot; stroke-width=&quot;1&quot;/&gt;
+                            &lt;circle cx=&quot;55&quot; cy=&quot;32&quot; r=&quot;3&quot; fill=&quot;none&quot; stroke=&quot;#34a853&quot; stroke-width=&quot;1.5&quot;/&gt;
+                            &lt;rect x=&quot;45&quot; y=&quot;45&quot; width=&quot;20&quot; height=&quot;2&quot; fill=&quot;#dadce0&quot;/&gt;
+                            &lt;rect x=&quot;45&quot; y=&quot;50&quot; width=&quot;15&quot; height=&quot;2&quot; fill=&quot;#dadce0&quot;/&gt;
+                            
+                            &lt;rect x=&quot;80&quot; y=&quot;25&quot; width=&quot;40&quot; height=&quot;20&quot; fill=&quot;none&quot; stroke=&quot;#5f6368&quot; stroke-width=&quot;1.5&quot;/&gt;
+                            &lt;line x1=&quot;85&quot; y1=&quot;32&quot; x2=&quot;115&quot; y2=&quot;32&quot; stroke=&quot;#4285f4&quot; stroke-width=&quot;2&quot;/&gt;
+                            &lt;line x1=&quot;85&quot; y1=&quot;38&quot; x2=&quot;105&quot; y2=&quot;38&quot; stroke=&quot;#dadce0&quot; stroke-width=&quot;2&quot;/&gt;
+
+                            &lt;rect x=&quot;80&quot; y=&quot;55&quot; width=&quot;40&quot; height=&quot;25&quot; fill=&quot;none&quot; stroke=&quot;#5f6368&quot; stroke-width=&quot;1.5&quot;/&gt;
+                            &lt;polygon points=&quot;95,62 105,67 95,72&quot; fill=&quot;#ea4335&quot;/&gt;
+
+                            &lt;path d=&quot;M20,85 C20,85 25,60 28,55 C32,50 36,50 36,50 L40,65 L30,90 Z&quot; fill=&quot;#d2e3fc&quot;/&gt;
+                            &lt;circle cx=&quot;30&quot; cy=&quot;40&quot; r=&quot;5&quot; fill=&quot;#a0522d&quot;/&gt;
+                            &lt;path d=&quot;M24,45 C24,45 28,43 34,45 C40,47 40,55 40,55 L26,55 Z&quot; fill=&quot;#ffffff&quot; stroke=&quot;#5f6368&quot; stroke-width=&quot;1&quot;/&gt;
+                            &lt;path d=&quot;M28,47 L40,38 L45,38&quot; fill=&quot;none&quot; stroke=&quot;#a0522d&quot; stroke-width=&quot;1.5&quot;/&gt;
+                            &lt;path d=&quot;M32,50 L45,45 L45,48&quot; fill=&quot;none&quot; stroke=&quot;#a0522d&quot; stroke-width=&quot;1.5&quot;/&gt;
+                            &lt;line x1=&quot;10&quot; y1=&quot;95&quot; x2=&quot;130&quot; y2=&quot;95&quot; stroke=&quot;#dadce0&quot; stroke-width=&quot;1.5&quot;/&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div&gt;
+                        &lt;h6 class=&quot;title-bold&quot;&gt;Cải thiện kết quả đo lường và bật thêm các chức năng khác thông qua các tính năng tích hợp với Google Ads.&lt;/h6&gt;
+                        &lt;p class=&quot;content-text mb-0&quot;&gt;Nhờ tính năng User-ID và dữ liệu do người dùng cung cấp, bạn có thể sử dụng dữ liệu của bên thứ nhất để hiểu rõ hơn về cách người dùng tương tác với trang web và ứng dụng của bạn, cải thiện kết quả đo lường lượt chuyển đổi và bổ sung chức năng chia sẻ đối tượng khi bạn liên kết tài sản Analytics với tài khoản Google Ads. &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Tìm hiểu thêm về tính năng User-ID.&lt;/a&gt;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;bordered-box&quot;&gt;
+                    &lt;h6 class=&quot;title-bold&quot;&gt;Thu thập User-ID&lt;/h6&gt;
+                    &lt;p class=&quot;content-text&quot;&gt;Tính năng User-ID cho phép bạn cung cấp giá trị nhận dạng riêng cho người dùng trên trang web và ứng dụng của bạn. Nhờ đó, bạn có thể kết nối hành vi của người dùng trong nhiều phiên, cũng như trên nhiều thiết bị và nền tảng mà họ truy cập. Google Analytics diễn giải mỗi mã nhận dạng người dùng là một người dùng riêng biệt. Vì vậy, bạn có thể nhận được dữ liệu chính xác hơn về số người dùng và hiểu rõ hơn về hoạt động tương tác của người dùng với doanh nghiệp của bạn. &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Tìm hiểu thêm về tính năng User-ID.&lt;/a&gt;&lt;/p&gt;
+                    
+                    &lt;p class=&quot;content-text mb-0&quot;&gt;Bạn có trách nhiệm đảm bảo rằng bạn sử dụng tính năng User-ID theo &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Điều khoản dịch vụ của Google Analytics&lt;/a&gt;. Điều này bao gồm việc không gửi thông tin nhận dạng cá nhân đến Google Analytics dưới dạng mã nhận dạng người dùng và đưa ra thông báo thích hợp về việc bạn sử dụng giá trị nhận dạng trong chính sách quyền riêng tư. Để xem hướng dẫn về cách gửi mã nhận dạng người dùng đến Google Analytics, hãy tham khảo bài viết &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Gửi mã nhận dạng người dùng&lt;/a&gt;.&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-accordion3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-accordion3">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.custom-accordion {
+    max-width: 1000px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.custom-accordion .accordion-item {
+    border-radius: 0;
+}
+
+.custom-accordion .accordion-button {
+    font-size: 15px;
+    color: #202124;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    font-weight: 400;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    color: #202124;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadce0;
+}
+
+.custom-accordion .accordion-button::after {
+    color: #5f6368;
+    background-size: 12px;
+}
+
+.custom-accordion .accordion-body {
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+.content-text {
+    font-size: 13px;
+    color: #3c4043;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.title-bold {
+    font-size: 14px;
+    font-weight: 500;
+    color: #202124;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.custom-link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+}
+
+.svg-container {
+    width: 140px;
+    height: 120px;
+}
+
+.bordered-box {
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 24px;
+    background-color: #ffffff;
 }</code></pre>
                                 </div>
                             </div>

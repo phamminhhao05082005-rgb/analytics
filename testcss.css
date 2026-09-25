@@ -654,3 +654,22 @@ body > .container-fluid > .row > main.main-content {
     overflow-x: auto;
 }
 
+/* Accordion 2 & 3 Preview */
+#preview-accordion2,
+#preview-accordion3 {
+    background-color: #f8f9fa;
+    border-radius: 0 0 12px 12px;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-accordion2 .custom-accordion,
+#preview-accordion3 .custom-accordion {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+

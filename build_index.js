@@ -68,6 +68,68 @@ const categories = [
 <!-- 4. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng </body>) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
                 depNote: `<strong>Lưu ý quan trọng cho Dev:</strong> Tính năng đóng mở phụ thuộc trực tiếp vào thuộc tính <code>data-bs-toggle="collapse"</code> của <strong>Bootstrap JS Bundle</strong>. Khi nhúng cần đảm bảo có file <code>bootstrap.bundle.min.js</code>.`
+            },
+            {
+                sampleId: 'acc-mau-2',
+                badgeText: 'Mẫu 2',
+                badgeClass: 'text-bg-success',
+                title: 'Advanced Ads Settings Accordion (Chế độ cài đặt nâng cao để bật tính năng cá nhân hoá quảng cáo)',
+                htmlFile: 'accordion2.html',
+                cssFile: 'accordion2.css',
+                jsFile: null,
+                previewId: 'preview-accordion2',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý quan trọng cho Dev:</strong> Tính năng mở rộng / thu gọn dựa trên thuộc tính <code>data-bs-toggle="collapse"</code> và <code>data-bs-target="#collapseAds"</code> của <strong>Bootstrap 5 JS Bundle</strong>.`
+            },
+            {
+                sampleId: 'acc-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-info text-white',
+                title: 'User ID & Data Collection Accordion (Tính năng User-ID và thu thập dữ liệu do người dùng cung cấp)',
+                htmlFile: 'accordion3.html',
+                cssFile: 'accordion3.css',
+                jsFile: null,
+                previewId: 'preview-accordion3',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý quan trọng cho Dev:</strong> Accordion kết hợp đồ họa vector SVG minh họa trực quan cùng khung thông tin <code>.bordered-box</code> và tính năng thu gọn/mở rộng chuẩn Bootstrap 5.`
             }
         ]
     },
@@ -1215,6 +1277,8 @@ const fullHtml = `<!DOCTYPE html>
 
     <!-- CSS từng Component -->
     <link rel="stylesheet" href="accordion1.css">
+    <link rel="stylesheet" href="accordion2.css">
+    <link rel="stylesheet" href="accordion3.css">
     <link rel="stylesheet" href="card1.css">
     <link rel="stylesheet" href="card2.css">
     <link rel="stylesheet" href="card3.css">
