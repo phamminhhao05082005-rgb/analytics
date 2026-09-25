@@ -82,6 +82,12 @@ function setupTabHashSync() {
                 if (typeof window.updateCarouselButtons === 'function') {
                     setTimeout(window.updateCarouselButtons, 150);
                 }
+                if (typeof window.updateExpCarouselButtons === 'function') {
+                    setTimeout(window.updateExpCarouselButtons, 150);
+                }
+                if (typeof window.updateRecentCarouselButtons === 'function') {
+                    setTimeout(window.updateRecentCarouselButtons, 150);
+                }
             }
         });
     });
@@ -150,6 +156,112 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.addEventListener('resize', window.updateCarouselButtons);
         setTimeout(window.updateCarouselButtons, 200);
+    }
+
+    // A2. Carousel 2 (Exploration Carousel) Logic
+    const expTrack = document.getElementById('expTrack');
+    const expPrevBtn = document.getElementById('expPrevBtn');
+    const expNextBtn = document.getElementById('expNextBtn');
+    const expTrackContainer = document.getElementById('expTrackContainer');
+    
+    if (expTrack && expPrevBtn && expNextBtn && expTrackContainer) {
+        const cardWidth = 296; 
+        let currentPosition = 0;
+
+        window.updateExpCarouselButtons = () => {
+            const containerWidth = expTrackContainer.offsetWidth;
+            const trackWidth = expTrack.scrollWidth;
+
+            if (currentPosition >= 0) {
+                currentPosition = 0;
+                expTrack.style.transform = `translateX(0px)`;
+                expPrevBtn.disabled = true;
+            } else {
+                expPrevBtn.disabled = false;
+            }
+
+            if (containerWidth > 0 && Math.abs(currentPosition) + containerWidth >= trackWidth - 10) {
+                expNextBtn.disabled = true;
+            } else {
+                expNextBtn.disabled = false;
+            }
+        };
+
+        expNextBtn.addEventListener('click', () => {
+            const containerWidth = expTrackContainer.offsetWidth;
+            const maxScroll = (expTrack.scrollWidth - containerWidth) * -1;
+            currentPosition -= cardWidth;
+            if (currentPosition < maxScroll) {
+                currentPosition = maxScroll;
+            }
+            expTrack.style.transform = `translateX(${currentPosition}px)`;
+            window.updateExpCarouselButtons();
+        });
+
+        expPrevBtn.addEventListener('click', () => {
+            currentPosition += cardWidth;
+            if (currentPosition > 0) {
+                currentPosition = 0;
+            }
+            expTrack.style.transform = `translateX(${currentPosition}px)`;
+            window.updateExpCarouselButtons();
+        });
+
+        window.addEventListener('resize', window.updateExpCarouselButtons);
+        setTimeout(window.updateExpCarouselButtons, 200);
+    }
+
+    // A3. Carousel 3 (Recent Carousel) Logic
+    const recentTrack = document.getElementById('recentTrack');
+    const recentPrevBtn = document.getElementById('recentPrevBtn');
+    const recentNextBtn = document.getElementById('recentNextBtn');
+    const recentTrackContainer = document.getElementById('recentTrackContainer');
+    
+    if (recentTrack && recentPrevBtn && recentNextBtn && recentTrackContainer) {
+        const cardWidth = 296; 
+        let currentPosition = 0;
+
+        window.updateRecentCarouselButtons = () => {
+            const containerWidth = recentTrackContainer.offsetWidth;
+            const trackWidth = recentTrack.scrollWidth;
+
+            if (currentPosition >= 0) {
+                currentPosition = 0;
+                recentTrack.style.transform = `translateX(0px)`;
+                recentPrevBtn.disabled = true;
+            } else {
+                recentPrevBtn.disabled = false;
+            }
+
+            if (containerWidth > 0 && Math.abs(currentPosition) + containerWidth >= trackWidth - 10) {
+                recentNextBtn.disabled = true;
+            } else {
+                recentNextBtn.disabled = false;
+            }
+        };
+
+        recentNextBtn.addEventListener('click', () => {
+            const containerWidth = recentTrackContainer.offsetWidth;
+            const maxScroll = (recentTrack.scrollWidth - containerWidth) * -1;
+            currentPosition -= cardWidth;
+            if (currentPosition < maxScroll) {
+                currentPosition = maxScroll;
+            }
+            recentTrack.style.transform = `translateX(${currentPosition}px)`;
+            window.updateRecentCarouselButtons();
+        });
+
+        recentPrevBtn.addEventListener('click', () => {
+            currentPosition += cardWidth;
+            if (currentPosition > 0) {
+                currentPosition = 0;
+            }
+            recentTrack.style.transform = `translateX(${currentPosition}px)`;
+            window.updateRecentCarouselButtons();
+        });
+
+        window.addEventListener('resize', window.updateRecentCarouselButtons);
+        setTimeout(window.updateRecentCarouselButtons, 200);
     }
 
     // B. Offcanvas 2 (Notes Offcanvas) Logic
@@ -951,6 +1063,48 @@ document.addEventListener("DOMContentLoaded", () => {
                 renderExp();
             });
         });
+    }
+
+    // N. Table 1 (Analytics Data Table) Interactions
+    const table1Preview = document.getElementById('preview-table1');
+    if (table1Preview) {
+        const tableSearch = table1Preview.querySelector('.table-search input');
+        const rows = table1Preview.querySelectorAll('.custom-data-table tbody tr:not(.total-row)');
+        const selectAllBtn = table1Preview.querySelector('.minus-square');
+        const checkboxes = table1Preview.querySelectorAll('.custom-data-table tbody .custom-checkbox');
+
+        if (tableSearch && rows.length > 0) {
+            tableSearch.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                rows.forEach(r => {
+                    const text = r.textContent.toLowerCase();
+                    r.style.display = text.includes(query) ? '' : 'none';
+                });
+            });
+        }
+
+        if (selectAllBtn && checkboxes.length > 0) {
+            let allChecked = false;
+            selectAllBtn.addEventListener('click', () => {
+                allChecked = !allChecked;
+                checkboxes.forEach(cb => {
+                    cb.checked = allChecked;
+                    const tr = cb.closest('tr');
+                    if (tr && !tr.classList.contains('total-row')) {
+                        tr.style.backgroundColor = allChecked ? '#f1f3f4' : '';
+                    }
+                });
+            });
+
+            checkboxes.forEach(cb => {
+                cb.addEventListener('change', () => {
+                    const tr = cb.closest('tr');
+                    if (tr && !tr.classList.contains('total-row')) {
+                        tr.style.backgroundColor = cb.checked ? '#f1f3f4' : '';
+                    }
+                });
+            });
+        }
     }
 
     // M. Đồng bộ URL Hash

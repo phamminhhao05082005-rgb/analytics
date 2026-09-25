@@ -378,6 +378,68 @@ const categories = [
 <!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
                 depNote: `<strong>Lưu ý cho Dev:</strong> Component cần script <code>carousel1.js</code> để tính toán khoảng trượt và kích hoạt ẩn/hiện nút Next/Prev.`
+            },
+            {
+                sampleId: 'carousel-mau-2',
+                badgeText: 'Mẫu 2',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Exploration Carousel (Băng chuyền danh sách các mẫu bản khám phá dữ liệu)',
+                htmlFile: 'carousel2.html',
+                cssFile: 'carousel2.css',
+                jsFile: 'carousel2.js',
+                previewId: 'preview-carousel2',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Component cần script <code>carousel2.js</code> để điều hướng thanh trượt bản khám phá, tính toán độ rộng thẻ và vô hiệu hóa nút Prev/Next khi tới biên.`
+            },
+            {
+                sampleId: 'carousel-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-success',
+                title: 'Analytics Recent Carousel (Băng chuyền các báo cáo và hoạt động xem gần đây)',
+                htmlFile: 'carousel3.html',
+                cssFile: 'carousel3.css',
+                jsFile: 'carousel3.js',
+                previewId: 'preview-carousel3',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Component cần script <code>carousel3.js</code> để cuộn ngang qua các mục báo cáo xem gần đây.`
             }
         ]
     },
@@ -491,6 +553,37 @@ const categories = [
 <!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
                 depNote: `<strong>Lưu ý cho Dev:</strong> Hộp thoại chứa các tab chọn lọc (Tất cả, Ưa thích, Gần đây) và bộ lọc thuộc tính. Click vào nút "Minh Hào" trong bản xem trước để mở Modal.`
+            },
+            {
+                sampleId: 'modal-mau-2',
+                badgeText: 'Mẫu 2',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Add User Modal (Hộp thoại thêm người dùng, phân quyền vai trò & hạn chế dữ liệu)',
+                htmlFile: 'modal2.html',
+                cssFile: 'modal2.css',
+                jsFile: null,
+                previewId: 'preview-modal2',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Hộp thoại phân quyền toàn diện kích thước 90vw x 90vh với đầy đủ danh sách vai trò chuẩn (Quản trị viên, Người chỉnh sửa, Người xem...) và các quy định hạn chế dữ liệu tài sản. Bấm nút trong bản xem trước để mở Modal.`
             }
         ]
     },
@@ -662,6 +755,37 @@ const categories = [
 <!-- 3. Bootstrap Icons (Đặt trong <head>) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">`,
                 depNote: `<strong>Lưu ý cho Dev:</strong> Cần script <code>popover1.js</code> để lắng nghe sự kiện focus vào ô input và tự động ẩn popover khi người dùng nhấp chuột ra ngoài.`
+            },
+            {
+                sampleId: 'popover-mau-2',
+                badgeText: 'Mẫu 2',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Help Popover (Menu trợ giúp nhanh, hướng dẫn & gửi phản hồi)',
+                htmlFile: 'popover2.html',
+                cssFile: 'popover2.css',
+                jsFile: null,
+                previewId: 'preview-popover2',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Menu trợ giúp nhanh kích hoạt từ icon dấu chấm hỏi với <code>dropdown-menu-end</code> và hiệu ứng bóng đổ đẹp mắt.`
             }
         ]
     },
@@ -808,6 +932,47 @@ const categories = [
 <!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
                 depNote: `<strong>Lưu ý cho Dev:</strong> Hệ thống tab khám phá nâng cao cho phép chuyển đổi loại báo cáo (Biểu mẫu tùy ý, Phễu, Khám phá người dùng...), thêm tab mới qua dropdown, xóa và nhân bản tab tức thì.`
+            }
+        ]
+    },
+    {
+        id: 'tab-tables',
+        btnId: 'tab-tables-btn',
+        title: '11. Table Components',
+        desc: 'Các mẫu Bảng dữ liệu (Data Table) phân tích chuyên sâu với 2 cột cố định (Sticky Columns), bộ lọc và chỉ số tương tác',
+        icon: 'bi-table text-primary',
+        active: false,
+        items: [
+            {
+                sampleId: 'table-mau-1',
+                badgeText: 'Mẫu 1',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Data Table (Bảng dữ liệu phân tích chi tiết với 2 cột cố định, tìm kiếm và phân trang)',
+                htmlFile: 'table1.html',
+                cssFile: 'table1.css',
+                jsFile: null,
+                previewId: 'preview-table1',
+                previewClass: '',
+                depBadges: [
+                    { type: 'req', text: 'Bootstrap 5 CSS (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap Icons (Bắt buộc)' },
+                    { type: 'req', text: 'Bootstrap 5 JS Bundle (Bắt buộc)' },
+                    { type: 'rec', text: 'Google Font Roboto (Khuyên dùng)' }
+                ],
+                depCode: `<!-- 1. Google Font Roboto (Đặt trong <head>) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 2. Bootstrap 5 CSS (Đặt trong <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 3. Bootstrap Icons (Đặt trong <head>) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước </body>) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>`,
+                depNote: `<strong>Lưu ý cho Dev:</strong> Bảng phân tích đa chiều chuyên sâu có 2 cột cố định (checkbox & thứ nguyên), thanh công cụ tìm kiếm, chọn số hàng mỗi trang và hỗ trợ cuộn ngang mượt mà.`
             }
         ]
     }
@@ -1060,16 +1225,21 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="card8.css">
     <link rel="stylesheet" href="card9.css">
     <link rel="stylesheet" href="carousel1.css">
+    <link rel="stylesheet" href="carousel2.css">
+    <link rel="stylesheet" href="carousel3.css">
     <link rel="stylesheet" href="dropdown1.css">
     <link rel="stylesheet" href="dropdown2.css">
     <link rel="stylesheet" href="modal1.css">
+    <link rel="stylesheet" href="modal2.css">
     <link rel="stylesheet" href="offcanvas1.css">
     <link rel="stylesheet" href="offcanvas2.css">
     <link rel="stylesheet" href="offcanvas3.css">
     <link rel="stylesheet" href="offcanvas4.css">
     <link rel="stylesheet" href="popover1.css">
+    <link rel="stylesheet" href="popover2.css">
     <link rel="stylesheet" href="sidebar1.css">
     <link rel="stylesheet" href="sidebar2.css">
+    <link rel="stylesheet" href="table1.css">
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
 

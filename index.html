@@ -26,16 +26,21 @@
     <link rel="stylesheet" href="card8.css">
     <link rel="stylesheet" href="card9.css">
     <link rel="stylesheet" href="carousel1.css">
+    <link rel="stylesheet" href="carousel2.css">
+    <link rel="stylesheet" href="carousel3.css">
     <link rel="stylesheet" href="dropdown1.css">
     <link rel="stylesheet" href="dropdown2.css">
     <link rel="stylesheet" href="modal1.css">
+    <link rel="stylesheet" href="modal2.css">
     <link rel="stylesheet" href="offcanvas1.css">
     <link rel="stylesheet" href="offcanvas2.css">
     <link rel="stylesheet" href="offcanvas3.css">
     <link rel="stylesheet" href="offcanvas4.css">
     <link rel="stylesheet" href="popover1.css">
+    <link rel="stylesheet" href="popover2.css">
     <link rel="stylesheet" href="sidebar1.css">
     <link rel="stylesheet" href="sidebar2.css">
+    <link rel="stylesheet" href="table1.css">
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
 
@@ -158,6 +163,15 @@
                         <span class="d-flex align-items-center gap-2">
                             <i class="bi bi-segmented-nav text-success"></i>
                             <span>Tabs</span>
+                        </span>
+                    </button>
+                    <!-- Tab Table Components -->
+                    <button class="nav-link  d-flex align-items-center justify-content-between mb-1"
+                        id="tab-tables-btn" data-bs-toggle="pill" data-bs-target="#tab-tables" type="button"
+                        role="tab" aria-controls="tab-tables" aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-table text-primary"></i>
+                            <span>Table</span>
                         </span>
                     </button>
                 </div>
@@ -6343,6 +6357,8 @@
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#carousel-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Analytics Carousel Collection</a>
+                                <a href="#carousel-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Analytics Exploration Carousel</a>
+                                <a href="#carousel-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Analytics Recent Carousel</a>
                             </div>
                         </div>
 
@@ -7170,6 +7186,1269 @@
                                 </div>
                             </div>
                         </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 2: Analytics Exploration Carousel (Băng chuyền danh sách các mẫu bản khám phá dữ liệu) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="carousel-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Exploration Carousel (Băng chuyền danh sách các mẫu bản khám phá dữ liệu)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-carousel2">
+                                    <div class="container-fluid max-w-1200 mx-auto">
+    <div class="carousel-wrapper position-relative">
+        
+        <button class="nav-btn prev-btn shadow-sm" id="expPrevBtn" disabled>
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <div class="carousel-track-container" id="expTrackContainer">
+            <div class="carousel-track d-flex gap-3" id="expTrack">
+                
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail d-flex justify-content-center align-items-center">
+                        <div class="plus-icon-wrapper">
+                            <div class="plus-line vertical bg-danger"></div>
+                            <div class="plus-line horizontal bg-primary"></div>
+                            <div class="plus-line horizontal-right bg-warning"></div>
+                            <div class="plus-line vertical-bottom bg-success"></div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Trống</h3>
+                        <p class="card-desc">Tạo một bản khám phá mới</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="20" y="20" width="200" height="4" fill="#dadce0" />
+                            <rect x="20" y="32" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="32" width="30" height="15" fill="#d2e3fc" />
+                            <rect x="90" y="32" width="50" height="4" fill="#dadce0" />
+                            <rect x="150" y="32" width="70" height="15" fill="#d2e3fc" />
+                            
+                            <rect x="20" y="55" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="55" width="30" height="15" fill="#8ab4f8" />
+                            <rect x="90" y="55" width="50" height="15" fill="#8ab4f8" />
+                            <rect x="150" y="55" width="70" height="30" fill="#f1f3f4" />
+                            <rect x="150" y="60" width="25" height="15" fill="#8ab4f8" />
+
+                            <rect x="20" y="78" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="78" width="30" height="15" fill="#d2e3fc" />
+                            <rect x="90" y="78" width="50" height="15" fill="#d2e3fc" />
+                            <rect x="150" y="90" width="70" height="15" fill="#d2e3fc" />
+                            <rect x="20" y="100" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="100" width="30" height="15" fill="#f1f3f4" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Biểu mẫu tùy ý</h3>
+                        <p class="card-desc">Bạn có thể khám phá những thông tin chi tiết nào thông qua các bảng và biểu đồ tùy chỉnh?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="30" y="30" width="20" height="60" fill="#8ab4f8" />
+                            <polygon points="50,30 65,40 65,90 50,90" fill="#f1f3f4" />
+                            
+                            <rect x="65" y="40" width="20" height="50" fill="#8ab4f8" />
+                            <polygon points="85,40 100,50 100,90 85,90" fill="#f1f3f4" />
+
+                            <rect x="100" y="50" width="20" height="40" fill="#8ab4f8" />
+                            <polygon points="120,50 135,60 135,90 120,90" fill="#f1f3f4" />
+
+                            <rect x="135" y="60" width="20" height="30" fill="#8ab4f8" />
+                            <polygon points="155,60 170,75 170,90 155,90" fill="#f1f3f4" />
+
+                            <rect x="170" y="75" width="20" height="15" fill="#8ab4f8" />
+                            <polygon points="190,75 205,82 205,90 190,90" fill="#f1f3f4" />
+
+                            <rect x="205" y="82" width="15" height="8" fill="#8ab4f8" />
+
+                            <rect x="20" y="90" width="200" height="2" fill="#dadce0" />
+                            <rect x="30" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="65" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="100" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="135" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="170" y="100" width="20" height="3" fill="#dadce0" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá phễu</h3>
+                        <p class="card-desc">Bạn có thể phân tích, phân đoạn và chia nhỏ các hành trình nào của người dùng thông qua phễu nhiều bước?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="25" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="70" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="115" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="160" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="205" y="15" width="15" height="3" fill="#dadce0" />
+
+                            <rect x="30" y="25" width="5" height="60" fill="#4285f4" />
+                            <rect x="75" y="25" width="5" height="35" fill="#4285f4" />
+                            <rect x="120" y="25" width="5" height="25" fill="#4285f4" />
+                            <rect x="165" y="25" width="5" height="15" fill="#4285f4" />
+
+                            <path d="M 35 25 C 50 25, 60 25, 75 25 L 75 60 C 60 60, 50 85, 35 85 Z" fill="#d2e3fc" opacity="0.8"/>
+                            <path d="M 80 25 C 95 25, 105 25, 120 25 L 120 50 C 105 50, 95 60, 80 60 Z" fill="#d2e3fc" opacity="0.8"/>
+                            <path d="M 125 25 C 140 25, 150 25, 165 25 L 165 40 C 150 40, 140 50, 125 50 Z" fill="#d2e3fc" opacity="0.8"/>
+                            <path d="M 170 25 C 185 25, 195 25, 210 25 L 210 30 C 195 30, 185 40, 170 40 Z" fill="#d2e3fc" opacity="0.8"/>
+
+                            <rect x="75" y="70" width="5" height="20" fill="#4285f4" />
+                            <path d="M 35 85 C 50 85, 60 70, 75 70 L 75 90 C 60 90, 50 100, 35 100 Z" fill="#e8f0fe" opacity="0.8"/>
+
+                            <rect x="120" y="65" width="5" height="10" fill="#4285f4" />
+                            <path d="M 80 60 C 95 60, 105 65, 120 65 L 120 75 C 105 75, 95 85, 80 85 Z" fill="#e8f0fe" opacity="0.8"/>
+
+                            <rect x="210" y="25" width="5" height="5" fill="#4285f4" />
+                            <rect x="210" y="35" width="5" height="5" fill="#4285f4" />
+                            <rect x="210" y="45" width="5" height="5" fill="#4285f4" />
+
+                            <rect x="220" y="26" width="10" height="3" fill="#dadce0" />
+                            <rect x="220" y="36" width="10" height="3" fill="#dadce0" />
+                            <rect x="220" y="46" width="10" height="3" fill="#dadce0" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá lộ trình</h3>
+                        <p class="card-desc">Bạn có thể khám phá những hành trình nào của người dùng thông qua biểu đồ cây?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="30" y="30" width="20" height="3" fill="#dadce0" />
+                            <rect x="30" y="90" width="20" height="3" fill="#dadce0" />
+                            <rect x="190" y="30" width="20" height="3" fill="#dadce0" />
+                            <rect x="190" y="90" width="20" height="3" fill="#dadce0" />
+                            
+                            <circle cx="100" cy="60" r="35" fill="#8ab4f8" opacity="0.6" stroke="#1a73e8" stroke-width="1.5" />
+                            <circle cx="140" cy="60" r="28" fill="#d2e3fc" opacity="0.6" stroke="#1a73e8" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Chồng chéo phân khúc</h3>
+                        <p class="card-desc">Điểm chung nào về phân đoạn người dùng cho bạn biết về hành vi của họ?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="20" y="25" width="40" height="4" fill="#dadce0" />
+                            <rect x="20" y="35" width="25" height="4" fill="#8ab4f8" />
+                            <rect x="150" y="25" width="60" height="4" fill="#dadce0" />
+                            <rect x="150" y="35" width="40" height="4" fill="#dadce0" />
+                            
+                            <rect x="20" y="55" width="200" height="15" fill="#f1f3f4" />
+                            <rect x="30" y="60" width="30" height="5" fill="#dadce0" />
+                            <rect x="80" y="60" width="30" height="5" fill="#dadce0" />
+                            <rect x="130" y="60" width="30" height="5" fill="#dadce0" />
+                            <rect x="180" y="60" width="30" height="5" fill="#dadce0" />
+
+                            <rect x="20" y="80" width="140" height="3" fill="#dadce0" />
+                            <rect x="20" y="90" width="100" height="3" fill="#dadce0" />
+                            <rect x="20" y="100" width="60" height="3" fill="#dadce0" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá người dùng</h3>
+                        <p class="card-desc">Bạn có thể khám phá các hành vi cá nhân nào thông qua việc tìm hiểu chi tiết về hoạt động của từng người dùng?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <line x1="20" y1="35" x2="220" y2="35" stroke="#dadce0" stroke-width="1" />
+                            <polyline points="20,15 60,30 100,25 140,28 180,25" fill="none" stroke="#4285f4" stroke-width="1.5" />
+                            <circle cx="20" cy="15" r="2" fill="#4285f4" />
+                            <circle cx="60" cy="30" r="2" fill="#4285f4" />
+                            <circle cx="100" cy="25" r="2" fill="#4285f4" />
+                            <circle cx="140" cy="28" r="2" fill="#4285f4" />
+                            <circle cx="180" cy="25" r="2" fill="#4285f4" />
+
+                            <rect x="50" y="45" width="20" height="12" fill="#4285f4" />
+                            <rect x="75" y="45" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="100" y="45" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="125" y="45" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="150" y="45" width="20" height="12" fill="#d2e3fc" />
+
+                            <rect x="50" y="60" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="75" y="60" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="100" y="60" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="125" y="60" width="20" height="12" fill="#e8f0fe" />
+
+                            <rect x="50" y="75" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="75" y="75" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="100" y="75" width="20" height="12" fill="#e8f0fe" />
+
+                            <rect x="50" y="90" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="75" y="90" width="20" height="12" fill="#e8f0fe" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá nhóm thuần tập</h3>
+                        <p class="card-desc">Theo thời gian, bạn có thể khám phá những thông tin chi tiết nào từ hành vi của nhóm người dùng thuần tập?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <line x1="20" y1="30" x2="220" y2="30" stroke="#dadce0" stroke-width="1" />
+                            <line x1="20" y1="50" x2="220" y2="50" stroke="#f1f3f4" stroke-width="1" />
+                            <line x1="20" y1="70" x2="220" y2="70" stroke="#f1f3f4" stroke-width="1" />
+                            <line x1="20" y1="90" x2="220" y2="90" stroke="#f1f3f4" stroke-width="1" />
+
+                            <rect x="30" y="20" width="15" height="4" fill="#dadce0" />
+                            <rect x="80" y="20" width="15" height="4" fill="#dadce0" />
+                            <rect x="130" y="20" width="15" height="4" fill="#dadce0" />
+                            <rect x="180" y="20" width="15" height="4" fill="#dadce0" />
+
+                            <rect x="30" y="40" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="40" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="40" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="40" width="20" height="6" fill="#a8c7fa" />
+
+                            <rect x="30" y="60" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="60" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="60" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="60" width="20" height="6" fill="#a8c7fa" />
+
+                            <rect x="30" y="80" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="80" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="80" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="80" width="20" height="6" fill="#a8c7fa" />
+
+                            <rect x="30" y="100" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="100" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="100" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="100" width="20" height="6" fill="#a8c7fa" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Giá trị lâu dài của người dùng</h3>
+                        <p class="card-desc">Bạn có thể tìm hiểu thông tin gì khi phân tích toàn bộ thời gian hoạt động của người dùng?</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn shadow-sm" id="expNextBtn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-carousel2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Roboto (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-carousel2">&lt;!-- 1. Google Font Roboto (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 3. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Component cần script <code>carousel2.js</code> để điều hướng thanh trượt bản khám phá, tính toán độ rộng thẻ và vô hiệu hóa nút Prev/Next khi tới biên.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_carousel2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-carousel2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-carousel2">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Exploration Carousel&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS carousel2.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-carousel2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-carousel2">&lt;div class=&quot;container-fluid max-w-1200 mx-auto&quot;&gt;
+    &lt;div class=&quot;carousel-wrapper position-relative&quot;&gt;
+        
+        &lt;button class=&quot;nav-btn prev-btn shadow-sm&quot; id=&quot;expPrevBtn&quot; disabled&gt;
+            &lt;i class=&quot;bi bi-chevron-left&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+
+        &lt;div class=&quot;carousel-track-container&quot; id=&quot;expTrackContainer&quot;&gt;
+            &lt;div class=&quot;carousel-track d-flex gap-3&quot; id=&quot;expTrack&quot;&gt;
+                
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail d-flex justify-content-center align-items-center&quot;&gt;
+                        &lt;div class=&quot;plus-icon-wrapper&quot;&gt;
+                            &lt;div class=&quot;plus-line vertical bg-danger&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;plus-line horizontal bg-primary&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;plus-line horizontal-right bg-warning&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;plus-line vertical-bottom bg-success&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Trống&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Tạo một bản khám phá mới&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 240 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;rect x=&quot;20&quot; y=&quot;20&quot; width=&quot;200&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;20&quot; y=&quot;32&quot; width=&quot;20&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;50&quot; y=&quot;32&quot; width=&quot;30&quot; height=&quot;15&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;90&quot; y=&quot;32&quot; width=&quot;50&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;150&quot; y=&quot;32&quot; width=&quot;70&quot; height=&quot;15&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            
+                            &lt;rect x=&quot;20&quot; y=&quot;55&quot; width=&quot;20&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;50&quot; y=&quot;55&quot; width=&quot;30&quot; height=&quot;15&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;90&quot; y=&quot;55&quot; width=&quot;50&quot; height=&quot;15&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;150&quot; y=&quot;55&quot; width=&quot;70&quot; height=&quot;30&quot; fill=&quot;#f1f3f4&quot; /&gt;
+                            &lt;rect x=&quot;150&quot; y=&quot;60&quot; width=&quot;25&quot; height=&quot;15&quot; fill=&quot;#8ab4f8&quot; /&gt;
+
+                            &lt;rect x=&quot;20&quot; y=&quot;78&quot; width=&quot;20&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;50&quot; y=&quot;78&quot; width=&quot;30&quot; height=&quot;15&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;90&quot; y=&quot;78&quot; width=&quot;50&quot; height=&quot;15&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;150&quot; y=&quot;90&quot; width=&quot;70&quot; height=&quot;15&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;20&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;50&quot; y=&quot;100&quot; width=&quot;30&quot; height=&quot;15&quot; fill=&quot;#f1f3f4&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Biểu mẫu tùy ý&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Bạn có thể khám phá những thông tin chi tiết nào thông qua các bảng và biểu đồ tùy chỉnh?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 240 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;rect x=&quot;30&quot; y=&quot;30&quot; width=&quot;20&quot; height=&quot;60&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;polygon points=&quot;50,30 65,40 65,90 50,90&quot; fill=&quot;#f1f3f4&quot; /&gt;
+                            
+                            &lt;rect x=&quot;65&quot; y=&quot;40&quot; width=&quot;20&quot; height=&quot;50&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;polygon points=&quot;85,40 100,50 100,90 85,90&quot; fill=&quot;#f1f3f4&quot; /&gt;
+
+                            &lt;rect x=&quot;100&quot; y=&quot;50&quot; width=&quot;20&quot; height=&quot;40&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;polygon points=&quot;120,50 135,60 135,90 120,90&quot; fill=&quot;#f1f3f4&quot; /&gt;
+
+                            &lt;rect x=&quot;135&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;30&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;polygon points=&quot;155,60 170,75 170,90 155,90&quot; fill=&quot;#f1f3f4&quot; /&gt;
+
+                            &lt;rect x=&quot;170&quot; y=&quot;75&quot; width=&quot;20&quot; height=&quot;15&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;polygon points=&quot;190,75 205,82 205,90 190,90&quot; fill=&quot;#f1f3f4&quot; /&gt;
+
+                            &lt;rect x=&quot;205&quot; y=&quot;82&quot; width=&quot;15&quot; height=&quot;8&quot; fill=&quot;#8ab4f8&quot; /&gt;
+
+                            &lt;rect x=&quot;20&quot; y=&quot;90&quot; width=&quot;200&quot; height=&quot;2&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;30&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;65&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;100&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;135&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;170&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Khám phá phễu&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Bạn có thể phân tích, phân đoạn và chia nhỏ các hành trình nào của người dùng thông qua phễu nhiều bước?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 240 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;rect x=&quot;25&quot; y=&quot;15&quot; width=&quot;25&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;70&quot; y=&quot;15&quot; width=&quot;25&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;115&quot; y=&quot;15&quot; width=&quot;25&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;160&quot; y=&quot;15&quot; width=&quot;25&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;205&quot; y=&quot;15&quot; width=&quot;15&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+
+                            &lt;rect x=&quot;30&quot; y=&quot;25&quot; width=&quot;5&quot; height=&quot;60&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;rect x=&quot;75&quot; y=&quot;25&quot; width=&quot;5&quot; height=&quot;35&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;rect x=&quot;120&quot; y=&quot;25&quot; width=&quot;5&quot; height=&quot;25&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;rect x=&quot;165&quot; y=&quot;25&quot; width=&quot;5&quot; height=&quot;15&quot; fill=&quot;#4285f4&quot; /&gt;
+
+                            &lt;path d=&quot;M 35 25 C 50 25, 60 25, 75 25 L 75 60 C 60 60, 50 85, 35 85 Z&quot; fill=&quot;#d2e3fc&quot; opacity=&quot;0.8&quot;/&gt;
+                            &lt;path d=&quot;M 80 25 C 95 25, 105 25, 120 25 L 120 50 C 105 50, 95 60, 80 60 Z&quot; fill=&quot;#d2e3fc&quot; opacity=&quot;0.8&quot;/&gt;
+                            &lt;path d=&quot;M 125 25 C 140 25, 150 25, 165 25 L 165 40 C 150 40, 140 50, 125 50 Z&quot; fill=&quot;#d2e3fc&quot; opacity=&quot;0.8&quot;/&gt;
+                            &lt;path d=&quot;M 170 25 C 185 25, 195 25, 210 25 L 210 30 C 195 30, 185 40, 170 40 Z&quot; fill=&quot;#d2e3fc&quot; opacity=&quot;0.8&quot;/&gt;
+
+                            &lt;rect x=&quot;75&quot; y=&quot;70&quot; width=&quot;5&quot; height=&quot;20&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;path d=&quot;M 35 85 C 50 85, 60 70, 75 70 L 75 90 C 60 90, 50 100, 35 100 Z&quot; fill=&quot;#e8f0fe&quot; opacity=&quot;0.8&quot;/&gt;
+
+                            &lt;rect x=&quot;120&quot; y=&quot;65&quot; width=&quot;5&quot; height=&quot;10&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;path d=&quot;M 80 60 C 95 60, 105 65, 120 65 L 120 75 C 105 75, 95 85, 80 85 Z&quot; fill=&quot;#e8f0fe&quot; opacity=&quot;0.8&quot;/&gt;
+
+                            &lt;rect x=&quot;210&quot; y=&quot;25&quot; width=&quot;5&quot; height=&quot;5&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;rect x=&quot;210&quot; y=&quot;35&quot; width=&quot;5&quot; height=&quot;5&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;rect x=&quot;210&quot; y=&quot;45&quot; width=&quot;5&quot; height=&quot;5&quot; fill=&quot;#4285f4&quot; /&gt;
+
+                            &lt;rect x=&quot;220&quot; y=&quot;26&quot; width=&quot;10&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;220&quot; y=&quot;36&quot; width=&quot;10&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;220&quot; y=&quot;46&quot; width=&quot;10&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Khám phá lộ trình&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Bạn có thể khám phá những hành trình nào của người dùng thông qua biểu đồ cây?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 240 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;rect x=&quot;30&quot; y=&quot;30&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;30&quot; y=&quot;90&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;190&quot; y=&quot;30&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;190&quot; y=&quot;90&quot; width=&quot;20&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            
+                            &lt;circle cx=&quot;100&quot; cy=&quot;60&quot; r=&quot;35&quot; fill=&quot;#8ab4f8&quot; opacity=&quot;0.6&quot; stroke=&quot;#1a73e8&quot; stroke-width=&quot;1.5&quot; /&gt;
+                            &lt;circle cx=&quot;140&quot; cy=&quot;60&quot; r=&quot;28&quot; fill=&quot;#d2e3fc&quot; opacity=&quot;0.6&quot; stroke=&quot;#1a73e8&quot; stroke-width=&quot;1.5&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Chồng chéo phân khúc&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Điểm chung nào về phân đoạn người dùng cho bạn biết về hành vi của họ?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 240 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;rect x=&quot;20&quot; y=&quot;25&quot; width=&quot;40&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;20&quot; y=&quot;35&quot; width=&quot;25&quot; height=&quot;4&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;150&quot; y=&quot;25&quot; width=&quot;60&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;150&quot; y=&quot;35&quot; width=&quot;40&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            
+                            &lt;rect x=&quot;20&quot; y=&quot;55&quot; width=&quot;200&quot; height=&quot;15&quot; fill=&quot;#f1f3f4&quot; /&gt;
+                            &lt;rect x=&quot;30&quot; y=&quot;60&quot; width=&quot;30&quot; height=&quot;5&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;80&quot; y=&quot;60&quot; width=&quot;30&quot; height=&quot;5&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;130&quot; y=&quot;60&quot; width=&quot;30&quot; height=&quot;5&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;180&quot; y=&quot;60&quot; width=&quot;30&quot; height=&quot;5&quot; fill=&quot;#dadce0&quot; /&gt;
+
+                            &lt;rect x=&quot;20&quot; y=&quot;80&quot; width=&quot;140&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;20&quot; y=&quot;90&quot; width=&quot;100&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;20&quot; y=&quot;100&quot; width=&quot;60&quot; height=&quot;3&quot; fill=&quot;#dadce0&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Khám phá người dùng&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Bạn có thể khám phá các hành vi cá nhân nào thông qua việc tìm hiểu chi tiết về hoạt động của từng người dùng?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 240 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;line x1=&quot;20&quot; y1=&quot;35&quot; x2=&quot;220&quot; y2=&quot;35&quot; stroke=&quot;#dadce0&quot; stroke-width=&quot;1&quot; /&gt;
+                            &lt;polyline points=&quot;20,15 60,30 100,25 140,28 180,25&quot; fill=&quot;none&quot; stroke=&quot;#4285f4&quot; stroke-width=&quot;1.5&quot; /&gt;
+                            &lt;circle cx=&quot;20&quot; cy=&quot;15&quot; r=&quot;2&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;circle cx=&quot;60&quot; cy=&quot;30&quot; r=&quot;2&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;circle cx=&quot;100&quot; cy=&quot;25&quot; r=&quot;2&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;circle cx=&quot;140&quot; cy=&quot;28&quot; r=&quot;2&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;circle cx=&quot;180&quot; cy=&quot;25&quot; r=&quot;2&quot; fill=&quot;#4285f4&quot; /&gt;
+
+                            &lt;rect x=&quot;50&quot; y=&quot;45&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#4285f4&quot; /&gt;
+                            &lt;rect x=&quot;75&quot; y=&quot;45&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;100&quot; y=&quot;45&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;125&quot; y=&quot;45&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;150&quot; y=&quot;45&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#d2e3fc&quot; /&gt;
+
+                            &lt;rect x=&quot;50&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;75&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;100&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;125&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#e8f0fe&quot; /&gt;
+
+                            &lt;rect x=&quot;50&quot; y=&quot;75&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#8ab4f8&quot; /&gt;
+                            &lt;rect x=&quot;75&quot; y=&quot;75&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;100&quot; y=&quot;75&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#e8f0fe&quot; /&gt;
+
+                            &lt;rect x=&quot;50&quot; y=&quot;90&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#d2e3fc&quot; /&gt;
+                            &lt;rect x=&quot;75&quot; y=&quot;90&quot; width=&quot;20&quot; height=&quot;12&quot; fill=&quot;#e8f0fe&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Khám phá nhóm thuần tập&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Theo thời gian, bạn có thể khám phá những thông tin chi tiết nào từ hành vi của nhóm người dùng thuần tập?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;explore-card flex-shrink-0 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;card-thumbnail&quot;&gt;
+                        &lt;svg viewBox=&quot;0 0 240 120&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+                            &lt;line x1=&quot;20&quot; y1=&quot;30&quot; x2=&quot;220&quot; y2=&quot;30&quot; stroke=&quot;#dadce0&quot; stroke-width=&quot;1&quot; /&gt;
+                            &lt;line x1=&quot;20&quot; y1=&quot;50&quot; x2=&quot;220&quot; y2=&quot;50&quot; stroke=&quot;#f1f3f4&quot; stroke-width=&quot;1&quot; /&gt;
+                            &lt;line x1=&quot;20&quot; y1=&quot;70&quot; x2=&quot;220&quot; y2=&quot;70&quot; stroke=&quot;#f1f3f4&quot; stroke-width=&quot;1&quot; /&gt;
+                            &lt;line x1=&quot;20&quot; y1=&quot;90&quot; x2=&quot;220&quot; y2=&quot;90&quot; stroke=&quot;#f1f3f4&quot; stroke-width=&quot;1&quot; /&gt;
+
+                            &lt;rect x=&quot;30&quot; y=&quot;20&quot; width=&quot;15&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;80&quot; y=&quot;20&quot; width=&quot;15&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;130&quot; y=&quot;20&quot; width=&quot;15&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+                            &lt;rect x=&quot;180&quot; y=&quot;20&quot; width=&quot;15&quot; height=&quot;4&quot; fill=&quot;#dadce0&quot; /&gt;
+
+                            &lt;rect x=&quot;30&quot; y=&quot;40&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;80&quot; y=&quot;40&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;130&quot; y=&quot;40&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;180&quot; y=&quot;40&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+
+                            &lt;rect x=&quot;30&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;80&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;130&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;180&quot; y=&quot;60&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+
+                            &lt;rect x=&quot;30&quot; y=&quot;80&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;80&quot; y=&quot;80&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;130&quot; y=&quot;80&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;180&quot; y=&quot;80&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+
+                            &lt;rect x=&quot;30&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;80&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;130&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                            &lt;rect x=&quot;180&quot; y=&quot;100&quot; width=&quot;20&quot; height=&quot;6&quot; fill=&quot;#a8c7fa&quot; /&gt;
+                        &lt;/svg&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;card-info&quot;&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Giá trị lâu dài của người dùng&lt;/h3&gt;
+                        &lt;p class=&quot;card-desc&quot;&gt;Bạn có thể tìm hiểu thông tin gì khi phân tích toàn bộ thời gian hoạt động của người dùng?&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;button class=&quot;nav-btn next-btn shadow-sm&quot; id=&quot;expNextBtn&quot;&gt;
+            &lt;i class=&quot;bi bi-chevron-right&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-carousel2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-carousel2">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.max-w-1200 {
+    max-width: 1200px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.carousel-track {
+    transition: transform 0.4s ease-in-out;
+}
+
+.explore-card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-thumbnail {
+    width: 100%;
+    height: 140px;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    margin-bottom: 16px;
+}
+
+.explore-card:hover .card-thumbnail {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.plus-icon-wrapper {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.plus-line {
+    position: absolute;
+    border-radius: 2px;
+}
+
+.plus-line.vertical { width: 6px; height: 21px; top: 0; left: 21px; }
+.plus-line.vertical-bottom { width: 6px; height: 21px; bottom: 0; left: 21px; }
+.plus-line.horizontal { width: 21px; height: 6px; top: 21px; left: 0; }
+.plus-line.horizontal-right { width: 21px; height: 6px; top: 21px; right: 0; }
+
+.card-info {
+    padding: 0 4px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #202124;
+    margin-bottom: 6px;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 60px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5f6368;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: #f8f9fa;
+    color: #202124;
+}
+
+.nav-btn:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-carousel2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-carousel2">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const track = document.getElementById(&#039;expTrack&#039;);
+    const prevBtn = document.getElementById(&#039;expPrevBtn&#039;);
+    const nextBtn = document.getElementById(&#039;expNextBtn&#039;);
+    
+    const cardWidth = 296; 
+    let currentPosition = 0;
+
+    const updateButtons = () =&gt; {
+        const containerWidth = document.getElementById(&#039;expTrackContainer&#039;).offsetWidth;
+        const trackWidth = track.scrollWidth;
+
+        if (currentPosition === 0) {
+            prevBtn.disabled = true;
+        } else {
+            prevBtn.disabled = false;
+        }
+
+        if (Math.abs(currentPosition) + containerWidth &gt;= trackWidth) {
+            nextBtn.disabled = true;
+        } else {
+            nextBtn.disabled = false;
+        }
+    };
+
+    nextBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        const containerWidth = document.getElementById(&#039;expTrackContainer&#039;).offsetWidth;
+        const maxScroll = (track.scrollWidth - containerWidth) * -1;
+        
+        currentPosition -= cardWidth;
+        
+        if (currentPosition &lt; maxScroll) {
+            currentPosition = maxScroll;
+        }
+
+        track.style.transform = `translateX(${currentPosition}px)`;
+        updateButtons();
+    });
+
+    prevBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        currentPosition += cardWidth;
+        
+        if (currentPosition &gt; 0) {
+            currentPosition = 0;
+        }
+
+        track.style.transform = `translateX(${currentPosition}px)`;
+        updateButtons();
+    });
+
+    window.addEventListener(&#039;resize&#039;, updateButtons);
+    
+    setTimeout(updateButtons, 100);
+});</code></pre>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 3: Analytics Recent Carousel (Băng chuyền các báo cáo và hoạt động xem gần đây) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="carousel-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Recent Carousel (Băng chuyền các báo cáo và hoạt động xem gần đây)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-carousel3">
+                                    <div class="container-fluid max-w-1200 mx-auto">
+    <div class="recent-carousel-wrapper position-relative">
+        
+        <button class="nav-btn prev-btn shadow-sm" id="recentPrevBtn" disabled>
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <div class="recent-track-container" id="recentTrackContainer">
+            <div class="recent-track d-flex gap-3" id="recentTrack">
+                
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Tổng quan nhanh về báo cáo</div>
+                        <div class="recent-time">Vừa xong</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Khám phá</div>
+                        <div class="recent-time">Vừa xong</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Trang và màn hình</div>
+                        <div class="recent-time">Hôm nay</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Tổng quan về hoạt động quảng ...</div>
+                        <div class="recent-time">Hôm nay</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Biểu mẫu tùy ý</div>
+                        <div class="recent-time">Hôm nay</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn shadow-sm" id="recentNextBtn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-carousel3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Roboto (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-carousel3">&lt;!-- 1. Google Font Roboto (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 3. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Component cần script <code>carousel3.js</code> để cuộn ngang qua các mục báo cáo xem gần đây.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_carousel3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-carousel3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-carousel3">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Recent Carousel&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS carousel3.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-carousel3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-carousel3">&lt;div class=&quot;container-fluid max-w-1200 mx-auto&quot;&gt;
+    &lt;div class=&quot;recent-carousel-wrapper position-relative&quot;&gt;
+        
+        &lt;button class=&quot;nav-btn prev-btn shadow-sm&quot; id=&quot;recentPrevBtn&quot; disabled&gt;
+            &lt;i class=&quot;bi bi-chevron-left&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+
+        &lt;div class=&quot;recent-track-container&quot; id=&quot;recentTrackContainer&quot;&gt;
+            &lt;div class=&quot;recent-track d-flex gap-3&quot; id=&quot;recentTrack&quot;&gt;
+                
+                &lt;div class=&quot;recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;recent-icon me-3 d-flex align-items-center justify-content-center&quot;&gt;
+                        &lt;i class=&quot;bi bi-bar-chart-line&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;recent-info overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;recent-title text-truncate mb-1&quot;&gt;Tổng quan nhanh về báo cáo&lt;/div&gt;
+                        &lt;div class=&quot;recent-time&quot;&gt;Vừa xong&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;recent-icon me-3 d-flex align-items-center justify-content-center&quot;&gt;
+                        &lt;i class=&quot;bi bi-graph-up&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;recent-info overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;recent-title text-truncate mb-1&quot;&gt;Khám phá&lt;/div&gt;
+                        &lt;div class=&quot;recent-time&quot;&gt;Vừa xong&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;recent-icon me-3 d-flex align-items-center justify-content-center&quot;&gt;
+                        &lt;i class=&quot;bi bi-bar-chart-line&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;recent-info overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;recent-title text-truncate mb-1&quot;&gt;Trang và màn hình&lt;/div&gt;
+                        &lt;div class=&quot;recent-time&quot;&gt;Hôm nay&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;recent-icon me-3 d-flex align-items-center justify-content-center&quot;&gt;
+                        &lt;i class=&quot;bi bi-bullseye&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;recent-info overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;recent-title text-truncate mb-1&quot;&gt;Tổng quan về hoạt động quảng ...&lt;/div&gt;
+                        &lt;div class=&quot;recent-time&quot;&gt;Hôm nay&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer&quot;&gt;
+                    &lt;div class=&quot;recent-icon me-3 d-flex align-items-center justify-content-center&quot;&gt;
+                        &lt;i class=&quot;bi bi-graph-up&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;recent-info overflow-hidden&quot;&gt;
+                        &lt;div class=&quot;recent-title text-truncate mb-1&quot;&gt;Biểu mẫu tùy ý&lt;/div&gt;
+                        &lt;div class=&quot;recent-time&quot;&gt;Hôm nay&lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;button class=&quot;nav-btn next-btn shadow-sm&quot; id=&quot;recentNextBtn&quot;&gt;
+            &lt;i class=&quot;bi bi-chevron-right&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-carousel3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-carousel3">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.max-w-1200 {
+    max-width: 1200px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.recent-carousel-wrapper {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.recent-track-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.recent-track {
+    transition: transform 0.4s ease-in-out;
+}
+
+.recent-card {
+    width: 280px;
+    height: 80px;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.recent-card:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+}
+
+.recent-icon {
+    font-size: 24px;
+    color: #3b78e7;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.recent-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a73e8;
+}
+
+.recent-time {
+    font-size: 12px;
+    color: #5f6368;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5f6368;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: #f8f9fa;
+    color: #202124;
+}
+
+.nav-btn:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-carousel3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-carousel3">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const track = document.getElementById(&#039;recentTrack&#039;);
+    const prevBtn = document.getElementById(&#039;recentPrevBtn&#039;);
+    const nextBtn = document.getElementById(&#039;recentNextBtn&#039;);
+    
+    const cardWidth = 296; 
+    let currentPosition = 0;
+
+    const updateButtons = () =&gt; {
+        const containerWidth = document.getElementById(&#039;recentTrackContainer&#039;).offsetWidth;
+        const trackWidth = track.scrollWidth;
+
+        if (currentPosition === 0) {
+            prevBtn.disabled = true;
+        } else {
+            prevBtn.disabled = false;
+        }
+
+        if (Math.abs(currentPosition) + containerWidth &gt;= trackWidth) {
+            nextBtn.disabled = true;
+        } else {
+            nextBtn.disabled = false;
+        }
+    };
+
+    nextBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        const containerWidth = document.getElementById(&#039;recentTrackContainer&#039;).offsetWidth;
+        const maxScroll = (track.scrollWidth - containerWidth) * -1;
+        
+        currentPosition -= cardWidth;
+        
+        if (currentPosition &lt; maxScroll) {
+            currentPosition = maxScroll;
+        }
+
+        track.style.transform = `translateX(${currentPosition}px)`;
+        updateButtons();
+    });
+
+    prevBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        currentPosition += cardWidth;
+        
+        if (currentPosition &gt; 0) {
+            currentPosition = 0;
+        }
+
+        track.style.transform = `translateX(${currentPosition}px)`;
+        updateButtons();
+    });
+
+    window.addEventListener(&#039;resize&#039;, updateButtons);
+    
+    setTimeout(updateButtons, 100);
+});</code></pre>
+                                </div>
+                            </div>
+                        </section>
                         
                     </div>
                     <!-- ============================================== -->
@@ -7943,6 +9222,7 @@
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#modal-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Account Selector Modal</a>
+                                <a href="#modal-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Analytics Add User Modal</a>
                             </div>
                         </div>
 
@@ -8586,6 +9866,599 @@
 
 .hover-dark:hover {
     color: #202124 !important;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 2: Analytics Add User Modal (Hộp thoại thêm người dùng, phân quyền vai trò & hạn chế dữ liệu) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="modal-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Add User Modal (Hộp thoại thêm người dùng, phân quyền vai trò & hạn chế dữ liệu)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-modal2">
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
+    Mở modal thêm người dùng
+</button>
+
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content custom-modal-content">
+            
+            <div class="modal-header custom-modal-header d-flex align-items-center">
+                <div class="d-flex align-items-center flex-grow-1">
+                    <button type="button" class="btn-close custom-btn-close ms-2 me-4 shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div>
+                        <div class="header-breadcrumb">Minh Hào <i class="bi bi-chevron-right" style="font-size: 8px; margin: 0 4px;"></i> Minh Hào</div>
+                        <h2 class="header-title">Thêm các quy định hạn chế về dữ liệu và vai trò</h2>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button type="button" class="btn btn-primary btn-add-user">Thêm</button>
+                    <button type="button" class="btn btn-icon-more">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-body custom-modal-body bg-light-gray p-4 custom-scrollbar">
+                <div class="content-wrapper mx-auto">
+                    
+                    <div class="settings-card shadow-sm mb-4">
+                        <div class="form-group mb-4">
+                            <label class="form-label text-dark fw-normal mb-3">Địa chỉ email</label>
+                            <input type="text" class="form-control custom-input" placeholder="Nhập địa chỉ email">
+                        </div>
+                        <label class="d-flex align-items-center gap-3 cursor-pointer">
+                            <input type="checkbox" class="form-check-input custom-checkbox m-0" checked>
+                            <span class="text-dark fs-14">Thông báo cho người dùng mới qua email</span>
+                        </label>
+                    </div>
+
+                    <div class="settings-card shadow-sm mb-5">
+                        <div class="d-flex align-items-center gap-2 mb-4">
+                            <span class="fs-16 text-dark">Các quy định hạn chế về dữ liệu và vai trò trực tiếp</span>
+                            <i class="bi bi-question-circle text-secondary fs-6"></i>
+                        </div>
+
+                        <div class="fs-14 text-dark mb-3">Vai trò chuẩn</div>
+
+                        <div class="role-list d-flex flex-column gap-3 mb-4">
+                            
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Quản trị viên</div>
+                                    <div class="role-desc">Toàn quyền kiểm soát tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Người chỉnh sửa</div>
+                                    <div class="role-desc">Chỉnh sửa tất cả dữ liệu và phần cài đặt cho tài sản. Không thể quản lý người dùng. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Nhà tiếp thị</div>
+                                    <div class="role-desc">Chỉnh sửa đối tượng, sự kiện quan trọng, mô hình phân bổ, giai đoạn xem lại và sự kiện cho tài sản. Bao gồm cả vai trò Nhà phân tích. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Nhà phân tích</div>
+                                    <div class="role-desc">Có thể chia sẻ dữ liệu khám phá đã tạo với người dùng khác trong tài sản. Bao gồm cả vai trò Người xem. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1" checked>
+                                <div>
+                                    <div class="role-title">Người xem</div>
+                                    <div class="role-desc">Xem dữ liệu báo cáo và phần cài đặt cấu hình cho tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Không có</div>
+                                    <div class="role-desc">Chưa chỉ định vai trò nào. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                        </div>
+
+                        <hr class="divider-line my-4">
+
+                        <div class="fs-14 text-dark mb-4">Quy định hạn chế về dữ liệu</div>
+
+                        <div class="restriction-list d-flex flex-column gap-3 pb-2">
+                            
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="checkbox" class="form-check-input custom-checkbox m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Không có chỉ số chi phí</div>
+                                    <div class="role-desc">Không có quyền truy cập vào các chỉ số liên quan đến chi phí cho tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="checkbox" class="form-check-input custom-checkbox m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Không có chỉ số doanh thu</div>
+                                    <div class="role-desc">Không có quyền truy cập vào các chỉ số liên quan đến doanh thu cho tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-modal2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Roboto (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-modal2">&lt;!-- 1. Google Font Roboto (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 3. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Hộp thoại phân quyền toàn diện kích thước 90vw x 90vh với đầy đủ danh sách vai trò chuẩn (Quản trị viên, Người chỉnh sửa, Người xem...) và các quy định hạn chế dữ liệu tài sản. Bấm nút trong bản xem trước để mở Modal.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_modal2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-modal2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-modal2">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Add User Modal&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS modal2.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-modal2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-modal2">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#addUserModal&quot;&gt;
+    Mở modal thêm người dùng
+&lt;/button&gt;
+
+&lt;div class=&quot;modal fade&quot; id=&quot;addUserModal&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-dialog custom-modal-dialog&quot;&gt;
+        &lt;div class=&quot;modal-content custom-modal-content&quot;&gt;
+            
+            &lt;div class=&quot;modal-header custom-modal-header d-flex align-items-center&quot;&gt;
+                &lt;div class=&quot;d-flex align-items-center flex-grow-1&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn-close custom-btn-close ms-2 me-4 shadow-none&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;header-breadcrumb&quot;&gt;Minh Hào &lt;i class=&quot;bi bi-chevron-right&quot; style=&quot;font-size: 8px; margin: 0 4px;&quot;&gt;&lt;/i&gt; Minh Hào&lt;/div&gt;
+                        &lt;h2 class=&quot;header-title&quot;&gt;Thêm các quy định hạn chế về dữ liệu và vai trò&lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;d-flex align-items-center gap-2 pe-3&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-add-user&quot;&gt;Thêm&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-icon-more&quot;&gt;
+                        &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;modal-body custom-modal-body bg-light-gray p-4 custom-scrollbar&quot;&gt;
+                &lt;div class=&quot;content-wrapper mx-auto&quot;&gt;
+                    
+                    &lt;div class=&quot;settings-card shadow-sm mb-4&quot;&gt;
+                        &lt;div class=&quot;form-group mb-4&quot;&gt;
+                            &lt;label class=&quot;form-label text-dark fw-normal mb-3&quot;&gt;Địa chỉ email&lt;/label&gt;
+                            &lt;input type=&quot;text&quot; class=&quot;form-control custom-input&quot; placeholder=&quot;Nhập địa chỉ email&quot;&gt;
+                        &lt;/div&gt;
+                        &lt;label class=&quot;d-flex align-items-center gap-3 cursor-pointer&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox m-0&quot; checked&gt;
+                            &lt;span class=&quot;text-dark fs-14&quot;&gt;Thông báo cho người dùng mới qua email&lt;/span&gt;
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&quot;settings-card shadow-sm mb-5&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-4&quot;&gt;
+                            &lt;span class=&quot;fs-16 text-dark&quot;&gt;Các quy định hạn chế về dữ liệu và vai trò trực tiếp&lt;/span&gt;
+                            &lt;i class=&quot;bi bi-question-circle text-secondary fs-6&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;fs-14 text-dark mb-3&quot;&gt;Vai trò chuẩn&lt;/div&gt;
+
+                        &lt;div class=&quot;role-list d-flex flex-column gap-3 mb-4&quot;&gt;
+                            
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;radio&quot; name=&quot;standard_role&quot; class=&quot;form-check-input custom-radio m-0 mt-1&quot;&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Quản trị viên&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Toàn quyền kiểm soát tài sản. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;radio&quot; name=&quot;standard_role&quot; class=&quot;form-check-input custom-radio m-0 mt-1&quot;&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Người chỉnh sửa&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Chỉnh sửa tất cả dữ liệu và phần cài đặt cho tài sản. Không thể quản lý người dùng. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;radio&quot; name=&quot;standard_role&quot; class=&quot;form-check-input custom-radio m-0 mt-1&quot;&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Nhà tiếp thị&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Chỉnh sửa đối tượng, sự kiện quan trọng, mô hình phân bổ, giai đoạn xem lại và sự kiện cho tài sản. Bao gồm cả vai trò Nhà phân tích. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;radio&quot; name=&quot;standard_role&quot; class=&quot;form-check-input custom-radio m-0 mt-1&quot;&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Nhà phân tích&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Có thể chia sẻ dữ liệu khám phá đã tạo với người dùng khác trong tài sản. Bao gồm cả vai trò Người xem. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;radio&quot; name=&quot;standard_role&quot; class=&quot;form-check-input custom-radio m-0 mt-1&quot; checked&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Người xem&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Xem dữ liệu báo cáo và phần cài đặt cấu hình cho tài sản. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;radio&quot; name=&quot;standard_role&quot; class=&quot;form-check-input custom-radio m-0 mt-1&quot;&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Không có&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Chưa chỉ định vai trò nào. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                        &lt;/div&gt;
+
+                        &lt;hr class=&quot;divider-line my-4&quot;&gt;
+
+                        &lt;div class=&quot;fs-14 text-dark mb-4&quot;&gt;Quy định hạn chế về dữ liệu&lt;/div&gt;
+
+                        &lt;div class=&quot;restriction-list d-flex flex-column gap-3 pb-2&quot;&gt;
+                            
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox m-0 mt-1&quot;&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Không có chỉ số chi phí&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Không có quyền truy cập vào các chỉ số liên quan đến chi phí cho tài sản. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                            &lt;label class=&quot;role-item d-flex align-items-start gap-3 cursor-pointer&quot;&gt;
+                                &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox m-0 mt-1&quot;&gt;
+                                &lt;div&gt;
+                                    &lt;div class=&quot;role-title&quot;&gt;Không có chỉ số doanh thu&lt;/div&gt;
+                                    &lt;div class=&quot;role-desc&quot;&gt;Không có quyền truy cập vào các chỉ số liên quan đến doanh thu cho tài sản. &lt;a href=&quot;#&quot; class=&quot;role-link&quot;&gt;Tìm hiểu thêm&lt;/a&gt;&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/label&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                    
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-modal2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-modal2">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.custom-modal-dialog {
+    max-width: 90vw;
+    height: 90vh;
+    margin: 5vh auto;
+}
+
+.custom-modal-content {
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.custom-modal-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadce0;
+    padding: 12px 0;
+    min-height: 64px;
+}
+
+.custom-btn-close {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+    padding: 12px;
+}
+
+.custom-btn-close:hover {
+    opacity: 1;
+}
+
+.header-breadcrumb {
+    font-size: 12px;
+    color: #5f6368;
+    margin-bottom: 2px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #202124;
+    margin: 0;
+}
+
+.btn-add-user {
+    background-color: #3b78e7;
+    border: none;
+    padding: 6px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-add-user:hover {
+    background-color: #2b60b9;
+}
+
+.btn-icon-more {
+    background: transparent;
+    border: none;
+    color: #5f6368;
+    font-size: 20px;
+    padding: 4px 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.btn-icon-more:hover {
+    background-color: #f1f3f4;
+}
+
+.custom-modal-body {
+    background-color: #f1f3f4;
+    overflow-y: auto;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    width: 100%;
+}
+
+.settings-card {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 24px;
+}
+
+.custom-input {
+    font-size: 14px;
+    color: #202124;
+    padding: 10px 12px;
+    border-color: #dadce0;
+    box-shadow: none !important;
+}
+
+.custom-input:focus {
+    border-color: #1a73e8;
+}
+
+.custom-input::placeholder {
+    color: #5f6368;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.custom-checkbox {
+    width: 18px;
+    height: 18px;
+    border-color: #5f6368;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.custom-checkbox:checked {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5f6368;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    background-color: transparent !important;
+}
+
+.custom-radio:checked {
+    border-color: #1a73e8;
+}
+
+.custom-radio:checked::after {
+    content: &#039;&#039;;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #1a73e8;
+    border-radius: 50%;
+}
+
+.role-title {
+    font-size: 14px;
+    color: #202124;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+.role-desc {
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.role-link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.role-link:hover {
+    text-decoration: underline;
+}
+
+.divider-line {
+    border-top: 1px solid #dadce0;
+    opacity: 1;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
 }</code></pre>
                                 </div>
                             </div>
@@ -11027,6 +12900,7 @@
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#popover-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Search Popover</a>
+                                <a href="#popover-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Analytics Help Popover</a>
                             </div>
                         </div>
 
@@ -11446,6 +13320,242 @@
 });</code></pre>
                                 </div>
                             </div>
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 2: Analytics Help Popover (Menu trợ giúp nhanh, hướng dẫn & gửi phản hồi) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="popover-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Help Popover (Menu trợ giúp nhanh, hướng dẫn & gửi phản hồi)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-popover2">
+                                    <div class="dropdown">
+    <button class="toolbar-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,10">
+        <i class="bi bi-question-circle-fill"></i>
+    </button>
+    <ul class="dropdown-menu shadow custom-help-menu dropdown-menu-end">
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-lightbulb fs-5"></i> Tìm hiểu về trang này
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-cursor fs-5"></i> Bắt đầu tìm hiểu
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-question-circle fs-5"></i> Yêu cầu trợ giúp thêm
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-chat-square-text fs-5"></i> Gửi phản hồi
+            </a>
+        </li>
+    </ul>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-popover2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Roboto (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-popover2">&lt;!-- 1. Google Font Roboto (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 3. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Menu trợ giúp nhanh kích hoạt từ icon dấu chấm hỏi với <code>dropdown-menu-end</code> và hiệu ứng bóng đổ đẹp mắt.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_popover2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-popover2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-popover2">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Help Popover&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS popover2.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-popover2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-popover2">&lt;div class=&quot;dropdown&quot;&gt;
+    &lt;button class=&quot;toolbar-icon-btn&quot; type=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; data-bs-offset=&quot;0,10&quot;&gt;
+        &lt;i class=&quot;bi bi-question-circle-fill&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;ul class=&quot;dropdown-menu shadow custom-help-menu dropdown-menu-end&quot;&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;dropdown-item d-flex align-items-center gap-3&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;bi bi-lightbulb fs-5&quot;&gt;&lt;/i&gt; Tìm hiểu về trang này
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;dropdown-item d-flex align-items-center gap-3&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;bi bi-cursor fs-5&quot;&gt;&lt;/i&gt; Bắt đầu tìm hiểu
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;dropdown-item d-flex align-items-center gap-3&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;bi bi-question-circle fs-5&quot;&gt;&lt;/i&gt; Yêu cầu trợ giúp thêm
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;dropdown-item d-flex align-items-center gap-3&quot; href=&quot;#&quot;&gt;
+                &lt;i class=&quot;bi bi-chat-square-text fs-5&quot;&gt;&lt;/i&gt; Gửi phản hồi
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-popover2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-popover2">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.toolbar-icon-btn {
+    background: transparent;
+    border: none;
+    color: #5f6368;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.toolbar-icon-btn:hover, .toolbar-icon-btn[aria-expanded=&quot;true&quot;] {
+    background-color: #f1f3f4;
+}
+
+.custom-help-menu {
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    padding: 8px 0;
+    min-width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.custom-help-menu .dropdown-item {
+    padding: 14px 24px;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.2s;
+}
+
+.custom-help-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-help-menu .dropdown-item i {
+    color: #5f6368;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+}</code></pre>
+                                </div>
+                            </div>
+                            
                         </section>
                         
                     </div>
@@ -13478,6 +15588,941 @@
 });</code></pre>
                                 </div>
                             </div>
+                        </section>
+                        
+                    </div>
+                    <!-- ============================================== -->
+                    <!-- 11. TABLE COMPONENTS -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade " id="tab-tables" role="tabpanel"
+                        aria-labelledby="tab-tables-btn">
+
+                        <!-- Tiêu đề & Nút điều hướng nhanh -->
+                        <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
+                            <div>
+                                <h1 class="h3 fw-bold mb-1">11. Table Components</h1>
+                                <p class="text-muted mb-0 small">Các mẫu Bảng dữ liệu (Data Table) phân tích chuyên sâu với 2 cột cố định (Sticky Columns), bộ lọc và chỉ số tương tác</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#table-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Analytics Data Table</a>
+                            </div>
+                        </div>
+
+                        
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 1: Analytics Data Table (Bảng dữ liệu phân tích chi tiết với 2 cột cố định, tìm kiếm và phân trang) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="table-mau-1" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Data Table (Bảng dữ liệu phân tích chi tiết với 2 cột cố định, tìm kiếm và phân trang)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-table1">
+                                    <div class="detailed-table-card shadow-sm">
+
+    <div class="table-toolbar d-flex align-items-center justify-content-between border-bottom px-4 py-2 bg-white">
+        <div class="d-flex align-items-center gap-3">
+            <button class="btn btn-outline-secondary bg-white btn-sm chart-btn text-muted border-dadce0" disabled>Dựng đồ thị hàng</button>
+            <div class="table-search d-flex align-items-center bg-white border border-dadce0 px-2 py-1 rounded" style="width: 250px;">
+                <i class="bi bi-search text-secondary me-2"></i>
+                <input type="text" placeholder="Tìm kiếm..." class="border-0 bg-transparent outline-none w-100" style="font-size: 13px;">
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-4 text-secondary" style="font-size: 13px;">
+            <div class="d-flex align-items-center gap-2">
+                Số hàng mỗi trang: 
+                <select class="form-select form-select-sm shadow-none custom-pagination-select">
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                </select>
+            </div>
+            <div>1 – 10 trên 10</div>
+        </div>
+    </div>
+
+    <div class="table-responsive custom-scrollbar pb-2">
+        <table class="table custom-data-table align-middle mb-0 bg-white">
+            <thead>
+                <tr>
+                    <th class="text-center bg-white position-sticky start-0 z-3 border-end sticky-col-1">
+                        <div class="minus-square mx-auto">
+                            <div class="minus-line"></div>
+                        </div>
+                    </th>
+                    <th class="bg-white position-sticky border-end z-3 sticky-col-2">
+                        <div class="d-flex align-items-center justify-content-between pe-2">
+                            <button class="btn btn-sm btn-outline-secondary border-dadce0 bg-white text-dark d-flex align-items-center gap-2 dimension-btn">
+                                Đường dẫn trang... loại màn hình <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+                            </button>
+                            <i class="bi bi-plus text-primary fs-5 cursor-pointer"></i>
+                        </div>
+                    </th>
+                    <th class="text-end" style="min-width: 140px;">
+                        <div class="d-flex align-items-center justify-content-end gap-1">
+                            <i class="bi bi-arrow-down text-dark"></i>
+                            <span class="dashed-header">Số lượt xem</span>
+                        </div>
+                    </th>
+                    <th class="text-end" style="min-width: 140px;">
+                        <span class="dashed-header">Số người dùng<br>đang hoạt<br>động</span>
+                    </th>
+                    <th class="text-end" style="min-width: 150px;">
+                        <span class="dashed-header">Số lượt<br>xem trên<br>mỗi người<br>dùng đang<br>hoạt động</span>
+                    </th>
+                    <th class="text-end" style="min-width: 160px;">
+                        <span class="dashed-header">Thời gian<br>tương tác<br>trung bình<br>trên mỗi<br>người dùng<br>đang hoạt<br>động</span>
+                    </th>
+                    <th class="text-end" style="min-width: 150px;">
+                        <div class="d-flex flex-column align-items-end">
+                            <span class="dashed-header">Số lượng sự kiện</span>
+                            <div class="sub-header-dropdown mt-1 text-secondary d-flex align-items-center gap-1 cursor-pointer">
+                                Tất cả các sự kiện <i class="bi bi-caret-down-fill" style="font-size: 10px;"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="text-end" style="min-width: 150px;">
+                        <div class="d-flex flex-column align-items-end">
+                            <span class="dashed-header">Sự kiện quan trọng</span>
+                            <div class="sub-header-dropdown mt-1 text-secondary d-flex align-items-center gap-1 cursor-pointer">
+                                Tất cả các sự kiện <i class="bi bi-caret-down-fill" style="font-size: 10px;"></i>
+                            </div>
+                        </div>
+                    </th>
+                    <th class="text-end pe-4" style="min-width: 100px;">
+                        <span class="dashed-header">Tổng<br>doanh<br>thu</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="total-row">
+                    <td class="text-center bg-white position-sticky start-0 border-end z-2 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox">
+                    </td>
+                    <td class="fw-medium text-secondary bg-white position-sticky border-end z-2 sticky-col-2 ps-4">
+                        Tổng cộng
+                    </td>
+                    <td class="text-end">
+                        <div class="fw-bold text-dark">59</div>
+                        <div class="text-secondary small-text">100% trong tổng số</div>
+                    </td>
+                    <td class="text-end">
+                        <div class="fw-bold text-dark">1</div>
+                        <div class="text-secondary small-text">100% trong tổng số</div>
+                    </td>
+                    <td class="text-end">
+                        <div class="fw-bold text-dark">59,00</div>
+                        <div class="text-secondary small-text">Trung bình 0%</div>
+                    </td>
+                    <td class="text-end">
+                        <div class="fw-bold text-dark">38 giây</div>
+                        <div class="text-secondary small-text">Trung bình 0%</div>
+                    </td>
+                    <td class="text-end">
+                        <div class="fw-bold text-dark">142</div>
+                        <div class="text-secondary small-text">100% trong tổng số</div>
+                    </td>
+                    <td class="text-end">
+                        <div class="fw-bold text-dark">0,00</div>
+                    </td>
+                    <td class="text-end pe-4">
+                        <div class="fw-bold text-dark">0 đ</div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">1</span>
+                            <span class="text-dark fw-medium">/admin</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">11 <span class="text-secondary">(18,64%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">11,00</td>
+                    <td class="text-end text-dark">11 giây</td>
+                    <td class="text-end text-dark">35 <span class="text-secondary">(24,65%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">2</span>
+                            <span class="text-dark fw-medium">/admin/companies</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">10 <span class="text-secondary">(16,95%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">10,00</td>
+                    <td class="text-end text-dark">3 giây</td>
+                    <td class="text-end text-dark">18 <span class="text-secondary">(12,68%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">3</span>
+                            <span class="text-dark fw-medium">/admin/analytics</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">8 <span class="text-secondary">(13,56%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">8,00</td>
+                    <td class="text-end text-dark">3 giây</td>
+                    <td class="text-end text-dark">15 <span class="text-secondary">(10,56%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">4</span>
+                            <span class="text-dark fw-medium">/admin/jobs</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">7 <span class="text-secondary">(11,86%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">7,00</td>
+                    <td class="text-end text-dark">2 giây</td>
+                    <td class="text-end text-dark">17 <span class="text-secondary">(11,97%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">5</span>
+                            <span class="text-dark fw-medium">/admin/skills</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">7 <span class="text-secondary">(11,86%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">7,00</td>
+                    <td class="text-end text-dark">2 giây</td>
+                    <td class="text-end text-dark">11 <span class="text-secondary">(7,75%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox">
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">6</span>
+                            <span class="text-dark fw-medium">/admin/categories</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">6 <span class="text-secondary">(10,17%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">6,00</td>
+                    <td class="text-end text-dark">11 giây</td>
+                    <td class="text-end text-dark">19 <span class="text-secondary">(13,38%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox">
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">7</span>
+                            <span class="text-dark fw-medium">/admin/notifications/create</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">5 <span class="text-secondary">(8,47%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">5,00</td>
+                    <td class="text-end text-dark">1 giây</td>
+                    <td class="text-end text-dark">13 <span class="text-secondary">(9,15%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox">
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">8</span>
+                            <span class="text-dark fw-medium">/admin/reviews</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">3 <span class="text-secondary">(5,08%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">3,00</td>
+                    <td class="text-end text-dark">2 giây</td>
+                    <td class="text-end text-dark">9 <span class="text-secondary">(6,34%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1">
+                        <input type="checkbox" class="form-check-input custom-checkbox">
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">9</span>
+                            <span class="text-dark fw-medium">/admin/companies/4</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(1,69%)</span></td>
+                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark">1,00</td>
+                    <td class="text-end text-dark">3 giây</td>
+                    <td class="text-end text-dark">3 <span class="text-secondary">(2,11%)</span></td>
+                    <td class="text-end text-dark">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+                <tr>
+                    <td class="text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1 border-bottom-0">
+                        <input type="checkbox" class="form-check-input custom-checkbox">
+                    </td>
+                    <td class="bg-white position-sticky border-end z-1 sticky-col-2 border-bottom-0">
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="text-dark">10</span>
+                            <span class="text-dark fw-medium">/admin/jobs/38</span>
+                        </div>
+                    </td>
+                    <td class="text-end text-dark border-bottom-0">1 <span class="text-secondary">(1,69%)</span></td>
+                    <td class="text-end text-dark border-bottom-0">1 <span class="text-secondary">(100%)</span></td>
+                    <td class="text-end text-dark border-bottom-0">1,00</td>
+                    <td class="text-end text-dark border-bottom-0">0 giây</td>
+                    <td class="text-end text-dark border-bottom-0">2 <span class="text-secondary">(1,41%)</span></td>
+                    <td class="text-end text-dark border-bottom-0">0,00 <span class="text-secondary">(–)</span></td>
+                    <td class="text-end text-dark pe-4 border-bottom-0">0 đ <span class="text-secondary">(–)</span></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-table1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Roboto (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-table1">&lt;!-- 1. Google Font Roboto (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;
+&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 3. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Bảng phân tích đa chiều chuyên sâu có 2 cột cố định (checkbox & thứ nguyên), thanh công cụ tìm kiếm, chọn số hàng mỗi trang và hỗ trợ cuộn ngang mượt mà.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_table1.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-table1', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-table1">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Data Table&lt;/title&gt;
+    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS table1.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-table1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-table1">&lt;div class=&quot;detailed-table-card shadow-sm&quot;&gt;
+
+    &lt;div class=&quot;table-toolbar d-flex align-items-center justify-content-between border-bottom px-4 py-2 bg-white&quot;&gt;
+        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary bg-white btn-sm chart-btn text-muted border-dadce0&quot; disabled&gt;Dựng đồ thị hàng&lt;/button&gt;
+            &lt;div class=&quot;table-search d-flex align-items-center bg-white border border-dadce0 px-2 py-1 rounded&quot; style=&quot;width: 250px;&quot;&gt;
+                &lt;i class=&quot;bi bi-search text-secondary me-2&quot;&gt;&lt;/i&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Tìm kiếm...&quot; class=&quot;border-0 bg-transparent outline-none w-100&quot; style=&quot;font-size: 13px;&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;d-flex align-items-center gap-4 text-secondary&quot; style=&quot;font-size: 13px;&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center gap-2&quot;&gt;
+                Số hàng mỗi trang: 
+                &lt;select class=&quot;form-select form-select-sm shadow-none custom-pagination-select&quot;&gt;
+                    &lt;option&gt;10&lt;/option&gt;
+                    &lt;option&gt;25&lt;/option&gt;
+                    &lt;option&gt;50&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div&gt;1 – 10 trên 10&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;table-responsive custom-scrollbar pb-2&quot;&gt;
+        &lt;table class=&quot;table custom-data-table align-middle mb-0 bg-white&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th class=&quot;text-center bg-white position-sticky start-0 z-3 border-end sticky-col-1&quot;&gt;
+                        &lt;div class=&quot;minus-square mx-auto&quot;&gt;
+                            &lt;div class=&quot;minus-line&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;bg-white position-sticky border-end z-3 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center justify-content-between pe-2&quot;&gt;
+                            &lt;button class=&quot;btn btn-sm btn-outline-secondary border-dadce0 bg-white text-dark d-flex align-items-center gap-2 dimension-btn&quot;&gt;
+                                Đường dẫn trang... loại màn hình &lt;i class=&quot;bi bi-caret-down-fill text-secondary&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+                            &lt;/button&gt;
+                            &lt;i class=&quot;bi bi-plus text-primary fs-5 cursor-pointer&quot;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;text-end&quot; style=&quot;min-width: 140px;&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center justify-content-end gap-1&quot;&gt;
+                            &lt;i class=&quot;bi bi-arrow-down text-dark&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;dashed-header&quot;&gt;Số lượt xem&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;text-end&quot; style=&quot;min-width: 140px;&quot;&gt;
+                        &lt;span class=&quot;dashed-header&quot;&gt;Số người dùng&lt;br&gt;đang hoạt&lt;br&gt;động&lt;/span&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;text-end&quot; style=&quot;min-width: 150px;&quot;&gt;
+                        &lt;span class=&quot;dashed-header&quot;&gt;Số lượt&lt;br&gt;xem trên&lt;br&gt;mỗi người&lt;br&gt;dùng đang&lt;br&gt;hoạt động&lt;/span&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;text-end&quot; style=&quot;min-width: 160px;&quot;&gt;
+                        &lt;span class=&quot;dashed-header&quot;&gt;Thời gian&lt;br&gt;tương tác&lt;br&gt;trung bình&lt;br&gt;trên mỗi&lt;br&gt;người dùng&lt;br&gt;đang hoạt&lt;br&gt;động&lt;/span&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;text-end&quot; style=&quot;min-width: 150px;&quot;&gt;
+                        &lt;div class=&quot;d-flex flex-column align-items-end&quot;&gt;
+                            &lt;span class=&quot;dashed-header&quot;&gt;Số lượng sự kiện&lt;/span&gt;
+                            &lt;div class=&quot;sub-header-dropdown mt-1 text-secondary d-flex align-items-center gap-1 cursor-pointer&quot;&gt;
+                                Tất cả các sự kiện &lt;i class=&quot;bi bi-caret-down-fill&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;text-end&quot; style=&quot;min-width: 150px;&quot;&gt;
+                        &lt;div class=&quot;d-flex flex-column align-items-end&quot;&gt;
+                            &lt;span class=&quot;dashed-header&quot;&gt;Sự kiện quan trọng&lt;/span&gt;
+                            &lt;div class=&quot;sub-header-dropdown mt-1 text-secondary d-flex align-items-center gap-1 cursor-pointer&quot;&gt;
+                                Tất cả các sự kiện &lt;i class=&quot;bi bi-caret-down-fill&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/th&gt;
+                    &lt;th class=&quot;text-end pe-4&quot; style=&quot;min-width: 100px;&quot;&gt;
+                        &lt;span class=&quot;dashed-header&quot;&gt;Tổng&lt;br&gt;doanh&lt;br&gt;thu&lt;/span&gt;
+                    &lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class=&quot;total-row&quot;&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-2 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot;&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;fw-medium text-secondary bg-white position-sticky border-end z-2 sticky-col-2 ps-4&quot;&gt;
+                        Tổng cộng
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end&quot;&gt;
+                        &lt;div class=&quot;fw-bold text-dark&quot;&gt;59&lt;/div&gt;
+                        &lt;div class=&quot;text-secondary small-text&quot;&gt;100% trong tổng số&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end&quot;&gt;
+                        &lt;div class=&quot;fw-bold text-dark&quot;&gt;1&lt;/div&gt;
+                        &lt;div class=&quot;text-secondary small-text&quot;&gt;100% trong tổng số&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end&quot;&gt;
+                        &lt;div class=&quot;fw-bold text-dark&quot;&gt;59,00&lt;/div&gt;
+                        &lt;div class=&quot;text-secondary small-text&quot;&gt;Trung bình 0%&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end&quot;&gt;
+                        &lt;div class=&quot;fw-bold text-dark&quot;&gt;38 giây&lt;/div&gt;
+                        &lt;div class=&quot;text-secondary small-text&quot;&gt;Trung bình 0%&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end&quot;&gt;
+                        &lt;div class=&quot;fw-bold text-dark&quot;&gt;142&lt;/div&gt;
+                        &lt;div class=&quot;text-secondary small-text&quot;&gt;100% trong tổng số&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end&quot;&gt;
+                        &lt;div class=&quot;fw-bold text-dark&quot;&gt;0,00&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end pe-4&quot;&gt;
+                        &lt;div class=&quot;fw-bold text-dark&quot;&gt;0 đ&lt;/div&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt;
+                
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot; checked&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;1&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;11 &lt;span class=&quot;text-secondary&quot;&gt;(18,64%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;11,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;11 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;35 &lt;span class=&quot;text-secondary&quot;&gt;(24,65%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot; checked&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;2&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/companies&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;10 &lt;span class=&quot;text-secondary&quot;&gt;(16,95%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;10,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;3 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;18 &lt;span class=&quot;text-secondary&quot;&gt;(12,68%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot; checked&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;3&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/analytics&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;8 &lt;span class=&quot;text-secondary&quot;&gt;(13,56%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;8,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;3 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;15 &lt;span class=&quot;text-secondary&quot;&gt;(10,56%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot; checked&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;4&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/jobs&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;7 &lt;span class=&quot;text-secondary&quot;&gt;(11,86%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;7,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;2 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;17 &lt;span class=&quot;text-secondary&quot;&gt;(11,97%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot; checked&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;5&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/skills&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;7 &lt;span class=&quot;text-secondary&quot;&gt;(11,86%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;7,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;2 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;11 &lt;span class=&quot;text-secondary&quot;&gt;(7,75%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot;&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;6&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/categories&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;6 &lt;span class=&quot;text-secondary&quot;&gt;(10,17%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;6,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;11 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;19 &lt;span class=&quot;text-secondary&quot;&gt;(13,38%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot;&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;7&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/notifications/create&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;5 &lt;span class=&quot;text-secondary&quot;&gt;(8,47%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;5,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;13 &lt;span class=&quot;text-secondary&quot;&gt;(9,15%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot;&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;8&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/reviews&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;3 &lt;span class=&quot;text-secondary&quot;&gt;(5,08%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;3,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;2 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;9 &lt;span class=&quot;text-secondary&quot;&gt;(6,34%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot;&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;9&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/companies/4&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(1,69%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;1,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;3 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;3 &lt;span class=&quot;text-secondary&quot;&gt;(2,11%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+                &lt;tr&gt;
+                    &lt;td class=&quot;text-center bg-white position-sticky start-0 border-end z-1 sticky-col-1 border-bottom-0&quot;&gt;
+                        &lt;input type=&quot;checkbox&quot; class=&quot;form-check-input custom-checkbox&quot;&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;bg-white position-sticky border-end z-1 sticky-col-2 border-bottom-0&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+                            &lt;span class=&quot;text-dark&quot;&gt;10&lt;/span&gt;
+                            &lt;span class=&quot;text-dark fw-medium&quot;&gt;/admin/jobs/38&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark border-bottom-0&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(1,69%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark border-bottom-0&quot;&gt;1 &lt;span class=&quot;text-secondary&quot;&gt;(100%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark border-bottom-0&quot;&gt;1,00&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark border-bottom-0&quot;&gt;0 giây&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark border-bottom-0&quot;&gt;2 &lt;span class=&quot;text-secondary&quot;&gt;(1,41%)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark border-bottom-0&quot;&gt;0,00 &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                    &lt;td class=&quot;text-end text-dark pe-4 border-bottom-0&quot;&gt;0 đ &lt;span class=&quot;text-secondary&quot;&gt;(–)&lt;/span&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-table1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-table1">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.detailed-table-card {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.chart-btn {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.outline-none {
+    outline: none;
+}
+
+.border-dadce0 {
+    border-color: #dadce0 !important;
+}
+
+.custom-pagination-select {
+    border: none;
+    background-color: transparent;
+    padding: 2px 24px 2px 8px;
+    font-size: 13px;
+    color: #3c4043;
+    cursor: pointer;
+    width: auto;
+    display: inline-block;
+    background-position: right 4px center;
+    background-size: 10px 10px;
+}
+
+.custom-pagination-select:focus {
+    background-color: #f1f3f4;
+    border-radius: 4px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f3f4;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}
+
+.custom-data-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 1200px;
+}
+
+.sticky-col-1 {
+    width: 48px;
+    min-width: 48px;
+    left: 0;
+}
+
+.sticky-col-2 {
+    width: 320px;
+    min-width: 320px;
+    left: 48px;
+}
+
+.custom-data-table th {
+    font-size: 12px;
+    color: #5f6368;
+    font-weight: 400;
+    padding: 16px 12px;
+    border-bottom: 1px solid #dadce0;
+    vertical-align: bottom;
+}
+
+.dimension-btn {
+    font-size: 13px;
+    color: #3c4043 !important;
+    padding: 4px 10px;
+}
+
+.dimension-btn:hover {
+    background-color: #f8f9fa !important;
+}
+
+.dashed-header {
+    border-bottom: 1px dashed #9aa0a6;
+    display: inline-block;
+    line-height: 1.4;
+    cursor: pointer;
+    text-align: right;
+}
+
+.sub-header-dropdown {
+    font-size: 11px;
+}
+
+.custom-data-table td {
+    padding: 12px;
+    font-size: 13px;
+    border-bottom: 1px solid #e8eaed;
+}
+
+.total-row td {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadce0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.minus-square {
+    width: 16px;
+    height: 16px;
+    background-color: #1a73e8;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.minus-line {
+    width: 8px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.custom-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border-color: #5f6368;
+    margin-top: 0;
+}
+
+.custom-checkbox:checked {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.small-text {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.custom-data-table tbody tr:hover td {
+    background-color: #f8f9fa;
+}</code></pre>
+                                </div>
+                            </div>
+                            
                         </section>
                         
                     </div>

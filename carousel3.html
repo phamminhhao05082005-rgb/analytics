@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Recent Carousel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="carousel3.css">
+</head>
+<body class="bg-light p-4">
+
+<div class="container-fluid max-w-1200 mx-auto">
+    <div class="recent-carousel-wrapper position-relative">
+        
+        <button class="nav-btn prev-btn shadow-sm" id="recentPrevBtn" disabled>
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <div class="recent-track-container" id="recentTrackContainer">
+            <div class="recent-track d-flex gap-3" id="recentTrack">
+                
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Tổng quan nhanh về báo cáo</div>
+                        <div class="recent-time">Vừa xong</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Khám phá</div>
+                        <div class="recent-time">Vừa xong</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Trang và màn hình</div>
+                        <div class="recent-time">Hôm nay</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Tổng quan về hoạt động quảng ...</div>
+                        <div class="recent-time">Hôm nay</div>
+                    </div>
+                </div>
+
+                <div class="recent-card flex-shrink-0 d-flex align-items-center p-3 cursor-pointer">
+                    <div class="recent-icon me-3 d-flex align-items-center justify-content-center">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <div class="recent-info overflow-hidden">
+                        <div class="recent-title text-truncate mb-1">Biểu mẫu tùy ý</div>
+                        <div class="recent-time">Hôm nay</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn shadow-sm" id="recentNextBtn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="carousel3.js"></script>
+</body>
+</html>

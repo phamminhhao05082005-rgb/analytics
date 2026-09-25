@@ -1,0 +1,50 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.toolbar-icon-btn {
+    background: transparent;
+    border: none;
+    color: #5f6368;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.toolbar-icon-btn:hover, .toolbar-icon-btn[aria-expanded="true"] {
+    background-color: #f1f3f4;
+}
+
+.custom-help-menu {
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    padding: 8px 0;
+    min-width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.custom-help-menu .dropdown-item {
+    padding: 14px 24px;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 400;
+    transition: background-color 0.2s;
+}
+
+.custom-help-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.custom-help-menu .dropdown-item i {
+    color: #5f6368;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+}

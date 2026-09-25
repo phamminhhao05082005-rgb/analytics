@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Add User Modal</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="modal2.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
+    Mở modal thêm người dùng
+</button>
+
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content custom-modal-content">
+            
+            <div class="modal-header custom-modal-header d-flex align-items-center">
+                <div class="d-flex align-items-center flex-grow-1">
+                    <button type="button" class="btn-close custom-btn-close ms-2 me-4 shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div>
+                        <div class="header-breadcrumb">Minh Hào <i class="bi bi-chevron-right" style="font-size: 8px; margin: 0 4px;"></i> Minh Hào</div>
+                        <h2 class="header-title">Thêm các quy định hạn chế về dữ liệu và vai trò</h2>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button type="button" class="btn btn-primary btn-add-user">Thêm</button>
+                    <button type="button" class="btn btn-icon-more">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-body custom-modal-body bg-light-gray p-4 custom-scrollbar">
+                <div class="content-wrapper mx-auto">
+                    
+                    <div class="settings-card shadow-sm mb-4">
+                        <div class="form-group mb-4">
+                            <label class="form-label text-dark fw-normal mb-3">Địa chỉ email</label>
+                            <input type="text" class="form-control custom-input" placeholder="Nhập địa chỉ email">
+                        </div>
+                        <label class="d-flex align-items-center gap-3 cursor-pointer">
+                            <input type="checkbox" class="form-check-input custom-checkbox m-0" checked>
+                            <span class="text-dark fs-14">Thông báo cho người dùng mới qua email</span>
+                        </label>
+                    </div>
+
+                    <div class="settings-card shadow-sm mb-5">
+                        <div class="d-flex align-items-center gap-2 mb-4">
+                            <span class="fs-16 text-dark">Các quy định hạn chế về dữ liệu và vai trò trực tiếp</span>
+                            <i class="bi bi-question-circle text-secondary fs-6"></i>
+                        </div>
+
+                        <div class="fs-14 text-dark mb-3">Vai trò chuẩn</div>
+
+                        <div class="role-list d-flex flex-column gap-3 mb-4">
+                            
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Quản trị viên</div>
+                                    <div class="role-desc">Toàn quyền kiểm soát tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Người chỉnh sửa</div>
+                                    <div class="role-desc">Chỉnh sửa tất cả dữ liệu và phần cài đặt cho tài sản. Không thể quản lý người dùng. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Nhà tiếp thị</div>
+                                    <div class="role-desc">Chỉnh sửa đối tượng, sự kiện quan trọng, mô hình phân bổ, giai đoạn xem lại và sự kiện cho tài sản. Bao gồm cả vai trò Nhà phân tích. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Nhà phân tích</div>
+                                    <div class="role-desc">Có thể chia sẻ dữ liệu khám phá đã tạo với người dùng khác trong tài sản. Bao gồm cả vai trò Người xem. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1" checked>
+                                <div>
+                                    <div class="role-title">Người xem</div>
+                                    <div class="role-desc">Xem dữ liệu báo cáo và phần cài đặt cấu hình cho tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="radio" name="standard_role" class="form-check-input custom-radio m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Không có</div>
+                                    <div class="role-desc">Chưa chỉ định vai trò nào. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                        </div>
+
+                        <hr class="divider-line my-4">
+
+                        <div class="fs-14 text-dark mb-4">Quy định hạn chế về dữ liệu</div>
+
+                        <div class="restriction-list d-flex flex-column gap-3 pb-2">
+                            
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="checkbox" class="form-check-input custom-checkbox m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Không có chỉ số chi phí</div>
+                                    <div class="role-desc">Không có quyền truy cập vào các chỉ số liên quan đến chi phí cho tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                            <label class="role-item d-flex align-items-start gap-3 cursor-pointer">
+                                <input type="checkbox" class="form-check-input custom-checkbox m-0 mt-1">
+                                <div>
+                                    <div class="role-title">Không có chỉ số doanh thu</div>
+                                    <div class="role-desc">Không có quyền truy cập vào các chỉ số liên quan đến doanh thu cho tài sản. <a href="#" class="role-link">Tìm hiểu thêm</a></div>
+                                </div>
+                            </label>
+
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

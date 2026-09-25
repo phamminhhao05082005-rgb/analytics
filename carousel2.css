@@ -1,0 +1,117 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.max-w-1200 {
+    max-width: 1200px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.carousel-wrapper {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.carousel-track {
+    transition: transform 0.4s ease-in-out;
+}
+
+.explore-card {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-thumbnail {
+    width: 100%;
+    height: 140px;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    margin-bottom: 16px;
+}
+
+.explore-card:hover .card-thumbnail {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.plus-icon-wrapper {
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.plus-line {
+    position: absolute;
+    border-radius: 2px;
+}
+
+.plus-line.vertical { width: 6px; height: 21px; top: 0; left: 21px; }
+.plus-line.vertical-bottom { width: 6px; height: 21px; bottom: 0; left: 21px; }
+.plus-line.horizontal { width: 21px; height: 6px; top: 21px; left: 0; }
+.plus-line.horizontal-right { width: 21px; height: 6px; top: 21px; right: 0; }
+
+.card-info {
+    padding: 0 4px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #202124;
+    margin-bottom: 6px;
+}
+
+.card-desc {
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 60px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5f6368;
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: #f8f9fa;
+    color: #202124;
+}
+
+.nav-btn:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px;
+}

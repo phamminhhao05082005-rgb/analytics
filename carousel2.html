@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Exploration Carousel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="carousel2.css">
+</head>
+<body class="bg-light p-4">
+
+<div class="container-fluid max-w-1200 mx-auto">
+    <div class="carousel-wrapper position-relative">
+        
+        <button class="nav-btn prev-btn shadow-sm" id="expPrevBtn" disabled>
+            <i class="bi bi-chevron-left"></i>
+        </button>
+
+        <div class="carousel-track-container" id="expTrackContainer">
+            <div class="carousel-track d-flex gap-3" id="expTrack">
+                
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail d-flex justify-content-center align-items-center">
+                        <div class="plus-icon-wrapper">
+                            <div class="plus-line vertical bg-danger"></div>
+                            <div class="plus-line horizontal bg-primary"></div>
+                            <div class="plus-line horizontal-right bg-warning"></div>
+                            <div class="plus-line vertical-bottom bg-success"></div>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Trống</h3>
+                        <p class="card-desc">Tạo một bản khám phá mới</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="20" y="20" width="200" height="4" fill="#dadce0" />
+                            <rect x="20" y="32" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="32" width="30" height="15" fill="#d2e3fc" />
+                            <rect x="90" y="32" width="50" height="4" fill="#dadce0" />
+                            <rect x="150" y="32" width="70" height="15" fill="#d2e3fc" />
+                            
+                            <rect x="20" y="55" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="55" width="30" height="15" fill="#8ab4f8" />
+                            <rect x="90" y="55" width="50" height="15" fill="#8ab4f8" />
+                            <rect x="150" y="55" width="70" height="30" fill="#f1f3f4" />
+                            <rect x="150" y="60" width="25" height="15" fill="#8ab4f8" />
+
+                            <rect x="20" y="78" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="78" width="30" height="15" fill="#d2e3fc" />
+                            <rect x="90" y="78" width="50" height="15" fill="#d2e3fc" />
+                            <rect x="150" y="90" width="70" height="15" fill="#d2e3fc" />
+                            <rect x="20" y="100" width="20" height="4" fill="#dadce0" />
+                            <rect x="50" y="100" width="30" height="15" fill="#f1f3f4" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Biểu mẫu tùy ý</h3>
+                        <p class="card-desc">Bạn có thể khám phá những thông tin chi tiết nào thông qua các bảng và biểu đồ tùy chỉnh?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="30" y="30" width="20" height="60" fill="#8ab4f8" />
+                            <polygon points="50,30 65,40 65,90 50,90" fill="#f1f3f4" />
+                            
+                            <rect x="65" y="40" width="20" height="50" fill="#8ab4f8" />
+                            <polygon points="85,40 100,50 100,90 85,90" fill="#f1f3f4" />
+
+                            <rect x="100" y="50" width="20" height="40" fill="#8ab4f8" />
+                            <polygon points="120,50 135,60 135,90 120,90" fill="#f1f3f4" />
+
+                            <rect x="135" y="60" width="20" height="30" fill="#8ab4f8" />
+                            <polygon points="155,60 170,75 170,90 155,90" fill="#f1f3f4" />
+
+                            <rect x="170" y="75" width="20" height="15" fill="#8ab4f8" />
+                            <polygon points="190,75 205,82 205,90 190,90" fill="#f1f3f4" />
+
+                            <rect x="205" y="82" width="15" height="8" fill="#8ab4f8" />
+
+                            <rect x="20" y="90" width="200" height="2" fill="#dadce0" />
+                            <rect x="30" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="65" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="100" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="135" y="100" width="20" height="3" fill="#dadce0" />
+                            <rect x="170" y="100" width="20" height="3" fill="#dadce0" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá phễu</h3>
+                        <p class="card-desc">Bạn có thể phân tích, phân đoạn và chia nhỏ các hành trình nào của người dùng thông qua phễu nhiều bước?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="25" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="70" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="115" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="160" y="15" width="25" height="3" fill="#dadce0" />
+                            <rect x="205" y="15" width="15" height="3" fill="#dadce0" />
+
+                            <rect x="30" y="25" width="5" height="60" fill="#4285f4" />
+                            <rect x="75" y="25" width="5" height="35" fill="#4285f4" />
+                            <rect x="120" y="25" width="5" height="25" fill="#4285f4" />
+                            <rect x="165" y="25" width="5" height="15" fill="#4285f4" />
+
+                            <path d="M 35 25 C 50 25, 60 25, 75 25 L 75 60 C 60 60, 50 85, 35 85 Z" fill="#d2e3fc" opacity="0.8"/>
+                            <path d="M 80 25 C 95 25, 105 25, 120 25 L 120 50 C 105 50, 95 60, 80 60 Z" fill="#d2e3fc" opacity="0.8"/>
+                            <path d="M 125 25 C 140 25, 150 25, 165 25 L 165 40 C 150 40, 140 50, 125 50 Z" fill="#d2e3fc" opacity="0.8"/>
+                            <path d="M 170 25 C 185 25, 195 25, 210 25 L 210 30 C 195 30, 185 40, 170 40 Z" fill="#d2e3fc" opacity="0.8"/>
+
+                            <rect x="75" y="70" width="5" height="20" fill="#4285f4" />
+                            <path d="M 35 85 C 50 85, 60 70, 75 70 L 75 90 C 60 90, 50 100, 35 100 Z" fill="#e8f0fe" opacity="0.8"/>
+
+                            <rect x="120" y="65" width="5" height="10" fill="#4285f4" />
+                            <path d="M 80 60 C 95 60, 105 65, 120 65 L 120 75 C 105 75, 95 85, 80 85 Z" fill="#e8f0fe" opacity="0.8"/>
+
+                            <rect x="210" y="25" width="5" height="5" fill="#4285f4" />
+                            <rect x="210" y="35" width="5" height="5" fill="#4285f4" />
+                            <rect x="210" y="45" width="5" height="5" fill="#4285f4" />
+
+                            <rect x="220" y="26" width="10" height="3" fill="#dadce0" />
+                            <rect x="220" y="36" width="10" height="3" fill="#dadce0" />
+                            <rect x="220" y="46" width="10" height="3" fill="#dadce0" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá lộ trình</h3>
+                        <p class="card-desc">Bạn có thể khám phá những hành trình nào của người dùng thông qua biểu đồ cây?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="30" y="30" width="20" height="3" fill="#dadce0" />
+                            <rect x="30" y="90" width="20" height="3" fill="#dadce0" />
+                            <rect x="190" y="30" width="20" height="3" fill="#dadce0" />
+                            <rect x="190" y="90" width="20" height="3" fill="#dadce0" />
+                            
+                            <circle cx="100" cy="60" r="35" fill="#8ab4f8" opacity="0.6" stroke="#1a73e8" stroke-width="1.5" />
+                            <circle cx="140" cy="60" r="28" fill="#d2e3fc" opacity="0.6" stroke="#1a73e8" stroke-width="1.5" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Chồng chéo phân khúc</h3>
+                        <p class="card-desc">Điểm chung nào về phân đoạn người dùng cho bạn biết về hành vi của họ?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <rect x="20" y="25" width="40" height="4" fill="#dadce0" />
+                            <rect x="20" y="35" width="25" height="4" fill="#8ab4f8" />
+                            <rect x="150" y="25" width="60" height="4" fill="#dadce0" />
+                            <rect x="150" y="35" width="40" height="4" fill="#dadce0" />
+                            
+                            <rect x="20" y="55" width="200" height="15" fill="#f1f3f4" />
+                            <rect x="30" y="60" width="30" height="5" fill="#dadce0" />
+                            <rect x="80" y="60" width="30" height="5" fill="#dadce0" />
+                            <rect x="130" y="60" width="30" height="5" fill="#dadce0" />
+                            <rect x="180" y="60" width="30" height="5" fill="#dadce0" />
+
+                            <rect x="20" y="80" width="140" height="3" fill="#dadce0" />
+                            <rect x="20" y="90" width="100" height="3" fill="#dadce0" />
+                            <rect x="20" y="100" width="60" height="3" fill="#dadce0" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá người dùng</h3>
+                        <p class="card-desc">Bạn có thể khám phá các hành vi cá nhân nào thông qua việc tìm hiểu chi tiết về hoạt động của từng người dùng?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <line x1="20" y1="35" x2="220" y2="35" stroke="#dadce0" stroke-width="1" />
+                            <polyline points="20,15 60,30 100,25 140,28 180,25" fill="none" stroke="#4285f4" stroke-width="1.5" />
+                            <circle cx="20" cy="15" r="2" fill="#4285f4" />
+                            <circle cx="60" cy="30" r="2" fill="#4285f4" />
+                            <circle cx="100" cy="25" r="2" fill="#4285f4" />
+                            <circle cx="140" cy="28" r="2" fill="#4285f4" />
+                            <circle cx="180" cy="25" r="2" fill="#4285f4" />
+
+                            <rect x="50" y="45" width="20" height="12" fill="#4285f4" />
+                            <rect x="75" y="45" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="100" y="45" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="125" y="45" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="150" y="45" width="20" height="12" fill="#d2e3fc" />
+
+                            <rect x="50" y="60" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="75" y="60" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="100" y="60" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="125" y="60" width="20" height="12" fill="#e8f0fe" />
+
+                            <rect x="50" y="75" width="20" height="12" fill="#8ab4f8" />
+                            <rect x="75" y="75" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="100" y="75" width="20" height="12" fill="#e8f0fe" />
+
+                            <rect x="50" y="90" width="20" height="12" fill="#d2e3fc" />
+                            <rect x="75" y="90" width="20" height="12" fill="#e8f0fe" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Khám phá nhóm thuần tập</h3>
+                        <p class="card-desc">Theo thời gian, bạn có thể khám phá những thông tin chi tiết nào từ hành vi của nhóm người dùng thuần tập?</p>
+                    </div>
+                </div>
+
+                <div class="explore-card flex-shrink-0 cursor-pointer">
+                    <div class="card-thumbnail">
+                        <svg viewBox="0 0 240 120" width="100%" height="100%">
+                            <line x1="20" y1="30" x2="220" y2="30" stroke="#dadce0" stroke-width="1" />
+                            <line x1="20" y1="50" x2="220" y2="50" stroke="#f1f3f4" stroke-width="1" />
+                            <line x1="20" y1="70" x2="220" y2="70" stroke="#f1f3f4" stroke-width="1" />
+                            <line x1="20" y1="90" x2="220" y2="90" stroke="#f1f3f4" stroke-width="1" />
+
+                            <rect x="30" y="20" width="15" height="4" fill="#dadce0" />
+                            <rect x="80" y="20" width="15" height="4" fill="#dadce0" />
+                            <rect x="130" y="20" width="15" height="4" fill="#dadce0" />
+                            <rect x="180" y="20" width="15" height="4" fill="#dadce0" />
+
+                            <rect x="30" y="40" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="40" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="40" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="40" width="20" height="6" fill="#a8c7fa" />
+
+                            <rect x="30" y="60" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="60" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="60" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="60" width="20" height="6" fill="#a8c7fa" />
+
+                            <rect x="30" y="80" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="80" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="80" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="80" width="20" height="6" fill="#a8c7fa" />
+
+                            <rect x="30" y="100" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="80" y="100" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="130" y="100" width="20" height="6" fill="#a8c7fa" />
+                            <rect x="180" y="100" width="20" height="6" fill="#a8c7fa" />
+                        </svg>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="card-title">Giá trị lâu dài của người dùng</h3>
+                        <p class="card-desc">Bạn có thể tìm hiểu thông tin gì khi phân tích toàn bộ thời gian hoạt động của người dùng?</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="nav-btn next-btn shadow-sm" id="expNextBtn">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="carousel2.js"></script>
+</body>
+</html>
