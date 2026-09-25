@@ -96,6 +96,8 @@ body > .container-fluid > .row > main.main-content {
     max-width: calc(100% - var(--crm-sidebar-width, 260px)) !important;
     min-height: 100vh;
     background-color: #f8fafc;
+    position: static !important;
+    z-index: auto !important;
 }
 
 /* Khối xem trước Component (Preview box) */
@@ -381,9 +383,32 @@ body > .container-fluid > .row > main.main-content {
 #preview-carousel1 {
     background-color: #f8f9fa;
     border-radius: 0 0 12px 12px;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem 8rem 1.5rem;
+    min-height: 480px;
     overflow: hidden;
     position: relative;
+}
+
+#preview-carousel1 .carousel-track-container {
+    clip-path: inset(-50px -50px -180px -50px) !important;
+}
+
+/* Offcanvas & Modal Stacking Context & Layering Fix */
+.offcanvas,
+.custom-compare-offcanvas {
+    z-index: 1060 !important;
+}
+
+.offcanvas-backdrop {
+    z-index: 1055 !important;
+}
+
+.modal {
+    z-index: 1070 !important;
+}
+
+.modal-backdrop {
+    z-index: 1065 !important;
 }
 
 /* Dropdown 1 & 2 */

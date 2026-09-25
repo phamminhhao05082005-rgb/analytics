@@ -18,7 +18,7 @@ body {
 .carousel-track-container {
     overflow: visible;
     width: 100%;
-    clip-path: inset(-50px -50px -50px -50px);
+    clip-path: inset(-50px -50px -180px -50px);
 }
 
 .carousel-track {

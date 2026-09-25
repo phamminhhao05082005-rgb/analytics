@@ -2051,7 +2051,7 @@
 .carousel-track-container {
     overflow: visible;
     width: 100%;
-    clip-path: inset(-50px -50px -50px -50px);
+    clip-path: inset(-50px -50px -180px -50px);
 }
 
 .carousel-track {
@@ -3089,7 +3089,10 @@
                         <input type="text" class="search-input" placeholder="Tìm kiếm">
                     </div>
 
-                    <a href="#" class="platform-link">Truy cập vào Trang chủ Platform</a>
+                    <div class="d-flex align-items-center">
+                        <a href="#" class="platform-link">Truy cập vào Trang chủ Platform</a>
+                        <button type="button" class="btn-close ms-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
                 </div>
             </div>
 
@@ -3317,7 +3320,10 @@
                         &lt;input type=&quot;text&quot; class=&quot;search-input&quot; placeholder=&quot;Tìm kiếm&quot;&gt;
                     &lt;/div&gt;
 
-                    &lt;a href=&quot;#&quot; class=&quot;platform-link&quot;&gt;Truy cập vào Trang chủ Platform&lt;/a&gt;
+                    &lt;div class=&quot;d-flex align-items-center&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;platform-link&quot;&gt;Truy cập vào Trang chủ Platform&lt;/a&gt;
+                        &lt;button type=&quot;button&quot; class=&quot;btn-close ms-3&quot; data-bs-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+                    &lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
 
@@ -6830,7 +6836,7 @@
     right: -32px;
 }
 
-.main-content {
+.layout-container .main-content {
     flex-grow: 1;
     transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #f4f7fc;
