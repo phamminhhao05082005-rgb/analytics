@@ -1,0 +1,84 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.data-settings-card {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header-section {
+    padding: 24px 24px 16px 24px;
+}
+
+.card-main-title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #202124;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.card-sub-desc {
+    font-size: 14px;
+    color: #5f6368;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.setting-item {
+    padding: 12px 24px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.setting-item:hover {
+    background-color: #f8f9fa;
+}
+
+.icon-wrapper {
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-wrapper i {
+    font-size: 20px;
+    color: #5f6368;
+}
+
+.setting-text {
+    font-size: 15px;
+    color: #3c4043;
+    font-weight: 400;
+}
+
+.help-icon-wrapper {
+    color: #5f6368;
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.help-icon-wrapper:hover {
+    background-color: #e8eaed;
+    color: #202124;
+}
+
+.tooltip-inner {
+    background-color: #202124;
+    font-size: 12px;
+    padding: 6px 10px;
+}
+.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: #202124;
+}

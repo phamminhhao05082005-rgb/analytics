@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Bar Chart Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="card12.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<div class="analytic-bar-card shadow-sm position-relative">
+    
+    <div class="feedback-widget shadow-sm d-flex gap-2">
+        <i class="bi bi-hand-thumbs-up-fill text-primary"></i>
+        <i class="bi bi-hand-thumbs-down text-secondary"></i>
+    </div>
+
+    <div class="card-header bg-white border-0 px-4 pt-4 pb-0 d-flex justify-content-between align-items-start">
+        <div>
+            <div class="metric-title dashed-border mb-1">Số người dùng mới theo</div>
+            <div class="dropdown">
+                <button class="btn btn-sm dropdown-toggle custom-dropdown-btn p-0 shadow-none text-dark" type="button" data-bs-toggle="dropdown">
+                    Nhóm kênh chính có người dùng lần đầu (N...
+                </button>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Nguồn</a></li>
+                    <li><a class="dropdown-item" href="#">Phương tiện</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="badge-icon-wrapper dropdown">
+            <button class="btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown">
+                <i class="bi bi-check-circle text-success"></i>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="chart-area px-4 mt-4">
+        <svg class="w-100" height="280" viewBox="0 0 500 280" preserveAspectRatio="none">
+            <defs>
+                <pattern id="stripedBlue" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                    <rect width="6" height="6" fill="#8ab4f8" fill-opacity="0.3" />
+                    <line x1="0" y1="0" x2="0" y2="6" stroke="#4285f4" stroke-width="2" />
+                </pattern>
+            </defs>
+
+            <line x1="140" y1="0" x2="140" y2="250" class="grid-line" />
+            <line x1="220" y1="0" x2="220" y2="250" class="grid-line" />
+            <line x1="300" y1="0" x2="300" y2="250" class="grid-line" />
+            <line x1="380" y1="0" x2="380" y2="250" class="grid-line" />
+            <line x1="460" y1="0" x2="460" y2="250" class="grid-line" />
+
+            <text x="140" y="270" class="axis-text" text-anchor="middle">0</text>
+            <text x="220" y="270" class="axis-text" text-anchor="middle">5 N</text>
+            <text x="300" y="270" class="axis-text" text-anchor="middle">10 N</text>
+            <text x="380" y="270" class="axis-text" text-anchor="middle">15 N</text>
+            <text x="460" y="270" class="axis-text" text-anchor="middle">20 N</text>
+
+            <g class="chart-row">
+                <text x="0" y="20" class="y-label">Direct</text>
+                <rect x="140" y="8" width="216" height="10" class="bar-solid" />
+                <rect x="140" y="19" width="242" height="10" class="bar-striped" />
+                <rect x="0" y="0" width="500" height="32" class="hover-zone" data-name="Direct" data-val="13.526" data-trend="↓ 10,8%" data-isup="false" />
+            </g>
+
+            <g class="chart-row">
+                <text x="0" y="55" class="y-label">Organic Search</text>
+                <rect x="140" y="43" width="76" height="10" class="bar-solid" />
+                <rect x="140" y="54" width="80" height="10" class="bar-striped" />
+                <rect x="0" y="35" width="500" height="32" class="hover-zone" data-name="Organic Search" data-val="4.750" data-trend="↓ 5,0%" data-isup="false" />
+            </g>
+
+            <g class="chart-row">
+                <text x="0" y="90" class="y-label">Paid Search</text>
+                <rect x="140" y="78" width="20" height="10" class="bar-solid" />
+                <rect x="140" y="89" width="35" height="10" class="bar-striped" />
+                <rect x="0" y="70" width="500" height="32" class="hover-zone" data-name="Paid Search" data-val="1.250" data-trend="↓ 42,8%" data-isup="false" />
+            </g>
+
+            <g class="chart-row">
+                <text x="0" y="125" class="y-label">Unassigned</text>
+                <rect x="140" y="113" width="10" height="10" class="bar-solid" />
+                <rect x="140" y="124" width="12" height="10" class="bar-striped" />
+                <rect x="0" y="105" width="500" height="32" class="hover-zone" data-name="Unassigned" data-val="625" data-trend="↓ 16,6%" data-isup="false" />
+            </g>
+
+            <g class="chart-row">
+                <text x="0" y="160" class="y-label">Cross-network</text>
+                <rect x="140" y="148" width="10" height="10" class="bar-solid" />
+                <rect x="140" y="159" width="8" height="10" class="bar-striped" />
+                <rect x="0" y="140" width="500" height="32" class="hover-zone" data-name="Cross-network" data-val="625" data-trend="↑ 25,0%" data-isup="true" />
+            </g>
+
+            <g class="chart-row">
+                <text x="0" y="195" class="y-label">Referral</text>
+                <rect x="140" y="183" width="6" height="10" class="bar-solid" />
+                <rect x="140" y="194" width="8" height="10" class="bar-striped" />
+                <rect x="0" y="175" width="500" height="32" class="hover-zone" data-name="Referral" data-val="375" data-trend="↓ 25,0%" data-isup="false" />
+            </g>
+
+            <g class="chart-row">
+                <text x="0" y="222" class="y-label">Organic</text>
+                <text x="0" y="238" class="y-label">Shopping</text>
+                <rect x="140" y="218" width="4" height="10" class="bar-solid" />
+                <rect x="140" y="229" width="4" height="10" class="bar-striped" />
+                <rect x="0" y="210" width="500" height="36" class="hover-zone" data-name="Organic Shopping" data-val="250" data-trend="0,0%" data-isup="true" />
+            </g>
+        </svg>
+    </div>
+
+    <div class="legend-area d-flex align-items-center gap-4 px-4 pb-2 mt-2">
+        <div class="d-flex align-items-center gap-2">
+            <div class="legend-dot-solid"></div>
+            <span class="legend-text">7 ngày trước</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <div class="legend-dot-striped"></div>
+            <span class="legend-text">Kỳ trước</span>
+        </div>
+    </div>
+
+    <div class="card-footer bg-white border-0 px-4 pb-4 pt-2 d-flex justify-content-between align-items-center">
+        <div class="dropdown">
+            <button class="btn btn-sm dropdown-toggle custom-dropdown-btn shadow-none text-secondary p-0" type="button" data-bs-toggle="dropdown">
+                7 ngày trước
+            </button>
+            <ul class="dropdown-menu shadow-sm">
+                <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                <li><a class="dropdown-item active" href="#">7 ngày trước</a></li>
+                <li><a class="dropdown-item" href="#">28 ngày trước</a></li>
+            </ul>
+        </div>
+        
+        <a href="#" class="view-report-link d-flex align-items-center gap-2">
+            Xem báo cáo thu nạp người dùng <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<div class="chart-popover shadow" id="chartPopover">
+    <div class="popover-date pb-2 mb-2 border-bottom" id="popDate">21 thg 9 - 27 thg 9, 2026 so với 14 thg 9 - 20 thg 9, 2026</div>
+    <div class="popover-metric-title mb-1 text-secondary text-uppercase" style="font-size: 11px;">SỐ NGƯỜI DÙNG MỚI</div>
+    <div class="d-flex justify-content-between align-items-center gap-5">
+        <span class="popover-label" id="popName">Direct</span>
+        <div class="d-flex align-items-center gap-3">
+            <span class="popover-val fw-bold" id="popVal">13.526</span>
+            <span class="popover-trend fw-medium" id="popTrend"><i class="bi bi-arrow-down"></i> 10,8%</span>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="card12.js"></script>
+</body>
+</html>

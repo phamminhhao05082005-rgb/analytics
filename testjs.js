@@ -1107,6 +1107,500 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // O. Card 10 (Realtime Card Dropdowns)
+    const card10Preview = document.getElementById('preview-card10');
+    if (card10Preview) {
+        function setupCard10Dropdown(menuId, btnId) {
+            const menu = card10Preview.querySelector('#' + menuId);
+            const btn = card10Preview.querySelector('#' + btnId);
+            if (!menu || !btn) return;
+            const items = menu.querySelectorAll('.dropdown-item');
+            items.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    items.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                    const val = item.getAttribute('data-val');
+                    if (val && val !== 'Chọn giúp tôi') {
+                        btn.innerHTML = `${val} <i class="bi bi-caret-down-fill" style="font-size: 10px;"></i>`;
+                    }
+                });
+            });
+        }
+        setupCard10Dropdown('menuDim1_10', 'btnDim1_10');
+    }
+
+    // P. Card 11 (Analytics Dashboard Card Slider & Popover)
+    const card11Preview = document.getElementById('preview-card11');
+    if (card11Preview) {
+        const track11 = card11Preview.querySelector('#metricTrack11');
+        const prevBtn11 = card11Preview.querySelector('#metricPrevBtn11');
+        const nextBtn11 = card11Preview.querySelector('#metricNextBtn11');
+        
+        let currentPos11 = 0;
+        const itemWidth11 = 220;
+
+        if (track11 && prevBtn11 && nextBtn11) {
+            nextBtn11.addEventListener('click', () => {
+                const maxScroll = -(track11.scrollWidth - track11.parentElement.offsetWidth);
+                if (currentPos11 > maxScroll) {
+                    currentPos11 -= itemWidth11;
+                    if (currentPos11 < maxScroll) currentPos11 = maxScroll;
+                    track11.style.transform = `translateX(${currentPos11}px)`;
+                }
+            });
+
+            prevBtn11.addEventListener('click', () => {
+                if (currentPos11 < 0) {
+                    currentPos11 += itemWidth11;
+                    if (currentPos11 > 0) currentPos11 = 0;
+                    track11.style.transform = `translateX(${currentPos11}px)`;
+                }
+            });
+        }
+
+        const metricItems11 = card11Preview.querySelectorAll('.metric-box');
+        metricItems11.forEach(item => {
+            item.addEventListener('click', () => {
+                metricItems11.forEach(i => {
+                    i.classList.remove('active');
+                    const t = i.querySelector('.metric-title');
+                    if (t) {
+                        t.classList.remove('text-primary');
+                        t.classList.add('text-secondary');
+                    }
+                });
+                item.classList.add('active');
+                const title = item.querySelector('.metric-title');
+                if (title) {
+                    title.classList.remove('text-secondary');
+                    title.classList.add('text-primary');
+                }
+            });
+        });
+
+        const chartData11 = [
+            { x: 50, yMain: 110, yDash: 130, date: 'Thứ 2 21 thg 9 vs Thứ 2 14 thg 9', val: '4.102', trend: '↓ 4,2%', isUp: false },
+            { x: 160, yMain: 100, yDash: 90, date: 'Thứ 3 22 thg 9 vs Thứ 3 15 thg 9', val: '4.805', trend: '↑ 2,1%', isUp: true },
+            { x: 270, yMain: 120, yDash: 115, date: 'Thứ 4 23 thg 9 vs Thứ 4 16 thg 9', val: '4.000', trend: '↓ 1,5%', isUp: false },
+            { x: 380, yMain: 130, yDash: 135, date: 'Thứ 5 24 thg 9 vs Thứ 5 17 thg 9', val: '3.800', trend: '↑ 0,8%', isUp: true },
+            { x: 490, yMain: 105, yDash: 140, date: 'Thứ 6 25 thg 9 vs Thứ 6 18 thg 9', val: '4.492', trend: '↑ 24,5%', isUp: true },
+            { x: 600, yMain: 160, yDash: 145, date: 'Thứ 7 26 thg 9 vs Thứ 7 19 thg 9', val: '2.500', trend: '↓ 12,0%', isUp: false },
+            { x: 710, yMain: 190, yDash: 130, date: 'CN 27 thg 9 vs CN 20 thg 9', val: '1.200', trend: '↓ 30,5%', isUp: false }
+        ];
+
+        const layer11 = card11Preview.querySelector('#interactiveLayer11');
+        const popover11 = card11Preview.querySelector('#chartPopover11');
+        const popDate11 = card11Preview.querySelector('#popDate11');
+        const popVal11 = card11Preview.querySelector('#popVal11');
+        const popTrend11 = card11Preview.querySelector('#popTrend11');
+        const zoneWidth11 = 110;
+
+        if (layer11 && popover11 && popDate11 && popVal11 && popTrend11) {
+            layer11.innerHTML = '';
+            chartData11.forEach((data, index) => {
+                const vLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                vLine.setAttribute('x1', data.x);
+                vLine.setAttribute('y1', 20);
+                vLine.setAttribute('x2', data.x);
+                vLine.setAttribute('y2', 220);
+                vLine.setAttribute('class', 'hover-vline');
+                vLine.setAttribute('id', `c11-vl-${index}`);
+                layer11.appendChild(vLine);
+
+                const dotDash = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                dotDash.setAttribute('cx', data.x);
+                dotDash.setAttribute('cy', data.yDash);
+                dotDash.setAttribute('r', 4);
+                dotDash.setAttribute('class', 'hover-dot-dash');
+                dotDash.setAttribute('id', `c11-ddash-${index}`);
+                layer11.appendChild(dotDash);
+
+                const dotMain = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                dotMain.setAttribute('cx', data.x);
+                dotMain.setAttribute('cy', data.yMain);
+                dotMain.setAttribute('r', 4);
+                dotMain.setAttribute('class', 'hover-dot-main');
+                dotMain.setAttribute('id', `c11-dmain-${index}`);
+                layer11.appendChild(dotMain);
+
+                const zone = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                zone.setAttribute('x', data.x - zoneWidth11 / 2);
+                zone.setAttribute('y', 0);
+                zone.setAttribute('width', zoneWidth11);
+                zone.setAttribute('height', 250);
+                zone.setAttribute('class', 'hover-zone');
+
+                zone.addEventListener('mouseenter', () => {
+                    const vl = card11Preview.querySelector(`#c11-vl-${index}`);
+                    const dd = card11Preview.querySelector(`#c11-ddash-${index}`);
+                    const dm = card11Preview.querySelector(`#c11-dmain-${index}`);
+                    if (vl) vl.style.opacity = '1';
+                    if (dd) dd.style.opacity = '1';
+                    if (dm) dm.style.opacity = '1';
+
+                    popDate11.textContent = data.date;
+                    popVal11.textContent = data.val;
+                    
+                    if (data.isUp) {
+                        popTrend11.innerHTML = `<i class="bi bi-arrow-up"></i> ${data.trend.replace('↑ ', '')}`;
+                        popTrend11.className = 'popover-trend fw-medium text-success';
+                    } else {
+                        popTrend11.innerHTML = `<i class="bi bi-arrow-down"></i> ${data.trend.replace('↓ ', '')}`;
+                        popTrend11.className = 'popover-trend fw-medium text-danger';
+                    }
+                    popover11.style.display = 'block';
+                });
+
+                zone.addEventListener('mousemove', (e) => {
+                    let left = e.clientX + 15;
+                    let top = e.clientY - 40;
+                    const pRect = popover11.getBoundingClientRect();
+                    if (left + pRect.width > window.innerWidth) {
+                        left = e.clientX - pRect.width - 15;
+                    }
+                    popover11.style.left = `${left}px`;
+                    popover11.style.top = `${top}px`;
+                });
+
+                zone.addEventListener('mouseleave', () => {
+                    const vl = card11Preview.querySelector(`#c11-vl-${index}`);
+                    const dd = card11Preview.querySelector(`#c11-ddash-${index}`);
+                    const dm = card11Preview.querySelector(`#c11-dmain-${index}`);
+                    if (vl) vl.style.opacity = '0';
+                    if (dd) dd.style.opacity = '0';
+                    if (dm) dm.style.opacity = '0';
+                    popover11.style.display = 'none';
+                });
+
+                layer11.appendChild(zone);
+            });
+        }
+    }
+
+    // Q. Card 12 (Analytics Acquisition Bar Chart Card Popover)
+    const card12Preview = document.getElementById('preview-card12');
+    if (card12Preview) {
+        const hoverZones12 = card12Preview.querySelectorAll('.hover-zone');
+        const popover12 = card12Preview.querySelector('#chartPopover12');
+        const popName12 = card12Preview.querySelector('#popName12');
+        const popVal12 = card12Preview.querySelector('#popVal12');
+        const popTrend12 = card12Preview.querySelector('#popTrend12');
+        const chartRows12 = card12Preview.querySelectorAll('.chart-row');
+
+        if (popover12 && popName12 && popVal12 && popTrend12) {
+            hoverZones12.forEach(zone => {
+                zone.addEventListener('mouseenter', () => {
+                    chartRows12.forEach(row => {
+                        if (row !== zone.parentElement) {
+                            row.classList.add('dimmed');
+                        }
+                    });
+
+                    const name = zone.getAttribute('data-name');
+                    const val = zone.getAttribute('data-val');
+                    const trend = zone.getAttribute('data-trend');
+                    const isUp = zone.getAttribute('data-isup') === 'true';
+
+                    popName12.textContent = name;
+                    popVal12.textContent = val;
+                    
+                    if (trend === '0,0%') {
+                        popTrend12.innerHTML = trend;
+                        popTrend12.className = 'popover-trend fw-medium text-secondary';
+                    } else if (isUp) {
+                        popTrend12.innerHTML = `<i class="bi bi-arrow-up"></i> ${trend.replace('↑ ', '')}`;
+                        popTrend12.className = 'popover-trend fw-medium text-success';
+                    } else {
+                        popTrend12.innerHTML = `<i class="bi bi-arrow-down"></i> ${trend.replace('↓ ', '')}`;
+                        popTrend12.className = 'popover-trend fw-medium text-danger';
+                    }
+
+                    popover12.style.display = 'block';
+                });
+
+                zone.addEventListener('mousemove', (e) => {
+                    let left = e.clientX + 15;
+                    let top = e.clientY + 15;
+                    const pRect = popover12.getBoundingClientRect();
+                    if (left + pRect.width > window.innerWidth) {
+                        left = e.clientX - pRect.width - 15;
+                    }
+                    if (top + pRect.height > window.innerHeight) {
+                        top = e.clientY - pRect.height - 15;
+                    }
+                    popover12.style.left = `${left}px`;
+                    popover12.style.top = `${top}px`;
+                });
+
+                zone.addEventListener('mouseleave', () => {
+                    chartRows12.forEach(row => {
+                        row.classList.remove('dimmed');
+                    });
+                    popover12.style.display = 'none';
+                });
+            });
+        }
+    }
+
+    // R. Card 13 (Analytics User Activity Over Time Card Popover)
+    const card13Preview = document.getElementById('preview-card13');
+    if (card13Preview) {
+        const chartData13 = [
+            { x: 30, date: '21 thg 9, 2026', y30: 55, y7: 175, y1: 215, val30: '100.521', val7: '28.412', val1: '3.204' },
+            { x: 90, date: '22 thg 9, 2026', y30: 55, y7: 175, y1: 215, val30: '101.102', val7: '28.350', val1: '3.150' },
+            { x: 150, date: '23 thg 9, 2026', y30: 54, y7: 176, y1: 216, val30: '101.405', val7: '27.900', val1: '3.080' },
+            { x: 210, date: '24 thg 9, 2026', y30: 53, y7: 176, y1: 217, val30: '101.890', val7: '27.850', val1: '2.950' },
+            { x: 270, date: '25 thg 9, 2026', y30: 52, y7: 174, y1: 215, val30: '102.300', val7: '28.600', val1: '3.310' },
+            { x: 330, date: '26 thg 9, 2026', y30: 54, y7: 175, y1: 218, val30: '101.500', val7: '28.450', val1: '2.850' },
+            { x: 390, date: '27 thg 9, 2026', y30: 60, y7: 188, y1: 227, val30: '97.000', val7: '24.000', val1: '1.600' }
+        ];
+
+        const layer13 = card13Preview.querySelector('#interactiveLayer13');
+        const popover13 = card13Preview.querySelector('#chartPopover13');
+        const popDate13 = card13Preview.querySelector('#popDate13');
+        const pop30_13 = card13Preview.querySelector('#pop30_13');
+        const pop7_13 = card13Preview.querySelector('#pop7_13');
+        const pop1_13 = card13Preview.querySelector('#pop1_13');
+        const zoneWidth13 = 60;
+
+        if (layer13 && popover13 && popDate13 && pop30_13 && pop7_13 && pop1_13) {
+            layer13.innerHTML = '';
+            chartData13.forEach((data, index) => {
+                const vLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                vLine.setAttribute('x1', data.x);
+                vLine.setAttribute('y1', 20);
+                vLine.setAttribute('x2', data.x);
+                vLine.setAttribute('y2', 230);
+                vLine.setAttribute('class', 'hover-vline');
+                vLine.setAttribute('id', `c13-vl-${index}`);
+                layer13.appendChild(vLine);
+
+                const d30 = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                d30.setAttribute('cx', data.x);
+                d30.setAttribute('cy', data.y30);
+                d30.setAttribute('r', 4);
+                d30.setAttribute('fill', '#4285f4');
+                d30.setAttribute('class', 'hover-dot');
+                d30.setAttribute('id', `c13-d30-${index}`);
+                layer13.appendChild(d30);
+
+                const d7 = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                d7.setAttribute('x', data.x - 4);
+                d7.setAttribute('y', data.y7 - 4);
+                d7.setAttribute('width', 8);
+                d7.setAttribute('height', 8);
+                d7.setAttribute('fill', '#8bc34a');
+                d7.setAttribute('class', 'hover-dot');
+                d7.setAttribute('id', `c13-d7-${index}`);
+                layer13.appendChild(d7);
+
+                const d1 = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+                d1.setAttribute('points', `${data.x},${data.y1-4} ${data.x+4},${data.y1} ${data.x},${data.y1+4} ${data.x-4},${data.y1}`);
+                d1.setAttribute('fill', '#e91e63');
+                d1.setAttribute('class', 'hover-dot');
+                d1.setAttribute('id', `c13-d1-${index}`);
+                layer13.appendChild(d1);
+
+                const zone = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                zone.setAttribute('x', data.x - zoneWidth13 / 2);
+                zone.setAttribute('y', 0);
+                zone.setAttribute('width', zoneWidth13);
+                zone.setAttribute('height', 260);
+                zone.setAttribute('class', 'hover-zone');
+
+                zone.addEventListener('mouseenter', () => {
+                    const vl = card13Preview.querySelector(`#c13-vl-${index}`);
+                    const dot30 = card13Preview.querySelector(`#c13-d30-${index}`);
+                    const dot7 = card13Preview.querySelector(`#c13-d7-${index}`);
+                    const dot1 = card13Preview.querySelector(`#c13-d1-${index}`);
+                    if (vl) vl.style.opacity = '1';
+                    if (dot30) dot30.style.opacity = '1';
+                    if (dot7) dot7.style.opacity = '1';
+                    if (dot1) dot1.style.opacity = '1';
+
+                    popDate13.textContent = data.date;
+                    pop30_13.textContent = data.val30;
+                    pop7_13.textContent = data.val7;
+                    pop1_13.textContent = data.val1;
+                    popover13.style.display = 'block';
+                });
+
+                zone.addEventListener('mousemove', (e) => {
+                    let left = e.clientX + 15;
+                    let top = e.clientY - 40;
+                    const pRect = popover13.getBoundingClientRect();
+                    if (left + pRect.width > window.innerWidth) {
+                        left = e.clientX - pRect.width - 15;
+                    }
+                    popover13.style.left = `${left}px`;
+                    popover13.style.top = `${top}px`;
+                });
+
+                zone.addEventListener('mouseleave', () => {
+                    const vl = card13Preview.querySelector(`#c13-vl-${index}`);
+                    const dot30 = card13Preview.querySelector(`#c13-d30-${index}`);
+                    const dot7 = card13Preview.querySelector(`#c13-d7-${index}`);
+                    const dot1 = card13Preview.querySelector(`#c13-d1-${index}`);
+                    if (vl) vl.style.opacity = '0';
+                    if (dot30) dot30.style.opacity = '0';
+                    if (dot7) dot7.style.opacity = '0';
+                    if (dot1) dot1.style.opacity = '0';
+                    popover13.style.display = 'none';
+                });
+
+                layer13.appendChild(zone);
+            });
+        }
+    }
+
+    // S. Card 14 & Card 15 (Settings Cards Tooltips & Help Icons)
+    const cardSettingsHelpIcons = document.querySelectorAll('#preview-card14 .help-icon-wrapper, #preview-card15 .help-icon-wrapper');
+    cardSettingsHelpIcons.forEach(icon => {
+        icon.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    });
+    const cardSettingsTooltips = document.querySelectorAll('#preview-card14 [data-bs-toggle="tooltip"], #preview-card15 [data-bs-toggle="tooltip"]');
+    if (window.bootstrap && cardSettingsTooltips.length > 0) {
+        [...cardSettingsTooltips].forEach(el => new bootstrap.Tooltip(el));
+    }
+
+    // T. Offcanvas 5 (Web Stream Details Tabs)
+    const offcanvas5Tabs = document.querySelectorAll('#webStreamOffcanvas .tab-item');
+    offcanvas5Tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            offcanvas5Tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+        });
+    });
+
+    // U. Table 2 (Custom Dimensions Table Search & Pagination)
+    const table2Preview = document.getElementById('preview-table2');
+    if (table2Preview) {
+        const searchInput2 = table2Preview.querySelector('#searchInputTable2');
+        const tableRows2 = Array.from(table2Preview.querySelectorAll('.data-row'));
+        const noDataMessage2 = table2Preview.querySelector('#noDataMessage2');
+        const rowsPerPageItems2 = table2Preview.querySelectorAll('.custom-pagination-dropdown .dropdown-item');
+        const rowsPerPageBtnText2 = table2Preview.querySelector('#rowsPerPageText2');
+        const firstPageBtn2 = table2Preview.querySelector('#firstPageBtn2');
+        const prevPageBtn2 = table2Preview.querySelector('#prevPageBtn2');
+        const nextPageBtn2 = table2Preview.querySelector('#nextPageBtn2');
+        const lastPageBtn2 = table2Preview.querySelector('#lastPageBtn2');
+        const pageInfo2 = table2Preview.querySelector('#pageInfo2');
+
+        let currentPage2 = 1;
+        let rowsPerPage2 = 25; 
+        let currentSearchTerm2 = '';
+        let filteredRows2 = [...tableRows2];
+
+        function renderTable2() {
+            filteredRows2 = tableRows2.filter(row => {
+                const textContent = row.textContent.toLowerCase();
+                return textContent.includes(currentSearchTerm2);
+            });
+
+            tableRows2.forEach(row => row.style.display = 'none');
+            const totalFiltered = filteredRows2.length;
+            
+            if (totalFiltered === 0) {
+                if (noDataMessage2) noDataMessage2.style.display = 'block';
+                if (pageInfo2) pageInfo2.textContent = `0 – 0/0`;
+                if (firstPageBtn2) firstPageBtn2.disabled = true;
+                if (prevPageBtn2) prevPageBtn2.disabled = true;
+                if (nextPageBtn2) nextPageBtn2.disabled = true;
+                if (lastPageBtn2) lastPageBtn2.disabled = true;
+                return;
+            }
+
+            if (noDataMessage2) noDataMessage2.style.display = 'none';
+
+            const totalPages = Math.ceil(totalFiltered / rowsPerPage2);
+            if (currentPage2 > totalPages) currentPage2 = totalPages;
+            if (currentPage2 < 1) currentPage2 = 1;
+
+            const startIndex = (currentPage2 - 1) * rowsPerPage2;
+            const endIndex = Math.min(startIndex + rowsPerPage2, totalFiltered);
+
+            for (let i = startIndex; i < endIndex; i++) {
+                filteredRows2[i].style.display = '';
+            }
+
+            if (pageInfo2) pageInfo2.textContent = `${startIndex + 1} – ${endIndex}/${totalFiltered}`;
+
+            const isFirst = currentPage2 === 1;
+            const isLast = currentPage2 === totalPages;
+
+            if (firstPageBtn2) firstPageBtn2.disabled = isFirst;
+            if (prevPageBtn2) prevPageBtn2.disabled = isFirst;
+            if (nextPageBtn2) nextPageBtn2.disabled = isLast;
+            if (lastPageBtn2) lastPageBtn2.disabled = isLast;
+        }
+
+        if (searchInput2) {
+            searchInput2.addEventListener('input', (e) => {
+                currentSearchTerm2 = e.target.value.toLowerCase().trim();
+                currentPage2 = 1;
+                renderTable2();
+            });
+        }
+
+        rowsPerPageItems2.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                rowsPerPageItems2.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                const val = item.getAttribute('data-val');
+                if (rowsPerPageBtnText2) rowsPerPageBtnText2.textContent = val;
+                rowsPerPage2 = parseInt(val);
+                currentPage2 = 1;
+                renderTable2();
+            });
+        });
+
+        if (firstPageBtn2) {
+            firstPageBtn2.addEventListener('click', () => {
+                currentPage2 = 1;
+                renderTable2();
+            });
+        }
+        if (prevPageBtn2) {
+            prevPageBtn2.addEventListener('click', () => {
+                if (currentPage2 > 1) {
+                    currentPage2--;
+                    renderTable2();
+                }
+            });
+        }
+        if (nextPageBtn2) {
+            nextPageBtn2.addEventListener('click', () => {
+                const totalPages = Math.ceil(filteredRows2.length / rowsPerPage2);
+                if (currentPage2 < totalPages) {
+                    currentPage2++;
+                    renderTable2();
+                }
+            });
+        }
+        if (lastPageBtn2) {
+            lastPageBtn2.addEventListener('click', () => {
+                currentPage2 = Math.ceil(filteredRows2.length / rowsPerPage2);
+                renderTable2();
+            });
+        }
+
+        // Chuyển đổi tab
+        const table2Tabs = table2Preview.querySelectorAll('.tab-item');
+        table2Tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                table2Tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        renderTable2();
+    }
+
     // M. Đồng bộ URL Hash
     setupTabHashSync();
 });

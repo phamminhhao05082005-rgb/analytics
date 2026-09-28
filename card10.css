@@ -1,0 +1,157 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.rt-card {
+    width: 320px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rt-title {
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.dashed-border {
+    border-bottom: 1px dashed #9aa0a6;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.status-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #e5f4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.status-icon i {
+    color: #137333;
+    font-size: 16px;
+}
+
+.rt-value {
+    font-size: 44px;
+    color: #202124;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.rt-chart-title {
+    font-size: 11px;
+    color: #5f6368;
+    letter-spacing: 0.2px;
+}
+
+.rt-chart {
+    height: 60px;
+    border-bottom: 1px solid #dadce0;
+    padding-bottom: 0;
+}
+
+.rt-bar {
+    flex-grow: 1;
+    background-color: #4285f4;
+    border-radius: 1px 1px 0 0;
+    min-width: 4px;
+}
+
+.table-dropdown-btn {
+    background: transparent;
+    border: none;
+    font-size: 13px;
+    color: #5f6368;
+    font-weight: 500;
+    padding: 4px 8px;
+    margin-left: -8px;
+    border-radius: 4px;
+}
+
+.table-dropdown-btn:hover, .table-dropdown-btn[aria-expanded="true"] {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.rt-dropdown-menu {
+    border-radius: 4px;
+    border: 1px solid #dadce0;
+    padding: 8px 0;
+    min-width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.rt-dropdown-menu .dropdown-item {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #3c4043;
+}
+
+.rt-dropdown-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.rt-dropdown-menu .dropdown-item.active {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.check-icon {
+    position: absolute;
+    left: 0;
+    display: none;
+    color: #1a73e8;
+    font-size: 16px;
+}
+
+.rt-dropdown-menu .dropdown-item.active .check-icon {
+    display: block;
+}
+
+.item-text {
+    margin-left: 28px;
+}
+
+.rt-row {
+    min-height: 40px;
+}
+
+.row-label-container {
+    flex-grow: 1;
+    padding-right: 16px;
+}
+
+.row-label {
+    font-size: 13px;
+    color: #202124;
+    margin-bottom: 4px;
+}
+
+.row-bar {
+    height: 2px;
+    background-color: #4285f4;
+    border-radius: 1px;
+}
+
+.row-value {
+    font-size: 13px;
+    color: #202124;
+}
+
+.rt-link {
+    font-size: 14px;
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.rt-link:hover {
+    text-decoration: underline;
+}

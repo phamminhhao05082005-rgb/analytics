@@ -1,0 +1,209 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.custom-dim-card {
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header-tabs {
+    border-bottom: 1px solid #dadce0;
+    background-color: #ffffff;
+}
+
+.tabs-container {
+    display: flex;
+}
+
+.tab-item {
+    padding: 16px 24px;
+    font-size: 14px;
+    color: #5f6368;
+    cursor: pointer;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tab-item.active {
+    color: #1a73e8;
+    background-color: #e8f0fe;
+    border-bottom-color: #1a73e8;
+}
+
+.tab-item:hover:not(.active) {
+    background-color: #f8f9fa;
+    color: #202124;
+}
+
+.search-box {
+    position: relative;
+    width: 250px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5f6368;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 12px 8px 40px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #202124;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+    border-color: #1a73e8;
+}
+
+.search-box input::placeholder {
+    color: #5f6368;
+}
+
+.custom-table {
+    margin-bottom: 0;
+}
+
+.custom-table th {
+    font-size: 13px;
+    color: #202124;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-bottom: 1px solid #dadce0;
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+
+.custom-table td {
+    font-size: 14px;
+    color: #3c4043;
+    padding: 16px 16px;
+    border-bottom: 1px solid #dadce0;
+    vertical-align: middle;
+}
+
+.custom-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.custom-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.desc-col {
+    line-height: 1.5;
+}
+
+.no-data-msg {
+    padding: 24px;
+    text-align: center;
+    color: #5f6368;
+    font-size: 14px;
+}
+
+.table-footer {
+    background-color: #ffffff;
+}
+
+.custom-pagination-dropdown .btn {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 4px 8px 4px 12px;
+    font-size: 13px;
+    color: #3c4043;
+    min-width: 65px;
+}
+
+.custom-pagination-dropdown .btn:focus,
+.custom-pagination-dropdown .btn[aria-expanded="true"] {
+    border-color: #1a73e8;
+    color: #202124;
+}
+
+.custom-pagination-dropdown .btn::after {
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-bottom: 0;
+    border-left: 4px solid transparent;
+    color: #5f6368;
+}
+
+.custom-pagination-dropdown .btn[aria-expanded="true"]::after {
+    border-top: 0;
+    border-bottom: 4px solid;
+    color: #1a73e8; 
+}
+
+.custom-pagination-dropdown .dropdown-menu {
+    min-width: 65px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    padding: 8px 0;
+    margin-top: 4px !important;
+    border-radius: 4px;
+}
+
+.custom-pagination-dropdown .dropdown-item {
+    padding: 10px 16px;
+    font-size: 13px;
+    color: #3c4043;
+}
+
+.custom-pagination-dropdown .dropdown-item:hover {
+    background-color: #f1f3f4;
+}
+
+.custom-pagination-dropdown .dropdown-item.active {
+    background-color: #e8f0fe;
+    color: #202124;
+    font-weight: 400;
+}
+
+.btn-icon-sm {
+    padding: 4px;
+    font-size: 16px;
+    color: #5f6368;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.btn-icon-sm:hover:not(:disabled) {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.btn-icon-sm:disabled {
+    opacity: 0.38;
+    cursor: default;
+}

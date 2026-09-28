@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Realtime Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="card10.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<div class="rt-card shadow-sm bg-white">
+    <div class="p-4 pb-2">
+        <div class="d-flex justify-content-between align-items-start">
+            <div class="rt-title text-uppercase text-secondary">
+                <span class="dashed-border">SỐ NGƯỜI DÙNG ĐANG HOẠT ĐỘNG</span><br>
+                <span class="dashed-border">TRONG 30 PHÚT QUA</span>
+            </div>
+            <div class="status-icon">
+                <i class="bi bi-check-circle"></i>
+            </div>
+        </div>
+        
+        <div class="rt-value mt-3">80</div>
+        
+        <div class="rt-chart-title text-uppercase mt-2 mb-2">
+            SỐ NGƯỜI DÙNG ĐANG HOẠT ĐỘNG MỖI PHÚT
+        </div>
+        
+        <div class="rt-chart d-flex align-items-end gap-1">
+            <div class="rt-bar" style="height: 4%;"></div>
+            <div class="rt-bar" style="height: 6%;"></div>
+            <div class="rt-bar" style="height: 25%;"></div>
+            <div class="rt-bar" style="height: 12%;"></div>
+            <div class="rt-bar" style="height: 18%;"></div>
+            <div class="rt-bar" style="height: 22%;"></div>
+            <div class="rt-bar" style="height: 30%;"></div>
+            <div class="rt-bar" style="height: 25%;"></div>
+            <div class="rt-bar" style="height: 10%;"></div>
+            <div class="rt-bar" style="height: 15%;"></div>
+            <div class="rt-bar" style="height: 10%;"></div>
+            <div class="rt-bar" style="height: 18%;"></div>
+            <div class="rt-bar" style="height: 28%;"></div>
+            <div class="rt-bar" style="height: 28%;"></div>
+            <div class="rt-bar" style="height: 15%;"></div>
+            <div class="rt-bar" style="height: 20%;"></div>
+            <div class="rt-bar" style="height: 20%;"></div>
+            <div class="rt-bar" style="height: 25%;"></div>
+            <div class="rt-bar" style="height: 6%;"></div>
+            <div class="rt-bar" style="height: 10%;"></div>
+            <div class="rt-bar" style="height: 6%;"></div>
+            <div class="rt-bar" style="height: 20%;"></div>
+            <div class="rt-bar" style="height: 10%;"></div>
+            <div class="rt-bar" style="height: 25%;"></div>
+            <div class="rt-bar" style="height: 45%;"></div>
+            <div class="rt-bar" style="height: 8%;"></div>
+            <div class="rt-bar" style="height: 15%;"></div>
+            <div class="rt-bar" style="height: 10%;"></div>
+        </div>
+    </div>
+
+    <div class="rt-table px-4 mt-2">
+        <div class="d-flex justify-content-between border-bottom pb-2 pt-2">
+            
+            <div class="dropdown">
+                <button class="table-dropdown-btn d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btnDim1">
+                    QUỐC GIA <i class="bi bi-caret-down-fill" style="font-size: 10px;"></i>
+                </button>
+                <ul class="dropdown-menu shadow-sm rt-dropdown-menu" id="menuDim1">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="#" data-val="Chọn giúp tôi">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Chọn giúp tôi</span>
+                            </div>
+                            <i class="bi bi-stars"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center active" href="#" data-val="Quốc gia">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Đối tượng</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" data-val="Thành phố">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Thành phố</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" data-val="Quốc gia">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Quốc gia</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" data-val="Chiến dịch của người dùng lần đầu">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Chiến dịch của người dùng lần đầu</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" data-val="Phương tiện của người dùng lần đầu">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Phương tiện của người dùng lần đầu</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" data-val="Nguồn của người dùng lần đầu">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Nguồn của người dùng lần đầu</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="table-dropdown-btn d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btnDim2">
+                    SỐ NGƯỜI ... <i class="bi bi-caret-down-fill" style="font-size: 10px;"></i>
+                </button>
+                <ul class="dropdown-menu shadow-sm rt-dropdown-menu" id="menuDim2">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center justify-content-between active" href="#" data-val="SỐ NGƯỜI ...">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Chọn giúp tôi</span>
+                            </div>
+                            <i class="bi bi-stars"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" data-val="SỐ NGƯỜI ...">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Số người dùng đang hoạt động</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="#" data-val="SỐ NGƯỜI MỚI">
+                            <div class="d-flex align-items-center position-relative">
+                                <i class="bi bi-check2 check-icon"></i>
+                                <span class="item-text">Số người dùng mới</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="rt-row d-flex justify-content-between align-items-start py-2 border-bottom">
+            <div class="row-label-container">
+                <div class="row-label">United States</div>
+                <div class="row-bar" style="width: 65%;"></div>
+            </div>
+            <div class="row-value">29</div>
+        </div>
+
+        <div class="rt-row d-flex justify-content-between align-items-start py-2 border-bottom">
+            <div class="row-label-container">
+                <div class="row-label">United Arab Emirat...</div>
+                <div class="row-bar" style="width: 10%;"></div>
+            </div>
+            <div class="row-value">4</div>
+        </div>
+
+        <div class="rt-row d-flex justify-content-between align-items-start py-2 border-bottom">
+            <div class="row-label-container">
+                <div class="row-label">Chile</div>
+                <div class="row-bar" style="width: 8%;"></div>
+            </div>
+            <div class="row-value">3</div>
+        </div>
+
+        <div class="rt-row d-flex justify-content-between align-items-start py-2 border-bottom">
+            <div class="row-label-container">
+                <div class="row-label">Australia</div>
+                <div class="row-bar" style="width: 5%;"></div>
+            </div>
+            <div class="row-value">2</div>
+        </div>
+
+    </div>
+
+    <div class="p-3 text-end">
+        <a href="#" class="rt-link d-inline-flex align-items-center gap-2">
+            Xem báo cáo thời gian thực <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="card10.js"></script>
+</body>
+</html>

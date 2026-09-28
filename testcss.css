@@ -674,5 +674,101 @@ body > .container-fluid > .row > main.main-content {
     margin: 0 auto;
 }
 
+/* Table 2 Preview (Custom Dimensions Table - Thu nhỏ vừa vặn & fix ô tìm kiếm) */
+#preview-table2 {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+    border-radius: 0 0 12px 12px;
+    overflow-x: auto;
+}
+
+#preview-table2 .custom-dim-card {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+/* Khắc phục xung đột CSS .search-box từ topbar1 và thu gọn vừa vặn */
+#preview-table2 .card-header-tabs {
+    padding: 0 12px 0 0;
+    gap: 12px;
+}
+
+#preview-table2 .card-header-tabs .tab-item {
+    padding: 12px 16px !important;
+    font-size: 13px !important;
+    white-space: nowrap;
+}
+
+#preview-table2 .search-box {
+    position: relative !important;
+    width: 220px !important;
+    min-width: 180px !important;
+    max-width: 220px !important;
+    height: auto !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    display: block !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
+#preview-table2 .search-box input {
+    width: 100% !important;
+    height: 36px !important;
+    padding: 6px 12px 6px 34px !important;
+    border: 1px solid #dadce0 !important;
+    border-radius: 4px !important;
+    font-size: 13px !important;
+    color: #202124 !important;
+    background-color: #ffffff !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s;
+}
+
+#preview-table2 .search-box input:focus {
+    border-color: #1a73e8 !important;
+    box-shadow: 0 0 0 1px #1a73e8 !important;
+}
+
+#preview-table2 .search-box .search-icon {
+    position: absolute !important;
+    left: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #5f6368 !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    pointer-events: none;
+}
+
+/* Làm cho các dòng bảng thon gọn hơn một chút để vừa vặn khung xem trước */
+#preview-table2 .custom-table th {
+    font-size: 12px !important;
+    padding: 10px 12px !important;
+}
+
+#preview-table2 .custom-table td {
+    font-size: 13px !important;
+    padding: 11px 12px !important;
+}
+
+#preview-table2 .table-footer {
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+}
+
+#preview-table2 .custom-pagination-dropdown .btn {
+    font-size: 12px !important;
+    padding: 3px 6px 3px 10px !important;
+    min-width: 58px !important;
+}
+
 
 

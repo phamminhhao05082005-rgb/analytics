@@ -275,6 +275,78 @@ const categories = [
                 previewId: 'preview-card9',
                 previewClass: '',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ hiển thị phân bố người dùng mới theo nền tảng dạng bong bóng tròn ấn tượng kèm tỷ lệ phần trăm chi tiết.'
+            },
+            {
+                sampleId: 'card-mau-10',
+                badgeText: 'Mẫu 10',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Realtime Card (Thẻ người dùng hoạt động theo thời gian thực 30 phút qua)',
+                htmlFile: 'card10.html',
+                cssFile: 'card10.css',
+                jsFile: 'card10.js',
+                previewId: 'preview-card10',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ hiển thị số liệu thời gian thực dạng thanh cột (bar chart), bảng xếp hạng động theo quốc gia/thành phố với dropdown lựa chọn thứ nguyên. Cần nhúng file <code>card10.js</code> để kích hoạt chọn thứ nguyên trong dropdown.'
+            },
+            {
+                sampleId: 'card-mau-11',
+                badgeText: 'Mẫu 11',
+                badgeClass: 'text-bg-info text-white',
+                title: 'Analytics Dashboard Metrics & Trend Card (Thẻ thanh trượt chỉ số đo lường & biểu đồ xu hướng SVG)',
+                htmlFile: 'card11.html',
+                cssFile: 'card11.css',
+                jsFile: 'card11.js',
+                previewId: 'preview-card11',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ bảng điều khiển cao cấp chứa thanh trượt chọn chỉ số (Người dùng hoạt động, Sự kiện quan trọng, Phiên, Mua hàng) và biểu đồ đường xu hướng SVG tương tác kèm popover chi tiết. Cần nhúng file <code>card11.js</code> để bật animation thanh trượt và hover biểu đồ.'
+            },
+            {
+                sampleId: 'card-mau-12',
+                badgeText: 'Mẫu 12',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Acquisition Bar Chart Card (Thẻ biểu đồ cột ngang phân tích thu nạp người dùng mới)',
+                htmlFile: 'card12.html',
+                cssFile: 'card12.css',
+                jsFile: 'card12.js',
+                previewId: 'preview-card12',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ cột ngang SVG phân tích nguồn người dùng mới (Direct, Organic Search, Paid Search...) hỗ trợ sọc so sánh 2 kỳ (kỳ này vs kỳ trước) và popover hiển thị tỷ lệ tăng giảm tương tác khi di chuột. Cần nhúng file <code>card12.js</code> để kích hoạt hiệu ứng hover & popover.'
+            },
+            {
+                sampleId: 'card-mau-13',
+                badgeText: 'Mẫu 13',
+                badgeClass: 'text-bg-success',
+                title: 'Analytics User Activity Over Time Card (Thẻ biểu đồ đường hoạt động người dùng theo 1, 7 và 30 ngày)',
+                htmlFile: 'card13.html',
+                cssFile: 'card13.css',
+                jsFile: 'card13.js',
+                previewId: 'preview-card13',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ theo dõi nhịp độ hoạt động của người dùng với 3 đường SVG tương ứng 30 ngày, 7 ngày và 1 ngày, tích hợp thống kê tỷ lệ biến động bên phải và popover chi tiết theo từng ngày khi hover. Cần nhúng file <code>card13.js</code> để kích hoạt hiệu ứng hover tương tác.'
+            },
+            {
+                sampleId: 'card-mau-14',
+                badgeText: 'Mẫu 14',
+                badgeClass: 'text-bg-secondary',
+                title: 'Analytics Data Settings Card (Thẻ danh mục cấu hình cài đặt thu thập và sửa đổi dữ liệu)',
+                htmlFile: 'card14.html',
+                cssFile: 'card14.css',
+                jsFile: 'card14.js',
+                previewId: 'preview-card14',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ cài đặt chuyên nghiệp hiển thị danh sách các mục quản trị luồng dữ liệu, thu thập, nhập và bộ lọc với icon nhận diện và tooltip hướng dẫn. Cần nhúng file <code>card14.js</code> (hoặc kích hoạt Bootstrap Tooltip) để hiển thị trợ giúp khi hover icon dấu hỏi.'
+            },
+            {
+                sampleId: 'card-mau-15',
+                badgeText: 'Mẫu 15',
+                badgeClass: 'text-bg-dark',
+                title: 'Analytics Display Settings Card (Thẻ danh mục cấu hình hiển thị dữ liệu & báo cáo)',
+                htmlFile: 'card15.html',
+                cssFile: 'card15.css',
+                jsFile: 'card15.js',
+                previewId: 'preview-card15',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ điều hướng danh mục báo cáo quản trị toàn diện gồm 10 mục cài đặt (Sự kiện, Mạng, Đối tượng, Chú thích, Phép so sánh, Phân đoạn, DebugView...) đi kèm tooltip giải thích chi tiết khi hover.'
             }
         ]
     },
@@ -447,6 +519,18 @@ const categories = [
                 previewId: 'preview-offcanvas4',
                 previewClass: '',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Bảng điều khiển cài đặt trượt từ cạnh phải (Offcanvas End) phục vụ cấu hình biểu mẫu, chọn dạng trực quan và thả phân đoạn so sánh.'
+            },
+            {
+                sampleId: 'offcanvas-mau-5',
+                badgeText: 'Mẫu 5',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Web Stream Details Offcanvas (Bảng thông tin chi tiết về luồng web & đo lường sự kiện nâng cao)',
+                htmlFile: 'offcanvas5.html',
+                cssFile: 'offcanvas5.css',
+                jsFile: null,
+                previewId: 'preview-offcanvas5',
+                previewClass: 'p-4',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Bảng điều khiển chi tiết luồng web toàn diện kích thước lớn (1000px) trượt từ cạnh phải (Offcanvas End) hiển thị thông số luồng, switch bật/tắt đo lường nâng cao và danh mục cấu hình Thẻ Google.'
             }
         ]
     },
@@ -581,6 +665,18 @@ const categories = [
                 previewId: 'preview-table1',
                 previewClass: '',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Bảng phân tích đa chiều chuyên sâu có 2 cột cố định (checkbox & thứ nguyên), thanh công cụ tìm kiếm, chọn số hàng mỗi trang và hỗ trợ cuộn ngang mượt mà.'
+            },
+            {
+                sampleId: 'table-mau-2',
+                badgeText: 'Mẫu 2',
+                badgeClass: 'text-bg-success',
+                title: 'Custom Dimensions Table (Bảng định nghĩa phương diện tuỳ chỉnh với tìm kiếm & phân trang linh hoạt)',
+                htmlFile: 'table2.html',
+                cssFile: 'table2.css',
+                jsFile: 'table2.js',
+                previewId: 'preview-table2',
+                previewClass: '',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Bảng hiển thị danh sách các phương diện tùy chỉnh hỗ trợ tab chuyển đổi, ô tìm kiếm lọc nhanh dữ liệu tức thì, dropdown tùy chọn số mục trên mỗi trang (10, 25, 50, 100) và các nút điều hướng phân trang. Cần nhúng file <code>table2.js</code> để kích hoạt tìm kiếm và phân trang.'
             }
         ]
     }
@@ -619,6 +715,56 @@ categories.forEach(cat => {
                 .replace(/id="ttDate"/g, 'id="ttDate8"')
                 .replace(/id="ttContent"/g, 'id="ttContent8"')
                 .replace(/id="mainChart"/g, 'id="mainChart8"');
+        }
+        if (item.sampleId === 'card-mau-10') {
+            previewHtml = previewHtml
+                .replace(/id="btnDim1"/g, 'id="btnDim1_10"')
+                .replace(/id="menuDim1"/g, 'id="menuDim1_10"')
+                .replace(/id="btnDim2"/g, 'id="btnDim2_10"')
+                .replace(/id="menuDim2"/g, 'id="menuDim2_10"');
+        }
+        if (item.sampleId === 'card-mau-11') {
+            previewHtml = previewHtml
+                .replace(/id="metricTrack"/g, 'id="metricTrack11"')
+                .replace(/id="metricPrevBtn"/g, 'id="metricPrevBtn11"')
+                .replace(/id="metricNextBtn"/g, 'id="metricNextBtn11"')
+                .replace(/id="metricContainer"/g, 'id="metricContainer11"')
+                .replace(/id="interactiveLayer"/g, 'id="interactiveLayer11"')
+                .replace(/id="chartPopover"/g, 'id="chartPopover11"')
+                .replace(/id="popDate"/g, 'id="popDate11"')
+                .replace(/id="popName"/g, 'id="popName11"')
+                .replace(/id="popVal"/g, 'id="popVal11"')
+                .replace(/id="popTrend"/g, 'id="popTrend11"');
+        }
+        if (item.sampleId === 'card-mau-12') {
+            previewHtml = previewHtml
+                .replace(/id="chartPopover"/g, 'id="chartPopover12"')
+                .replace(/id="popDate"/g, 'id="popDate12"')
+                .replace(/id="popName"/g, 'id="popName12"')
+                .replace(/id="popVal"/g, 'id="popVal12"')
+                .replace(/id="popTrend"/g, 'id="popTrend12"');
+        }
+        if (item.sampleId === 'card-mau-13') {
+            previewHtml = previewHtml
+                .replace(/id="interactiveLayer"/g, 'id="interactiveLayer13"')
+                .replace(/id="chartPopover"/g, 'id="chartPopover13"')
+                .replace(/id="popDate"/g, 'id="popDate13"')
+                .replace(/id="pop30"/g, 'id="pop30_13"')
+                .replace(/id="pop7"/g, 'id="pop7_13"')
+                .replace(/id="pop1"/g, 'id="pop1_13"');
+        }
+        if (item.sampleId === 'table-mau-2') {
+            previewHtml = previewHtml
+                .replace(/id="searchInput"/g, 'id="searchInputTable2"')
+                .replace(/id="dataTable"/g, 'id="dataTable2"')
+                .replace(/id="tableBody"/g, 'id="tableBody2"')
+                .replace(/id="noDataMessage"/g, 'id="noDataMessage2"')
+                .replace(/id="rowsPerPageText"/g, 'id="rowsPerPageText2"')
+                .replace(/id="firstPageBtn"/g, 'id="firstPageBtn2"')
+                .replace(/id="prevPageBtn"/g, 'id="prevPageBtn2"')
+                .replace(/id="nextPageBtn"/g, 'id="nextPageBtn2"')
+                .replace(/id="lastPageBtn"/g, 'id="lastPageBtn2"')
+                .replace(/id="pageInfo"/g, 'id="pageInfo2"');
         }
         const cssContent = item.cssFile ? fs.readFileSync(path.join(DIR, item.cssFile), 'utf-8') : '';
         const jsContent = item.jsFile ? fs.readFileSync(path.join(DIR, item.jsFile), 'utf-8') : '';
@@ -839,6 +985,12 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="card7.css">
     <link rel="stylesheet" href="card8.css">
     <link rel="stylesheet" href="card9.css">
+    <link rel="stylesheet" href="card10.css">
+    <link rel="stylesheet" href="card11.css">
+    <link rel="stylesheet" href="card12.css">
+    <link rel="stylesheet" href="card13.css">
+    <link rel="stylesheet" href="card14.css">
+    <link rel="stylesheet" href="card15.css">
     <link rel="stylesheet" href="carousel1.css">
     <link rel="stylesheet" href="carousel2.css">
     <link rel="stylesheet" href="carousel3.css">
@@ -850,11 +1002,13 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="offcanvas2.css">
     <link rel="stylesheet" href="offcanvas3.css">
     <link rel="stylesheet" href="offcanvas4.css">
+    <link rel="stylesheet" href="offcanvas5.css">
     <link rel="stylesheet" href="popover1.css">
     <link rel="stylesheet" href="popover2.css">
     <link rel="stylesheet" href="sidebar1.css">
     <link rel="stylesheet" href="sidebar2.css">
     <link rel="stylesheet" href="table1.css">
+    <link rel="stylesheet" href="table2.css">
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
 
