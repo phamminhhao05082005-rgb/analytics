@@ -1,0 +1,141 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.collapsed-sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    height: 48px;
+    background-color: #f1f3f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+    border-top: 1px solid #dadce0;
+    border-right: 1px solid #dadce0;
+    z-index: 1000;
+}
+
+.collapsed-sidebar:hover {
+    background-color: #e8eaed;
+}
+
+.variables-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    border-right: 1px solid #dadce0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.panel-header {
+    flex-shrink: 0;
+    height: 48px;
+}
+
+.panel-scroll {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.fs-15 { font-size: 15px; }
+.fs-14 { font-size: 14px; }
+.fs-13 { font-size: 13px; }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.hover-dark:hover {
+    color: #202124 !important;
+}
+
+.hover-bg {
+    transition: background-color 0.2s;
+}
+
+.hover-bg:hover {
+    background-color: #f8f9fa;
+}
+
+.date-badge {
+    background-color: #f1f3f4;
+    color: #3c4043;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.dashed-title {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #9aa0a6;
+    cursor: pointer;
+    padding-bottom: 1px;
+}
+
+.var-item {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: grab;
+    transition: box-shadow 0.2s;
+}
+
+.var-item:hover {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.var-item:active {
+    cursor: grabbing;
+}
+
+.dim-item {
+    border-left: 3px solid #5bb974;
+}
+
+.met-item {
+    border-left: 3px solid #669df6;
+}
+
+.grip-icon {
+    color: #9aa0a6;
+    font-size: 14px;
+}
+
+.item-text {
+    font-size: 13px;
+    color: #3c4043;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}

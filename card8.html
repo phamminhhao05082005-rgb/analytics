@@ -13,10 +13,10 @@
 <div class="detailed-card shadow-sm w-100">
     
     <div class="card-top-header d-flex justify-content-between align-items-center px-4 py-3">
-        <h2 class="card-main-title">Số lượng sự kiện theo Tên sự kiện qua thời gian</h2>
+        <h2 class="card-main-title">Số lượt xem theo Đường dẫn trang và loại màn hình qua thời gian</h2>
         
         <div class="dropdown">
-            <button class="btn btn-outline-primary dropdown-toggle custom-dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="timeRangeBtn">
+            <button class="btn custom-dropdown-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="timeRangeBtn">
                 Ngày
             </button>
             <ul class="dropdown-menu shadow-sm custom-menu dropdown-menu-end">
@@ -31,211 +31,164 @@
         <svg class="w-100" height="280" viewBox="0 0 1200 280" preserveAspectRatio="none" id="mainChart">
             
             <line x1="0" y1="20" x2="1150" y2="20" class="chart-grid" />
-            <line x1="0" y1="70" x2="1150" y2="70" class="chart-grid" />
-            <line x1="0" y1="120" x2="1150" y2="120" class="chart-grid" />
-            <line x1="0" y1="170" x2="1150" y2="170" class="chart-grid" />
+            <line x1="0" y1="86.7" x2="1150" y2="86.7" class="chart-grid" />
+            <line x1="0" y1="153.3" x2="1150" y2="153.3" class="chart-grid" />
             <line x1="0" y1="220" x2="1150" y2="220" class="chart-grid axis-x-line" />
 
             <g id="yLabelsGroup">
-                <text x="1165" y="25" class="chart-axis-label">200</text>
-                <text x="1165" y="75" class="chart-axis-label">150</text>
-                <text x="1165" y="125" class="chart-axis-label">100</text>
-                <text x="1165" y="175" class="chart-axis-label">50</text>
+                <text x="1165" y="25" class="chart-axis-label">3 N</text>
+                <text x="1165" y="91.7" class="chart-axis-label">2 N</text>
+                <text x="1165" y="158.3" class="chart-axis-label">1 N</text>
                 <text x="1165" y="225" class="chart-axis-label">0</text>
             </g>
 
-            <g id="xLabelsGroup">
-                
-            </g>
+            <g id="xLabelsGroup"></g>
+            
+            <polyline id="lineNew" points="" class="chart-line chart-line-new" />
+            <polyline id="lineClearance" points="" class="chart-line chart-line-clearance" />
+            <polyline id="lineApparel" points="" class="chart-line chart-line-apparel" />
+            <polyline id="lineRetro" points="" class="chart-line chart-line-retro" />
 
-            <polygon id="totalBand" points="" class="chart-band-total" />
-            
-            <polyline id="lineTotal" points="" class="chart-line chart-line-total" />
-            <polyline id="linePageview" points="" class="chart-line chart-line-pageview" />
-            <polyline id="lineScroll" points="" class="chart-line chart-line-scroll" />
-            <polyline id="lineUser" points="" class="chart-line chart-line-user" />
-            <polyline id="lineSession" points="" class="chart-line chart-line-session" />
-            <polyline id="lineFirst" points="" class="chart-line chart-line-first" />
-
-            
-            <g id="endPointsGroup">
-                <path d="M1124,30 A6,6 0 0,1 1136,30 L1130,22 Z" class="point-total" id="ptTotal" />
-                <circle cx="1130" cy="115" r="4" class="point-pageview" id="ptPageview" />
-                <rect x="1126" y="121" width="8" height="8" class="point-scroll" id="ptScroll" />
-                <polygon points="1130,150 1134,154 1130,158 1126,154" class="point-user" id="ptUser" />
-                <polygon points="1126,215 1134,215 1130,221" class="point-session" id="ptSession" />
-                <polygon points="1130,215 1134,221 1126,221" class="point-first" id="ptFirst" />
-            </g>
-            
+            <g id="staticEndMarkersGroup"></g>
             <g id="interactiveLayer"></g>
         </svg>
 
         <div class="chart-legend d-flex align-items-center flex-wrap gap-4 mt-3">
-            <div class="d-flex align-items-center gap-1 cursor-pointer legend-hover">
-                <svg width="14" height="14" viewBox="0 0 14 14"><path d="M4,7 A3,3 0 0,1 10,7 L7,3 Z" fill="#174ea6"/></svg>
-                <span class="legend-text">Tổng cộng</span>
-            </div>
-            <div class="d-flex align-items-center gap-1 cursor-pointer legend-hover">
+            <div class="d-flex align-items-center gap-1 legend-item" data-key="new">
                 <circle cx="7" cy="7" r="4" fill="#4285f4"/>
-                <span class="legend-text">page_view</span>
+                <span class="legend-text">/shop/new</span>
             </div>
-            <div class="d-flex align-items-center gap-1 cursor-pointer legend-hover">
+            <div class="d-flex align-items-center gap-1 legend-item" data-key="clearance">
                 <rect x="3" y="3" width="8" height="8" fill="#8bc34a"/>
-                <span class="legend-text">scroll</span>
+                <span class="legend-text">/shop/clearance</span>
             </div>
-            <div class="d-flex align-items-center gap-1 cursor-pointer legend-hover">
+            <div class="d-flex align-items-center gap-1 legend-item" data-key="apparel">
                 <polygon points="7,3 11,7 7,11 3,7" fill="#e91e63"/>
-                <span class="legend-text">user_engagement</span>
+                <span class="legend-text">/shop/apparel</span>
             </div>
-            <div class="d-flex align-items-center gap-1 cursor-pointer legend-hover">
-                <polygon points="3,4 11,4 7,10" fill="#ffb300"/>
-                <span class="legend-text">session_start</span>
-            </div>
-            <div class="d-flex align-items-center gap-1 cursor-pointer legend-hover">
-                <polygon points="7,4 11,10 3,10" fill="#3f51b5"/>
-                <span class="legend-text">first_visit</span>
+            <div class="d-flex align-items-center gap-1 legend-item" data-key="retro">
+                <polygon points="3,4 11,4 7,10" fill="#fbbc04"/>
+                <span class="legend-text">/shop/collections/1998-retro-collection</span>
             </div>
         </div>
     </div>
 
     <div class="table-toolbar d-flex align-items-center justify-content-between border-top border-bottom px-4 py-2 mt-4 bg-light">
         <div class="d-flex align-items-center gap-3">
-            <button class="btn btn-outline-secondary bg-white btn-sm chart-btn text-muted border-dadce0" disabled>Dựng đồ thị hàng</button>
+            <button class="btn btn-outline-secondary bg-white btn-sm chart-btn text-muted border-dadce0" id="buildChartBtn" disabled>Dựng đồ thị hàng</button>
             <div class="table-search d-flex align-items-center bg-white border border-dadce0 px-2 py-1 rounded" style="width: 250px;">
                 <i class="bi bi-search text-secondary me-2"></i>
-                <input type="text" placeholder="Tìm kiếm..." class="border-0 bg-transparent outline-none w-100" style="font-size: 13px;">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm..." class="border-0 bg-transparent outline-none w-100" style="font-size: 13px;">
             </div>
         </div>
-        <div class="d-flex align-items-center gap-4 text-secondary" style="font-size: 13px;">
-            <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-4 table-pagination-container">
+            <div class="d-flex align-items-center gap-1">
                 Số hàng mỗi trang: 
-                <select class="form-select form-select-sm border-0 bg-transparent shadow-none w-auto p-0 pe-3 custom-table-select">
-                    <option>10</option>
-                    <option>25</option>
-                    <option>50</option>
-                </select>
+                <div class="dropdown d-inline-block ms-1">
+                    <div class="d-flex align-items-center gap-2 cursor-pointer pagination-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="rowsPerPageText">10</span>
+                        <i class="bi bi-caret-down-fill text-secondary caret-icon" style="font-size: 10px;"></i>
+                    </div>
+                    <ul class="dropdown-menu border-0 custom-pagination-menu">
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center active" href="#" data-val="10">10 <i class="bi bi-check2 text-primary check-icon"></i></a></li>
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#" data-val="25">25 <i class="bi bi-check2 text-primary check-icon d-none"></i></a></li>
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#" data-val="50">50 <i class="bi bi-check2 text-primary check-icon d-none"></i></a></li>
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#" data-val="100">100 <i class="bi bi-check2 text-primary check-icon d-none"></i></a></li>
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#" data-val="250">250 <i class="bi bi-check2 text-primary check-icon d-none"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div>1 – 5 trên 5</div>
+            <div class="d-flex align-items-center gap-3">
+                <span id="paginationInfo">1 – 4 trên 4</span>
+                <div class="d-flex gap-3">
+                    <i class="bi bi-chevron-left text-muted opacity-50" style="cursor: not-allowed;"></i>
+                    <i class="bi bi-chevron-right text-muted opacity-50" style="cursor: not-allowed;"></i>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="table-responsive">
-        <table class="table custom-data-table align-middle mb-0 bg-white">
+        <table class="table custom-data-table align-middle mb-0 bg-white" id="dataTable">
             <thead>
                 <tr>
-                    <th style="width: 40px;" class="text-center bg-white position-sticky start-0 z-2 border-end">
-                        <div class="minus-square">
+                    <th style="width: 40px;" class="text-center position-sticky start-0 z-2 border-end">
+                        <div class="minus-square" id="masterCheckbox">
                             <div class="minus-line"></div>
                         </div>
                     </th>
-                    <th style="min-width: 200px;" class="bg-white position-sticky border-end z-2" style="left: 40px;">
+                    <th style="min-width: 250px;" class="position-sticky border-end z-2" style="left: 40px;">
                         <div class="d-flex align-items-center justify-content-between">
-                            Tên sự kiện <i class="bi bi-plus text-primary fs-5 cursor-pointer"></i>
+                            Đường dẫn trang và loại màn hình <i class="bi bi-plus text-primary fs-5 cursor-pointer"></i>
                         </div>
                     </th>
                     <th class="text-end">
                         <div class="d-flex align-items-center justify-content-end gap-1">
                             <i class="bi bi-arrow-down text-dark"></i>
-                            <span class="dashed-header">Số lượng sự kiện</span>
+                            <span class="dashed-header">Số lượt xem</span>
                         </div>
                     </th>
-                    <th class="text-end"><span class="dashed-header">Tổng số người dùng</span></th>
-                    <th class="text-end"><span class="dashed-header">Số sự kiện trên mỗi người dùng đang hoạt động</span></th>
-                    <th class="text-end"><span class="dashed-header">Tổng doanh thu</span></th>
+                    <th class="text-end"><span class="dashed-header">Số người dùng</span></th>
+                    <th class="text-end"><span class="dashed-header">Số lượt xem mỗi người dùng</span></th>
+                    <th class="text-end"><span class="dashed-header">Thời gian tương tác</span></th>
                     <th style="width: 40px;"></th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="total-row">
-                    <td class="text-center bg-white position-sticky start-0 border-end z-1">
-                        <input type="checkbox" class="form-check-input custom-checkbox" checked>
-                    </td>
-                    <td class="fw-medium text-dark bg-white position-sticky border-end z-1" style="left: 40px;">Tổng cộng</td>
-                    <td class="text-end">
-                        <div class="fw-bold text-dark">142</div>
-                        <div class="text-secondary small-text">100% trong tổng số</div>
-                    </td>
-                    <td class="text-end">
-                        <div class="fw-bold text-dark">1</div>
-                        <div class="text-secondary small-text">100% trong tổng số</div>
-                    </td>
-                    <td class="text-end">
-                        <div class="fw-bold text-dark">142,00</div>
-                        <div class="text-secondary small-text">Trung bình 0%</div>
-                    </td>
-                    <td class="text-end">
-                        <div class="fw-bold text-dark">0 đ</div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td class="text-center bg-white position-sticky start-0 border-end z-1">
+                <tr class="data-row">
+                    <td class="text-center position-sticky start-0 border-end z-1">
                         <div class="d-flex align-items-center justify-content-center gap-2">
-                            <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                            <input type="checkbox" class="form-check-input custom-checkbox row-checkbox" data-key="new" checked>
                             <span class="text-dark">1</span>
                         </div>
                     </td>
-                    <td class="bg-white position-sticky border-end z-1" style="left: 40px;"><a href="#" class="table-link">page_view</a></td>
-                    <td class="text-end text-dark">59 <span class="text-secondary">(41,55%)</span></td>
-                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
-                    <td class="text-end text-dark">59,00</td>
-                    <td class="text-end text-dark">0 đ <span class="text-secondary">(–)</span></td>
+                    <td class="position-sticky border-end z-1" style="left: 40px;"><a href="#" class="table-link row-link">/shop/new</a></td>
+                    <td class="text-end text-dark">11.450 <span class="text-secondary">(45,1%)</span></td>
+                    <td class="text-end text-dark">9.800 <span class="text-secondary">(42,3%)</span></td>
+                    <td class="text-end text-dark">1,17</td>
+                    <td class="text-end text-dark">1m 24s</td>
                     <td class="text-center"><i class="bi bi-three-dots-vertical text-secondary cursor-pointer"></i></td>
                 </tr>
-                <tr>
-                    <td class="text-center bg-white position-sticky start-0 border-end z-1">
+                <tr class="data-row">
+                    <td class="text-center position-sticky start-0 border-end z-1">
                         <div class="d-flex align-items-center justify-content-center gap-2">
-                            <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                            <input type="checkbox" class="form-check-input custom-checkbox row-checkbox" data-key="clearance" checked>
                             <span class="text-dark">2</span>
                         </div>
                     </td>
-                    <td class="bg-white position-sticky border-end z-1" style="left: 40px;"><a href="#" class="table-link">scroll</a></td>
-                    <td class="text-end text-dark">52 <span class="text-secondary">(36,62%)</span></td>
-                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
-                    <td class="text-end text-dark">52,00</td>
-                    <td class="text-end text-dark">0 đ <span class="text-secondary">(–)</span></td>
+                    <td class="position-sticky border-end z-1" style="left: 40px;"><a href="#" class="table-link row-link">/shop/clearance</a></td>
+                    <td class="text-end text-dark">6.230 <span class="text-secondary">(24,5%)</span></td>
+                    <td class="text-end text-dark">5.100 <span class="text-secondary">(22,0%)</span></td>
+                    <td class="text-end text-dark">1,22</td>
+                    <td class="text-end text-dark">2m 05s</td>
                     <td class="text-center"><i class="bi bi-three-dots-vertical text-secondary cursor-pointer"></i></td>
                 </tr>
-                <tr>
-                    <td class="text-center bg-white position-sticky start-0 border-end z-1">
+                <tr class="data-row">
+                    <td class="text-center position-sticky start-0 border-end z-1">
                         <div class="d-flex align-items-center justify-content-center gap-2">
-                            <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                            <input type="checkbox" class="form-check-input custom-checkbox row-checkbox" data-key="apparel" checked>
                             <span class="text-dark">3</span>
                         </div>
                     </td>
-                    <td class="bg-white position-sticky border-end z-1" style="left: 40px;"><a href="#" class="table-link">user_engagement</a></td>
-                    <td class="text-end text-dark">27 <span class="text-secondary">(19,01%)</span></td>
-                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
-                    <td class="text-end text-dark">27,00</td>
-                    <td class="text-end text-dark">0 đ <span class="text-secondary">(–)</span></td>
+                    <td class="position-sticky border-end z-1" style="left: 40px;"><a href="#" class="table-link row-link">/shop/apparel</a></td>
+                    <td class="text-end text-dark">4.890 <span class="text-secondary">(19,3%)</span></td>
+                    <td class="text-end text-dark">4.200 <span class="text-secondary">(18,1%)</span></td>
+                    <td class="text-end text-dark">1,16</td>
+                    <td class="text-end text-dark">1m 42s</td>
                     <td class="text-center"><i class="bi bi-three-dots-vertical text-secondary cursor-pointer"></i></td>
                 </tr>
-                <tr>
-                    <td class="text-center bg-white position-sticky start-0 border-end z-1">
+                <tr class="data-row">
+                    <td class="text-center position-sticky start-0 border-end z-1 border-bottom-0">
                         <div class="d-flex align-items-center justify-content-center gap-2">
-                            <input type="checkbox" class="form-check-input custom-checkbox" checked>
+                            <input type="checkbox" class="form-check-input custom-checkbox row-checkbox" data-key="retro" checked>
                             <span class="text-dark">4</span>
                         </div>
                     </td>
-                    <td class="bg-white position-sticky border-end z-1" style="left: 40px;"><a href="#" class="table-link">session_start</a></td>
-                    <td class="text-end text-dark">3 <span class="text-secondary">(2,11%)</span></td>
-                    <td class="text-end text-dark">1 <span class="text-secondary">(100%)</span></td>
-                    <td class="text-end text-dark">3,00</td>
-                    <td class="text-end text-dark">0 đ <span class="text-secondary">(–)</span></td>
-                    <td class="text-center"><i class="bi bi-three-dots-vertical text-secondary cursor-pointer"></i></td>
-                </tr>
-                <tr>
-                    <td class="text-center bg-white position-sticky start-0 border-end z-1 border-bottom-0">
-                        <div class="d-flex align-items-center justify-content-center gap-2">
-                            <input type="checkbox" class="form-check-input custom-checkbox" checked>
-                            <span class="text-dark">5</span>
-                        </div>
-                    </td>
-                    <td class="bg-white position-sticky border-end z-1 border-bottom-0" style="left: 40px;"><a href="#" class="table-link">first_visit</a></td>
-                    <td class="text-end text-dark border-bottom-0">1 <span class="text-secondary">(0,7%)</span></td>
-                    <td class="text-end text-dark border-bottom-0">1 <span class="text-secondary">(100%)</span></td>
-                    <td class="text-end text-dark border-bottom-0">1,00</td>
-                    <td class="text-end text-dark border-bottom-0">0 đ <span class="text-secondary">(–)</span></td>
+                    <td class="position-sticky border-end z-1 border-bottom-0" style="left: 40px;"><a href="#" class="table-link row-link">/shop/collections/1998-retro-collection</a></td>
+                    <td class="text-end text-dark border-bottom-0">2.830 <span class="text-secondary">(11,1%)</span></td>
+                    <td class="text-end text-dark border-bottom-0">2.500 <span class="text-secondary">(10,8%)</span></td>
+                    <td class="text-end text-dark border-bottom-0">1,13</td>
+                    <td class="text-end text-dark border-bottom-0">1m 15s</td>
                     <td class="text-center border-bottom-0"><i class="bi bi-three-dots-vertical text-secondary cursor-pointer"></i></td>
                 </tr>
             </tbody>
@@ -245,10 +198,8 @@
 </div>
 
 <div class="chart-tooltip shadow" id="chartTooltip">
-    <div class="tooltip-date pb-2 border-bottom mb-2" id="ttDate">CN 06 thg 9</div>
-    <div class="d-flex flex-column gap-2" id="ttContent">
-        
-    </div>
+    <div class="tooltip-date pb-2 border-bottom mb-2" id="ttDate"></div>
+    <div class="d-flex flex-column gap-2" id="ttContent"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

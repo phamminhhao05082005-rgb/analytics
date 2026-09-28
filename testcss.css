@@ -770,5 +770,45 @@ body > .container-fluid > .row > main.main-content {
     min-width: 58px !important;
 }
 
+/* Popover 3 Preview (Analytics Variables Panel) */
+#preview-popover3 {
+    background-color: #f8f9fa;
+    position: relative;
+    min-height: 480px;
+    height: 520px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+}
 
+#preview-popover3 .collapsed-sidebar {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+}
 
+#preview-popover3 .variables-panel {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    z-index: 11 !important;
+}
+
+/* Table 3 Preview (Analytics Top Pages Table) */
+#preview-table3 {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    border-radius: 0 0 12px 12px;
+    overflow-x: auto;
+}
+
+#preview-table3 .top-pages-card {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}

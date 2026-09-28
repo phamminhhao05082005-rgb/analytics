@@ -208,13 +208,13 @@ const categories = [
                 sampleId: 'card-mau-4',
                 badgeText: 'Mẫu 4',
                 badgeClass: 'text-bg-success',
-                title: 'Analytics Detailed Chart Card (Thẻ biểu đồ đường chi tiết theo thời gian kèm bảng dữ liệu)',
+                title: 'Analytics Detailed Bar Chart Card (Thẻ biểu đồ cột phân tích người dùng theo thời gian kèm bảng dữ liệu & bộ lọc)',
                 htmlFile: 'card4.html',
                 cssFile: 'card4.css',
                 jsFile: 'card4.js',
                 previewId: 'preview-card4',
                 previewClass: '',
-                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ phân tích tổng số người dùng theo thời gian với tooltip tương tác trên đường SVG và bảng thống kê chi tiết phía dưới.'
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ phân tích tổng số người dùng theo đối tượng (All Users, New Users, Returning Users) dạng biểu đồ cột SVG tương tác, hỗ trợ chọn chu kỳ Ngày/Tuần/Tháng, tìm kiếm bảng và dựng đồ thị hàng theo checkbox. Cần nhúng file <code>card4.js</code> để kích hoạt tương tác.'
             },
             {
                 sampleId: 'card-mau-5',
@@ -256,13 +256,13 @@ const categories = [
                 sampleId: 'card-mau-8',
                 badgeText: 'Mẫu 8',
                 badgeClass: 'text-bg-dark',
-                title: 'Analytics Detailed Multi-Line Chart Card (Thẻ biểu đồ đa đường phân tích theo Ngày/Tuần/Tháng)',
+                title: 'Analytics Detailed Multi-Line Chart Card (Thẻ biểu đồ đa đường phân tích theo Đường dẫn trang kèm bảng dữ liệu & bộ lọc)',
                 htmlFile: 'card8.html',
                 cssFile: 'card8.css',
                 jsFile: 'card8.js',
                 previewId: 'preview-card8',
                 previewClass: '',
-                depNote: '<strong>Lưu ý cho Dev:</strong> Biểu đồ đa đường phân tích xu hướng nhiều sự kiện cùng lúc qua thời gian, hỗ trợ chuyển đổi chu kỳ Ngày/Tuần/Tháng linh hoạt.'
+                depNote: '<strong>Lưu ý cho Dev:</strong> Biểu đồ đa đường phân tích số lượt xem theo đường dẫn trang (/shop/new, /shop/clearance...) qua thời gian, hỗ trợ chuyển đổi chu kỳ Ngày/Tuần/Tháng, tìm kiếm dữ liệu, dựng lại đồ thị theo hàng được chọn và hover làm nổi bật đường tương ứng. Cần nhúng file <code>card8.js</code> để kích hoạt tương tác.'
             },
             {
                 sampleId: 'card-mau-9',
@@ -565,6 +565,18 @@ const categories = [
                 previewId: 'preview-popover2',
                 previewClass: '',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Menu trợ giúp nhanh kích hoạt từ icon dấu chấm hỏi với <code>dropdown-menu-end</code> và hiệu ứng bóng đổ đẹp mắt.'
+            },
+            {
+                sampleId: 'popover-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-success',
+                title: 'Analytics Variables Panel Popover (Bảng trượt điều khiển biến số phân đoạn, phương diện & chỉ số)',
+                htmlFile: 'popover3.html',
+                cssFile: 'popover3.css',
+                jsFile: 'popover3.js',
+                previewId: 'preview-popover3',
+                previewClass: '',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Bảng điều khiển cấu hình biến phân tích (Variables Panel) hiển thị phân đoạn, phương diện và chỉ số dạng thẻ kéo thả; có thể thu gọn xuống góc dưới thành thanh icon hoặc mở rộng toàn bộ bảng bên cạnh. Cần nhúng file <code>popover3.js</code> để đóng/mở panel.'
             }
         ]
     },
@@ -677,6 +689,18 @@ const categories = [
                 previewId: 'preview-table2',
                 previewClass: '',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Bảng hiển thị danh sách các phương diện tùy chỉnh hỗ trợ tab chuyển đổi, ô tìm kiếm lọc nhanh dữ liệu tức thì, dropdown tùy chọn số mục trên mỗi trang (10, 25, 50, 100) và các nút điều hướng phân trang. Cần nhúng file <code>table2.js</code> để kích hoạt tìm kiếm và phân trang.'
+            },
+            {
+                sampleId: 'table-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Top Pages Table (Bảng xếp hạng trang/màn hình hàng đầu kèm thanh tỷ lệ và hover popover)',
+                htmlFile: 'table3.html',
+                cssFile: 'table3.css',
+                jsFile: 'table3.js',
+                previewId: 'preview-table3',
+                previewClass: '',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Bảng thống kê chi tiết các trang hàng đầu (Số lượt xem, Số người dùng hoạt động, Số lượng sự kiện, Tỷ lệ thoát) tích hợp thanh tiến trình tỷ lệ trực quan (Progress Bars) và popover hiển thị số liệu chính xác khi rê chuột qua từng hàng. Cần nhúng file <code>table3.js</code> để kích hoạt hover popover.'
             }
         ]
     }
@@ -1005,10 +1029,12 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="offcanvas5.css">
     <link rel="stylesheet" href="popover1.css">
     <link rel="stylesheet" href="popover2.css">
+    <link rel="stylesheet" href="popover3.css">
     <link rel="stylesheet" href="sidebar1.css">
     <link rel="stylesheet" href="sidebar2.css">
     <link rel="stylesheet" href="table1.css">
     <link rel="stylesheet" href="table2.css">
+    <link rel="stylesheet" href="table3.css">
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
 

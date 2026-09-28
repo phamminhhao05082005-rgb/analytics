@@ -502,93 +502,384 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // H. Card 4 (Analytics Detailed Chart Card)
+    // H. Card 4 (Analytics Detailed Bar Chart Card)
     const card4Preview = document.getElementById('preview-card4');
     if (card4Preview) {
-        const chartData = [
-            { x: 50, yTotal: 260, yUsers: 260, date: 'CN 29 thg 8', valTotal: '0', valUsers: '0' },
-            { x: 150, yTotal: 220, yUsers: 230, date: 'T3 31 thg 8', valTotal: '0,2', valUsers: '0,15' },
-            { x: 250, yTotal: 240, yUsers: 250, date: 'T5 03 thg 9', valTotal: '0,1', valUsers: '0,05' },
-            { x: 350, yTotal: 140, yUsers: 160, date: 'T2 07 thg 9', valTotal: '0,6', valUsers: '0,5' },
-            { x: 450, yTotal: 180, yUsers: 190, date: 'T6 11 thg 9', valTotal: '0,4', valUsers: '0,35' },
-            { x: 550, yTotal: 100, yUsers: 120, date: 'T3 15 thg 9', valTotal: '0,8', valUsers: '0,7' },
-            { x: 650, yTotal: 160, yUsers: 170, date: 'T7 19 thg 9', valTotal: '0,5', valUsers: '0,45' },
-            { x: 750, yTotal: 80, yUsers: 95, date: 'T2 21 thg 9', valTotal: '0,9', valUsers: '0,8' },
-            { x: 850, yTotal: 30, yUsers: 45, date: 'T4 23 thg 9', valTotal: '1,1', valUsers: '1,05' }
-        ];
+        const db4 = {
+            "Ngày": {
+                xLabels: ["29 thg", "31", "01", "03", "05", "07", "09", "11", "13", "15", "17", "19", "21", "23"],
+                pts: {
+                    total: "50,260 114,220 178,230 242,240 306,190 370,140 434,160 498,180 562,140 626,100 690,130 754,160 818,80 882,55 950,30",
+                    all: "50,260 114,230 178,240 242,250 306,200 370,160 434,175 498,190 562,155 626,120 690,145 754,170 818,95 882,70 950,45",
+                    new: "50,260 114,240 178,245 242,255 306,220 370,180 434,190 498,200 562,170 626,140 690,160 754,180 818,110 882,85 950,60",
+                    returning: "50,260 114,250 178,255 242,260 306,230 370,200 434,205 498,210 562,185 626,160 690,180 754,200 818,130 882,105 950,80"
+                },
+                hoverData: [
+                    {date: "CN 29 thg 8", vals: {total: "0", all: "0", new: "0", returning: "0"}},
+                    {date: "T3 31 thg 8", vals: {total: "0,2", all: "0,15", new: "0,1", returning: "0,05"}},
+                    {date: "T4 01 thg 9", vals: {total: "0,15", all: "0,1", new: "0,07", returning: "0,02"}},
+                    {date: "T5 03 thg 9", vals: {total: "0,1", all: "0,05", new: "0,02", returning: "0"}},
+                    {date: "T7 05 thg 9", vals: {total: "0,35", all: "0,3", new: "0,2", returning: "0,15"}},
+                    {date: "T2 07 thg 9", vals: {total: "0,6", all: "0,5", new: "0,4", returning: "0,3"}},
+                    {date: "T4 09 thg 9", vals: {total: "0,5", all: "0,42", new: "0,35", returning: "0,27"}},
+                    {date: "T6 11 thg 9", vals: {total: "0,4", all: "0,35", new: "0,3", returning: "0,25"}},
+                    {date: "CN 13 thg 9", vals: {total: "0,6", all: "0,52", new: "0,45", returning: "0,37"}},
+                    {date: "T3 15 thg 9", vals: {total: "0,8", all: "0,7", new: "0,6", returning: "0,5"}},
+                    {date: "T5 17 thg 9", vals: {total: "0,65", all: "0,57", new: "0,5", returning: "0,4"}},
+                    {date: "T7 19 thg 9", vals: {total: "0,5", all: "0,45", new: "0,4", returning: "0,3"}},
+                    {date: "T2 21 thg 9", vals: {total: "0,9", all: "0,8", new: "0,75", returning: "0,65"}},
+                    {date: "T4 23 thg 9", vals: {total: "1,02", all: "0,95", new: "0,87", returning: "0,77"}},
+                    {date: "T6 25 thg 9", vals: {total: "1,15", all: "1,07", new: "1,0", returning: "0,9"}}
+                ]
+            },
+            "Tuần": {
+                xLabels: ["Tuần 1", "Tuần 2", "Tuần 3", "Tuần 4", "Tuần 5"],
+                pts: {
+                    total: "50,260 275,180 500,100 725,160 950,30",
+                    all: "50,260 275,190 500,120 725,170 950,45",
+                    new: "50,260 275,200 500,140 725,180 950,60",
+                    returning: "50,260 275,210 500,160 725,200 950,80"
+                },
+                hoverData: [
+                    {date: "Tuần 1", vals: {total: "0", all: "0", new: "0", returning: "0"}},
+                    {date: "Tuần 2", vals: {total: "0,4", all: "0,35", new: "0,3", returning: "0,25"}},
+                    {date: "Tuần 3", vals: {total: "0,8", all: "0,7", new: "0,6", returning: "0,5"}},
+                    {date: "Tuần 4", vals: {total: "0,5", all: "0,45", new: "0,4", returning: "0,3"}},
+                    {date: "Tuần 5", vals: {total: "1,15", all: "1,07", new: "1,0", returning: "0,9"}}
+                ]
+            },
+            "Tháng": {
+                xLabels: ["Tháng trước", "Tháng này"],
+                pts: {
+                    total: "50,260 950,30",
+                    all: "50,260 950,45",
+                    new: "50,260 950,60",
+                    returning: "50,260 950,80"
+                },
+                hoverData: [
+                    {date: "Tháng trước", vals: {total: "0", all: "0", new: "0", returning: "0"}},
+                    {date: "Tháng này", vals: {total: "1,15", all: "1,07", new: "1,0", returning: "0,9"}}
+                ]
+            }
+        };
 
-        const layer = card4Preview.querySelector('#interactiveLayer');
-        const tooltip = card4Preview.querySelector('#chartTooltip');
-        const ttDate = card4Preview.querySelector('#ttDate');
-        const ttUsers = card4Preview.querySelector('#ttUsers');
-        const ttTotal = card4Preview.querySelector('#ttTotal');
-        const hoverWidth = 100;
+        const xLabelsGroup4 = card4Preview.querySelector('#xLabelsGroup');
+        const barGroup4 = card4Preview.querySelector('#barGroup');
+        const interactiveLayer4 = card4Preview.querySelector('#interactiveLayer');
+        const tooltip4 = card4Preview.querySelector('#chartTooltip');
+        const ttDate4 = card4Preview.querySelector('#ttDate');
+        const ttContent4 = card4Preview.querySelector('#ttContent');
+        const timeRangeBtn4 = card4Preview.querySelector('#timeRangeBtn');
+        const dropItems4 = card4Preview.querySelectorAll('.custom-menu .dropdown-item');
+        const rowCheckboxes4 = card4Preview.querySelectorAll('.row-checkbox');
+        const masterCheckbox4 = card4Preview.querySelector('#masterCheckbox');
+        const buildChartBtn4 = card4Preview.querySelector('#buildChartBtn');
+        const legendItems4 = card4Preview.querySelectorAll('.legend-item');
+        const svgEl4 = card4Preview.querySelector('#mainChart');
 
-        if (layer && tooltip && ttDate && ttUsers && ttTotal) {
-            layer.innerHTML = '';
-            chartData.forEach((data, index) => {
-                const vLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                vLine.setAttribute('x1', data.x);
-                vLine.setAttribute('y1', 20);
-                vLine.setAttribute('x2', data.x);
-                vLine.setAttribute('y2', 260);
-                vLine.setAttribute('class', 'hover-line');
-                vLine.setAttribute('id', `c4-vline-${index}`);
-                layer.appendChild(vLine);
+        const searchInput4 = card4Preview.querySelector('#searchInput');
+        const tableRows4 = card4Preview.querySelectorAll('.data-row');
+        const paginationInfo4 = card4Preview.querySelector('#paginationInfo');
 
-                const ptTotal = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-                ptTotal.setAttribute('d', `M${data.x-6},${data.yTotal} A6,6 0 0,1 ${data.x+6},${data.yTotal} L${data.x},${data.yTotal-8} Z`);
-                ptTotal.setAttribute('class', 'hover-point-total');
-                ptTotal.setAttribute('id', `c4-ptotal-${index}`);
-                layer.appendChild(ptTotal);
+        const pageDropItems4 = card4Preview.querySelectorAll('.custom-pagination-menu .dropdown-item');
+        const rowsPerPageText4 = card4Preview.querySelector('#rowsPerPageText');
 
-                const ptUsers = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                ptUsers.setAttribute('cx', data.x);
-                ptUsers.setAttribute('cy', data.yUsers);
-                ptUsers.setAttribute('r', 5);
-                ptUsers.setAttribute('class', 'hover-point-users');
-                ptUsers.setAttribute('id', `c4-pusers-${index}`);
-                layer.appendChild(ptUsers);
+        let plottedKeys4 = ['total', 'all', 'new', 'returning'];
 
+        const colors4 = {
+            total: '#174ea6',
+            all: '#669df6',
+            new: '#8bc34a',
+            returning: '#e91e63'
+        };
+
+        const iconsHtml4 = {
+            all: `<rect width="14" height="14" rx="3" fill="${colors4.all}"/>`,
+            new: `<rect width="14" height="14" rx="3" fill="${colors4.new}"/>`,
+            returning: `<rect width="14" height="14" rx="3" fill="${colors4.returning}"/>`,
+            total: `<rect width="14" height="14" rx="3" fill="${colors4.total}"/>`
+        };
+        
+        const labelsStr4 = { 
+            all: "All Users", 
+            new: "New Users", 
+            returning: "Returning Users", 
+            total: "Tổng cộng" 
+        };
+
+        if (searchInput4 && paginationInfo4) {
+            searchInput4.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                let visibleCount = 0;
+                tableRows4.forEach(row => {
+                    const linkText = row.querySelector('.row-link')?.textContent.toLowerCase() || '';
+                    if (linkText.includes(term)) {
+                        row.style.display = '';
+                        visibleCount++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                paginationInfo4.textContent = visibleCount > 0 ? `1 – ${visibleCount} trên ${visibleCount}` : `0 – 0 trên 0`;
+            });
+        }
+
+        pageDropItems4.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                pageDropItems4.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.check-icon')?.classList.add('d-none');
+                });
+                item.classList.add('active');
+                item.querySelector('.check-icon')?.classList.remove('d-none');
+                if (rowsPerPageText4) rowsPerPageText4.textContent = item.getAttribute('data-val');
+            });
+        });
+
+        function getCheckedKeys4() {
+            const keys = [];
+            rowCheckboxes4.forEach(cb => {
+                if (cb.checked) {
+                    keys.push(cb.getAttribute('data-key'));
+                }
+            });
+            return keys;
+        }
+
+        function checkBuildButtonState4() {
+            if (!buildChartBtn4) return;
+            const checkedKeys = getCheckedKeys4();
+            const sortedChecked = [...checkedKeys].sort().join(',');
+            const sortedPlotted = [...plottedKeys4].sort().join(',');
+            
+            if (sortedChecked !== sortedPlotted && checkedKeys.length > 0) {
+                buildChartBtn4.classList.remove('btn-outline-secondary', 'bg-white', 'text-muted', 'border-dadce0');
+                buildChartBtn4.classList.add('btn-primary', 'text-white');
+                buildChartBtn4.removeAttribute('disabled');
+            } else {
+                buildChartBtn4.classList.add('btn-outline-secondary', 'bg-white', 'text-muted', 'border-dadce0');
+                buildChartBtn4.classList.remove('btn-primary', 'text-white');
+                buildChartBtn4.setAttribute('disabled', 'true');
+            }
+        }
+
+        function renderChart4(range) {
+            if (!db4[range] || !xLabelsGroup4 || !barGroup4 || !interactiveLayer4) return;
+            const data = db4[range];
+            
+            xLabelsGroup4.innerHTML = '';
+            barGroup4.innerHTML = '';
+            interactiveLayer4.innerHTML = '';
+            
+            const ptsArrTemplate = data.pts.total.split(' ');
+            
+            data.xLabels.forEach((lbl, i) => {
+                const xVal = ptsArrTemplate[i].split(',')[0];
+                const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                textEl.setAttribute('x', xVal);
+                textEl.setAttribute('y', 278);
+                textEl.setAttribute('class', 'chart-axis-label');
+                textEl.setAttribute('text-anchor', 'middle');
+                
+                if (range === "Ngày" && i === 0) {
+                    textEl.innerHTML = `${lbl.split(' ')[0]}<tspan x="${xVal}" dy="14">${lbl.split(' ')[1]} ${lbl.split(' ')[2]}</tspan>`;
+                } else if (range === "Ngày") {
+                    textEl.textContent = lbl.split(' ')[0];
+                } else {
+                    textEl.textContent = lbl;
+                }
+                xLabelsGroup4.appendChild(textEl);
+            });
+
+            ptsArrTemplate.forEach((ptStr, i) => {
+                const xVal = parseFloat(ptStr.split(',')[0]);
+                const hoverData = data.hoverData[i];
+                
+                const groupWidth = plottedKeys4.length * 12 + (plottedKeys4.length - 1) * 2;
+                let currentX = xVal - groupWidth / 2;
+
+                plottedKeys4.forEach(k => {
+                    const yVal = parseFloat(data.pts[k].split(' ')[i].split(',')[1]);
+                    let height = 260 - yVal;
+                    if (height < 0) height = 0;
+
+                    const bar = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    let dStr = '';
+                    
+                    if (height === 0) {
+                        dStr = `M ${currentX},260 L ${currentX + 12},260`;
+                    } else {
+                        const r = Math.min(3, height);
+                        dStr = `M ${currentX},260 L ${currentX},${yVal + r} Q ${currentX},${yVal} ${currentX + r},${yVal} L ${currentX + 12 - r},${yVal} Q ${currentX + 12},${yVal} ${currentX + 12},${yVal + r} L ${currentX + 12},260 Z`;
+                    }
+
+                    bar.setAttribute('d', dStr);
+                    bar.setAttribute('fill', colors4[k]);
+                    bar.setAttribute('class', `chart-bar bar-${k} bar-group-${i}`);
+                    barGroup4.appendChild(bar);
+                    
+                    currentX += 14;
+                });
+
+                const zoneWidth = range === "Ngày" ? 64 : range === "Tuần" ? 225 : 900;
                 const zone = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-                zone.setAttribute('x', data.x - hoverWidth/2);
-                zone.setAttribute('y', 0);
-                zone.setAttribute('width', hoverWidth);
-                zone.setAttribute('height', 300);
+                zone.setAttribute('x', xVal - zoneWidth / 2);
+                zone.setAttribute('y', 20);
+                zone.setAttribute('width', zoneWidth);
+                zone.setAttribute('height', 240);
                 zone.setAttribute('class', 'hover-zone');
 
                 zone.addEventListener('mouseenter', () => {
-                    const vl = card4Preview.querySelector(`#c4-vline-${index}`);
-                    const pt = card4Preview.querySelector(`#c4-ptotal-${index}`);
-                    const pu = card4Preview.querySelector(`#c4-pusers-${index}`);
-                    if (vl) vl.style.opacity = '1';
-                    if (pt) pt.style.opacity = '1';
-                    if (pu) pu.style.opacity = '1';
-
-                    ttDate.textContent = data.date;
-                    ttUsers.textContent = data.valUsers;
-                    ttTotal.textContent = data.valTotal;
-                    tooltip.style.display = 'block';
+                    card4Preview.querySelectorAll('.chart-bar').forEach(el => el.classList.add('dimmed'));
+                    card4Preview.querySelectorAll(`.bar-group-${i}`).forEach(el => el.classList.remove('dimmed'));
                 });
 
                 zone.addEventListener('mousemove', (e) => {
-                    tooltip.style.left = `${e.clientX + 15}px`;
-                    tooltip.style.top = `${e.clientY - 40}px`;
+                    if (!svgEl4 || !tooltip4 || !ttDate4 || !ttContent4) return;
+                    const pt = svgEl4.createSVGPoint();
+                    pt.x = e.clientX;
+                    pt.y = e.clientY;
+                    const svgP = pt.matrixTransform(svgEl4.getScreenCTM().inverse());
+                    
+                    let closestKey = null;
+                    let minDistance = Infinity;
+
+                    let cX = xVal - groupWidth / 2;
+                    plottedKeys4.forEach(k => {
+                        const barCenter = cX + 6;
+                        const dist = Math.abs(svgP.x - barCenter);
+                        if (dist < minDistance) {
+                            minDistance = dist;
+                            closestKey = k;
+                        }
+                        cX += 14;
+                    });
+
+                    ttDate4.textContent = hoverData.date;
+                    ttContent4.innerHTML = '';
+                    
+                    ['all', 'new', 'returning'].forEach(k => {
+                        if (plottedKeys4.includes(k)) {
+                            const isClosest = (k === closestKey);
+                            ttContent4.innerHTML += `
+                                <div class="d-flex justify-content-between align-items-center gap-4 ${isClosest ? 'fw-bold' : ''}" style="${isClosest ? 'background:#f8f9fa; margin:-4px -8px; padding:4px 8px; border-radius:4px;' : ''}">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" style="opacity: ${isClosest ? '1' : '0.5'};">${iconsHtml4[k]}</svg>
+                                        <span class="tt-label ${isClosest ? 'fw-bold text-dark' : ''}">${labelsStr4[k]}</span>
+                                    </div>
+                                    <span class="tt-val ${isClosest ? 'fw-bold text-dark' : ''}">${hoverData.vals[k]}</span>
+                                </div>
+                            `;
+                        }
+                    });
+
+                    if (plottedKeys4.includes('total')) {
+                        const isClosest = ('total' === closestKey);
+                        ttContent4.innerHTML += `
+                            <div class="d-flex justify-content-between align-items-center gap-4 mt-1 border-top pt-2 ${isClosest ? 'fw-bold' : ''}" style="${isClosest ? 'background:#f8f9fa; margin:0 -8px; padding:4px 8px; border-radius:4px;' : ''}">
+                                <div class="d-flex align-items-center gap-2">
+                                    <svg width="14" height="14" viewBox="0 0 14 14">${iconsHtml4['total']}</svg>
+                                    <span class="tt-label total">Tổng cộng</span>
+                                </div>
+                                <span class="tt-val total">${hoverData.vals.total}</span>
+                            </div>
+                        `;
+                    }
+                    
+                    if (ttContent4.innerHTML !== '') {
+                        tooltip4.style.display = 'block';
+                    }
+
+                    let left = e.clientX + 15;
+                    let top = e.clientY + 15;
+                    const ttRect = tooltip4.getBoundingClientRect();
+                    if (left + ttRect.width > window.innerWidth) left = e.clientX - ttRect.width - 15;
+                    if (top + ttRect.height > window.innerHeight) top = e.clientY - ttRect.height - 15;
+                    tooltip4.style.left = `${left}px`;
+                    tooltip4.style.top = `${top}px`;
                 });
 
                 zone.addEventListener('mouseleave', () => {
-                    const vl = card4Preview.querySelector(`#c4-vline-${index}`);
-                    const pt = card4Preview.querySelector(`#c4-ptotal-${index}`);
-                    const pu = card4Preview.querySelector(`#c4-pusers-${index}`);
-                    if (vl) vl.style.opacity = '0';
-                    if (pt) pt.style.opacity = '0';
-                    if (pu) pu.style.opacity = '0';
-                    tooltip.style.display = 'none';
+                    card4Preview.querySelectorAll('.chart-bar').forEach(el => el.classList.remove('dimmed'));
+                    if (tooltip4) tooltip4.style.display = 'none';
                 });
 
-                layer.appendChild(zone);
+                interactiveLayer4.appendChild(zone);
+            });
+
+            legendItems4.forEach(item => {
+                const k = item.getAttribute('data-key');
+                if (plottedKeys4.includes(k)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            checkBuildButtonState4();
+        }
+
+        renderChart4("Ngày");
+
+        dropItems4.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropItems4.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                const val = item.getAttribute('data-val');
+                if (timeRangeBtn4) timeRangeBtn4.innerHTML = `${val}`;
+                renderChart4(val);
+            });
+        });
+
+        rowCheckboxes4.forEach(cb => {
+            cb.addEventListener('change', () => {
+                checkBuildButtonState4();
+            });
+        });
+
+        if (masterCheckbox4) {
+            masterCheckbox4.addEventListener('click', () => {
+                const allChecked = Array.from(rowCheckboxes4).every(cb => cb.checked);
+                rowCheckboxes4.forEach(cb => {
+                    cb.checked = !allChecked;
+                });
+                checkBuildButtonState4();
             });
         }
+
+        if (buildChartBtn4) {
+            buildChartBtn4.addEventListener('click', () => {
+                plottedKeys4 = getCheckedKeys4();
+                renderChart4(timeRangeBtn4 ? timeRangeBtn4.textContent.trim() : "Ngày");
+            });
+        }
+
+        legendItems4.forEach(item => {
+            const k = item.getAttribute('data-key');
+
+            item.addEventListener('mouseenter', () => {
+                legendItems4.forEach(li => li.classList.add('dimmed'));
+                item.classList.remove('dimmed');
+                
+                card4Preview.querySelectorAll('.chart-bar').forEach(b => {
+                    if (b.classList.contains(`bar-${k}`)) {
+                        b.classList.remove('dimmed');
+                    } else {
+                        b.classList.add('dimmed');
+                    }
+                });
+            });
+
+            item.addEventListener('mouseleave', () => {
+                legendItems4.forEach(li => li.classList.remove('dimmed'));
+                card4Preview.querySelectorAll('.chart-bar').forEach(b => {
+                    b.classList.remove('dimmed');
+                });
+            });
+        });
     }
 
     // I. Card 5 (Funnel Toggle Switch)
@@ -700,228 +991,423 @@ document.addEventListener("DOMContentLoaded", () => {
     // K. Card 8 (Analytics Detailed Multi-Line Chart with Time Range)
     const card8Preview = document.getElementById('preview-card8');
     if (card8Preview) {
-        const db = {
+        const db8 = {
             "Ngày": {
-                xLabels: ["29 thg", "31", "01", "03", "05", "07", "09", "11", "13", "15", "17", "19", "21", "23"],
+                xLabels: ["31 thg", "01", "03", "05", "07", "09", "11", "13", "15", "17", "19", "21", "23", "25", "27"],
                 pts: {
-                    total: "50,220 130,220 210,220 290,220 370,220 450,220 530,220 610,220 690,220 770,220 850,220 930,220 1010,220 1130,30",
-                    pageview: "50,220 130,220 210,220 290,220 370,220 450,220 530,220 610,220 690,220 770,220 850,220 930,220 1010,220 1130,115",
-                    scroll: "50,220 130,220 210,220 290,220 370,220 450,220 530,220 610,220 690,220 770,220 850,220 930,220 1010,220 1130,125",
-                    user: "50,220 130,220 210,220 290,220 370,220 450,220 530,220 610,220 690,220 770,220 850,220 930,220 1010,220 1130,154",
-                    session: "50,220 130,220 210,220 290,220 370,220 450,220 530,220 610,220 690,220 770,220 850,220 930,220 1010,220 1130,215",
-                    first: "50,220 130,220 210,220 290,220 370,220 450,220 530,220 610,220 690,220 770,220 850,220 930,220 1010,220 1130,218"
-                },
-                bandTotal: "50,220 1130,30 1130,220 50,220",
-                endPts: {
-                    total: "M1124,30 A6,6 0 0,1 1136,30 L1130,22 Z",
-                    pageview: {cy: 115}, scroll: {y: 121}, user: "1130,150 1134,154 1130,158 1126,154",
-                    session: "1126,215 1134,215 1130,221", first: "1130,215 1134,221 1126,221"
+                    new: "50,180 129,183 207,170 286,183 364,203 443,196 521,173 600,170 679,190 757,200 836,170 914,166 993,186 1071,47 1150,180",
+                    clearance: "50,200 129,196 207,183 286,183 364,210 443,203 521,183 600,180 679,200 757,206 836,186 914,176 993,196 1071,154 1150,203",
+                    apparel: "50,203 129,210 207,193 286,206 364,208 443,206 521,190 600,196 679,203 757,210 836,190 914,190 993,196 1071,186 1150,210",
+                    retro: "50,206 129,203 207,196 286,203 364,210 443,208 521,193 600,190 679,200 757,213 836,196 914,196 993,203 1071,196 1150,213"
                 },
                 hoverData: [
-                    {date: "29 thg 8", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "31 thg 8", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "01 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "03 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "05 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "07 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "09 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "11 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "13 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "15 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "17 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "19 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "21 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "23 thg 9", vals: {total: 142, pageview: 59, scroll: 52, user: 27, session: 3, first: 1}}
+                    {date: "31 tháng trước", vals: {new: 600, clearance: 300, apparel: 250, retro: 200}},
+                    {date: "01 tháng này", vals: {new: 550, clearance: 350, apparel: 150, retro: 250}},
+                    {date: "03 tháng này", vals: {new: 750, clearance: 550, apparel: 400, retro: 350}},
+                    {date: "05 tháng này", vals: {new: 550, clearance: 550, apparel: 200, retro: 250}},
+                    {date: "07 tháng này", vals: {new: 250, clearance: 150, apparel: 180, retro: 150}},
+                    {date: "09 tháng này", vals: {new: 350, clearance: 250, apparel: 200, retro: 180}},
+                    {date: "11 tháng này", vals: {new: 700, clearance: 550, apparel: 450, retro: 400}},
+                    {date: "13 tháng này", vals: {new: 750, clearance: 600, apparel: 350, retro: 450}},
+                    {date: "15 tháng này", vals: {new: 450, clearance: 300, apparel: 250, retro: 300}},
+                    {date: "17 tháng này", vals: {new: 300, clearance: 200, apparel: 150, retro: 100}},
+                    {date: "19 tháng này", vals: {new: 750, clearance: 500, apparel: 450, retro: 350}},
+                    {date: "21 tháng này", vals: {new: 800, clearance: 650, apparel: 450, retro: 350}},
+                    {date: "23 tháng này", vals: {new: 500, clearance: 350, apparel: 350, retro: 250}},
+                    {date: "25 tháng này", vals: {new: 2600, clearance: 1000, apparel: 500, retro: 350}},
+                    {date: "27 tháng này", vals: {new: 600, clearance: 250, apparel: 150, retro: 100}}
                 ]
             },
             "Tuần": {
-                xLabels: ["28 thg", "30", "06", "13", "20"],
+                xLabels: ["Tuần 1", "Tuần 2", "Tuần 3", "Tuần 4", "Tuần 5"],
                 pts: {
-                    total: "50,220 250,220 550,220 850,220 1130,30",
-                    pageview: "50,220 250,220 550,220 850,220 1130,115",
-                    scroll: "50,220 250,220 550,220 850,220 1130,125",
-                    user: "50,220 250,220 550,220 850,220 1130,154",
-                    session: "50,220 250,220 550,220 850,220 1130,215",
-                    first: "50,220 250,220 550,220 850,220 1130,218"
-                },
-                bandTotal: "50,220 1130,30 1130,220 50,220",
-                endPts: {
-                    total: "M1124,30 A6,6 0 0,1 1136,30 L1130,22 Z",
-                    pageview: {cy: 115}, scroll: {y: 121}, user: "1130,150 1134,154 1130,158 1126,154",
-                    session: "1126,215 1134,215 1130,221", first: "1130,215 1134,221 1126,221"
+                    new: "50,180 325,170 600,203 875,166 1150,47",
+                    clearance: "50,200 325,183 600,210 875,176 1150,154",
+                    apparel: "50,203 325,193 600,208 875,190 1150,186",
+                    retro: "50,206 325,196 600,210 875,196 1150,196"
                 },
                 hoverData: [
-                    {date: "Tuần 28 thg 8", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "Tuần 30 thg 8", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "Tuần 06 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "Tuần 13 thg 9", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "Tuần 20 thg 9", vals: {total: 142, pageview: 59, scroll: 52, user: 27, session: 3, first: 1}}
+                    {date: "Tuần 1", vals: {new: 600, clearance: 300, apparel: 250, retro: 200}},
+                    {date: "Tuần 2", vals: {new: 750, clearance: 550, apparel: 400, retro: 350}},
+                    {date: "Tuần 3", vals: {new: 250, clearance: 150, apparel: 180, retro: 150}},
+                    {date: "Tuần 4", vals: {new: 800, clearance: 650, apparel: 450, retro: 350}},
+                    {date: "Tuần 5", vals: {new: 2600, clearance: 1000, apparel: 500, retro: 350}}
                 ]
             },
             "Tháng": {
-                xLabels: ["Tháng 8", "Tháng 9"],
+                xLabels: ["Tháng trước", "Tháng này"],
                 pts: {
-                    total: "50,220 1130,30",
-                    pageview: "50,220 1130,115",
-                    scroll: "50,220 1130,125",
-                    user: "50,220 1130,154",
-                    session: "50,220 1130,215",
-                    first: "50,220 1130,218"
-                },
-                bandTotal: "50,220 1130,30 1130,220 50,220",
-                endPts: {
-                    total: "M1124,30 A6,6 0 0,1 1136,30 L1130,22 Z",
-                    pageview: {cy: 115}, scroll: {y: 121}, user: "1130,150 1134,154 1130,158 1126,154",
-                    session: "1126,215 1134,215 1130,221", first: "1130,215 1134,221 1126,221"
+                    new: "50,180 1150,47",
+                    clearance: "50,200 1150,154",
+                    apparel: "50,203 1150,186",
+                    retro: "50,206 1150,196"
                 },
                 hoverData: [
-                    {date: "Tháng 8", vals: {total: 0, pageview: 0, scroll: 0, user: 0, session: 0, first: 0}},
-                    {date: "Tháng 9", vals: {total: 142, pageview: 59, scroll: 52, user: 27, session: 3, first: 1}}
+                    {date: "Tháng trước", vals: {new: 600, clearance: 300, apparel: 250, retro: 200}},
+                    {date: "Tháng này", vals: {new: 2600, clearance: 1000, apparel: 500, retro: 350}}
                 ]
             }
         };
 
-        const xLabelsGroup = card8Preview.querySelector('#xLabelsGroup');
-        const interactiveLayer = card8Preview.querySelector('#interactiveLayer8') || card8Preview.querySelector('#interactiveLayer');
-        const tooltip = card8Preview.querySelector('#chartTooltip8') || card8Preview.querySelector('#chartTooltip');
-        const ttDate = card8Preview.querySelector('#ttDate8') || card8Preview.querySelector('#ttDate');
-        const ttContent = card8Preview.querySelector('#ttContent8') || card8Preview.querySelector('#ttContent');
-        const timeRangeBtn = card8Preview.querySelector('#timeRangeBtn');
+        const xLabelsGroup8 = card8Preview.querySelector('#xLabelsGroup');
+        const interactiveLayer8 = card8Preview.querySelector('#interactiveLayer');
+        const staticEndMarkersGroup8 = card8Preview.querySelector('#staticEndMarkersGroup');
+        const tooltip8 = card8Preview.querySelector('#chartTooltip');
+        const ttDate8 = card8Preview.querySelector('#ttDate');
+        const ttContent8 = card8Preview.querySelector('#ttContent');
+        const timeRangeBtn8 = card8Preview.querySelector('#timeRangeBtn');
+        const dropItems8 = card8Preview.querySelectorAll('.custom-menu .dropdown-item');
+        const rowCheckboxes8 = card8Preview.querySelectorAll('.row-checkbox');
+        const masterCheckbox8 = card8Preview.querySelector('#masterCheckbox');
+        const buildChartBtn8 = card8Preview.querySelector('#buildChartBtn');
+        const legendItems8 = card8Preview.querySelectorAll('.legend-item');
+        const svgEl8 = card8Preview.querySelector('#mainChart');
 
-        function renderChart8(rangeKey) {
-            const data = db[rangeKey];
-            if (!data) return;
+        const searchInput8 = card8Preview.querySelector('#searchInput');
+        const tableRows8 = card8Preview.querySelectorAll('.data-row');
+        const paginationInfo8 = card8Preview.querySelector('#paginationInfo');
 
-            if (xLabelsGroup) {
-                xLabelsGroup.innerHTML = '';
-                const totalLabels = data.xLabels.length;
-                data.xLabels.forEach((label, i) => {
-                    const x = 50 + (i * ((1130 - 50) / (totalLabels - 1 || 1)));
-                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-                    text.setAttribute('x', x);
-                    text.setAttribute('y', 245);
-                    text.setAttribute('class', 'chart-axis-label');
-                    text.setAttribute('text-anchor', 'middle');
-                    text.textContent = label;
-                    xLabelsGroup.appendChild(text);
+        const pageDropItems8 = card8Preview.querySelectorAll('.custom-pagination-menu .dropdown-item');
+        const rowsPerPageText8 = card8Preview.querySelector('#rowsPerPageText');
+
+        let plottedKeys8 = ['new', 'clearance', 'apparel', 'retro'];
+
+        const iconsHtml8 = {
+            new: '<circle cx="7" cy="7" r="4" fill="#4285f4"/>',
+            clearance: '<rect x="3" y="3" width="8" height="8" fill="#8bc34a"/>',
+            apparel: '<polygon points="7,3 11,7 7,11 3,7" fill="#e91e63"/>',
+            retro: '<polygon points="3,4 11,4 7,10" fill="#fbbc04"/>'
+        };
+        
+        const labelsStr8 = { 
+            new: "/shop/new", 
+            clearance: "/shop/clearance", 
+            apparel: "/shop/apparel", 
+            retro: "/shop/collections/1998-retro-collection" 
+        };
+
+        if (searchInput8 && paginationInfo8) {
+            searchInput8.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                let visibleCount = 0;
+                tableRows8.forEach(row => {
+                    const linkText = row.querySelector('.row-link')?.textContent.toLowerCase() || '';
+                    if (linkText.includes(term)) {
+                        row.style.display = '';
+                        visibleCount++;
+                    } else {
+                        row.style.display = 'none';
+                    }
                 });
-            }
+                paginationInfo8.textContent = visibleCount > 0 ? `1 – ${visibleCount} trên ${visibleCount}` : `0 – 0 trên 0`;
+            });
+        }
 
-            const totalBand = card8Preview.querySelector('#totalBand');
-            const lineTotal = card8Preview.querySelector('#lineTotal');
-            const linePageview = card8Preview.querySelector('#linePageview');
-            const lineScroll = card8Preview.querySelector('#lineScroll');
-            const lineUser = card8Preview.querySelector('#lineUser');
-            const lineSession = card8Preview.querySelector('#lineSession');
-            const lineFirst = card8Preview.querySelector('#lineFirst');
-            const ptTotal = card8Preview.querySelector('#ptTotal');
-            const ptPageview = card8Preview.querySelector('#ptPageview');
-            const ptScroll = card8Preview.querySelector('#ptScroll');
-            const ptUser = card8Preview.querySelector('#ptUser');
-            const ptSession = card8Preview.querySelector('#ptSession');
-            const ptFirst = card8Preview.querySelector('#ptFirst');
-
-            if (totalBand) totalBand.setAttribute('points', data.bandTotal);
-            if (lineTotal) lineTotal.setAttribute('points', data.pts.total);
-            if (linePageview) linePageview.setAttribute('points', data.pts.pageview);
-            if (lineScroll) lineScroll.setAttribute('points', data.pts.scroll);
-            if (lineUser) lineUser.setAttribute('points', data.pts.user);
-            if (lineSession) lineSession.setAttribute('points', data.pts.session);
-            if (lineFirst) lineFirst.setAttribute('points', data.pts.first);
-
-            if (ptTotal) ptTotal.setAttribute('d', data.endPts.total);
-            if (ptPageview) ptPageview.setAttribute('cy', data.endPts.pageview.cy);
-            if (ptScroll) ptScroll.setAttribute('y', data.endPts.scroll.y);
-            if (ptUser) ptUser.setAttribute('points', data.endPts.user);
-            if (ptSession) ptSession.setAttribute('points', data.endPts.session);
-            if (ptFirst) ptFirst.setAttribute('points', data.endPts.first);
-
-            if (interactiveLayer) {
-                interactiveLayer.innerHTML = '';
-                const totalPts = data.hoverData.length;
-                const stepX = (1130 - 50) / (totalPts - 1 || 1);
-
-                data.hoverData.forEach((h, i) => {
-                    const x = 50 + (i * stepX);
-                    const vl = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                    vl.setAttribute('x1', x);
-                    vl.setAttribute('y1', 20);
-                    vl.setAttribute('x2', x);
-                    vl.setAttribute('y2', 220);
-                    vl.setAttribute('class', 'hover-line');
-                    vl.setAttribute('id', `c8-vl-${i}`);
-                    interactiveLayer.appendChild(vl);
-
-                    const zone = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-                    zone.setAttribute('x', x - (stepX / 2));
-                    zone.setAttribute('y', 0);
-                    zone.setAttribute('width', stepX);
-                    zone.setAttribute('height', 280);
-                    zone.setAttribute('class', 'hover-zone');
-
-                    zone.addEventListener('mouseenter', () => {
-                        const targetVl = card8Preview.querySelector(`#c8-vl-${i}`);
-                        if (targetVl) targetVl.style.opacity = '1';
-                        if (ttDate) ttDate.textContent = h.date;
-                        if (ttContent) {
-                            ttContent.innerHTML = `
-                                <div class="tooltip-item d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex align-items-center"><span class="tooltip-dot bg-total me-2"></span><span class="tooltip-name">Tổng cộng</span></div>
-                                    <span class="tooltip-val fw-bold">${h.vals.total}</span>
-                                </div>
-                                <div class="tooltip-item d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex align-items-center"><span class="tooltip-dot bg-pageview me-2"></span><span class="tooltip-name">page_view</span></div>
-                                    <span class="tooltip-val fw-bold">${h.vals.pageview}</span>
-                                </div>
-                                <div class="tooltip-item d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex align-items-center"><span class="tooltip-dot bg-scroll me-2"></span><span class="tooltip-name">scroll</span></div>
-                                    <span class="tooltip-val fw-bold">${h.vals.scroll}</span>
-                                </div>
-                                <div class="tooltip-item d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex align-items-center"><span class="tooltip-dot bg-user me-2"></span><span class="tooltip-name">user_engagement</span></div>
-                                    <span class="tooltip-val fw-bold">${h.vals.user}</span>
-                                </div>
-                                <div class="tooltip-item d-flex justify-content-between align-items-center mb-1">
-                                    <div class="d-flex align-items-center"><span class="tooltip-dot bg-session me-2"></span><span class="tooltip-name">session_start</span></div>
-                                    <span class="tooltip-val fw-bold">${h.vals.session}</span>
-                                </div>
-                                <div class="tooltip-item d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center"><span class="tooltip-dot bg-first me-2"></span><span class="tooltip-name">first_visit</span></div>
-                                    <span class="tooltip-val fw-bold">${h.vals.first}</span>
-                                </div>
-                            `;
-                        }
-                        if (tooltip) tooltip.style.display = 'block';
-                    });
-
-                    zone.addEventListener('mousemove', (e) => {
-                        if (tooltip) {
-                            tooltip.style.left = `${e.clientX + 15}px`;
-                            tooltip.style.top = `${e.clientY - 40}px`;
-                        }
-                    });
-
-                    zone.addEventListener('mouseleave', () => {
-                        const targetVl = card8Preview.querySelector(`#c8-vl-${i}`);
-                        if (targetVl) targetVl.style.opacity = '0';
-                        if (tooltip) tooltip.style.display = 'none';
-                    });
-
-                    interactiveLayer.appendChild(zone);
+        pageDropItems8.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                pageDropItems8.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.check-icon')?.classList.add('d-none');
                 });
+                item.classList.add('active');
+                item.querySelector('.check-icon')?.classList.remove('d-none');
+                if (rowsPerPageText8) rowsPerPageText8.textContent = item.getAttribute('data-val');
+            });
+        });
+
+        function getCheckedKeys8() {
+            const keys = [];
+            rowCheckboxes8.forEach(cb => {
+                if (cb.checked) {
+                    keys.push(cb.getAttribute('data-key'));
+                }
+            });
+            return keys;
+        }
+
+        function checkBuildButtonState8() {
+            if (!buildChartBtn8) return;
+            const checkedKeys = getCheckedKeys8();
+            const sortedChecked = [...checkedKeys].sort().join(',');
+            const sortedPlotted = [...plottedKeys8].sort().join(',');
+            
+            if (sortedChecked !== sortedPlotted && checkedKeys.length > 0) {
+                buildChartBtn8.classList.remove('btn-outline-secondary', 'bg-white', 'text-muted', 'border-dadce0');
+                buildChartBtn8.classList.add('btn-primary', 'text-white');
+                buildChartBtn8.removeAttribute('disabled');
+            } else {
+                buildChartBtn8.classList.add('btn-outline-secondary', 'bg-white', 'text-muted', 'border-dadce0');
+                buildChartBtn8.classList.remove('btn-primary', 'text-white');
+                buildChartBtn8.setAttribute('disabled', 'true');
             }
         }
 
-        renderChart8('Ngày');
+        function updateChartVisibility8() {
+            const allKeys = ['new', 'clearance', 'apparel', 'retro'];
+            
+            allKeys.forEach(k => {
+                const el = card8Preview.querySelector(`#line${k.charAt(0).toUpperCase() + k.slice(1)}`);
+                if (el) el.style.display = plottedKeys8.includes(k) ? 'block' : 'none';
+            });
 
-        card8Preview.querySelectorAll('.dropdown-item[data-val]').forEach(item => {
+            legendItems8.forEach(item => {
+                const k = item.getAttribute('data-key');
+                if (plottedKeys8.includes(k)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            checkBuildButtonState8();
+            renderChart8(timeRangeBtn8 ? timeRangeBtn8.textContent.trim() : "Ngày");
+        }
+
+        function drawMarker8(k, cx, cy, groupEl, isHover) {
+            let shape;
+            if (k === 'new') {
+                shape = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                shape.setAttribute('cx', cx); shape.setAttribute('cy', cy); shape.setAttribute('r', 4);
+            } else if (k === 'clearance') {
+                shape = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                shape.setAttribute('x', cx - 4); shape.setAttribute('y', cy - 4); shape.setAttribute('width', 8); shape.setAttribute('height', 8);
+            } else if (k === 'apparel') {
+                shape = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+                shape.setAttribute('points', `${cx},${cy-5} ${cx+5},${cy} ${cx},${cy+5} ${cx-5},${cy}`);
+            } else {
+                shape = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+                shape.setAttribute('points', `${cx-5},${cy-4} ${cx+5},${cy-4} ${cx},${cy+5}`);
+            }
+            
+            if (isHover) {
+                shape.setAttribute('class', `point-${k} hover-point`);
+            } else {
+                shape.setAttribute('class', `point-${k}`);
+            }
+            
+            groupEl.appendChild(shape);
+            return shape;
+        }
+
+        function renderChart8(range) {
+            if (!db8[range] || !xLabelsGroup8 || !interactiveLayer8) return;
+            const data = db8[range];
+            
+            xLabelsGroup8.innerHTML = '';
+            const ptsArrTemplate = data.pts.new.split(' ');
+            
+            data.xLabels.forEach((lbl, i) => {
+                const xVal = ptsArrTemplate[i].split(',')[0];
+                const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                textEl.setAttribute('x', xVal);
+                textEl.setAttribute('y', 238);
+                textEl.setAttribute('class', 'chart-axis-label');
+                textEl.setAttribute('text-anchor', 'middle');
+                
+                if (range === "Ngày" && i === 0) {
+                    textEl.innerHTML = `${lbl.split(' ')[0]}<tspan x="${xVal}" dy="14">${lbl.split(' ')[1]}</tspan>`;
+                } else {
+                    textEl.textContent = lbl;
+                }
+                xLabelsGroup8.appendChild(textEl);
+            });
+
+            ['new', 'clearance', 'apparel', 'retro'].forEach(k => {
+                const line = card8Preview.querySelector(`#line${k.charAt(0).toUpperCase() + k.slice(1)}`);
+                if (line) line.setAttribute('points', data.pts[k]);
+            });
+
+            if (staticEndMarkersGroup8) {
+                staticEndMarkersGroup8.innerHTML = '';
+                const lastIndex = ptsArrTemplate.length - 1;
+                plottedKeys8.forEach(k => {
+                    const lastPt = data.pts[k].split(' ')[lastIndex].split(',');
+                    drawMarker8(k, parseFloat(lastPt[0]), parseFloat(lastPt[1]), staticEndMarkersGroup8, false);
+                });
+            }
+
+            interactiveLayer8.innerHTML = '';
+            
+            ptsArrTemplate.forEach((ptStr, i) => {
+                const xVal = parseFloat(ptStr.split(',')[0]);
+                const hoverData = data.hoverData[i];
+                
+                const vLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                vLine.setAttribute('x1', xVal); vLine.setAttribute('y1', 20);
+                vLine.setAttribute('x2', xVal); vLine.setAttribute('y2', 220);
+                vLine.setAttribute('class', 'hover-vline');
+                vLine.setAttribute('id', `c8-vl-${i}`);
+                interactiveLayer8.appendChild(vLine);
+
+                const shapes = [];
+                ['new', 'clearance', 'apparel', 'retro'].forEach(k => {
+                    const pY = parseFloat(data.pts[k].split(' ')[i].split(',')[1]);
+                    const shape = drawMarker8(k, xVal, pY, interactiveLayer8, true);
+                    shape.classList.add(`c8-pt-group-${i}`);
+                    shapes.push(shape);
+                });
+
+                const zoneWidth = range === "Ngày" ? 80 : range === "Tuần" ? 200 : 500;
+                const zone = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                zone.setAttribute('x', xVal - zoneWidth / 2);
+                zone.setAttribute('y', 20);
+                zone.setAttribute('width', zoneWidth);
+                zone.setAttribute('height', 200);
+                zone.setAttribute('class', 'hover-zone');
+
+                zone.addEventListener('mouseenter', () => {
+                    const targetVl = card8Preview.querySelector(`#c8-vl-${i}`);
+                    if (targetVl) targetVl.style.opacity = '1';
+                    card8Preview.querySelectorAll(`.c8-pt-group-${i}`).forEach(el => {
+                        const k = Array.from(el.classList).find(c => c.startsWith('point-'))?.split('-')[1];
+                        if (k && plottedKeys8.includes(k)) el.style.opacity = '1';
+                    });
+                });
+
+                zone.addEventListener('mousemove', (e) => {
+                    if (!svgEl8 || !tooltip8 || !ttDate8 || !ttContent8) return;
+                    const pt = svgEl8.createSVGPoint();
+                    pt.x = e.clientX;
+                    pt.y = e.clientY;
+                    const svgP = pt.matrixTransform(svgEl8.getScreenCTM().inverse());
+                    const mouseY = svgP.y;
+
+                    let closestKey = null;
+                    let minDistance = 30;
+
+                    plottedKeys8.forEach(k => {
+                        const pY = parseFloat(data.pts[k].split(' ')[i].split(',')[1]);
+                        const dist = Math.abs(mouseY - pY);
+                        if (dist < minDistance) {
+                            minDistance = dist;
+                            closestKey = k;
+                        }
+                    });
+
+                    card8Preview.querySelectorAll('.chart-line').forEach(l => {
+                        l.classList.remove('highlighted');
+                        l.classList.add('dimmed');
+                    });
+                    legendItems8.forEach(li => li.classList.add('dimmed'));
+
+                    if (closestKey) {
+                        const lineEl = card8Preview.querySelector(`#line${closestKey.charAt(0).toUpperCase() + closestKey.slice(1)}`);
+                        if (lineEl) {
+                            lineEl.classList.remove('dimmed');
+                            lineEl.classList.add('highlighted');
+                        }
+                        const leg = card8Preview.querySelector(`.legend-item[data-key="${closestKey}"]`);
+                        if (leg) leg.classList.remove('dimmed');
+                    } else {
+                        card8Preview.querySelectorAll('.chart-line').forEach(l => l.classList.remove('dimmed'));
+                        legendItems8.forEach(li => li.classList.remove('dimmed'));
+                    }
+
+                    ttDate8.textContent = hoverData.date;
+                    ttContent8.innerHTML = '';
+                    
+                    ['new', 'clearance', 'apparel', 'retro'].forEach(k => {
+                        if (plottedKeys8.includes(k)) {
+                            const isClosest = (k === closestKey);
+                            ttContent8.innerHTML += `
+                                <div class="d-flex justify-content-between align-items-center gap-4 ${isClosest ? 'fw-bold' : ''}" style="${isClosest ? 'background:#f8f9fa; margin:-4px -8px; padding:4px 8px; border-radius:4px;' : ''}">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" style="opacity: ${isClosest ? '1' : '0.5'};">${iconsHtml8[k]}</svg>
+                                        <span class="tt-label ${isClosest ? 'fw-bold text-dark' : ''}">${labelsStr8[k]}</span>
+                                    </div>
+                                    <span class="tt-val ${isClosest ? 'fw-bold text-dark' : ''}">${hoverData.vals[k]}</span>
+                                </div>
+                            `;
+                        }
+                    });
+                    
+                    if (ttContent8.innerHTML !== '') {
+                        tooltip8.style.display = 'block';
+                    }
+
+                    let left = e.clientX + 15;
+                    let top = e.clientY + 15;
+                    const ttRect = tooltip8.getBoundingClientRect();
+                    if (left + ttRect.width > window.innerWidth) left = e.clientX - ttRect.width - 15;
+                    if (top + ttRect.height > window.innerHeight) top = e.clientY - ttRect.height - 15;
+                    tooltip8.style.left = `${left}px`;
+                    tooltip8.style.top = `${top}px`;
+                });
+
+                zone.addEventListener('mouseleave', () => {
+                    const targetVl = card8Preview.querySelector(`#c8-vl-${i}`);
+                    if (targetVl) targetVl.style.opacity = '0';
+                    card8Preview.querySelectorAll(`.c8-pt-group-${i}`).forEach(el => el.style.opacity = '0');
+                    if (tooltip8) tooltip8.style.display = 'none';
+                    
+                    card8Preview.querySelectorAll('.chart-line').forEach(l => {
+                        l.classList.remove('dimmed', 'highlighted');
+                    });
+                    legendItems8.forEach(li => li.classList.remove('dimmed'));
+                });
+
+                interactiveLayer8.appendChild(zone);
+            });
+        }
+
+        renderChart8("Ngày");
+
+        dropItems8.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
-                const val = e.target.getAttribute('data-val');
-                if (timeRangeBtn) timeRangeBtn.textContent = val;
-                card8Preview.querySelectorAll('.dropdown-item[data-val]').forEach(i => i.classList.remove('active'));
-                e.target.classList.add('active');
+                dropItems8.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                
+                const val = item.getAttribute('data-val');
+                if (timeRangeBtn8) timeRangeBtn8.innerHTML = `${val}`;
                 renderChart8(val);
+            });
+        });
+
+        rowCheckboxes8.forEach(cb => {
+            cb.addEventListener('change', () => {
+                checkBuildButtonState8();
+            });
+        });
+
+        if (masterCheckbox8) {
+            masterCheckbox8.addEventListener('click', () => {
+                const allChecked = Array.from(rowCheckboxes8).every(cb => cb.checked);
+                rowCheckboxes8.forEach(cb => {
+                    cb.checked = !allChecked;
+                });
+                checkBuildButtonState8();
+            });
+        }
+
+        if (buildChartBtn8) {
+            buildChartBtn8.addEventListener('click', () => {
+                plottedKeys8 = getCheckedKeys8();
+                updateChartVisibility8();
+            });
+        }
+
+        legendItems8.forEach(item => {
+            const k = item.getAttribute('data-key');
+            const lineEl = card8Preview.querySelector(`#line${k.charAt(0).toUpperCase() + k.slice(1)}`);
+
+            item.addEventListener('mouseenter', () => {
+                legendItems8.forEach(li => li.classList.add('dimmed'));
+                item.classList.remove('dimmed');
+                
+                card8Preview.querySelectorAll('.chart-line').forEach(l => l.classList.add('dimmed'));
+                if (lineEl) {
+                    lineEl.classList.remove('dimmed');
+                    lineEl.classList.add('highlighted');
+                }
+            });
+
+            item.addEventListener('mouseleave', () => {
+                legendItems8.forEach(li => li.classList.remove('dimmed'));
+                card8Preview.querySelectorAll('.chart-line').forEach(l => {
+                    l.classList.remove('dimmed', 'highlighted');
+                });
             });
         });
     }
@@ -1599,6 +2085,69 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         renderTable2();
+    }
+
+    // V. Popover 3 (Analytics Variables Panel Toggle)
+    const popover3Preview = document.getElementById('preview-popover3');
+    if (popover3Preview) {
+        const panel3 = popover3Preview.querySelector('#variablesPanel');
+        const closeBtn3 = popover3Preview.querySelector('#closePanelBtn');
+        const openBtn3 = popover3Preview.querySelector('#openPanelBtn');
+
+        if (panel3 && closeBtn3 && openBtn3) {
+            closeBtn3.addEventListener('click', () => {
+                panel3.style.display = 'none';
+                openBtn3.style.display = 'flex';
+            });
+
+            openBtn3.addEventListener('click', () => {
+                panel3.style.display = 'flex';
+                openBtn3.style.display = 'none';
+            });
+        }
+    }
+
+    // W. Table 3 (Analytics Top Pages Table Hover Popover)
+    const table3Preview = document.getElementById('preview-table3');
+    if (table3Preview) {
+        const hoverRows3 = table3Preview.querySelectorAll('.hover-row');
+        const popover3 = table3Preview.querySelector('#pagesPopover');
+        const popTitle3 = table3Preview.querySelector('#popTitle');
+        const popV3 = table3Preview.querySelector('#popV');
+        const popU3 = table3Preview.querySelector('#popU');
+        const popE3 = table3Preview.querySelector('#popE');
+        const popB3 = table3Preview.querySelector('#popB');
+
+        if (popover3 && popTitle3 && popV3 && popU3 && popE3 && popB3) {
+            hoverRows3.forEach(row => {
+                row.addEventListener('mouseenter', () => {
+                    popTitle3.textContent = row.getAttribute('data-title');
+                    popV3.textContent = row.getAttribute('data-v');
+                    popU3.textContent = row.getAttribute('data-u');
+                    popE3.textContent = row.getAttribute('data-e');
+                    popB3.textContent = row.getAttribute('data-b');
+                    popover3.style.display = 'block';
+                });
+
+                row.addEventListener('mousemove', (e) => {
+                    let left = e.clientX + 15;
+                    let top = e.clientY + 15;
+                    const pRect = popover3.getBoundingClientRect();
+                    if (left + pRect.width > window.innerWidth) {
+                        left = e.clientX - pRect.width - 15;
+                    }
+                    if (top + pRect.height > window.innerHeight) {
+                        top = e.clientY - pRect.height - 15;
+                    }
+                    popover3.style.left = `${left}px`;
+                    popover3.style.top = `${top}px`;
+                });
+
+                row.addEventListener('mouseleave', () => {
+                    popover3.style.display = 'none';
+                });
+            });
+        }
     }
 
     // M. Đồng bộ URL Hash

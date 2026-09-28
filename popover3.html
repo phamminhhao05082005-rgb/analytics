@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Variables Panel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="popover3.css">
+</head>
+<body class="bg-light">
+
+<div class="collapsed-sidebar" id="openPanelBtn">
+    <div class="d-flex align-items-center gap-3">
+        <i class="bi bi-files fs-5 text-secondary"></i>
+        <span class="fs-15 text-dark" style="color: #3c4043;">Biến</span>
+    </div>
+    <i class="bi bi-dash fs-4 text-secondary"></i>
+</div>
+
+<div class="variables-panel bg-white shadow-sm" id="variablesPanel" style="display: none;">
+    
+    <div class="panel-header d-flex justify-content-between align-items-center border-bottom px-3 py-3">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-files fs-5 text-dark"></i>
+            <span class="fs-15 fw-medium text-dark">Biến thiên</span>
+        </div>
+        <i class="bi bi-x-lg cursor-pointer text-secondary hover-dark" id="closePanelBtn"></i>
+    </div>
+
+    <div class="panel-scroll custom-scrollbar">
+        
+        <div class="px-3 py-3 border-bottom">
+            <div class="text-uppercase text-secondary mb-1" style="font-size: 11px; letter-spacing: 0.3px;">Tên dữ liệu khám phá:</div>
+            <div class="text-dark fs-14">Chồng chéo phân khúc</div>
+        </div>
+
+        <div class="px-3 py-3 border-bottom hover-bg cursor-pointer">
+            <span class="date-badge">28 ngày trước</span>
+            <div class="d-flex justify-content-between align-items-center mt-1">
+                <span class="fs-13 text-dark">31 thg 8 - 27 thg 9, 2026</span>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </div>
+        </div>
+
+        <div class="section-container pb-2">
+            <div class="section-header d-flex justify-content-between align-items-center px-3 pt-3 mb-2">
+                <span class="dashed-title">PHÂN ĐOẠN</span>
+                <i class="bi bi-plus-lg cursor-pointer text-secondary hover-dark"></i>
+            </div>
+            <div class="px-3 list-container">
+                <div class="var-item">
+                    <i class="bi bi-grid-3x3-gap-fill grip-icon"></i>
+                    <span class="item-text">Hoa Kỳ</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-container pb-2">
+            <div class="section-header d-flex justify-content-between align-items-center px-3 pt-2 mb-2">
+                <span class="dashed-title">PHƯƠNG DIỆN</span>
+                <i class="bi bi-plus-lg cursor-pointer text-secondary hover-dark"></i>
+            </div>
+            <div class="px-3 list-container">
+                <div class="var-item dim-item">
+                    <i class="bi bi-grid-3x3-gap-fill grip-icon"></i>
+                    <span class="item-text">Danh mục thiết bị</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-container pb-3">
+            <div class="section-header d-flex justify-content-between align-items-center px-3 pt-2 mb-2">
+                <span class="dashed-title">CHỈ SỐ</span>
+                <i class="bi bi-plus-lg cursor-pointer text-secondary hover-dark"></i>
+            </div>
+            <div class="px-3 list-container">
+                <div class="var-item met-item">
+                    <i class="bi bi-grid-3x3-gap-fill grip-icon"></i>
+                    <span class="item-text">Số người dùng đang hoạt động</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="popover3.js"></script>
+</body>
+</html>
