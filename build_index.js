@@ -223,10 +223,10 @@ const categories = [
                 title: 'Analytics Funnel Chart Card (Thẻ biểu đồ phễu chuyển đổi & tỷ lệ bỏ ngang qua từng bước)',
                 htmlFile: 'card5.html',
                 cssFile: 'card5.css',
-                jsFile: null,
+                jsFile: 'card5.js',
                 previewId: 'preview-card5',
                 previewClass: '',
-                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ phễu (Funnel) phân tích hành trình khách hàng từ bắt đầu phiên, thêm vào giỏ hàng đến mua hàng với công tắc đóng/mở phễu.'
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ phễu (Funnel) phân tích hành trình khách hàng từ bắt đầu phiên, thêm vào giỏ hàng đến mua hàng với công tắc đóng/mở phễu, bộ lọc tìm kiếm danh mục thiết bị và dropdown chọn số hàng hiển thị trên mỗi trang. Cần nhúng file <code>card5.js</code> để kích hoạt tương tác.'
             },
             {
                 sampleId: 'card-mau-6',

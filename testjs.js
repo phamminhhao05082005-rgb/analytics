@@ -882,7 +882,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // I. Card 5 (Funnel Toggle Switch)
+    // I. Card 5 (Funnel Toggle Switch & Search & Pagination)
     const card5Preview = document.getElementById('preview-card5');
     if (card5Preview) {
         const funnelToggle = card5Preview.querySelector('#funnelToggle');
@@ -893,99 +893,215 @@ document.addEventListener("DOMContentLoaded", () => {
                 funnelArea.style.transition = 'opacity 0.3s ease';
             });
         }
+
+        const searchInput5 = card5Preview.querySelector('#searchInput5') || card5Preview.querySelector('.table-search input');
+        const tableRows5 = card5Preview.querySelectorAll('.data-row');
+        const paginationInfo5 = card5Preview.querySelector('#paginationInfo5');
+        const pageDropItems5 = card5Preview.querySelectorAll('.custom-pagination-menu .dropdown-item');
+        const rowsPerPageText5 = card5Preview.querySelector('#rowsPerPageText5');
+
+        if (searchInput5 && tableRows5.length > 0) {
+            searchInput5.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase().trim();
+                let visibleCount = 0;
+                tableRows5.forEach(row => {
+                    const text = row.querySelector('.row-link')?.textContent.toLowerCase() || row.textContent.toLowerCase();
+                    if (text.includes(term)) {
+                        row.style.display = '';
+                        visibleCount++;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                if (paginationInfo5) {
+                    paginationInfo5.textContent = visibleCount > 0 ? `1 – ${visibleCount} trên ${tableRows5.length}` : `0 – 0 trên ${tableRows5.length}`;
+                }
+            });
+        }
+
+        pageDropItems5.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                pageDropItems5.forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.check-icon')?.classList.add('d-none');
+                });
+                item.classList.add('active');
+                item.querySelector('.check-icon')?.classList.remove('d-none');
+                if (rowsPerPageText5) {
+                    rowsPerPageText5.textContent = item.getAttribute('data-val');
+                }
+            });
+        });
     }
 
-    // J. Card 7 (Analytics Dynamic Chart)
     const card7Preview = document.getElementById('preview-card7');
     if (card7Preview) {
         const datasets = [
             {
-                yLabels: ["1 phút 20 giây", "1 phút 00 giây", "40 giây", "20 giây", "0 giây"],
-                linePts: "0,220 100,220 250,220 400,220 550,220 680,220 720,110",
-                bandPts: "0,120 40,120 70,90 140,90 170,120 240,120 270,90 340,90 370,120 440,120 470,90 540,90 570,120 640,120 670,90 740,90 750,90 750,140 740,140 670,140 640,170 570,170 540,140 470,140 440,170 370,170 340,140 270,140 240,170 170,170 140,140 70,140 40,170 0,170",
-                hoverVals: ["0 giây", "0 giây", "0 giây", "0 giây", "38 giây"],
-                dotY: [220, 220, 220, 220, 110],
-                name: "Thời gian tương tác trung bình trên mỗi người dùng đang hoạt động"
+                name: "Số người dùng đang hoạt động",
+                yLabels: ["8 N", "6 N", "4 N", "2 N", "0"],
+                linePts: "50,115 150,105 250,120 350,110 450,75 550,145 650,150",
+                dashedPts: "50,110 150,112 250,115 350,118 450,120 550,160 650,160",
+                bandPts: "50,195 150,195 250,198 350,195 450,192 550,205 650,206 650,220 50,220",
+                benchmarkPts: "50,195 150,195 250,198 350,195 450,192 550,205 650,206",
+                hoverVals: ["4,2 N", "4,6 N", "4,0 N", "4,4 N", "5,8 N", "3,0 N", "2,8 N"],
+                dotY: [115, 105, 120, 110, 75, 145, 150]
             },
             {
-                yLabels: ["2", "1,5", "1", "0,5", "0"],
-                linePts: "0,220 100,220 250,220 400,220 550,220 680,220 720,120",
-                bandPts: "0,130 40,130 70,100 140,100 170,130 240,130 270,100 340,100 370,130 440,130 470,100 540,100 570,130 640,130 670,100 740,100 750,100 750,150 740,150 670,150 640,180 570,180 540,150 470,150 440,180 370,180 340,150 270,150 240,180 170,180 140,150 70,150 40,180 0,180",
-                hoverVals: ["0", "0", "0", "0", "1"],
-                dotY: [220, 220, 220, 220, 120],
-                name: "Số phiên có sự tương tác trên mỗi người dùng đang hoạt động"
+                name: "Sự kiện quan trọng",
+                yLabels: ["8 N", "6 N", "4 N", "2 N", "0"],
+                linePts: "50,108 150,100 250,115 350,105 450,63 550,150 650,155",
+                dashedPts: "50,118 150,118 250,113 350,110 450,118 550,163 650,163",
+                bandPts: "50,195 150,195 250,198 350,195 450,192 550,205 650,206 650,220 50,220",
+                benchmarkPts: "50,195 150,195 250,198 350,195 450,192 550,205 650,206",
+                hoverVals: ["4,5 N", "4,8 N", "4,2 N", "4,6 N", "6,3 N", "2,8 N", "2,6 N"],
+                dotY: [108, 100, 115, 105, 63, 150, 155]
             },
             {
-                yLabels: ["40 giây", "30 giây", "20 giây", "10 giây", "0 giây"],
-                linePts: "0,220 100,220 250,220 400,220 550,220 680,220 720,136",
-                bandPts: "0,140 40,140 70,110 140,110 170,140 240,140 270,110 340,110 370,140 440,140 470,110 540,110 570,140 640,140 670,110 740,110 750,110 750,160 740,160 670,160 640,190 570,190 540,160 470,160 440,190 370,190 340,160 270,160 240,190 170,190 140,160 70,160 40,190 0,190",
-                hoverVals: ["0 giây", "0 giây", "0 giây", "0 giây", "12 giây"],
-                dotY: [220, 220, 220, 220, 136],
-                name: "Thời gian tương tác trung bình/phiên hoạt động"
+                name: "Phiên",
+                yLabels: ["10 N", "7,5 N", "5 N", "2,5 N", "0"],
+                linePts: "50,95 150,90 250,105 350,92 450,55 550,135 650,140",
+                dashedPts: "50,100 150,102 250,105 350,108 450,110 550,145 650,148",
+                bandPts: "50,190 150,192 250,195 350,190 450,188 550,200 650,202 650,220 50,220",
+                benchmarkPts: "50,190 150,192 250,195 350,190 450,188 550,200 650,202",
+                hoverVals: ["5,2 N", "5,5 N", "4,8 N", "5,4 N", "7,1 N", "3,4 N", "3,2 N"],
+                dotY: [95, 90, 105, 92, 55, 135, 140]
+            },
+            {
+                name: "Mua hàng",
+                yLabels: ["500", "375", "250", "125", "0"],
+                linePts: "50,130 150,120 250,140 350,125 450,70 550,160 650,165",
+                dashedPts: "50,145 150,145 250,142 350,138 450,140 550,175 650,175",
+                bandPts: "50,198 150,198 250,200 350,198 450,195 550,208 650,210 650,220 50,220",
+                benchmarkPts: "50,198 150,198 250,200 350,198 450,195 550,208 650,210",
+                hoverVals: ["225", "250", "200", "235", "375", "150", "140"],
+                dotY: [130, 120, 140, 125, 70, 160, 165]
             }
         ];
-        const hoverDates = ["30 thg", "06 thg", "13 thg", "20 thg", "Hôm nay"];
+
+        const hoverDates = ["21 thg", "22 thg", "23 thg", "24 thg", "25 thg", "26 thg", "27 thg"];
         let activeIdx = 0;
 
         const yLabelEls = card7Preview.querySelectorAll('.y-label');
-        const chartLine = card7Preview.querySelector('#chartLine');
-        const chartBand = card7Preview.querySelector('#chartBand');
+        const chartLine = card7Preview.querySelector('#chartLine7') || card7Preview.querySelector('#chartLine');
+        const chartDashedLine = card7Preview.querySelector('#chartDashedLine7') || card7Preview.querySelector('#chartDashedLine');
+        const chartBand = card7Preview.querySelector('#chartBand7') || card7Preview.querySelector('#chartBand');
+        const benchmarkLine = card7Preview.querySelector('#benchmarkLine7') || card7Preview.querySelector('#benchmarkLine');
         const metricBoxes = card7Preview.querySelectorAll('.metric-box');
-        const ttName = card7Preview.querySelector('#ttName');
-        const tooltip = card7Preview.querySelector('#customTooltip');
-        const ttVal = card7Preview.querySelector('#ttVal');
-        const ttDate = card7Preview.querySelector('#ttDate');
-        const hitboxes = card7Preview.querySelectorAll('.hover-hitbox');
-        const hoverDots = card7Preview.querySelectorAll('.hover-dot');
-        const hoverLines = card7Preview.querySelectorAll('.hover-line');
+        const ttName = card7Preview.querySelector('#ttName7') || card7Preview.querySelector('#ttName');
+        const ttDate = card7Preview.querySelector('#ttDate7') || card7Preview.querySelector('#ttDate');
+        const ttVal = card7Preview.querySelector('#ttVal7') || card7Preview.querySelector('#ttVal');
+        const popover = card7Preview.querySelector('#tooltipPopover7') || card7Preview.querySelector('#tooltipPopover');
+        const hoverTriggers = card7Preview.querySelectorAll('.hover-trigger');
 
         metricBoxes.forEach((box, index) => {
             box.addEventListener('click', () => {
-                metricBoxes.forEach(b => {
-                    b.classList.remove('active');
-                    b.querySelector('.metric-title')?.classList.remove('text-primary');
-                    b.querySelector('.metric-title')?.classList.add('text-secondary');
-                });
+                metricBoxes.forEach(b => b.classList.remove('active'));
                 box.classList.add('active');
-                box.querySelector('.metric-title')?.classList.remove('text-secondary');
-                box.querySelector('.metric-title')?.classList.add('text-primary');
 
                 activeIdx = index;
                 const data = datasets[activeIdx];
-                yLabelEls.forEach((el, i) => { if (data.yLabels[i]) el.textContent = data.yLabels[i]; });
-                if (chartLine) chartLine.setAttribute('points', data.linePts);
-                if (chartBand) chartBand.setAttribute('points', data.bandPts);
-                if (ttName) ttName.textContent = data.name;
-                hoverDots.forEach((dot, i) => {
-                    if (data.dotY[i]) dot.setAttribute('cy', data.dotY[i]);
+
+                yLabelEls.forEach((el, i) => {
+                    if (data.yLabels[i]) el.textContent = data.yLabels[i];
                 });
+
+                if (chartLine) chartLine.setAttribute('points', data.linePts);
+                if (chartDashedLine) chartDashedLine.setAttribute('points', data.dashedPts);
+                if (chartBand) chartBand.setAttribute('points', data.bandPts);
+                if (benchmarkLine) benchmarkLine.setAttribute('points', data.benchmarkPts);
+
+                for (let i = 0; i < 7; i++) {
+                    const dot = card7Preview.querySelector(`#dot7-${i}`) || card7Preview.querySelector(`#dot-${i}`);
+                    if (dot) dot.setAttribute('cy', data.dotY[i]);
+                }
             });
         });
 
-        if (tooltip) {
-            hitboxes.forEach(box => {
-                box.addEventListener('mouseenter', (e) => {
-                    const i = parseInt(e.target.getAttribute('data-point'));
-                    if (hoverLines[i]) hoverLines[i].style.opacity = '1';
-                    if (hoverDots[i]) hoverDots[i].style.opacity = '1';
-                    if (ttVal) ttVal.textContent = datasets[activeIdx].hoverVals[i];
-                    if (ttDate) ttDate.textContent = hoverDates[i];
-                    tooltip.style.display = 'block';
-                });
+        hoverTriggers.forEach(trigger => {
+            const i = trigger.getAttribute('data-idx');
+            trigger.addEventListener('mouseenter', () => {
+                const vline = card7Preview.querySelector(`#vline7-${i}`) || card7Preview.querySelector(`#vline-${i}`);
+                const dot = card7Preview.querySelector(`#dot7-${i}`) || card7Preview.querySelector(`#dot-${i}`);
+                if (vline) vline.style.opacity = '1';
+                if (dot) dot.style.opacity = '1';
 
-                box.addEventListener('mousemove', (e) => {
-                    tooltip.style.left = `${e.clientX + 15}px`;
-                    tooltip.style.top = `${e.clientY - 40}px`;
-                });
+                if (ttDate) ttDate.textContent = hoverDates[i];
+                if (ttName) ttName.textContent = datasets[activeIdx].name;
+                if (ttVal) ttVal.textContent = datasets[activeIdx].hoverVals[i];
+                if (popover) popover.style.display = 'block';
+            });
 
-                box.addEventListener('mouseleave', (e) => {
-                    const i = parseInt(e.target.getAttribute('data-point'));
-                    if (hoverLines[i]) hoverLines[i].style.opacity = '0';
-                    if (hoverDots[i]) hoverDots[i].style.opacity = '0';
-                    tooltip.style.display = 'none';
-                });
+            trigger.addEventListener('mousemove', (e) => {
+                if (!popover) return;
+                let left = e.clientX + 15;
+                let top = e.clientY - 30;
+                const pRect = popover.getBoundingClientRect();
+                if (left + pRect.width > window.innerWidth) {
+                    left = e.clientX - pRect.width - 15;
+                }
+                if (top + pRect.height > window.innerHeight) {
+                    top = e.clientY - pRect.height - 15;
+                }
+                popover.style.left = `${left}px`;
+                popover.style.top = `${top}px`;
+            });
+
+            trigger.addEventListener('mouseleave', () => {
+                const vline = card7Preview.querySelector(`#vline7-${i}`) || card7Preview.querySelector(`#vline-${i}`);
+                const dot = card7Preview.querySelector(`#dot7-${i}`) || card7Preview.querySelector(`#dot-${i}`);
+                if (vline) vline.style.opacity = '0';
+                if (dot) dot.style.opacity = '0';
+                if (popover) popover.style.display = 'none';
+            });
+        });
+
+        const slider = card7Preview.querySelector('#metricSlider7') || card7Preview.querySelector('#metricSlider');
+        const prevBtn = card7Preview.querySelector('#navPrev7') || card7Preview.querySelector('#navPrev');
+        const nextBtn = card7Preview.querySelector('#navNext7') || card7Preview.querySelector('#navNext');
+        let sliderPos = 0;
+
+        function updateNavButtons() {
+            if (!slider || !prevBtn || !nextBtn) return;
+            const maxScroll = -(slider.scrollWidth - slider.parentElement.offsetWidth);
+            if (sliderPos >= 0) {
+                prevBtn.classList.add('disabled');
+            } else {
+                prevBtn.classList.remove('disabled');
+            }
+            if (sliderPos <= maxScroll || maxScroll >= 0) {
+                nextBtn.classList.add('disabled');
+            } else {
+                nextBtn.classList.remove('disabled');
+            }
+        }
+
+        if (nextBtn && slider) {
+            nextBtn.addEventListener('click', () => {
+                const maxScroll = -(slider.scrollWidth - slider.parentElement.offsetWidth);
+                if (sliderPos > maxScroll) {
+                    sliderPos -= 232;
+                    if (sliderPos < maxScroll) sliderPos = maxScroll;
+                    slider.style.transform = `translateX(${sliderPos}px)`;
+                    updateNavButtons();
+                }
             });
         }
+
+        if (prevBtn && slider) {
+            prevBtn.addEventListener('click', () => {
+                if (sliderPos < 0) {
+                    sliderPos += 232;
+                    if (sliderPos > 0) sliderPos = 0;
+                    slider.style.transform = `translateX(${sliderPos}px)`;
+                    updateNavButtons();
+                }
+            });
+        }
+
+        updateNavButtons();
+        window.addEventListener('resize', updateNavButtons);
     }
 
     // K. Card 8 (Analytics Detailed Multi-Line Chart with Time Range)
@@ -1050,18 +1166,18 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         const xLabelsGroup8 = card8Preview.querySelector('#xLabelsGroup');
-        const interactiveLayer8 = card8Preview.querySelector('#interactiveLayer');
+        const interactiveLayer8 = card8Preview.querySelector('#interactiveLayer8') || card8Preview.querySelector('#interactiveLayer');
         const staticEndMarkersGroup8 = card8Preview.querySelector('#staticEndMarkersGroup');
-        const tooltip8 = card8Preview.querySelector('#chartTooltip');
-        const ttDate8 = card8Preview.querySelector('#ttDate');
-        const ttContent8 = card8Preview.querySelector('#ttContent');
+        const tooltip8 = card8Preview.querySelector('#chartTooltip8') || card8Preview.querySelector('#chartTooltip');
+        const ttDate8 = card8Preview.querySelector('#ttDate8') || card8Preview.querySelector('#ttDate');
+        const ttContent8 = card8Preview.querySelector('#ttContent8') || card8Preview.querySelector('#ttContent');
         const timeRangeBtn8 = card8Preview.querySelector('#timeRangeBtn');
         const dropItems8 = card8Preview.querySelectorAll('.custom-menu .dropdown-item');
         const rowCheckboxes8 = card8Preview.querySelectorAll('.row-checkbox');
         const masterCheckbox8 = card8Preview.querySelector('#masterCheckbox');
         const buildChartBtn8 = card8Preview.querySelector('#buildChartBtn');
         const legendItems8 = card8Preview.querySelectorAll('.legend-item');
-        const svgEl8 = card8Preview.querySelector('#mainChart');
+        const svgEl8 = card8Preview.querySelector('#mainChart8') || card8Preview.querySelector('#mainChart');
 
         const searchInput8 = card8Preview.querySelector('#searchInput');
         const tableRows8 = card8Preview.querySelectorAll('.data-row');
@@ -1215,7 +1331,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             ['new', 'clearance', 'apparel', 'retro'].forEach(k => {
                 const line = card8Preview.querySelector(`#line${k.charAt(0).toUpperCase() + k.slice(1)}`);
-                if (line) line.setAttribute('points', data.pts[k]);
+                if (line) {
+                    line.setAttribute('points', data.pts[k]);
+                    line.style.display = plottedKeys8.includes(k) ? 'block' : 'none';
+                }
             });
 
             if (staticEndMarkersGroup8) {

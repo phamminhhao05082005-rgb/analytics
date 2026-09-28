@@ -137,18 +137,30 @@
     <div class="table-toolbar d-flex align-items-center justify-content-between border-top px-3 py-2">
         <div class="table-search d-flex align-items-center">
             <i class="bi bi-search text-secondary me-2"></i>
-            <input type="text" placeholder="Tìm kiếm...">
+            <input type="text" id="searchInput5" placeholder="Tìm kiếm...">
         </div>
-        <div class="d-flex align-items-center gap-4 text-secondary" style="font-size: 13px;">
-            <div class="d-flex align-items-center gap-2">
+        <div class="d-flex align-items-center gap-4 table-pagination-container">
+            <div class="d-flex align-items-center gap-1">
                 Số hàng mỗi trang: 
-                <select class="form-select form-select-sm border-0 bg-transparent shadow-none w-auto p-0 pe-3 custom-table-select">
-                    <option>10</option>
-                    <option>25</option>
-                    <option>50</option>
-                </select>
+                <div class="dropdown d-inline-block ms-1">
+                    <div class="d-flex align-items-center gap-2 cursor-pointer pagination-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="rowsPerPageText5">10</span>
+                        <i class="bi bi-caret-down-fill text-secondary caret-icon" style="font-size: 10px;"></i>
+                    </div>
+                    <ul class="dropdown-menu border-0 custom-pagination-menu">
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center active" href="#" data-val="10">10 <i class="bi bi-check2 text-primary check-icon"></i></a></li>
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#" data-val="25">25 <i class="bi bi-check2 text-primary check-icon d-none"></i></a></li>
+                        <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#" data-val="50">50 <i class="bi bi-check2 text-primary check-icon d-none"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div>1 – 1 trên 1</div>
+            <div class="d-flex align-items-center gap-3">
+                <span id="paginationInfo5">1 – 3 trên 3</span>
+                <div class="d-flex gap-3">
+                    <i class="bi bi-chevron-left text-muted opacity-50" style="cursor: not-allowed;"></i>
+                    <i class="bi bi-chevron-right text-muted opacity-50" style="cursor: not-allowed;"></i>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -216,12 +228,34 @@
                         <div class="fw-medium text-dark">0</div>
                     </td>
                 </tr>
-                <tr>
+                <tr class="data-row">
                     <td class="d-flex align-items-center gap-4 text-dark" style="padding-left: 24px;">
                         <span class="text-secondary">1</span>
-                        <span class="fw-medium">desktop</span>
+                        <span class="fw-medium row-link">desktop</span>
                     </td>
                     <td class="text-center text-dark">1 (100%)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                </tr>
+                <tr class="data-row">
+                    <td class="d-flex align-items-center gap-4 text-dark" style="padding-left: 24px;">
+                        <span class="text-secondary">2</span>
+                        <span class="fw-medium row-link">mobile</span>
+                    </td>
+                    <td class="text-center text-dark">0 (0%)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                    <td class="text-center text-dark">0 (–)</td>
+                </tr>
+                <tr class="data-row">
+                    <td class="d-flex align-items-center gap-4 text-dark" style="padding-left: 24px;">
+                        <span class="text-secondary">3</span>
+                        <span class="fw-medium row-link">tablet</span>
+                    </td>
+                    <td class="text-center text-dark">0 (0%)</td>
                     <td class="text-center text-dark">0 (–)</td>
                     <td class="text-center text-dark">0 (–)</td>
                     <td class="text-center text-dark">0 (–)</td>
@@ -234,5 +268,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="card5.js"></script>
 </body>
 </html>
