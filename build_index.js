@@ -407,6 +407,18 @@ const categories = [
                 previewId: 'preview-card19',
                 previewClass: 'p-4 d-flex justify-content-center bg-light',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ Venn giao thoa phân tích người dùng hoạt động theo nền tảng (Android, iOS, Web) với hiệu ứng làm mờ/làm nổi bật vòng tròn giao thoa và popover thông số chi tiết khi rê chuột. Cần nhúng file <code>card19.js</code> để kích hoạt hiệu ứng hover & popover.'
+            },
+            {
+                sampleId: 'card-mau-20',
+                badgeText: 'Mẫu 20',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Insights List Card (Thẻ danh sách thông tin chi tiết & đề xuất thông minh kèm nút đánh giá)',
+                htmlFile: 'card20.html',
+                cssFile: 'card20.css',
+                jsFile: null,
+                previewId: 'preview-card20',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ danh sách thông tin chi tiết và đề xuất tối ưu hóa (Recommendations & Insights) với badge đếm số lượng, khung cuộn nội dung <code>.custom-scrollbar</code>, các nút đánh giá thích/không thích (Thumbs Up/Down) xuất hiện mượt mà khi hover và hiệu ứng đổi màu thương hiệu Google Analytics.'
             }
         ]
     },
@@ -1103,6 +1115,7 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="card17.css">
     <link rel="stylesheet" href="card18.css">
     <link rel="stylesheet" href="card19.css">
+    <link rel="stylesheet" href="card20.css">
     <link rel="stylesheet" href="carousel1.css">
     <link rel="stylesheet" href="carousel2.css">
     <link rel="stylesheet" href="carousel3.css">

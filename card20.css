@@ -1,0 +1,142 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.insights-list-card {
+    width: 100%;
+    max-width: 380px;
+    height: 520px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.header-title {
+    font-size: 16px;
+    color: #3c4043;
+    font-weight: 400;
+}
+
+.custom-badge {
+    width: 20px;
+    height: 20px;
+    background-color: #4285f4;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.card-body-scroll {
+    overflow-y: auto;
+}
+
+.insight-list-item {
+    padding: 16px;
+    border-bottom: 1px solid #f1f3f4;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.insight-list-item:last-child {
+    border-bottom: none;
+}
+
+.item-label {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+}
+
+.item-icon {
+    font-size: 14px;
+    color: #5f6368;
+    transition: color 0.2s;
+}
+
+.item-title {
+    font-size: 15px;
+    color: #202124;
+    font-weight: 400;
+    line-height: 1.4;
+    transition: color 0.2s;
+}
+
+.dashed-text {
+    border-bottom: 1px dashed #9aa0a6;
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+}
+
+.item-date {
+    font-size: 13px;
+    color: #3c4043;
+    transition: color 0.2s;
+}
+
+.action-icons {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.btn-icon-action {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: #1a73e8;
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.btn-icon-action:hover {
+    background-color: #e8f0fe;
+}
+
+.hover-trigger:hover .item-label,
+.hover-trigger:hover .item-icon,
+.hover-trigger:hover .item-title,
+.hover-trigger:hover .item-date {
+    color: #1a73e8;
+}
+
+.hover-trigger:hover .dashed-text {
+    border-bottom-color: #1a73e8;
+}
+
+.hover-trigger:hover .action-icons {
+    opacity: 1;
+}
+
+.view-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}

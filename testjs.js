@@ -2460,6 +2460,29 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Z. Card 20 (Analytics Insights List Card)
+    const card20Preview = document.getElementById('preview-card20');
+    if (card20Preview) {
+        const actionBtns = card20Preview.querySelectorAll('.btn-icon-action');
+        actionBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const icon = btn.querySelector('i');
+                if (!icon) return;
+                const isThumbsUp = icon.classList.contains('bi-hand-thumbs-up') || icon.classList.contains('bi-hand-thumbs-up-fill');
+                const isThumbsDown = icon.classList.contains('bi-hand-thumbs-down') || icon.classList.contains('bi-hand-thumbs-down-fill');
+                
+                if (isThumbsUp) {
+                    icon.classList.toggle('bi-hand-thumbs-up');
+                    icon.classList.toggle('bi-hand-thumbs-up-fill');
+                } else if (isThumbsDown) {
+                    icon.classList.toggle('bi-hand-thumbs-down');
+                    icon.classList.toggle('bi-hand-thumbs-down-fill');
+                }
+            });
+        });
+    }
+
     // M. Đồng bộ URL Hash
     setupTabHashSync();
 });
