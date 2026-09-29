@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Venn Diagram Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="card19.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<div class="venn-card bg-white shadow-sm d-flex flex-column">
+    
+    <div class="card-header-top d-flex justify-content-between align-items-center px-4 pt-4 pb-0">
+        <div class="card-title-group d-flex align-items-center gap-1">
+            <span class="card-title-text dashed-text">Số người dùng đang hoạt động</span>
+            <span class="card-title-text text-secondary">theo</span>
+            <span class="card-title-text dashed-text">Nền</span>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none" type="button" data-bs-toggle="dropdown">
+                <i class="bi bi-check-circle text-success"></i>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="card-body p-4 d-flex">
+        
+        <div class="venn-diagram-container position-relative flex-grow-1" id="vennContainer">
+            
+            <div class="venn-circle venn-android d-flex justify-content-center align-items-center" data-platform="Android" data-val="21.422" data-pct="80,0%">
+                <span class="venn-label">Android</span>
+            </div>
+            
+            <div class="venn-circle venn-web d-flex justify-content-center align-items-center" data-platform="Web" data-val="2.356" data-pct="8,8%">
+                <span class="venn-label">Web</span>
+            </div>
+            
+            <div class="venn-circle venn-ios d-flex justify-content-center align-items-center" data-platform="iOS" data-val="2.945" data-pct="11,0%">
+                <span class="venn-label">iOS</span>
+            </div>
+            
+        </div>
+        
+        <div class="stats-sidebar ms-4 d-flex flex-column justify-content-center gap-4">
+            <div class="stat-item">
+                <div class="stat-label">ANDROID</div>
+                <div class="stat-value">80,2%</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">IOS</div>
+                <div class="stat-value">11,0%</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">WEB</div>
+                <div class="stat-value">8,8%</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="card-footer bg-white border-0 px-4 pt-0 pb-4 text-end">
+        <a href="#" class="view-link d-inline-flex align-items-center gap-2">
+            Xem các nền tảng <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<div class="venn-popover shadow" id="vennPopover">
+    <div class="pop-date">1 thg 9 - 1 thg 9, 2026</div>
+    <div class="pop-metric-title">SỐ NGƯỜI DÙNG ĐANG HOẠT ĐỘNG</div>
+    <div class="pop-row">
+        <span class="pop-platform" id="popPlatform">Android</span>
+        <span class="pop-val">
+            <span id="popVal">21.422</span>
+            <span class="pop-pct" id="popPct">(80,0%)</span>
+        </span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="card19.js"></script>
+</body>
+</html>

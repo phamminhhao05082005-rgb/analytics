@@ -13,12 +13,14 @@
     <!-- Bootstrap 5 CSS & Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <!-- CSS từng Component -->
     <link rel="stylesheet" href="accordion1.css">
     <link rel="stylesheet" href="accordion2.css">
     <link rel="stylesheet" href="accordion3.css">
     <link rel="stylesheet" href="accordion4.css">
+    <link rel="stylesheet" href="accordion5.css">
     <link rel="stylesheet" href="card1.css">
     <link rel="stylesheet" href="card2.css">
     <link rel="stylesheet" href="card3.css">
@@ -34,6 +36,10 @@
     <link rel="stylesheet" href="card13.css">
     <link rel="stylesheet" href="card14.css">
     <link rel="stylesheet" href="card15.css">
+    <link rel="stylesheet" href="card16.css">
+    <link rel="stylesheet" href="card17.css">
+    <link rel="stylesheet" href="card18.css">
+    <link rel="stylesheet" href="card19.css">
     <link rel="stylesheet" href="carousel1.css">
     <link rel="stylesheet" href="carousel2.css">
     <link rel="stylesheet" href="carousel3.css">
@@ -56,6 +62,7 @@
     <link rel="stylesheet" href="table3.css">
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
+    <link rel="stylesheet" href="breadcrumb1.css">
 
     <!-- CSS Gốc Layout & Navigation Portal -->
     <link rel="stylesheet" href="testcss.css">
@@ -187,6 +194,15 @@
                             <span>Table</span>
                         </span>
                     </button>
+                    <!-- Tab Breadcrumb Components -->
+                    <button class="nav-link  d-flex align-items-center justify-content-between mb-1"
+                        id="tab-breadcrumbs-btn" data-bs-toggle="pill" data-bs-target="#tab-breadcrumbs" type="button"
+                        role="tab" aria-controls="tab-breadcrumbs" aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-chevron-bar-right text-warning"></i>
+                            <span>Breadcrumb</span>
+                        </span>
+                    </button>
                 </div>
             </nav>
 
@@ -213,6 +229,7 @@
                                 <a href="#acc-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Advanced Ads Settings Accordion</a>
                                 <a href="#acc-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: User ID & Data Collection Accordion</a>
                                 <a href="#acc-mau-4" class="btn btn-sm btn-outline-secondary">Mẫu 4: Analytics Consent Signals Accordion</a>
+                                <a href="#acc-mau-5" class="btn btn-sm btn-outline-secondary">Mẫu 5: Analytics Terms Accordion</a>
                             </div>
                         </div>
 
@@ -1676,6 +1693,327 @@
                             </div>
                             
                         </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 5: Analytics Terms Accordion (Điều khoản bảo vệ dữ liệu với khung cuộn & nút chấp nhận) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="acc-mau-5" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 5</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Terms Accordion (Điều khoản bảo vệ dữ liệu với khung cuộn & nút chấp nhận)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4" id="preview-accordion5">
+                                    <div class="terms-card bg-white w-100">
+    
+    <div class="accordion-header-custom d-flex justify-content-between align-items-center px-4 py-3 cursor-pointer" data-bs-toggle="collapse" data-bs-target="#termsCollapseContent" aria-expanded="true">
+        <div class="d-flex align-items-center gap-3">
+            <i class="bi bi-check-circle custom-success-icon"></i>
+            <span class="header-text-main">
+                Điều khoản bảo vệ dữ liệu giữa các đơn vị kiểm soát đối với dữ liệu do tài khoản này chia sẻ đã được chấp nhận vào ngày <span class="custom-success-text fw-bold">11 tháng 6, 2019</span>
+            </span>
+        </div>
+        <i class="bi bi-chevron-up text-secondary toggle-icon"></i>
+    </div>
+
+    <div id="termsCollapseContent" class="collapse show">
+        <div class="px-4 pb-4 pt-1 pe-5">
+            
+            <h4 class="section-title mb-2">Các điều khoản bổ sung áp dụng cho dữ liệu được chia sẻ với Google</h4>
+            
+            <p class="section-desc mb-2">
+                Cảm ơn bạn đã đồng ý chia sẻ dữ liệu nhằm giúp Google cải thiện các sản phẩm và dịch vụ của Google. Dữ liệu mà bạn chia sẻ sẽ giúp Google tạo ra Thông tin chi tiết thông minh, phát hiện và xoá dữ liệu mang tính lừa đảo (bao gồm cả Dữ liệu làm phiền), đồng thời cung cấp các sản phẩm như Thông tin nhân khẩu học và mối quan tâm nâng cao. <a href="#" class="custom-link">Tìm hiểu thêm về việc chia sẻ dữ liệu theo Các điều khoản bảo vệ dữ liệu giữa đơn vị kiểm soát và đơn vị kiểm soát thông tin đo lường</a>
+            </p>
+            
+            <p class="section-desc mb-4">
+                Để lưu chế độ cài đặt này, bạn phải xem xét và chấp nhận những điều khoản áp dụng cho dữ liệu mà bạn chia sẻ với Google theo Quy định chung về việc bảo vệ dữ liệu (GDPR).
+            </p>
+
+            <div class="terms-scroll-box custom-scrollbar mb-4 p-4">
+                <h5 class="scroll-box-title mb-3">Các điều khoản bảo vệ dữ liệu giữa đơn vị kiểm soát và đơn vị kiểm soát thông tin đo lường của Google</h5>
+                
+                <p class="scroll-box-text mb-3">
+                    Khách hàng sử dụng Dịch vụ đo lường đồng ý với các điều khoản này ("<strong>Khách hàng</strong>") đã ký kết một thoả thuận với Google hoặc một đại lý bên thứ ba (nếu có) về việc cung cấp Dịch vụ đo lường (gọi là "<strong>Thoả thuận</strong>", được sửa đổi tuỳ từng thời điểm) thông qua giao diện người dùng của dịch vụ mà Khách hàng đã bật Chế độ cài đặt cách chia sẻ dữ liệu.
+                </p>
+                
+                <p class="scroll-box-text mb-0">
+                    Các điều khoản bảo vệ dữ liệu giữa đơn vị kiểm soát và đơn vị kiểm soát thông tin đo lường của Google ("<strong>Điều khoản giữa các đơn vị kiểm soát</strong>") này được ký kết giữa Google và Khách hàng. Trong trường hợp đây là Thoả thuận giữa Khách hàng và Google, thì các Điều khoản giữa các đơn vị kiểm soát này sẽ bổ sung cho Thoả thuận. Trong trường hợp đây là Thoả thuận giữa Khách hàng và một đại lý bên thứ ba, thì các Điều khoản giữa các đơn vị kiểm soát này sẽ tạo thành một thoả thuận riêng giữa Google và Khách hàng.
+                </p>
+            </div>
+
+            <button class="btn custom-btn-primary">Xong</button>
+            
+        </div>
+    </div>
+
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-accordion5', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-accordion5">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Mẫu điều khoản accordion tích hợp tiêu đề trạng thái với icon thành công, nội dung điều khoản GDPR có khung cuộn thanh cuộn tùy chỉnh và nút xác nhận. Đóng mở dựa vào <code>data-bs-toggle="collapse"</code> của <strong>Bootstrap JS Bundle</strong>.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_accordion5.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-accordion5', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-accordion5">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Terms Accordion&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS accordion5.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-accordion5', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-accordion5">&lt;div class=&quot;terms-card bg-white w-100&quot;&gt;
+    
+    &lt;div class=&quot;accordion-header-custom d-flex justify-content-between align-items-center px-4 py-3 cursor-pointer&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#termsCollapseContent&quot; aria-expanded=&quot;true&quot;&gt;
+        &lt;div class=&quot;d-flex align-items-center gap-3&quot;&gt;
+            &lt;i class=&quot;bi bi-check-circle custom-success-icon&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;header-text-main&quot;&gt;
+                Điều khoản bảo vệ dữ liệu giữa các đơn vị kiểm soát đối với dữ liệu do tài khoản này chia sẻ đã được chấp nhận vào ngày &lt;span class=&quot;custom-success-text fw-bold&quot;&gt;11 tháng 6, 2019&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;i class=&quot;bi bi-chevron-up text-secondary toggle-icon&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;termsCollapseContent&quot; class=&quot;collapse show&quot;&gt;
+        &lt;div class=&quot;px-4 pb-4 pt-1 pe-5&quot;&gt;
+            
+            &lt;h4 class=&quot;section-title mb-2&quot;&gt;Các điều khoản bổ sung áp dụng cho dữ liệu được chia sẻ với Google&lt;/h4&gt;
+            
+            &lt;p class=&quot;section-desc mb-2&quot;&gt;
+                Cảm ơn bạn đã đồng ý chia sẻ dữ liệu nhằm giúp Google cải thiện các sản phẩm và dịch vụ của Google. Dữ liệu mà bạn chia sẻ sẽ giúp Google tạo ra Thông tin chi tiết thông minh, phát hiện và xoá dữ liệu mang tính lừa đảo (bao gồm cả Dữ liệu làm phiền), đồng thời cung cấp các sản phẩm như Thông tin nhân khẩu học và mối quan tâm nâng cao. &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Tìm hiểu thêm về việc chia sẻ dữ liệu theo Các điều khoản bảo vệ dữ liệu giữa đơn vị kiểm soát và đơn vị kiểm soát thông tin đo lường&lt;/a&gt;
+            &lt;/p&gt;
+            
+            &lt;p class=&quot;section-desc mb-4&quot;&gt;
+                Để lưu chế độ cài đặt này, bạn phải xem xét và chấp nhận những điều khoản áp dụng cho dữ liệu mà bạn chia sẻ với Google theo Quy định chung về việc bảo vệ dữ liệu (GDPR).
+            &lt;/p&gt;
+
+            &lt;div class=&quot;terms-scroll-box custom-scrollbar mb-4 p-4&quot;&gt;
+                &lt;h5 class=&quot;scroll-box-title mb-3&quot;&gt;Các điều khoản bảo vệ dữ liệu giữa đơn vị kiểm soát và đơn vị kiểm soát thông tin đo lường của Google&lt;/h5&gt;
+                
+                &lt;p class=&quot;scroll-box-text mb-3&quot;&gt;
+                    Khách hàng sử dụng Dịch vụ đo lường đồng ý với các điều khoản này (&quot;&lt;strong&gt;Khách hàng&lt;/strong&gt;&quot;) đã ký kết một thoả thuận với Google hoặc một đại lý bên thứ ba (nếu có) về việc cung cấp Dịch vụ đo lường (gọi là &quot;&lt;strong&gt;Thoả thuận&lt;/strong&gt;&quot;, được sửa đổi tuỳ từng thời điểm) thông qua giao diện người dùng của dịch vụ mà Khách hàng đã bật Chế độ cài đặt cách chia sẻ dữ liệu.
+                &lt;/p&gt;
+                
+                &lt;p class=&quot;scroll-box-text mb-0&quot;&gt;
+                    Các điều khoản bảo vệ dữ liệu giữa đơn vị kiểm soát và đơn vị kiểm soát thông tin đo lường của Google (&quot;&lt;strong&gt;Điều khoản giữa các đơn vị kiểm soát&lt;/strong&gt;&quot;) này được ký kết giữa Google và Khách hàng. Trong trường hợp đây là Thoả thuận giữa Khách hàng và Google, thì các Điều khoản giữa các đơn vị kiểm soát này sẽ bổ sung cho Thoả thuận. Trong trường hợp đây là Thoả thuận giữa Khách hàng và một đại lý bên thứ ba, thì các Điều khoản giữa các đơn vị kiểm soát này sẽ tạo thành một thoả thuận riêng giữa Google và Khách hàng.
+                &lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;button class=&quot;btn custom-btn-primary&quot;&gt;Xong&lt;/button&gt;
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-accordion5', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-accordion5">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.terms-card {
+    max-width: 1000px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.custom-success-icon {
+    color: #188038;
+    font-size: 20px;
+}
+
+.custom-success-text {
+    color: #188038;
+}
+
+.header-text-main {
+    font-size: 14px;
+    color: #5f6368;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.accordion-header-custom[aria-expanded=&quot;false&quot;] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.section-title {
+    font-size: 18px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.section-desc {
+    font-size: 14px;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.custom-link {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+}
+
+.terms-scroll-box {
+    border: 1px solid #dadce0;
+    height: 250px;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.scroll-box-title {
+    font-size: 20px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.scroll-box-text {
+    font-size: 14px;
+    color: #202124;
+    line-height: 1.5;
+}
+
+.custom-btn-primary {
+    background-color: #3b71e8;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-btn-primary:hover {
+    background-color: #2a56c6;
+    color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f3f4;
+    border-left: 1px solid #dadce0;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border: 2px solid #f1f3f4;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                        </section>
                         
                     </div>
                     <!-- ============================================== -->
@@ -1706,6 +2044,10 @@
                                 <a href="#card-mau-13" class="btn btn-sm btn-outline-secondary">Mẫu 13: Analytics User Activity Over Time Card</a>
                                 <a href="#card-mau-14" class="btn btn-sm btn-outline-secondary">Mẫu 14: Analytics Data Settings Card</a>
                                 <a href="#card-mau-15" class="btn btn-sm btn-outline-secondary">Mẫu 15: Analytics Display Settings Card</a>
+                                <a href="#card-mau-16" class="btn btn-sm btn-outline-secondary">Mẫu 16: Analytics Insights Card</a>
+                                <a href="#card-mau-17" class="btn btn-sm btn-outline-secondary">Mẫu 17: Analytics Geo Chart Card</a>
+                                <a href="#card-mau-18" class="btn btn-sm btn-outline-secondary">Mẫu 18: Analytics Cohort Activity Table Card</a>
+                                <a href="#card-mau-19" class="btn btn-sm btn-outline-secondary">Mẫu 19: Analytics Venn Diagram Card</a>
                             </div>
                         </div>
 
@@ -11925,6 +12267,2360 @@
         icon.addEventListener(&#039;click&#039;, (e) =&gt; {
             e.preventDefault(); 
             e.stopPropagation();
+        });
+    });
+});</code></pre>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 16: Analytics Insights Card (Thẻ thông tin chi tiết thông minh kèm biểu đồ bất thường & mở rộng Offcanvas) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="card-mau-16" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 16</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Insights Card (Thẻ thông tin chi tiết thông minh kèm biểu đồ bất thường & mở rộng Offcanvas)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4 d-flex justify-content-center bg-light" id="preview-card16">
+                                    <div class="insight-card bg-white shadow-sm d-flex flex-column">
+    <div class="card-content flex-grow-1 custom-scrollbar">
+        <div class="px-4 pt-4 pb-3">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-stars text-secondary fs-5"></i>
+                <span class="header-label">THÔNG TIN CHI TIẾT</span>
+            </div>
+            
+            <h3 class="insight-title mb-2">
+                Doanh thu từ <span class="dashed-text">nguồn "google"</span> và <span class="dashed-text">phương tiện "cpc"</span> đã giảm
+            </h3>
+            
+            <div class="insight-date mb-3">Từ ngày 30 tháng 8 đến ngày 5 tháng 9 năm 2026</div>
+            
+            <p class="insight-desc mb-4">
+                Chúng tôi đã dự báo rằng doanh thu từ nguồn "google" và phương tiện "cpc" sẽ nằm trong khoảng từ 388,73 US$ đến 4.495,40 US$. Doanh thu thực tế của bạn là 387,38 US$, nhỏ hơn khoảng này.
+            </p>
+            
+            <h4 class="chart-title mb-2">Doanh thu</h4>
+            
+            <div class="chart-container position-relative mb-3">
+                <svg viewBox="0 0 300 180" class="w-100 h-100" preserveAspectRatio="none">
+                    <rect width="300" height="150" fill="#f8f9fa"/>
+                    
+                    <line x1="0" y1="30" x2="300" y2="30" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="70" x2="300" y2="70" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="110" x2="300" y2="110" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="150" x2="300" y2="150" stroke="#e8eaed" stroke-width="1"/>
+                    
+                    <text x="295" y="25" text-anchor="end" class="chart-label">3 N$</text>
+                    <text x="295" y="65" text-anchor="end" class="chart-label">2 N$</text>
+                    <text x="295" y="105" text-anchor="end" class="chart-label">1 N$</text>
+                    <text x="295" y="145" text-anchor="end" class="chart-label">0,00 $</text>
+                    
+                    <text x="20" y="165" class="chart-label" text-anchor="middle">19<tspan x="20" dy="12">thg</tspan></text>
+                    <text x="65" y="165" class="chart-label" text-anchor="middle">26</text>
+                    <text x="110" y="165" class="chart-label" text-anchor="middle">02</text>
+                    <text x="155" y="165" class="chart-label" text-anchor="middle">09</text>
+                    <text x="200" y="165" class="chart-label" text-anchor="middle">16</text>
+                    <text x="245" y="165" class="chart-label" text-anchor="middle">23</text>
+                    <text x="290" y="165" class="chart-label" text-anchor="middle">30</text>
+                    
+                    <polygon points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140 300,150 0,150" fill="#e8f0fe" opacity="0.5"/>
+                    <polyline points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140" fill="none" stroke="#ffffff" stroke-width="2"/>
+                    
+                    <polyline points="0,100 45,75 90,110 135,115 180,140 225,160 270,165" fill="none" stroke="#4285f4" stroke-width="2"/>
+                    <circle cx="270" cy="165" r="4" fill="#ffffff" stroke="#4285f4" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <div class="legend-grid mb-4">
+                <div class="legend-item">
+                    <div class="legend-icon circle-outline"></div>
+                    <span>Hoạt động bất thường</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon wave-line"></div>
+                    <span>Giá trị dự kiến</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon solid-line"></div>
+                    <span>Doanh thu</span>
+                </div>
+            </div>
+            
+            <div class="info-box d-flex gap-3 p-3">
+                <i class="bi bi-lightbulb fs-5 text-dark mt-1"></i>
+                <div>
+                    <div class="info-title mb-2">Analytics xác định hành vi không mong muốn theo thời gian như thế nào?</div>
+                    <div class="info-desc mb-2">Analytics Thông minh sử dụng dữ liệu trong quá khứ để xác định các điểm bất thường trong một chỉ số nhất định theo thời gian.</div>
+                    <a href="#" class="info-link d-flex align-items-center gap-1">Đọc thêm: Tính năng Phát hiện hoạt động bất thường <i class="bi bi-box-arrow-up-right ms-auto"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer border-top bg-white p-3">
+        <button class="btn btn-icon shadow-none" id="openOffcanvasBtn" data-bs-toggle="offcanvas" data-bs-target="#insightOffcanvas">
+            <i class="bi bi-arrows-angle-expand"></i>
+        </button>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end insight-offcanvas" tabindex="-1" id="insightOffcanvas">
+    <div class="offcanvas-header border-bottom py-2 px-3 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-graph-up text-secondary fs-5"></i>
+            <span class="offcanvas-title-text">Thông tin chi tiết</span>
+        </div>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body p-0 custom-scrollbar d-flex flex-column">
+        <div class="flex-grow-1 p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-stars text-secondary fs-5"></i>
+                    <span class="header-label">THÔNG TIN CHI TIẾT</span>
+                </div>
+                <i class="bi bi-three-dots-vertical text-secondary cursor-pointer"></i>
+            </div>
+            
+            <h3 class="insight-title mb-2">
+                Doanh thu của <span class="dashed-text">phương tiện chiến dịch "cpc"</span> đã giảm
+            </h3>
+            
+            <div class="insight-date mb-3">Từ ngày 30 tháng 8 đến ngày 5 tháng 9 năm 2026</div>
+            
+            <p class="insight-desc mb-4">
+                Chúng tôi đã dự báo rằng doanh thu của phương tiện chiến dịch "cpc" sẽ nằm trong khoảng từ 388,73 US$ đến 4.495,40 US$. Doanh thu thực tế của bạn là 387,38 US$, nhỏ hơn khoảng này.
+            </p>
+            
+            <h4 class="chart-title mb-2">Doanh thu</h4>
+            
+            <div class="chart-container position-relative mb-3">
+                <svg viewBox="0 0 300 180" class="w-100 h-100" preserveAspectRatio="none">
+                    <rect width="300" height="150" fill="#f8f9fa"/>
+                    <line x1="0" y1="30" x2="300" y2="30" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="70" x2="300" y2="70" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="110" x2="300" y2="110" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="150" x2="300" y2="150" stroke="#e8eaed" stroke-width="1"/>
+                    
+                    <text x="295" y="25" text-anchor="end" class="chart-label">3 N$</text>
+                    <text x="295" y="65" text-anchor="end" class="chart-label">2 N$</text>
+                    <text x="295" y="105" text-anchor="end" class="chart-label">1 N$</text>
+                    <text x="295" y="145" text-anchor="end" class="chart-label">0,00 $</text>
+                    
+                    <text x="20" y="165" class="chart-label" text-anchor="middle">19<tspan x="20" dy="12">thg</tspan></text>
+                    <text x="65" y="165" class="chart-label" text-anchor="middle">26</text>
+                    <text x="110" y="165" class="chart-label" text-anchor="middle">02</text>
+                    <text x="155" y="165" class="chart-label" text-anchor="middle">09</text>
+                    <text x="200" y="165" class="chart-label" text-anchor="middle">16</text>
+                    <text x="245" y="165" class="chart-label" text-anchor="middle">23</text>
+                    <text x="290" y="165" class="chart-label" text-anchor="middle">30</text>
+                    
+                    <polygon points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140 300,150 0,150" fill="#e8f0fe" opacity="0.5"/>
+                    <polyline points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140" fill="none" stroke="#ffffff" stroke-width="2"/>
+                    
+                    <polyline points="0,100 45,75 90,110 135,115 180,140 225,160 270,165" fill="none" stroke="#4285f4" stroke-width="2"/>
+                    <circle cx="270" cy="165" r="4" fill="#ffffff" stroke="#4285f4" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <div class="legend-grid mb-4">
+                <div class="legend-item">
+                    <div class="legend-icon circle-outline"></div>
+                    <span>Hoạt động bất thường</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon wave-line"></div>
+                    <span>Giá trị dự kiến</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon solid-line"></div>
+                    <span>Doanh thu</span>
+                </div>
+            </div>
+            
+            <div class="info-box d-flex gap-3 p-3 mb-4">
+                <i class="bi bi-lightbulb fs-5 text-dark mt-1"></i>
+                <div>
+                    <div class="info-title mb-2">Analytics xác định hành vi không mong muốn theo thời gian như thế nào?</div>
+                    <div class="info-desc mb-2">Analytics Thông minh sử dụng dữ liệu trong quá khứ để xác định các điểm bất thường trong một chỉ số nhất định theo thời gian.</div>
+                    <a href="#" class="info-link d-flex align-items-center gap-1">Đọc thêm: Tính năng Phát hiện hoạt động bất thường <i class="bi bi-box-arrow-up-right ms-auto"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offcanvas-footer border-top bg-white p-3 d-flex justify-content-center">
+            <button class="btn btn-outline-primary btn-sm rounded-1 px-4 py-2 text-primary shadow-none" style="border-color: #dadce0;">Câu hỏi đề xuất</button>
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-card16', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-card16">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Thẻ phân tích thông tin chi tiết (Intelligence Insights) hiển thị cảnh báo doanh thu bất thường kèm biểu đồ vùng dự kiến SVG. Nút phóng to ở chân card kết nối trực tiếp với <strong>Bootstrap Offcanvas</strong> (<code>data-bs-toggle="offcanvas"</code>) để xem phân tích chi tiết bên bảng trượt phải.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_card16.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-card16', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-card16">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Insights Card&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS card16.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-card16', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card16">&lt;div class=&quot;insight-card bg-white shadow-sm d-flex flex-column&quot;&gt;
+    &lt;div class=&quot;card-content flex-grow-1 custom-scrollbar&quot;&gt;
+        &lt;div class=&quot;px-4 pt-4 pb-3&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
+                &lt;i class=&quot;bi bi-stars text-secondary fs-5&quot;&gt;&lt;/i&gt;
+                &lt;span class=&quot;header-label&quot;&gt;THÔNG TIN CHI TIẾT&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;h3 class=&quot;insight-title mb-2&quot;&gt;
+                Doanh thu từ &lt;span class=&quot;dashed-text&quot;&gt;nguồn &quot;google&quot;&lt;/span&gt; và &lt;span class=&quot;dashed-text&quot;&gt;phương tiện &quot;cpc&quot;&lt;/span&gt; đã giảm
+            &lt;/h3&gt;
+            
+            &lt;div class=&quot;insight-date mb-3&quot;&gt;Từ ngày 30 tháng 8 đến ngày 5 tháng 9 năm 2026&lt;/div&gt;
+            
+            &lt;p class=&quot;insight-desc mb-4&quot;&gt;
+                Chúng tôi đã dự báo rằng doanh thu từ nguồn &quot;google&quot; và phương tiện &quot;cpc&quot; sẽ nằm trong khoảng từ 388,73 US$ đến 4.495,40 US$. Doanh thu thực tế của bạn là 387,38 US$, nhỏ hơn khoảng này.
+            &lt;/p&gt;
+            
+            &lt;h4 class=&quot;chart-title mb-2&quot;&gt;Doanh thu&lt;/h4&gt;
+            
+            &lt;div class=&quot;chart-container position-relative mb-3&quot;&gt;
+                &lt;svg viewBox=&quot;0 0 300 180&quot; class=&quot;w-100 h-100&quot; preserveAspectRatio=&quot;none&quot;&gt;
+                    &lt;rect width=&quot;300&quot; height=&quot;150&quot; fill=&quot;#f8f9fa&quot;/&gt;
+                    
+                    &lt;line x1=&quot;0&quot; y1=&quot;30&quot; x2=&quot;300&quot; y2=&quot;30&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    &lt;line x1=&quot;0&quot; y1=&quot;70&quot; x2=&quot;300&quot; y2=&quot;70&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    &lt;line x1=&quot;0&quot; y1=&quot;110&quot; x2=&quot;300&quot; y2=&quot;110&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    &lt;line x1=&quot;0&quot; y1=&quot;150&quot; x2=&quot;300&quot; y2=&quot;150&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    
+                    &lt;text x=&quot;295&quot; y=&quot;25&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;3 N$&lt;/text&gt;
+                    &lt;text x=&quot;295&quot; y=&quot;65&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;2 N$&lt;/text&gt;
+                    &lt;text x=&quot;295&quot; y=&quot;105&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;1 N$&lt;/text&gt;
+                    &lt;text x=&quot;295&quot; y=&quot;145&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;0,00 $&lt;/text&gt;
+                    
+                    &lt;text x=&quot;20&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;19&lt;tspan x=&quot;20&quot; dy=&quot;12&quot;&gt;thg&lt;/tspan&gt;&lt;/text&gt;
+                    &lt;text x=&quot;65&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;26&lt;/text&gt;
+                    &lt;text x=&quot;110&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;02&lt;/text&gt;
+                    &lt;text x=&quot;155&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;09&lt;/text&gt;
+                    &lt;text x=&quot;200&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;16&lt;/text&gt;
+                    &lt;text x=&quot;245&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;23&lt;/text&gt;
+                    &lt;text x=&quot;290&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;30&lt;/text&gt;
+                    
+                    &lt;polygon points=&quot;0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140 300,150 0,150&quot; fill=&quot;#e8f0fe&quot; opacity=&quot;0.5&quot;/&gt;
+                    &lt;polyline points=&quot;0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140&quot; fill=&quot;none&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;2&quot;/&gt;
+                    
+                    &lt;polyline points=&quot;0,100 45,75 90,110 135,115 180,140 225,160 270,165&quot; fill=&quot;none&quot; stroke=&quot;#4285f4&quot; stroke-width=&quot;2&quot;/&gt;
+                    &lt;circle cx=&quot;270&quot; cy=&quot;165&quot; r=&quot;4&quot; fill=&quot;#ffffff&quot; stroke=&quot;#4285f4&quot; stroke-width=&quot;2&quot;/&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;legend-grid mb-4&quot;&gt;
+                &lt;div class=&quot;legend-item&quot;&gt;
+                    &lt;div class=&quot;legend-icon circle-outline&quot;&gt;&lt;/div&gt;
+                    &lt;span&gt;Hoạt động bất thường&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;legend-item&quot;&gt;
+                    &lt;div class=&quot;legend-icon wave-line&quot;&gt;&lt;/div&gt;
+                    &lt;span&gt;Giá trị dự kiến&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;legend-item&quot;&gt;
+                    &lt;div class=&quot;legend-icon solid-line&quot;&gt;&lt;/div&gt;
+                    &lt;span&gt;Doanh thu&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;info-box d-flex gap-3 p-3&quot;&gt;
+                &lt;i class=&quot;bi bi-lightbulb fs-5 text-dark mt-1&quot;&gt;&lt;/i&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;info-title mb-2&quot;&gt;Analytics xác định hành vi không mong muốn theo thời gian như thế nào?&lt;/div&gt;
+                    &lt;div class=&quot;info-desc mb-2&quot;&gt;Analytics Thông minh sử dụng dữ liệu trong quá khứ để xác định các điểm bất thường trong một chỉ số nhất định theo thời gian.&lt;/div&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;info-link d-flex align-items-center gap-1&quot;&gt;Đọc thêm: Tính năng Phát hiện hoạt động bất thường &lt;i class=&quot;bi bi-box-arrow-up-right ms-auto&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-footer border-top bg-white p-3&quot;&gt;
+        &lt;button class=&quot;btn btn-icon shadow-none&quot; id=&quot;openOffcanvasBtn&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#insightOffcanvas&quot;&gt;
+            &lt;i class=&quot;bi bi-arrows-angle-expand&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;offcanvas offcanvas-end insight-offcanvas&quot; tabindex=&quot;-1&quot; id=&quot;insightOffcanvas&quot;&gt;
+    &lt;div class=&quot;offcanvas-header border-bottom py-2 px-3 d-flex justify-content-between align-items-center&quot;&gt;
+        &lt;div class=&quot;d-flex align-items-center gap-2&quot;&gt;
+            &lt;i class=&quot;bi bi-graph-up text-secondary fs-5&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;offcanvas-title-text&quot;&gt;Thông tin chi tiết&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn-close shadow-none&quot; data-bs-dismiss=&quot;offcanvas&quot; aria-label=&quot;Close&quot;&gt;&lt;/button&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;offcanvas-body p-0 custom-scrollbar d-flex flex-column&quot;&gt;
+        &lt;div class=&quot;flex-grow-1 p-4&quot;&gt;
+            &lt;div class=&quot;d-flex justify-content-between align-items-center mb-3&quot;&gt;
+                &lt;div class=&quot;d-flex align-items-center gap-2&quot;&gt;
+                    &lt;i class=&quot;bi bi-stars text-secondary fs-5&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;header-label&quot;&gt;THÔNG TIN CHI TIẾT&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;i class=&quot;bi bi-three-dots-vertical text-secondary cursor-pointer&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            
+            &lt;h3 class=&quot;insight-title mb-2&quot;&gt;
+                Doanh thu của &lt;span class=&quot;dashed-text&quot;&gt;phương tiện chiến dịch &quot;cpc&quot;&lt;/span&gt; đã giảm
+            &lt;/h3&gt;
+            
+            &lt;div class=&quot;insight-date mb-3&quot;&gt;Từ ngày 30 tháng 8 đến ngày 5 tháng 9 năm 2026&lt;/div&gt;
+            
+            &lt;p class=&quot;insight-desc mb-4&quot;&gt;
+                Chúng tôi đã dự báo rằng doanh thu của phương tiện chiến dịch &quot;cpc&quot; sẽ nằm trong khoảng từ 388,73 US$ đến 4.495,40 US$. Doanh thu thực tế của bạn là 387,38 US$, nhỏ hơn khoảng này.
+            &lt;/p&gt;
+            
+            &lt;h4 class=&quot;chart-title mb-2&quot;&gt;Doanh thu&lt;/h4&gt;
+            
+            &lt;div class=&quot;chart-container position-relative mb-3&quot;&gt;
+                &lt;svg viewBox=&quot;0 0 300 180&quot; class=&quot;w-100 h-100&quot; preserveAspectRatio=&quot;none&quot;&gt;
+                    &lt;rect width=&quot;300&quot; height=&quot;150&quot; fill=&quot;#f8f9fa&quot;/&gt;
+                    &lt;line x1=&quot;0&quot; y1=&quot;30&quot; x2=&quot;300&quot; y2=&quot;30&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    &lt;line x1=&quot;0&quot; y1=&quot;70&quot; x2=&quot;300&quot; y2=&quot;70&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    &lt;line x1=&quot;0&quot; y1=&quot;110&quot; x2=&quot;300&quot; y2=&quot;110&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    &lt;line x1=&quot;0&quot; y1=&quot;150&quot; x2=&quot;300&quot; y2=&quot;150&quot; stroke=&quot;#e8eaed&quot; stroke-width=&quot;1&quot;/&gt;
+                    
+                    &lt;text x=&quot;295&quot; y=&quot;25&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;3 N$&lt;/text&gt;
+                    &lt;text x=&quot;295&quot; y=&quot;65&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;2 N$&lt;/text&gt;
+                    &lt;text x=&quot;295&quot; y=&quot;105&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;1 N$&lt;/text&gt;
+                    &lt;text x=&quot;295&quot; y=&quot;145&quot; text-anchor=&quot;end&quot; class=&quot;chart-label&quot;&gt;0,00 $&lt;/text&gt;
+                    
+                    &lt;text x=&quot;20&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;19&lt;tspan x=&quot;20&quot; dy=&quot;12&quot;&gt;thg&lt;/tspan&gt;&lt;/text&gt;
+                    &lt;text x=&quot;65&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;26&lt;/text&gt;
+                    &lt;text x=&quot;110&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;02&lt;/text&gt;
+                    &lt;text x=&quot;155&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;09&lt;/text&gt;
+                    &lt;text x=&quot;200&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;16&lt;/text&gt;
+                    &lt;text x=&quot;245&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;23&lt;/text&gt;
+                    &lt;text x=&quot;290&quot; y=&quot;165&quot; class=&quot;chart-label&quot; text-anchor=&quot;middle&quot;&gt;30&lt;/text&gt;
+                    
+                    &lt;polygon points=&quot;0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140 300,150 0,150&quot; fill=&quot;#e8f0fe&quot; opacity=&quot;0.5&quot;/&gt;
+                    &lt;polyline points=&quot;0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140&quot; fill=&quot;none&quot; stroke=&quot;#ffffff&quot; stroke-width=&quot;2&quot;/&gt;
+                    
+                    &lt;polyline points=&quot;0,100 45,75 90,110 135,115 180,140 225,160 270,165&quot; fill=&quot;none&quot; stroke=&quot;#4285f4&quot; stroke-width=&quot;2&quot;/&gt;
+                    &lt;circle cx=&quot;270&quot; cy=&quot;165&quot; r=&quot;4&quot; fill=&quot;#ffffff&quot; stroke=&quot;#4285f4&quot; stroke-width=&quot;2&quot;/&gt;
+                &lt;/svg&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;legend-grid mb-4&quot;&gt;
+                &lt;div class=&quot;legend-item&quot;&gt;
+                    &lt;div class=&quot;legend-icon circle-outline&quot;&gt;&lt;/div&gt;
+                    &lt;span&gt;Hoạt động bất thường&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;legend-item&quot;&gt;
+                    &lt;div class=&quot;legend-icon wave-line&quot;&gt;&lt;/div&gt;
+                    &lt;span&gt;Giá trị dự kiến&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;legend-item&quot;&gt;
+                    &lt;div class=&quot;legend-icon solid-line&quot;&gt;&lt;/div&gt;
+                    &lt;span&gt;Doanh thu&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;info-box d-flex gap-3 p-3 mb-4&quot;&gt;
+                &lt;i class=&quot;bi bi-lightbulb fs-5 text-dark mt-1&quot;&gt;&lt;/i&gt;
+                &lt;div&gt;
+                    &lt;div class=&quot;info-title mb-2&quot;&gt;Analytics xác định hành vi không mong muốn theo thời gian như thế nào?&lt;/div&gt;
+                    &lt;div class=&quot;info-desc mb-2&quot;&gt;Analytics Thông minh sử dụng dữ liệu trong quá khứ để xác định các điểm bất thường trong một chỉ số nhất định theo thời gian.&lt;/div&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;info-link d-flex align-items-center gap-1&quot;&gt;Đọc thêm: Tính năng Phát hiện hoạt động bất thường &lt;i class=&quot;bi bi-box-arrow-up-right ms-auto&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;offcanvas-footer border-top bg-white p-3 d-flex justify-content-center&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-primary btn-sm rounded-1 px-4 py-2 text-primary shadow-none&quot; style=&quot;border-color: #dadce0;&quot;&gt;Câu hỏi đề xuất&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-card16', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-card16">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.insight-card {
+    width: 330px;
+    height: 550px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-content {
+    overflow-y: auto;
+}
+
+.header-label {
+    font-size: 11px;
+    color: #5f6368;
+    letter-spacing: 0.5px;
+}
+
+.insight-title {
+    font-size: 18px;
+    color: #202124;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.dashed-text {
+    border-bottom: 1px dashed #9aa0a6;
+    padding-bottom: 1px;
+    cursor: pointer;
+}
+
+.insight-date {
+    font-size: 13px;
+    color: #3c4043;
+}
+
+.insight-desc {
+    font-size: 14px;
+    color: #3c4043;
+    line-height: 1.5;
+}
+
+.chart-title {
+    font-size: 15px;
+    color: #202124;
+    font-weight: 500;
+}
+
+.chart-container {
+    height: 190px;
+    overflow: hidden;
+}
+
+.chart-label {
+    fill: #5f6368;
+    font-size: 11px;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #202124;
+}
+
+.legend-icon {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-outline {
+    border: 2px solid #4285f4;
+    border-radius: 50%;
+}
+
+.solid-line {
+    width: 14px;
+    height: 2px;
+    background-color: #4285f4;
+}
+
+.wave-line {
+    background-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#039;http://www.w3.org/2000/svg&#039; viewBox=&#039;0 0 10 4&#039;%3E%3Cpath d=&#039;M0,2 Q2.5,0 5,2 T10,2&#039; fill=&#039;none&#039; stroke=&#039;%234285f4&#039; stroke-width=&#039;1.5&#039;/%3E%3C/svg%3E&quot;);
+    background-repeat: repeat-x;
+    background-position: center;
+    width: 14px;
+    height: 14px;
+}
+
+.info-box {
+    background-color: #e8f0fe;
+    border-radius: 8px;
+}
+
+.info-title {
+    font-size: 14px;
+    color: #202124;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.info-desc {
+    font-size: 13px;
+    color: #3c4043;
+    line-height: 1.5;
+}
+
+.info-link {
+    font-size: 13px;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
+
+.btn-icon {
+    color: #5f6368;
+    padding: 6px;
+    font-size: 18px;
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-icon:hover {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.insight-offcanvas {
+    width: 400px !important;
+    border-left: 1px solid #dadce0;
+}
+
+.offcanvas-title-text {
+    font-size: 16px;
+    color: #3c4043;
+    font-weight: 400;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 17: Analytics Geo Chart Card (Thẻ bản đồ địa lý Google Charts phân bố người dùng theo quốc gia) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="card-mau-17" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 17</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Geo Chart Card (Thẻ bản đồ địa lý Google Charts phân bố người dùng theo quốc gia)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4 d-flex justify-content-center bg-light" id="preview-card17">
+                                    <div class="geo-card bg-white shadow-sm">
+    
+    <div class="card-header-top d-flex justify-content-between align-items-center px-4 pt-4 pb-3">
+        <div class="card-title-group d-flex align-items-center gap-1">
+            <span class="card-title-text cursor-pointer">Số người dùng đang hoạt động</span>
+            <i class="bi bi-caret-down-fill text-secondary me-1" style="font-size: 10px;"></i>
+            <span class="card-title-text text-secondary">theo</span>
+            <span class="card-title-text dashed-text">Quốc gia</span>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none" type="button" data-bs-toggle="dropdown">
+                <i class="bi bi-check-circle text-success"></i>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="row g-0 px-4 pb-2">
+        <div class="col-7 position-relative">
+            <div class="map-wrapper" id="mapWrapper">
+                <div id="regions_div" class="w-100 h-100"></div>
+            </div>
+            
+            <div class="map-controls shadow-sm">
+                <button class="map-btn border-bottom" id="zoomInBtn"><i class="bi bi-plus"></i></button>
+                <button class="map-btn" id="zoomOutBtn"><i class="bi bi-dash"></i></button>
+            </div>
+            
+            <div class="map-copyright d-flex gap-2">
+                <span>Dữ liệu bản đồ ©2026</span>
+                <span class="cursor-pointer hover-underline">Điều khoản</span>
+            </div>
+        </div>
+        
+        <div class="col-5 ps-4">
+            <table class="geo-table w-100">
+                <thead>
+                    <tr>
+                        <th class="text-start pb-2"><span class="dashed-header">QUỐC GIA</span></th>
+                        <th class="text-end pb-2"><span class="dashed-header">SỐ NGƯỜI DÙ...</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="p-0">
+                            <div class="d-flex justify-content-between row-text">
+                                <span>India</span>
+                                <span>4,7 N</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 100%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="p-0">
+                            <div class="d-flex justify-content-between row-text">
+                                <span>Bangladesh</span>
+                                <span>3,2 N</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 68%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="p-0">
+                            <div class="d-flex justify-content-between row-text">
+                                <span>United States</span>
+                                <span>2,9 N</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 61%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="p-0">
+                            <div class="d-flex justify-content-between row-text">
+                                <span>Nigeria</span>
+                                <span>1,1 N</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 23%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="p-0">
+                            <div class="d-flex justify-content-between row-text">
+                                <span>Pakistan</span>
+                                <span>894</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 19%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="p-0">
+                            <div class="d-flex justify-content-between row-text">
+                                <span>Indonesia</span>
+                                <span>845</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 18%;"></div></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="p-0">
+                            <div class="d-flex justify-content-between row-text">
+                                <span>Brazil</span>
+                                <span>542</span>
+                            </div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 11%;"></div></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card-footer bg-white border-0 px-4 pt-3 pb-4 text-end">
+        <a href="#" class="view-link d-inline-flex align-items-center gap-2">
+            Xem báo cáo quốc gia <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-card17', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> External JS Library</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-card17">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Thư viện JavaScript (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Thẻ bản đồ địa lý trực quan tích hợp <strong>Google Charts GeoChart</strong> (<code>https://www.gstatic.com/charts/loader.js</code>), bảng phân tích quốc gia dạng thanh tiến trình và công cụ điều khiển phóng to/thu nhỏ (Zoom in/out), kéo rê bản đồ (Pan & Drag). Cần nhúng thư viện Google Charts và file <code>card17.js</code> để khởi tạo.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_card17.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-card17', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-card17">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Geo Chart Card&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS card17.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-card17', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card17">&lt;div class=&quot;geo-card bg-white shadow-sm&quot;&gt;
+    
+    &lt;div class=&quot;card-header-top d-flex justify-content-between align-items-center px-4 pt-4 pb-3&quot;&gt;
+        &lt;div class=&quot;card-title-group d-flex align-items-center gap-1&quot;&gt;
+            &lt;span class=&quot;card-title-text cursor-pointer&quot;&gt;Số người dùng đang hoạt động&lt;/span&gt;
+            &lt;i class=&quot;bi bi-caret-down-fill text-secondary me-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;card-title-text text-secondary&quot;&gt;theo&lt;/span&gt;
+            &lt;span class=&quot;card-title-text dashed-text&quot;&gt;Quốc gia&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none&quot; type=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot;&gt;
+                &lt;i class=&quot;bi bi-check-circle text-success&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-caret-down-fill text-secondary&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;row g-0 px-4 pb-2&quot;&gt;
+        &lt;div class=&quot;col-7 position-relative&quot;&gt;
+            &lt;div class=&quot;map-wrapper&quot; id=&quot;mapWrapper&quot;&gt;
+                &lt;div id=&quot;regions_div&quot; class=&quot;w-100 h-100&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;map-controls shadow-sm&quot;&gt;
+                &lt;button class=&quot;map-btn border-bottom&quot; id=&quot;zoomInBtn&quot;&gt;&lt;i class=&quot;bi bi-plus&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                &lt;button class=&quot;map-btn&quot; id=&quot;zoomOutBtn&quot;&gt;&lt;i class=&quot;bi bi-dash&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;map-copyright d-flex gap-2&quot;&gt;
+                &lt;span&gt;Dữ liệu bản đồ ©2026&lt;/span&gt;
+                &lt;span class=&quot;cursor-pointer hover-underline&quot;&gt;Điều khoản&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;col-5 ps-4&quot;&gt;
+            &lt;table class=&quot;geo-table w-100&quot;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th class=&quot;text-start pb-2&quot;&gt;&lt;span class=&quot;dashed-header&quot;&gt;QUỐC GIA&lt;/span&gt;&lt;/th&gt;
+                        &lt;th class=&quot;text-end pb-2&quot;&gt;&lt;span class=&quot;dashed-header&quot;&gt;SỐ NGƯỜI DÙ...&lt;/span&gt;&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan=&quot;2&quot; class=&quot;p-0&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between row-text&quot;&gt;
+                                &lt;span&gt;India&lt;/span&gt;
+                                &lt;span&gt;4,7 N&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: 100%;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan=&quot;2&quot; class=&quot;p-0&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between row-text&quot;&gt;
+                                &lt;span&gt;Bangladesh&lt;/span&gt;
+                                &lt;span&gt;3,2 N&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: 68%;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan=&quot;2&quot; class=&quot;p-0&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between row-text&quot;&gt;
+                                &lt;span&gt;United States&lt;/span&gt;
+                                &lt;span&gt;2,9 N&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: 61%;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan=&quot;2&quot; class=&quot;p-0&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between row-text&quot;&gt;
+                                &lt;span&gt;Nigeria&lt;/span&gt;
+                                &lt;span&gt;1,1 N&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: 23%;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan=&quot;2&quot; class=&quot;p-0&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between row-text&quot;&gt;
+                                &lt;span&gt;Pakistan&lt;/span&gt;
+                                &lt;span&gt;894&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: 19%;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan=&quot;2&quot; class=&quot;p-0&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between row-text&quot;&gt;
+                                &lt;span&gt;Indonesia&lt;/span&gt;
+                                &lt;span&gt;845&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: 18%;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td colspan=&quot;2&quot; class=&quot;p-0&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between row-text&quot;&gt;
+                                &lt;span&gt;Brazil&lt;/span&gt;
+                                &lt;span&gt;542&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;bar-track&quot;&gt;&lt;div class=&quot;bar-fill&quot; style=&quot;width: 11%;&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+                        &lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-footer bg-white border-0 px-4 pt-3 pb-4 text-end&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;view-link d-inline-flex align-items-center gap-2&quot;&gt;
+            Xem báo cáo quốc gia &lt;i class=&quot;bi bi-arrow-right&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-card17', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-card17">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.geo-card {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-title-text {
+    font-size: 15px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.dashed-text {
+    border-bottom: 1px dashed #9aa0a6;
+    cursor: pointer;
+    padding-bottom: 1px;
+}
+
+.badge-dropdown-btn {
+    border-color: #dadce0;
+    border-radius: 16px;
+    padding: 4px 10px;
+    background-color: #ffffff;
+}
+
+.badge-dropdown-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.map-wrapper {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #ffffff;
+    cursor: grab;
+}
+
+.map-wrapper:active {
+    cursor: grabbing;
+}
+
+#regions_div {
+    transition: transform 0.2s ease;
+    transform-origin: center center;
+}
+
+.map-controls {
+    position: absolute;
+    bottom: 24px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.map-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3c4043;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.map-btn:hover {
+    background-color: #f1f3f4;
+}
+
+.map-btn:active {
+    background-color: #e8eaed;
+}
+
+.map-copyright {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    font-size: 10px;
+    color: #5f6368;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2px 4px;
+}
+
+.hover-underline:hover {
+    text-decoration: underline;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.geo-table th {
+    border-bottom: 1px solid #dadce0;
+    font-weight: normal;
+}
+
+.dashed-header {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    border-bottom: 1px dashed #9aa0a6;
+    letter-spacing: 0.2px;
+    padding-bottom: 2px;
+}
+
+.row-text {
+    font-size: 14px;
+    color: #3c4043;
+    padding: 10px 0 6px 0;
+}
+
+.bar-track {
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    margin-bottom: 2px;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #4285f4;
+}
+
+.view-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-card17', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-card17">google.charts.load(&#039;current&#039;, {
+    &#039;packages&#039;:[&#039;geochart&#039;]
+});
+google.charts.setOnLoadCallback(drawRegionsMap);
+
+function drawRegionsMap() {
+    var data = google.visualization.arrayToDataTable([
+        [&#039;Country&#039;, &#039;Users&#039;],
+        [&#039;India&#039;, 4700],
+        [&#039;Bangladesh&#039;, 3200],
+        [&#039;United States&#039;, 2900],
+        [&#039;Nigeria&#039;, 1100],
+        [&#039;Pakistan&#039;, 894],
+        [&#039;Indonesia&#039;, 845],
+        [&#039;Brazil&#039;, 542],
+        [&#039;Canada&#039;, 1200],
+        [&#039;France&#039;, 900],
+        [&#039;Australia&#039;, 850],
+        [&#039;Mexico&#039;, 600],
+        [&#039;South Africa&#039;, 400],
+        [&#039;Russia&#039;, 1500]
+    ]);
+
+    var options = {
+        colorAxis: {colors: [&#039;#c6d8f9&#039;, &#039;#4285f4&#039;, &#039;#2a56c6&#039;]},
+        backgroundColor: &#039;transparent&#039;,
+        datalessRegionColor: &#039;#f1f3f4&#039;,
+        defaultColor: &#039;#f1f3f4&#039;,
+        legend: &#039;none&#039;,
+        tooltip: { trigger: &#039;focus&#039; },
+        keepAspectRatio: true
+    };
+
+    var chart = new google.visualization.GeoChart(document.getElementById(&#039;regions_div&#039;));
+    chart.draw(data, options);
+}
+
+document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const mapDiv = document.getElementById(&#039;regions_div&#039;);
+    const zoomInBtn = document.getElementById(&#039;zoomInBtn&#039;);
+    const zoomOutBtn = document.getElementById(&#039;zoomOutBtn&#039;);
+    const wrapper = document.getElementById(&#039;mapWrapper&#039;);
+    
+    let currentScale = 1;
+    let isDragging = false;
+    let startX, startY;
+    let translateX = 0;
+    let translateY = 0;
+
+    function updateTransform() {
+        mapDiv.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+    }
+
+    zoomInBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        currentScale += 0.4;
+        updateTransform();
+    });
+
+    zoomOutBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        currentScale = Math.max(1, currentScale - 0.4);
+        if (currentScale === 1) {
+            translateX = 0;
+            translateY = 0;
+        }
+        updateTransform();
+    });
+
+    wrapper.addEventListener(&#039;mousedown&#039;, (e) =&gt; {
+        if (currentScale &gt; 1) {
+            isDragging = true;
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+        }
+    });
+
+    window.addEventListener(&#039;mousemove&#039;, (e) =&gt; {
+        if (isDragging) {
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            updateTransform();
+        }
+    });
+
+    window.addEventListener(&#039;mouseup&#039;, () =&gt; {
+        isDragging = false;
+    });
+});</code></pre>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 18: Analytics Cohort Activity Table Card (Thẻ ma trận bản đồ nhiệt hoạt động người dùng theo nhóm thuần tập) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="card-mau-18" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 18</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Cohort Activity Table Card (Thẻ ma trận bản đồ nhiệt hoạt động người dùng theo nhóm thuần tập)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4 d-flex justify-content-center bg-light" id="preview-card18">
+                                    <div class="cohort-activity-card bg-white">
+    
+    <div class="card-header-top d-flex justify-content-between align-items-start px-4 pt-4 pb-3">
+        <div>
+            <div class="card-title-text mb-1">Hoạt động của người dùng theo nhóm thuần tập</div>
+            <div class="card-subtitle-text">Chỉ dựa trên dữ liệu của thiết bị</div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none" type="button" data-bs-toggle="dropdown">
+                <i class="bi bi-check-circle text-success"></i>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="table-responsive px-4 pb-2">
+        <table class="table cohort-grid-table align-middle mb-0">
+            <thead>
+                <tr>
+                    <th class="col-first"></th>
+                    <th>Tuần 0</th>
+                    <th>Tuần 1</th>
+                    <th>Tuần 2</th>
+                    <th>Tuần 3</th>
+                    <th>Tuần 4</th>
+                    <th>Tuần 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="summary-row">
+                    <td class="col-first text-dark">Tất cả người dùng</td>
+                    <td class="summary-val">100,0%</td>
+                    <td class="summary-val">10,5%</td>
+                    <td class="summary-val">6,0%</td>
+                    <td class="summary-val">4,5%</td>
+                    <td class="summary-val">3,7%</td>
+                    <td class="summary-val">3,2%</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">16 thg 8 - 22 thg 8</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 0" data-users="4.199" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 1" data-users="440" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 2" data-users="251" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 3" data-users="188" data-pct="4,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 4" data-users="155" data-pct="3,7%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-1 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 5" data-users="134" data-pct="3,2%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">23 thg 8 - 29 thg 8</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 0" data-users="4.295" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 1" data-users="450" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 2" data-users="257" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 3" data-users="193" data-pct="4,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 4" data-users="158" data-pct="3,7%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">30 thg 8 - 5 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 0" data-users="4.810" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 1" data-users="505" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 2" data-users="288" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 3" data-users="216" data-pct="4,5%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">6 thg 9 - 12 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="6 thg 9 - 12 thg 9" data-week="Tuần 0" data-users="5.105" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="6 thg 9 - 12 thg 9" data-week="Tuần 1" data-users="536" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="6 thg 9 - 12 thg 9" data-week="Tuần 2" data-users="306" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">13 thg 9 - 19 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="13 thg 9 - 19 thg 9" data-week="Tuần 0" data-users="5.320" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="13 thg 9 - 19 thg 9" data-week="Tuần 1" data-users="558" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark border-bottom-0">20 thg 9 - 26 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="20 thg 9 - 26 thg 9" data-week="Tuần 0" data-users="5.600" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer bg-white border-0 px-4 pt-3 pb-4 d-flex justify-content-between align-items-end">
+        <div class="text-secondary" style="font-size: 14px;">
+            6 tuần kết thúc vào ngày thg 9<br>26
+        </div>
+        <a href="#" class="view-link d-inline-flex align-items-center gap-2">
+            Xem tỷ lệ giữ chân người dùng <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<div class="cohort-popover shadow" id="cohortPopover">
+    <div class="pop-header" id="popHeader">23 thg 8 - 29 thg 8 • Tuần 0</div>
+    
+    <div class="pop-row mt-3">
+        <span class="pop-label">Người dùng</span>
+        <span class="pop-val" id="popUsers">4.295</span>
+    </div>
+    
+    <div class="pop-row mt-1">
+        <span class="pop-label-sub" id="popRetention">Tỷ lệ giữ chân người dùng: 100%</span>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-card18', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-card18">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Thẻ bảng ma trận phân tích thuần tập (Cohort Activity / Retention Heatmap) theo dõi tỷ lệ giữ chân người dùng qua 6 tuần (Tuần 0 đến Tuần 5) với 5 cấp độ màu nhiệt sắc trực quan và popover chi tiết hiển thị số lượng người dùng khi rê chuột. Cần nhúng file <code>card18.js</code> để kích hoạt hover popover.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_card18.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-card18', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-card18">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Cohort Activity Table Card&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS card18.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-card18', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card18">&lt;div class=&quot;cohort-activity-card bg-white&quot;&gt;
+    
+    &lt;div class=&quot;card-header-top d-flex justify-content-between align-items-start px-4 pt-4 pb-3&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;card-title-text mb-1&quot;&gt;Hoạt động của người dùng theo nhóm thuần tập&lt;/div&gt;
+            &lt;div class=&quot;card-subtitle-text&quot;&gt;Chỉ dựa trên dữ liệu của thiết bị&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none&quot; type=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot;&gt;
+                &lt;i class=&quot;bi bi-check-circle text-success&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-caret-down-fill text-secondary&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;table-responsive px-4 pb-2&quot;&gt;
+        &lt;table class=&quot;table cohort-grid-table align-middle mb-0&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th class=&quot;col-first&quot;&gt;&lt;/th&gt;
+                    &lt;th&gt;Tuần 0&lt;/th&gt;
+                    &lt;th&gt;Tuần 1&lt;/th&gt;
+                    &lt;th&gt;Tuần 2&lt;/th&gt;
+                    &lt;th&gt;Tuần 3&lt;/th&gt;
+                    &lt;th&gt;Tuần 4&lt;/th&gt;
+                    &lt;th&gt;Tuần 5&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class=&quot;summary-row&quot;&gt;
+                    &lt;td class=&quot;col-first text-dark&quot;&gt;Tất cả người dùng&lt;/td&gt;
+                    &lt;td class=&quot;summary-val&quot;&gt;100,0%&lt;/td&gt;
+                    &lt;td class=&quot;summary-val&quot;&gt;10,5%&lt;/td&gt;
+                    &lt;td class=&quot;summary-val&quot;&gt;6,0%&lt;/td&gt;
+                    &lt;td class=&quot;summary-val&quot;&gt;4,5%&lt;/td&gt;
+                    &lt;td class=&quot;summary-val&quot;&gt;3,7%&lt;/td&gt;
+                    &lt;td class=&quot;summary-val&quot;&gt;3,2%&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;col-first text-dark&quot;&gt;16 thg 8 - 22 thg 8&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-5 hover-trigger&quot; data-date=&quot;16 thg 8 - 22 thg 8&quot; data-week=&quot;Tuần 0&quot; data-users=&quot;4.199&quot; data-pct=&quot;100%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-4 hover-trigger&quot; data-date=&quot;16 thg 8 - 22 thg 8&quot; data-week=&quot;Tuần 1&quot; data-users=&quot;440&quot; data-pct=&quot;10,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-3 hover-trigger&quot; data-date=&quot;16 thg 8 - 22 thg 8&quot; data-week=&quot;Tuần 2&quot; data-users=&quot;251&quot; data-pct=&quot;6,0%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-2 hover-trigger&quot; data-date=&quot;16 thg 8 - 22 thg 8&quot; data-week=&quot;Tuần 3&quot; data-users=&quot;188&quot; data-pct=&quot;4,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-2 hover-trigger&quot; data-date=&quot;16 thg 8 - 22 thg 8&quot; data-week=&quot;Tuần 4&quot; data-users=&quot;155&quot; data-pct=&quot;3,7%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-1 hover-trigger&quot; data-date=&quot;16 thg 8 - 22 thg 8&quot; data-week=&quot;Tuần 5&quot; data-users=&quot;134&quot; data-pct=&quot;3,2%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;col-first text-dark&quot;&gt;23 thg 8 - 29 thg 8&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-5 hover-trigger&quot; data-date=&quot;23 thg 8 - 29 thg 8&quot; data-week=&quot;Tuần 0&quot; data-users=&quot;4.295&quot; data-pct=&quot;100%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-4 hover-trigger&quot; data-date=&quot;23 thg 8 - 29 thg 8&quot; data-week=&quot;Tuần 1&quot; data-users=&quot;450&quot; data-pct=&quot;10,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-3 hover-trigger&quot; data-date=&quot;23 thg 8 - 29 thg 8&quot; data-week=&quot;Tuần 2&quot; data-users=&quot;257&quot; data-pct=&quot;6,0%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-2 hover-trigger&quot; data-date=&quot;23 thg 8 - 29 thg 8&quot; data-week=&quot;Tuần 3&quot; data-users=&quot;193&quot; data-pct=&quot;4,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-2 hover-trigger&quot; data-date=&quot;23 thg 8 - 29 thg 8&quot; data-week=&quot;Tuần 4&quot; data-users=&quot;158&quot; data-pct=&quot;3,7%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;col-first text-dark&quot;&gt;30 thg 8 - 5 thg 9&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-5 hover-trigger&quot; data-date=&quot;30 thg 8 - 5 thg 9&quot; data-week=&quot;Tuần 0&quot; data-users=&quot;4.810&quot; data-pct=&quot;100%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-4 hover-trigger&quot; data-date=&quot;30 thg 8 - 5 thg 9&quot; data-week=&quot;Tuần 1&quot; data-users=&quot;505&quot; data-pct=&quot;10,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-3 hover-trigger&quot; data-date=&quot;30 thg 8 - 5 thg 9&quot; data-week=&quot;Tuần 2&quot; data-users=&quot;288&quot; data-pct=&quot;6,0%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-2 hover-trigger&quot; data-date=&quot;30 thg 8 - 5 thg 9&quot; data-week=&quot;Tuần 3&quot; data-users=&quot;216&quot; data-pct=&quot;4,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;col-first text-dark&quot;&gt;6 thg 9 - 12 thg 9&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-5 hover-trigger&quot; data-date=&quot;6 thg 9 - 12 thg 9&quot; data-week=&quot;Tuần 0&quot; data-users=&quot;5.105&quot; data-pct=&quot;100%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-4 hover-trigger&quot; data-date=&quot;6 thg 9 - 12 thg 9&quot; data-week=&quot;Tuần 1&quot; data-users=&quot;536&quot; data-pct=&quot;10,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-3 hover-trigger&quot; data-date=&quot;6 thg 9 - 12 thg 9&quot; data-week=&quot;Tuần 2&quot; data-users=&quot;306&quot; data-pct=&quot;6,0%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;col-first text-dark&quot;&gt;13 thg 9 - 19 thg 9&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-5 hover-trigger&quot; data-date=&quot;13 thg 9 - 19 thg 9&quot; data-week=&quot;Tuần 0&quot; data-users=&quot;5.320&quot; data-pct=&quot;100%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-4 hover-trigger&quot; data-date=&quot;13 thg 9 - 19 thg 9&quot; data-week=&quot;Tuần 1&quot; data-users=&quot;558&quot; data-pct=&quot;10,5%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td class=&quot;col-first text-dark border-bottom-0&quot;&gt;20 thg 9 - 26 thg 9&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell heat-lvl-5 hover-trigger&quot; data-date=&quot;20 thg 9 - 26 thg 9&quot; data-week=&quot;Tuần 0&quot; data-users=&quot;5.600&quot; data-pct=&quot;100%&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                    &lt;td class=&quot;heat-cell empty-cell&quot;&gt;&amp;nbsp;&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-footer bg-white border-0 px-4 pt-3 pb-4 d-flex justify-content-between align-items-end&quot;&gt;
+        &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 14px;&quot;&gt;
+            6 tuần kết thúc vào ngày thg 9&lt;br&gt;26
+        &lt;/div&gt;
+        &lt;a href=&quot;#&quot; class=&quot;view-link d-inline-flex align-items-center gap-2&quot;&gt;
+            Xem tỷ lệ giữ chân người dùng &lt;i class=&quot;bi bi-arrow-right&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;cohort-popover shadow&quot; id=&quot;cohortPopover&quot;&gt;
+    &lt;div class=&quot;pop-header&quot; id=&quot;popHeader&quot;&gt;23 thg 8 - 29 thg 8 • Tuần 0&lt;/div&gt;
+    
+    &lt;div class=&quot;pop-row mt-3&quot;&gt;
+        &lt;span class=&quot;pop-label&quot;&gt;Người dùng&lt;/span&gt;
+        &lt;span class=&quot;pop-val&quot; id=&quot;popUsers&quot;&gt;4.295&lt;/span&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;pop-row mt-1&quot;&gt;
+        &lt;span class=&quot;pop-label-sub&quot; id=&quot;popRetention&quot;&gt;Tỷ lệ giữ chân người dùng: 100%&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-card18', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-card18">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.cohort-activity-card {
+    width: 100%;
+    max-width: 580px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-title-text {
+    font-size: 16px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.card-subtitle-text {
+    font-size: 14px;
+    color: #5f6368;
+}
+
+.badge-dropdown-btn {
+    border-color: #dadce0;
+    border-radius: 16px;
+    padding: 4px 10px;
+    background-color: #ffffff;
+}
+
+.badge-dropdown-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.cohort-grid-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.cohort-grid-table th {
+    text-align: center;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid #dadce0;
+    border-top: 1px solid #dadce0;
+    padding: 16px 12px;
+    background-color: #ffffff;
+}
+
+.cohort-grid-table td {
+    vertical-align: middle;
+    font-size: 14px;
+    border: none; 
+    padding: 0;
+}
+
+.col-first {
+    text-align: left !important;
+    width: 155px;
+    max-width: 155px;
+    padding: 12px 16px 12px 0 !important;
+    background-color: #ffffff;
+}
+
+.summary-row td {
+    padding: 16px 0 !important;
+    border-bottom: 1px solid #dadce0;
+}
+
+.summary-row .col-first {
+    padding-left: 0 !important;
+}
+
+.summary-val {
+    text-align: center;
+    font-size: 14px;
+    color: #3c4043;
+}
+
+.heat-cell {
+    height: 48px;
+    border: 2px solid #ffffff !important; 
+    transition: filter 0.2s;
+}
+
+.heat-lvl-5 {
+    background-color: #254b9d !important; 
+}
+
+.heat-lvl-4 {
+    background-color: #3966cc !important; 
+}
+
+.heat-lvl-3 {
+    background-color: #5c86e0 !important; 
+}
+
+.heat-lvl-2 {
+    background-color: #8caaf0 !important; 
+}
+
+.heat-lvl-1 {
+    background-color: #bacaf5 !important; 
+}
+
+.empty-cell {
+    background-color: #ffffff !important; 
+}
+
+.hover-trigger:hover {
+    filter: brightness(0.85);
+    cursor: pointer;
+}
+
+.cohort-grid-table tbody tr {
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.cohort-grid-table tbody tr:last-child {
+    border-bottom: 1px solid #dadce0;
+}
+
+.view-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}
+
+.cohort-popover {
+    position: fixed;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 16px;
+    pointer-events: none;
+    z-index: 1050;
+    display: none;
+    min-width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+.pop-header {
+    font-size: 13px;
+    color: #5f6368;
+}
+
+.pop-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pop-label {
+    font-size: 14px;
+    color: #202124;
+}
+
+.pop-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: #202124;
+}
+
+.pop-label-sub {
+    font-size: 14px;
+    color: #3c4043;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-card18', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-card18">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const hoverCells = document.querySelectorAll(&#039;.hover-trigger&#039;);
+    const popover = document.getElementById(&#039;cohortPopover&#039;);
+    const popHeader = document.getElementById(&#039;popHeader&#039;);
+    const popUsers = document.getElementById(&#039;popUsers&#039;);
+    const popRetention = document.getElementById(&#039;popRetention&#039;);
+
+    hoverCells.forEach(cell =&gt; {
+        cell.addEventListener(&#039;mouseenter&#039;, () =&gt; {
+            const dateStr = cell.getAttribute(&#039;data-date&#039;);
+            const weekStr = cell.getAttribute(&#039;data-week&#039;);
+            const users = cell.getAttribute(&#039;data-users&#039;);
+            const pct = cell.getAttribute(&#039;data-pct&#039;);
+
+            popHeader.textContent = `${dateStr} • ${weekStr}`;
+            popUsers.textContent = users;
+            popRetention.textContent = `Tỷ lệ giữ chân người dùng: ${pct}`;
+
+            popover.style.display = &#039;block&#039;;
+        });
+
+        cell.addEventListener(&#039;mousemove&#039;, (e) =&gt; {
+            let left = e.clientX + 15;
+            let top = e.clientY + 15;
+            
+            const pRect = popover.getBoundingClientRect();
+            
+            if (left + pRect.width &gt; window.innerWidth) {
+                left = e.clientX - pRect.width - 15;
+            }
+            if (top + pRect.height &gt; window.innerHeight) {
+                top = e.clientY - pRect.height - 15;
+            }
+            
+            popover.style.left = `${left}px`;
+            popover.style.top = `${top}px`;
+        });
+
+        cell.addEventListener(&#039;mouseleave&#039;, () =&gt; {
+            popover.style.display = &#039;none&#039;;
+        });
+    });
+});</code></pre>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 19: Analytics Venn Diagram Card (Thẻ biểu đồ Venn giao thoa phân tích người dùng theo nền tảng) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="card-mau-19" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 19</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Venn Diagram Card (Thẻ biểu đồ Venn giao thoa phân tích người dùng theo nền tảng)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4 d-flex justify-content-center bg-light" id="preview-card19">
+                                    <div class="venn-card bg-white shadow-sm d-flex flex-column">
+    
+    <div class="card-header-top d-flex justify-content-between align-items-center px-4 pt-4 pb-0">
+        <div class="card-title-group d-flex align-items-center gap-1">
+            <span class="card-title-text dashed-text">Số người dùng đang hoạt động</span>
+            <span class="card-title-text text-secondary">theo</span>
+            <span class="card-title-text dashed-text">Nền</span>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none" type="button" data-bs-toggle="dropdown">
+                <i class="bi bi-check-circle text-success"></i>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="card-body p-4 d-flex">
+        
+        <div class="venn-diagram-container position-relative flex-grow-1" id="vennContainer">
+            
+            <div class="venn-circle venn-android d-flex justify-content-center align-items-center" data-platform="Android" data-val="21.422" data-pct="80,0%">
+                <span class="venn-label">Android</span>
+            </div>
+            
+            <div class="venn-circle venn-web d-flex justify-content-center align-items-center" data-platform="Web" data-val="2.356" data-pct="8,8%">
+                <span class="venn-label">Web</span>
+            </div>
+            
+            <div class="venn-circle venn-ios d-flex justify-content-center align-items-center" data-platform="iOS" data-val="2.945" data-pct="11,0%">
+                <span class="venn-label">iOS</span>
+            </div>
+            
+        </div>
+        
+        <div class="stats-sidebar ms-4 d-flex flex-column justify-content-center gap-4">
+            <div class="stat-item">
+                <div class="stat-label">ANDROID</div>
+                <div class="stat-value">80,2%</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">IOS</div>
+                <div class="stat-value">11,0%</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-label">WEB</div>
+                <div class="stat-value">8,8%</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="card-footer bg-white border-0 px-4 pt-0 pb-4 text-end">
+        <a href="#" class="view-link d-inline-flex align-items-center gap-2">
+            Xem các nền tảng <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<div class="venn-popover shadow" id="vennPopover">
+    <div class="pop-date">1 thg 9 - 1 thg 9, 2026</div>
+    <div class="pop-metric-title">SỐ NGƯỜI DÙNG ĐANG HOẠT ĐỘNG</div>
+    <div class="pop-row">
+        <span class="pop-platform" id="popPlatform">Android</span>
+        <span class="pop-val">
+            <span id="popVal">21.422</span>
+            <span class="pop-pct" id="popPct">(80,0%)</span>
+        </span>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-card19', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-card19">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ Venn giao thoa phân tích người dùng hoạt động theo nền tảng (Android, iOS, Web) với hiệu ứng làm mờ/làm nổi bật vòng tròn giao thoa và popover thông số chi tiết khi rê chuột. Cần nhúng file <code>card19.js</code> để kích hoạt hiệu ứng hover & popover.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_card19.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-card19', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-card19">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Venn Diagram Card&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS card19.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-card19', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card19">&lt;div class=&quot;venn-card bg-white shadow-sm d-flex flex-column&quot;&gt;
+    
+    &lt;div class=&quot;card-header-top d-flex justify-content-between align-items-center px-4 pt-4 pb-0&quot;&gt;
+        &lt;div class=&quot;card-title-group d-flex align-items-center gap-1&quot;&gt;
+            &lt;span class=&quot;card-title-text dashed-text&quot;&gt;Số người dùng đang hoạt động&lt;/span&gt;
+            &lt;span class=&quot;card-title-text text-secondary&quot;&gt;theo&lt;/span&gt;
+            &lt;span class=&quot;card-title-text dashed-text&quot;&gt;Nền&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;dropdown&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none&quot; type=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot;&gt;
+                &lt;i class=&quot;bi bi-check-circle text-success&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-caret-down-fill text-secondary&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-body p-4 d-flex&quot;&gt;
+        
+        &lt;div class=&quot;venn-diagram-container position-relative flex-grow-1&quot; id=&quot;vennContainer&quot;&gt;
+            
+            &lt;div class=&quot;venn-circle venn-android d-flex justify-content-center align-items-center&quot; data-platform=&quot;Android&quot; data-val=&quot;21.422&quot; data-pct=&quot;80,0%&quot;&gt;
+                &lt;span class=&quot;venn-label&quot;&gt;Android&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;venn-circle venn-web d-flex justify-content-center align-items-center&quot; data-platform=&quot;Web&quot; data-val=&quot;2.356&quot; data-pct=&quot;8,8%&quot;&gt;
+                &lt;span class=&quot;venn-label&quot;&gt;Web&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;venn-circle venn-ios d-flex justify-content-center align-items-center&quot; data-platform=&quot;iOS&quot; data-val=&quot;2.945&quot; data-pct=&quot;11,0%&quot;&gt;
+                &lt;span class=&quot;venn-label&quot;&gt;iOS&lt;/span&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;stats-sidebar ms-4 d-flex flex-column justify-content-center gap-4&quot;&gt;
+            &lt;div class=&quot;stat-item&quot;&gt;
+                &lt;div class=&quot;stat-label&quot;&gt;ANDROID&lt;/div&gt;
+                &lt;div class=&quot;stat-value&quot;&gt;80,2%&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;stat-item&quot;&gt;
+                &lt;div class=&quot;stat-label&quot;&gt;IOS&lt;/div&gt;
+                &lt;div class=&quot;stat-value&quot;&gt;11,0%&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;stat-item&quot;&gt;
+                &lt;div class=&quot;stat-label&quot;&gt;WEB&lt;/div&gt;
+                &lt;div class=&quot;stat-value&quot;&gt;8,8%&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+
+    &lt;div class=&quot;card-footer bg-white border-0 px-4 pt-0 pb-4 text-end&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;view-link d-inline-flex align-items-center gap-2&quot;&gt;
+            Xem các nền tảng &lt;i class=&quot;bi bi-arrow-right&quot;&gt;&lt;/i&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;venn-popover shadow&quot; id=&quot;vennPopover&quot;&gt;
+    &lt;div class=&quot;pop-date&quot;&gt;1 thg 9 - 1 thg 9, 2026&lt;/div&gt;
+    &lt;div class=&quot;pop-metric-title&quot;&gt;SỐ NGƯỜI DÙNG ĐANG HOẠT ĐỘNG&lt;/div&gt;
+    &lt;div class=&quot;pop-row&quot;&gt;
+        &lt;span class=&quot;pop-platform&quot; id=&quot;popPlatform&quot;&gt;Android&lt;/span&gt;
+        &lt;span class=&quot;pop-val&quot;&gt;
+            &lt;span id=&quot;popVal&quot;&gt;21.422&lt;/span&gt;
+            &lt;span class=&quot;pop-pct&quot; id=&quot;popPct&quot;&gt;(80,0%)&lt;/span&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-card19', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-card19">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.venn-card {
+    width: 580px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-title-text {
+    font-size: 16px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.dashed-text {
+    border-bottom: 1px dashed #9aa0a6;
+    cursor: pointer;
+    padding-bottom: 1px;
+}
+
+.badge-dropdown-btn {
+    border-color: #dadce0;
+    border-radius: 16px;
+    padding: 4px 10px;
+    background-color: #ffffff;
+}
+
+.badge-dropdown-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.venn-diagram-container {
+    height: 250px;
+}
+
+.venn-circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(173, 200, 246, 0.5);
+    border: 1.5px solid #669df6;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, z-index 0s;
+}
+
+.venn-circle:hover, .venn-circle.active-hover {
+    background-color: rgba(173, 200, 246, 0.7);
+    border-color: #4285f4;
+    border-width: 2.5px;
+    z-index: 10;
+}
+
+.venn-label {
+    font-size: 14px;
+    color: #202124;
+    font-weight: 400;
+    pointer-events: none;
+}
+
+.venn-android {
+    width: 220px;
+    height: 220px;
+    top: 15px;
+    left: 20px;
+    z-index: 1;
+}
+
+.venn-web {
+    width: 80px;
+    height: 80px;
+    top: 45px;
+    left: 210px;
+    z-index: 2;
+}
+
+.venn-ios {
+    width: 90px;
+    height: 90px;
+    top: 105px;
+    left: 205px;
+    z-index: 3;
+}
+
+.stats-sidebar {
+    width: 100px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 22px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.view-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}
+
+.venn-popover {
+    position: fixed;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 16px;
+    pointer-events: none;
+    z-index: 1050;
+    display: none;
+    min-width: 260px;
+}
+
+.pop-date {
+    font-size: 13px;
+    color: #5f6368;
+    margin-bottom: 8px;
+}
+
+.pop-metric-title {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+}
+
+.pop-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pop-platform {
+    font-size: 14px;
+    color: #202124;
+}
+
+.pop-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: #202124;
+}
+
+.pop-pct {
+    font-weight: 400;
+    margin-left: 2px;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-card19', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-card19">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const vennCircles = document.querySelectorAll(&#039;.venn-circle&#039;);
+    const popover = document.getElementById(&#039;vennPopover&#039;);
+    const popPlatform = document.getElementById(&#039;popPlatform&#039;);
+    const popVal = document.getElementById(&#039;popVal&#039;);
+    const popPct = document.getElementById(&#039;popPct&#039;);
+
+    function resetCircles() {
+        vennCircles.forEach(c =&gt; {
+            c.classList.remove(&#039;active-hover&#039;);
+            c.style.borderColor = &#039;#669df6&#039;;
+            c.style.borderWidth = &#039;1.5px&#039;;
+            c.style.backgroundColor = &#039;rgba(173, 200, 246, 0.5)&#039;;
+        });
+    }
+
+    vennCircles.forEach(circle =&gt; {
+        circle.addEventListener(&#039;mouseenter&#039;, () =&gt; {
+            resetCircles();
+            
+            circle.classList.add(&#039;active-hover&#039;);
+            
+            vennCircles.forEach(c =&gt; {
+                if(c !== circle) {
+                    c.style.borderColor = &#039;#9aa0a6&#039;;
+                    c.style.backgroundColor = &#039;transparent&#039;;
+                }
+            });
+
+            popPlatform.textContent = circle.getAttribute(&#039;data-platform&#039;);
+            popVal.textContent = circle.getAttribute(&#039;data-val&#039;);
+            popPct.textContent = circle.getAttribute(&#039;data-pct&#039;);
+
+            popover.style.display = &#039;block&#039;;
+        });
+
+        circle.addEventListener(&#039;mousemove&#039;, (e) =&gt; {
+            let left = e.clientX + 15;
+            let top = e.clientY + 15;
+            
+            const pRect = popover.getBoundingClientRect();
+            
+            if (left + pRect.width &gt; window.innerWidth) {
+                left = e.clientX - pRect.width - 15;
+            }
+            if (top + pRect.height &gt; window.innerHeight) {
+                top = e.clientY - pRect.height - 15;
+            }
+            
+            popover.style.left = `${left}px`;
+            popover.style.top = `${top}px`;
+        });
+
+        circle.addEventListener(&#039;mouseleave&#039;, () =&gt; {
+            resetCircles();
+            popover.style.display = &#039;none&#039;;
         });
     });
 });</code></pre>
@@ -24532,6 +27228,350 @@
 });</code></pre>
                                 </div>
                             </div>
+                        </section>
+                        
+                    </div>
+                    <!-- ============================================== -->
+                    <!-- 12. BREADCRUMB COMPONENTS -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade " id="tab-breadcrumbs" role="tabpanel"
+                        aria-labelledby="tab-breadcrumbs-btn">
+
+                        <!-- Tiêu đề & Nút điều hướng nhanh -->
+                        <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
+                            <div>
+                                <h1 class="h3 fw-bold mb-1">12. Breadcrumb Components</h1>
+                                <p class="text-muted mb-0 small">Các mẫu Breadcrumb dạng thanh tiến trình phân bổ phân tích (Attribution Path / Touchpoints Breadcrumb)</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#breadcrumb-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Analytics Attribution Breadcrumb</a>
+                            </div>
+                        </div>
+
+                        
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 1: Analytics Attribution Breadcrumb (Thanh điều hướng điểm tiếp xúc phân bổ mô hình chuyển đổi) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="breadcrumb-mau-1" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 1</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Attribution Breadcrumb (Thanh điều hướng điểm tiếp xúc phân bổ mô hình chuyển đổi)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4" id="preview-breadcrumb1">
+                                    <div class="attribution-container p-4 w-100 d-flex overflow-x-auto custom-scrollbar">
+    
+    <div class="chevron-step text-step">
+        <div class="chevron-content dashed-group">
+            <span class="step-text">Những điểm tiếp xúc ở đầu</span>
+            <span class="pct-badge">5.48%</span>
+        </div>
+    </div>
+    
+    <div class="chevron-step text-step">
+        <div class="chevron-content dashed-group">
+            <span class="step-text">Những điểm tiếp xúc ở giữa</span>
+            <span class="pct-badge">3.25%</span>
+        </div>
+    </div>
+    
+    <div class="chevron-step text-step">
+        <div class="chevron-content dashed-group">
+            <span class="step-text">Những điểm tiếp xúc ở cuối</span>
+            <span class="pct-badge">91.27%</span>
+        </div>
+    </div>
+
+    <div class="chevron-step check-step">
+        <div class="chevron-content">
+            <div class="check-circle"><i class="bi bi-check"></i></div>
+        </div>
+    </div>
+
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-breadcrumb1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-breadcrumb1">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Component breadcrumb thiết kế theo dạng mũi tên liên hoàn (Chevron shape) sử dụng kỹ thuật pseudo-elements <code>::before</code> và <code>::after</code> với góc xiên 45 độ, hiển thị các điểm tiếp xúc đầu, giữa và cuối kèm tỷ lệ phần trăm phân bổ.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_breadcrumb1.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-breadcrumb1', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-breadcrumb1">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Attribution Breadcrumb&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS breadcrumb1.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-breadcrumb1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-breadcrumb1">&lt;div class=&quot;attribution-container p-4 w-100 d-flex overflow-x-auto custom-scrollbar&quot;&gt;
+    
+    &lt;div class=&quot;chevron-step text-step&quot;&gt;
+        &lt;div class=&quot;chevron-content dashed-group&quot;&gt;
+            &lt;span class=&quot;step-text&quot;&gt;Những điểm tiếp xúc ở đầu&lt;/span&gt;
+            &lt;span class=&quot;pct-badge&quot;&gt;5.48%&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;chevron-step text-step&quot;&gt;
+        &lt;div class=&quot;chevron-content dashed-group&quot;&gt;
+            &lt;span class=&quot;step-text&quot;&gt;Những điểm tiếp xúc ở giữa&lt;/span&gt;
+            &lt;span class=&quot;pct-badge&quot;&gt;3.25%&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class=&quot;chevron-step text-step&quot;&gt;
+        &lt;div class=&quot;chevron-content dashed-group&quot;&gt;
+            &lt;span class=&quot;step-text&quot;&gt;Những điểm tiếp xúc ở cuối&lt;/span&gt;
+            &lt;span class=&quot;pct-badge&quot;&gt;91.27%&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;chevron-step check-step&quot;&gt;
+        &lt;div class=&quot;chevron-content&quot;&gt;
+            &lt;div class=&quot;check-circle&quot;&gt;&lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-breadcrumb1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-breadcrumb1">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.attribution-container {
+    max-width: 1200px;
+    background-color: #ffffff;
+}
+
+.chevron-step {
+    position: relative;
+    height: 44px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    margin-right: 26px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.chevron-step:first-child {
+    border-left: 1px solid #dadce0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-left: 0;
+}
+
+.chevron-step::before, .chevron-step::after {
+    content: &quot;&quot;;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 50%;
+    margin-top: -15.5px;
+    transform: rotate(45deg);
+}
+
+.chevron-step::before {
+    left: -15.5px;
+    background-color: #ffffff;
+    border-top: 1px solid #dadce0;
+    border-right: 1px solid #dadce0;
+    z-index: 1; 
+}
+
+.chevron-step:first-child::before {
+    display: none;
+}
+
+.chevron-step::after {
+    right: -15.5px;
+    background-color: inherit;
+    border-top: 1px solid #dadce0;
+    border-right: 1px solid #dadce0;
+    border-radius: 0 2px 0 0;
+    z-index: 2;
+}
+
+.chevron-content {
+    position: relative;
+    z-index: 3; 
+}
+
+.empty-step {
+    width: 24px;
+    padding: 0;
+}
+
+.check-step {
+    padding: 0 16px 0 24px;
+}
+
+.text-step {
+    padding: 0 24px 0 32px;
+}
+
+.check-circle {
+    width: 24px;
+    height: 24px;
+    background-color: #4285f4;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-circle i {
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.dashed-group {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px dashed #9aa0a6;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.dashed-group:hover {
+    opacity: 0.8;
+}
+
+.step-text {
+    font-size: 14px;
+    color: #202124;
+}
+
+.pct-badge {
+    background-color: #3c4043;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}</code></pre>
+                                </div>
+                            </div>
+                            
                         </section>
                         
                     </div>

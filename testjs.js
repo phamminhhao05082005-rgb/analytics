@@ -2269,6 +2269,197 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // X. Card 17 (Analytics Geo Chart Card)
+    const card17Preview = document.getElementById('preview-card17');
+    if (card17Preview) {
+        if (window.google && window.google.charts) {
+            google.charts.load('current', { 'packages': ['geochart'] });
+            google.charts.setOnLoadCallback(() => {
+                const mapEl = card17Preview.querySelector('#regions_div');
+                if (!mapEl) return;
+                const data = google.visualization.arrayToDataTable([
+                    ['Country', 'Users'],
+                    ['India', 4700],
+                    ['Bangladesh', 3200],
+                    ['United States', 2900],
+                    ['Nigeria', 1100],
+                    ['Pakistan', 894],
+                    ['Indonesia', 845],
+                    ['Brazil', 542],
+                    ['Canada', 1200],
+                    ['France', 900],
+                    ['Australia', 850],
+                    ['Mexico', 600],
+                    ['South Africa', 400],
+                    ['Russia', 1500]
+                ]);
+                const options = {
+                    colorAxis: { colors: ['#c6d8f9', '#4285f4', '#2a56c6'] },
+                    backgroundColor: 'transparent',
+                    datalessRegionColor: '#f1f3f4',
+                    defaultColor: '#f1f3f4',
+                    legend: 'none',
+                    tooltip: { trigger: 'focus' },
+                    keepAspectRatio: true
+                };
+                const chart = new google.visualization.GeoChart(mapEl);
+                chart.draw(data, options);
+            });
+        }
+
+        const mapDiv17 = card17Preview.querySelector('#regions_div');
+        const zoomInBtn17 = card17Preview.querySelector('#zoomInBtn');
+        const zoomOutBtn17 = card17Preview.querySelector('#zoomOutBtn');
+        const wrapper17 = card17Preview.querySelector('#mapWrapper');
+        if (mapDiv17 && zoomInBtn17 && zoomOutBtn17 && wrapper17) {
+            let currentScale = 1;
+            let isDragging = false;
+            let startX, startY;
+            let translateX = 0;
+            let translateY = 0;
+
+            function updateTransform() {
+                mapDiv17.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+            }
+
+            zoomInBtn17.addEventListener('click', () => {
+                currentScale += 0.4;
+                updateTransform();
+            });
+
+            zoomOutBtn17.addEventListener('click', () => {
+                currentScale = Math.max(1, currentScale - 0.4);
+                if (currentScale === 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+            });
+
+            wrapper17.addEventListener('mousedown', (e) => {
+                if (currentScale > 1) {
+                    isDragging = true;
+                    startX = e.clientX - translateX;
+                    startY = e.clientY - translateY;
+                }
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    translateX = e.clientX - startX;
+                    translateY = e.clientY - startY;
+                    updateTransform();
+                }
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+        }
+    }
+
+    // Y. Card 18 (Analytics Cohort Activity Table Card)
+    const card18Preview = document.getElementById('preview-card18');
+    if (card18Preview) {
+        const hoverCells18 = card18Preview.querySelectorAll('.hover-trigger');
+        const popover18 = card18Preview.querySelector('#cohortPopover');
+        const popHeader18 = card18Preview.querySelector('#popHeader');
+        const popUsers18 = card18Preview.querySelector('#popUsers');
+        const popRetention18 = card18Preview.querySelector('#popRetention');
+
+        if (popover18 && popHeader18 && popUsers18 && popRetention18) {
+            hoverCells18.forEach(cell => {
+                cell.addEventListener('mouseenter', () => {
+                    const dateStr = cell.getAttribute('data-date');
+                    const weekStr = cell.getAttribute('data-week');
+                    const users = cell.getAttribute('data-users');
+                    const pct = cell.getAttribute('data-pct');
+
+                    popHeader18.textContent = `${dateStr} • ${weekStr}`;
+                    popUsers18.textContent = users;
+                    popRetention18.textContent = `Tỷ lệ giữ chân người dùng: ${pct}`;
+                    popover18.style.display = 'block';
+                });
+
+                cell.addEventListener('mousemove', (e) => {
+                    let left = e.clientX + 15;
+                    let top = e.clientY + 15;
+                    const pRect = popover18.getBoundingClientRect();
+                    if (left + pRect.width > window.innerWidth) {
+                        left = e.clientX - pRect.width - 15;
+                    }
+                    if (top + pRect.height > window.innerHeight) {
+                        top = e.clientY - pRect.height - 15;
+                    }
+                    popover18.style.left = `${left}px`;
+                    popover18.style.top = `${top}px`;
+                });
+
+                cell.addEventListener('mouseleave', () => {
+                    popover18.style.display = 'none';
+                });
+            });
+        }
+    }
+
+    // Z. Card 19 (Analytics Venn Diagram Card)
+    const card19Preview = document.getElementById('preview-card19');
+    if (card19Preview) {
+        const vennCircles19 = card19Preview.querySelectorAll('.venn-circle');
+        const popover19 = card19Preview.querySelector('#vennPopover');
+        const popPlatform19 = card19Preview.querySelector('#popPlatform');
+        const popVal19 = card19Preview.querySelector('#popVal');
+        const popPct19 = card19Preview.querySelector('#popPct');
+
+        function resetCircles19() {
+            vennCircles19.forEach(c => {
+                c.classList.remove('active-hover');
+                c.style.borderColor = '#669df6';
+                c.style.borderWidth = '1.5px';
+                c.style.backgroundColor = 'rgba(173, 200, 246, 0.5)';
+            });
+        }
+
+        if (popover19 && popPlatform19 && popVal19 && popPct19) {
+            vennCircles19.forEach(circle => {
+                circle.addEventListener('mouseenter', () => {
+                    resetCircles19();
+                    circle.classList.add('active-hover');
+                    vennCircles19.forEach(c => {
+                        if (c !== circle) {
+                            c.style.borderColor = '#9aa0a6';
+                            c.style.backgroundColor = 'transparent';
+                        }
+                    });
+
+                    popPlatform19.textContent = circle.getAttribute('data-platform');
+                    popVal19.textContent = circle.getAttribute('data-val');
+                    popPct19.textContent = circle.getAttribute('data-pct');
+                    popover19.style.display = 'block';
+                });
+
+                circle.addEventListener('mousemove', (e) => {
+                    let left = e.clientX + 15;
+                    let top = e.clientY + 15;
+                    const pRect = popover19.getBoundingClientRect();
+                    if (left + pRect.width > window.innerWidth) {
+                        left = e.clientX - pRect.width - 15;
+                    }
+                    if (top + pRect.height > window.innerHeight) {
+                        top = e.clientY - pRect.height - 15;
+                    }
+                    popover19.style.left = `${left}px`;
+                    popover19.style.top = `${top}px`;
+                });
+
+                circle.addEventListener('mouseleave', () => {
+                    resetCircles19();
+                    popover19.style.display = 'none';
+                });
+            });
+        }
+    }
+
     // M. Đồng bộ URL Hash
     setupTabHashSync();
 });

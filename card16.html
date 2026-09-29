@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Insights Card</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="card16.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<div class="insight-card bg-white shadow-sm d-flex flex-column">
+    <div class="card-content flex-grow-1 custom-scrollbar">
+        <div class="px-4 pt-4 pb-3">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-stars text-secondary fs-5"></i>
+                <span class="header-label">THÔNG TIN CHI TIẾT</span>
+            </div>
+            
+            <h3 class="insight-title mb-2">
+                Doanh thu từ <span class="dashed-text">nguồn "google"</span> và <span class="dashed-text">phương tiện "cpc"</span> đã giảm
+            </h3>
+            
+            <div class="insight-date mb-3">Từ ngày 30 tháng 8 đến ngày 5 tháng 9 năm 2026</div>
+            
+            <p class="insight-desc mb-4">
+                Chúng tôi đã dự báo rằng doanh thu từ nguồn "google" và phương tiện "cpc" sẽ nằm trong khoảng từ 388,73 US$ đến 4.495,40 US$. Doanh thu thực tế của bạn là 387,38 US$, nhỏ hơn khoảng này.
+            </p>
+            
+            <h4 class="chart-title mb-2">Doanh thu</h4>
+            
+            <div class="chart-container position-relative mb-3">
+                <svg viewBox="0 0 300 180" class="w-100 h-100" preserveAspectRatio="none">
+                    <rect width="300" height="150" fill="#f8f9fa"/>
+                    
+                    <line x1="0" y1="30" x2="300" y2="30" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="70" x2="300" y2="70" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="110" x2="300" y2="110" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="150" x2="300" y2="150" stroke="#e8eaed" stroke-width="1"/>
+                    
+                    <text x="295" y="25" text-anchor="end" class="chart-label">3 N$</text>
+                    <text x="295" y="65" text-anchor="end" class="chart-label">2 N$</text>
+                    <text x="295" y="105" text-anchor="end" class="chart-label">1 N$</text>
+                    <text x="295" y="145" text-anchor="end" class="chart-label">0,00 $</text>
+                    
+                    <text x="20" y="165" class="chart-label" text-anchor="middle">19<tspan x="20" dy="12">thg</tspan></text>
+                    <text x="65" y="165" class="chart-label" text-anchor="middle">26</text>
+                    <text x="110" y="165" class="chart-label" text-anchor="middle">02</text>
+                    <text x="155" y="165" class="chart-label" text-anchor="middle">09</text>
+                    <text x="200" y="165" class="chart-label" text-anchor="middle">16</text>
+                    <text x="245" y="165" class="chart-label" text-anchor="middle">23</text>
+                    <text x="290" y="165" class="chart-label" text-anchor="middle">30</text>
+                    
+                    <polygon points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140 300,150 0,150" fill="#e8f0fe" opacity="0.5"/>
+                    <polyline points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140" fill="none" stroke="#ffffff" stroke-width="2"/>
+                    
+                    <polyline points="0,100 45,75 90,110 135,115 180,140 225,160 270,165" fill="none" stroke="#4285f4" stroke-width="2"/>
+                    <circle cx="270" cy="165" r="4" fill="#ffffff" stroke="#4285f4" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <div class="legend-grid mb-4">
+                <div class="legend-item">
+                    <div class="legend-icon circle-outline"></div>
+                    <span>Hoạt động bất thường</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon wave-line"></div>
+                    <span>Giá trị dự kiến</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon solid-line"></div>
+                    <span>Doanh thu</span>
+                </div>
+            </div>
+            
+            <div class="info-box d-flex gap-3 p-3">
+                <i class="bi bi-lightbulb fs-5 text-dark mt-1"></i>
+                <div>
+                    <div class="info-title mb-2">Analytics xác định hành vi không mong muốn theo thời gian như thế nào?</div>
+                    <div class="info-desc mb-2">Analytics Thông minh sử dụng dữ liệu trong quá khứ để xác định các điểm bất thường trong một chỉ số nhất định theo thời gian.</div>
+                    <a href="#" class="info-link d-flex align-items-center gap-1">Đọc thêm: Tính năng Phát hiện hoạt động bất thường <i class="bi bi-box-arrow-up-right ms-auto"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer border-top bg-white p-3">
+        <button class="btn btn-icon shadow-none" id="openOffcanvasBtn" data-bs-toggle="offcanvas" data-bs-target="#insightOffcanvas">
+            <i class="bi bi-arrows-angle-expand"></i>
+        </button>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end insight-offcanvas" tabindex="-1" id="insightOffcanvas">
+    <div class="offcanvas-header border-bottom py-2 px-3 d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-graph-up text-secondary fs-5"></i>
+            <span class="offcanvas-title-text">Thông tin chi tiết</span>
+        </div>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    
+    <div class="offcanvas-body p-0 custom-scrollbar d-flex flex-column">
+        <div class="flex-grow-1 p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-stars text-secondary fs-5"></i>
+                    <span class="header-label">THÔNG TIN CHI TIẾT</span>
+                </div>
+                <i class="bi bi-three-dots-vertical text-secondary cursor-pointer"></i>
+            </div>
+            
+            <h3 class="insight-title mb-2">
+                Doanh thu của <span class="dashed-text">phương tiện chiến dịch "cpc"</span> đã giảm
+            </h3>
+            
+            <div class="insight-date mb-3">Từ ngày 30 tháng 8 đến ngày 5 tháng 9 năm 2026</div>
+            
+            <p class="insight-desc mb-4">
+                Chúng tôi đã dự báo rằng doanh thu của phương tiện chiến dịch "cpc" sẽ nằm trong khoảng từ 388,73 US$ đến 4.495,40 US$. Doanh thu thực tế của bạn là 387,38 US$, nhỏ hơn khoảng này.
+            </p>
+            
+            <h4 class="chart-title mb-2">Doanh thu</h4>
+            
+            <div class="chart-container position-relative mb-3">
+                <svg viewBox="0 0 300 180" class="w-100 h-100" preserveAspectRatio="none">
+                    <rect width="300" height="150" fill="#f8f9fa"/>
+                    <line x1="0" y1="30" x2="300" y2="30" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="70" x2="300" y2="70" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="110" x2="300" y2="110" stroke="#e8eaed" stroke-width="1"/>
+                    <line x1="0" y1="150" x2="300" y2="150" stroke="#e8eaed" stroke-width="1"/>
+                    
+                    <text x="295" y="25" text-anchor="end" class="chart-label">3 N$</text>
+                    <text x="295" y="65" text-anchor="end" class="chart-label">2 N$</text>
+                    <text x="295" y="105" text-anchor="end" class="chart-label">1 N$</text>
+                    <text x="295" y="145" text-anchor="end" class="chart-label">0,00 $</text>
+                    
+                    <text x="20" y="165" class="chart-label" text-anchor="middle">19<tspan x="20" dy="12">thg</tspan></text>
+                    <text x="65" y="165" class="chart-label" text-anchor="middle">26</text>
+                    <text x="110" y="165" class="chart-label" text-anchor="middle">02</text>
+                    <text x="155" y="165" class="chart-label" text-anchor="middle">09</text>
+                    <text x="200" y="165" class="chart-label" text-anchor="middle">16</text>
+                    <text x="245" y="165" class="chart-label" text-anchor="middle">23</text>
+                    <text x="290" y="165" class="chart-label" text-anchor="middle">30</text>
+                    
+                    <polygon points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140 300,150 0,150" fill="#e8f0fe" opacity="0.5"/>
+                    <polyline points="0,70 45,50 90,80 135,90 180,105 225,115 270,130 300,140" fill="none" stroke="#ffffff" stroke-width="2"/>
+                    
+                    <polyline points="0,100 45,75 90,110 135,115 180,140 225,160 270,165" fill="none" stroke="#4285f4" stroke-width="2"/>
+                    <circle cx="270" cy="165" r="4" fill="#ffffff" stroke="#4285f4" stroke-width="2"/>
+                </svg>
+            </div>
+            
+            <div class="legend-grid mb-4">
+                <div class="legend-item">
+                    <div class="legend-icon circle-outline"></div>
+                    <span>Hoạt động bất thường</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon wave-line"></div>
+                    <span>Giá trị dự kiến</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon solid-line"></div>
+                    <span>Doanh thu</span>
+                </div>
+            </div>
+            
+            <div class="info-box d-flex gap-3 p-3 mb-4">
+                <i class="bi bi-lightbulb fs-5 text-dark mt-1"></i>
+                <div>
+                    <div class="info-title mb-2">Analytics xác định hành vi không mong muốn theo thời gian như thế nào?</div>
+                    <div class="info-desc mb-2">Analytics Thông minh sử dụng dữ liệu trong quá khứ để xác định các điểm bất thường trong một chỉ số nhất định theo thời gian.</div>
+                    <a href="#" class="info-link d-flex align-items-center gap-1">Đọc thêm: Tính năng Phát hiện hoạt động bất thường <i class="bi bi-box-arrow-up-right ms-auto"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offcanvas-footer border-top bg-white p-3 d-flex justify-content-center">
+            <button class="btn btn-outline-primary btn-sm rounded-1 px-4 py-2 text-primary shadow-none" style="border-color: #dadce0;">Câu hỏi đề xuất</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

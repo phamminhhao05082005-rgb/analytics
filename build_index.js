@@ -157,6 +157,18 @@ const categories = [
                 previewId: 'preview-accordion4',
                 previewClass: '',
                 depNote: '<strong>Lưu ý quan trọng cho Dev:</strong> Accordion hiển thị trạng thái tín hiệu đồng ý kèm lưới 2 cột phân tích chi tiết mức độ tác động (đo lường, tái tiếp thị, xuất chuyển đổi); đóng mở mượt mà bằng <code>data-bs-toggle="collapse"</code>.'
+            },
+            {
+                sampleId: 'acc-mau-5',
+                badgeText: 'Mẫu 5',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Terms Accordion (Điều khoản bảo vệ dữ liệu với khung cuộn & nút chấp nhận)',
+                htmlFile: 'accordion5.html',
+                cssFile: 'accordion5.css',
+                jsFile: null,
+                previewId: 'preview-accordion5',
+                previewClass: 'p-4',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Mẫu điều khoản accordion tích hợp tiêu đề trạng thái với icon thành công, nội dung điều khoản GDPR có khung cuộn thanh cuộn tùy chỉnh và nút xác nhận. Đóng mở dựa vào <code>data-bs-toggle="collapse"</code> của <strong>Bootstrap JS Bundle</strong>.'
             }
         ]
     },
@@ -347,6 +359,54 @@ const categories = [
                 previewId: 'preview-card15',
                 previewClass: 'p-4 d-flex justify-content-center bg-light',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ điều hướng danh mục báo cáo quản trị toàn diện gồm 10 mục cài đặt (Sự kiện, Mạng, Đối tượng, Chú thích, Phép so sánh, Phân đoạn, DebugView...) đi kèm tooltip giải thích chi tiết khi hover.'
+            },
+            {
+                sampleId: 'card-mau-16',
+                badgeText: 'Mẫu 16',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Insights Card (Thẻ thông tin chi tiết thông minh kèm biểu đồ bất thường & mở rộng Offcanvas)',
+                htmlFile: 'card16.html',
+                cssFile: 'card16.css',
+                jsFile: null,
+                previewId: 'preview-card16',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ phân tích thông tin chi tiết (Intelligence Insights) hiển thị cảnh báo doanh thu bất thường kèm biểu đồ vùng dự kiến SVG. Nút phóng to ở chân card kết nối trực tiếp với <strong>Bootstrap Offcanvas</strong> (<code>data-bs-toggle="offcanvas"</code>) để xem phân tích chi tiết bên bảng trượt phải.'
+            },
+            {
+                sampleId: 'card-mau-17',
+                badgeText: 'Mẫu 17',
+                badgeClass: 'text-bg-success',
+                title: 'Analytics Geo Chart Card (Thẻ bản đồ địa lý Google Charts phân bố người dùng theo quốc gia)',
+                htmlFile: 'card17.html',
+                cssFile: 'card17.css',
+                jsFile: 'card17.js',
+                previewId: 'preview-card17',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ bản đồ địa lý trực quan tích hợp <strong>Google Charts GeoChart</strong> (<code>https://www.gstatic.com/charts/loader.js</code>), bảng phân tích quốc gia dạng thanh tiến trình và công cụ điều khiển phóng to/thu nhỏ (Zoom in/out), kéo rê bản đồ (Pan & Drag). Cần nhúng thư viện Google Charts và file <code>card17.js</code> để khởi tạo.'
+            },
+            {
+                sampleId: 'card-mau-18',
+                badgeText: 'Mẫu 18',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Cohort Activity Table Card (Thẻ ma trận bản đồ nhiệt hoạt động người dùng theo nhóm thuần tập)',
+                htmlFile: 'card18.html',
+                cssFile: 'card18.css',
+                jsFile: 'card18.js',
+                previewId: 'preview-card18',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ bảng ma trận phân tích thuần tập (Cohort Activity / Retention Heatmap) theo dõi tỷ lệ giữ chân người dùng qua 6 tuần (Tuần 0 đến Tuần 5) với 5 cấp độ màu nhiệt sắc trực quan và popover chi tiết hiển thị số lượng người dùng khi rê chuột. Cần nhúng file <code>card18.js</code> để kích hoạt hover popover.'
+            },
+            {
+                sampleId: 'card-mau-19',
+                badgeText: 'Mẫu 19',
+                badgeClass: 'text-bg-info text-white',
+                title: 'Analytics Venn Diagram Card (Thẻ biểu đồ Venn giao thoa phân tích người dùng theo nền tảng)',
+                htmlFile: 'card19.html',
+                cssFile: 'card19.css',
+                jsFile: 'card19.js',
+                previewId: 'preview-card19',
+                previewClass: 'p-4 d-flex justify-content-center bg-light',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thẻ biểu đồ Venn giao thoa phân tích người dùng hoạt động theo nền tảng (Android, iOS, Web) với hiệu ứng làm mờ/làm nổi bật vòng tròn giao thoa và popover thông số chi tiết khi rê chuột. Cần nhúng file <code>card19.js</code> để kích hoạt hiệu ứng hover & popover.'
             }
         ]
     },
@@ -703,6 +763,28 @@ const categories = [
                 depNote: '<strong>Lưu ý cho Dev:</strong> Bảng thống kê chi tiết các trang hàng đầu (Số lượt xem, Số người dùng hoạt động, Số lượng sự kiện, Tỷ lệ thoát) tích hợp thanh tiến trình tỷ lệ trực quan (Progress Bars) và popover hiển thị số liệu chính xác khi rê chuột qua từng hàng. Cần nhúng file <code>table3.js</code> để kích hoạt hover popover.'
             }
         ]
+    },
+    {
+        id: 'tab-breadcrumbs',
+        btnId: 'tab-breadcrumbs-btn',
+        title: '12. Breadcrumb Components',
+        desc: 'Các mẫu Breadcrumb dạng thanh tiến trình phân bổ phân tích (Attribution Path / Touchpoints Breadcrumb)',
+        icon: 'bi-chevron-bar-right text-warning',
+        active: false,
+        items: [
+            {
+                sampleId: 'breadcrumb-mau-1',
+                badgeText: 'Mẫu 1',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Attribution Breadcrumb (Thanh điều hướng điểm tiếp xúc phân bổ mô hình chuyển đổi)',
+                htmlFile: 'breadcrumb1.html',
+                cssFile: 'breadcrumb1.css',
+                jsFile: null,
+                previewId: 'preview-breadcrumb1',
+                previewClass: 'p-4',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Component breadcrumb thiết kế theo dạng mũi tên liên hoàn (Chevron shape) sử dụng kỹ thuật pseudo-elements <code>::before</code> và <code>::after</code> với góc xiên 45 độ, hiển thị các điểm tiếp xúc đầu, giữa và cuối kèm tỷ lệ phần trăm phân bổ.'
+            }
+        ]
     }
 ];
 
@@ -994,12 +1076,14 @@ const fullHtml = `<!DOCTYPE html>
     <!-- Bootstrap 5 CSS & Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <!-- CSS từng Component -->
     <link rel="stylesheet" href="accordion1.css">
     <link rel="stylesheet" href="accordion2.css">
     <link rel="stylesheet" href="accordion3.css">
     <link rel="stylesheet" href="accordion4.css">
+    <link rel="stylesheet" href="accordion5.css">
     <link rel="stylesheet" href="card1.css">
     <link rel="stylesheet" href="card2.css">
     <link rel="stylesheet" href="card3.css">
@@ -1015,6 +1099,10 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="card13.css">
     <link rel="stylesheet" href="card14.css">
     <link rel="stylesheet" href="card15.css">
+    <link rel="stylesheet" href="card16.css">
+    <link rel="stylesheet" href="card17.css">
+    <link rel="stylesheet" href="card18.css">
+    <link rel="stylesheet" href="card19.css">
     <link rel="stylesheet" href="carousel1.css">
     <link rel="stylesheet" href="carousel2.css">
     <link rel="stylesheet" href="carousel3.css">
@@ -1037,6 +1125,7 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="table3.css">
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
+    <link rel="stylesheet" href="breadcrumb1.css">
 
     <!-- CSS Gốc Layout & Navigation Portal -->
     <link rel="stylesheet" href="testcss.css">

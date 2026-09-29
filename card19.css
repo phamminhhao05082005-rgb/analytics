@@ -1,0 +1,162 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.venn-card {
+    width: 580px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-title-text {
+    font-size: 16px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.dashed-text {
+    border-bottom: 1px dashed #9aa0a6;
+    cursor: pointer;
+    padding-bottom: 1px;
+}
+
+.badge-dropdown-btn {
+    border-color: #dadce0;
+    border-radius: 16px;
+    padding: 4px 10px;
+    background-color: #ffffff;
+}
+
+.badge-dropdown-btn:hover {
+    background-color: #f8f9fa;
+}
+
+.venn-diagram-container {
+    height: 250px;
+}
+
+.venn-circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(173, 200, 246, 0.5);
+    border: 1.5px solid #669df6;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, z-index 0s;
+}
+
+.venn-circle:hover, .venn-circle.active-hover {
+    background-color: rgba(173, 200, 246, 0.7);
+    border-color: #4285f4;
+    border-width: 2.5px;
+    z-index: 10;
+}
+
+.venn-label {
+    font-size: 14px;
+    color: #202124;
+    font-weight: 400;
+    pointer-events: none;
+}
+
+.venn-android {
+    width: 220px;
+    height: 220px;
+    top: 15px;
+    left: 20px;
+    z-index: 1;
+}
+
+.venn-web {
+    width: 80px;
+    height: 80px;
+    top: 45px;
+    left: 210px;
+    z-index: 2;
+}
+
+.venn-ios {
+    width: 90px;
+    height: 90px;
+    top: 105px;
+    left: 205px;
+    z-index: 3;
+}
+
+.stats-sidebar {
+    width: 100px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 22px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.view-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.view-link:hover {
+    text-decoration: underline;
+}
+
+.venn-popover {
+    position: fixed;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 16px;
+    pointer-events: none;
+    z-index: 1050;
+    display: none;
+    min-width: 260px;
+}
+
+.pop-date {
+    font-size: 13px;
+    color: #5f6368;
+    margin-bottom: 8px;
+}
+
+.pop-metric-title {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 12px;
+}
+
+.pop-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pop-platform {
+    font-size: 14px;
+    color: #202124;
+}
+
+.pop-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: #202124;
+}
+
+.pop-pct {
+    font-weight: 400;
+    margin-left: 2px;
+}

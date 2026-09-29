@@ -1,0 +1,140 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.attribution-container {
+    max-width: 1200px;
+    background-color: #ffffff;
+}
+
+.chevron-step {
+    position: relative;
+    height: 44px;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    margin-right: 26px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.chevron-step:first-child {
+    border-left: 1px solid #dadce0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    margin-left: 0;
+}
+
+.chevron-step::before, .chevron-step::after {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 50%;
+    margin-top: -15.5px;
+    transform: rotate(45deg);
+}
+
+.chevron-step::before {
+    left: -15.5px;
+    background-color: #ffffff;
+    border-top: 1px solid #dadce0;
+    border-right: 1px solid #dadce0;
+    z-index: 1; 
+}
+
+.chevron-step:first-child::before {
+    display: none;
+}
+
+.chevron-step::after {
+    right: -15.5px;
+    background-color: inherit;
+    border-top: 1px solid #dadce0;
+    border-right: 1px solid #dadce0;
+    border-radius: 0 2px 0 0;
+    z-index: 2;
+}
+
+.chevron-content {
+    position: relative;
+    z-index: 3; 
+}
+
+.empty-step {
+    width: 24px;
+    padding: 0;
+}
+
+.check-step {
+    padding: 0 16px 0 24px;
+}
+
+.text-step {
+    padding: 0 24px 0 32px;
+}
+
+.check-circle {
+    width: 24px;
+    height: 24px;
+    background-color: #4285f4;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-circle i {
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.dashed-group {
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px dashed #9aa0a6;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.dashed-group:hover {
+    opacity: 0.8;
+}
+
+.step-text {
+    font-size: 14px;
+    color: #202124;
+}
+
+.pct-badge {
+    background-color: #3c4043;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}

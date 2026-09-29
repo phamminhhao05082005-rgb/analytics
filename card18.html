@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Cohort Activity Table</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="card18.css">
+</head>
+<body class="bg-light p-5 d-flex justify-content-center">
+
+<div class="cohort-activity-card bg-white">
+    
+    <div class="card-header-top d-flex justify-content-between align-items-start px-4 pt-4 pb-3">
+        <div>
+            <div class="card-title-text mb-1">Hoạt động của người dùng theo nhóm thuần tập</div>
+            <div class="card-subtitle-text">Chỉ dựa trên dữ liệu của thiết bị</div>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary btn-sm badge-dropdown-btn d-flex align-items-center gap-2 shadow-none" type="button" data-bs-toggle="dropdown">
+                <i class="bi bi-check-circle text-success"></i>
+                <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="table-responsive px-4 pb-2">
+        <table class="table cohort-grid-table align-middle mb-0">
+            <thead>
+                <tr>
+                    <th class="col-first"></th>
+                    <th>Tuần 0</th>
+                    <th>Tuần 1</th>
+                    <th>Tuần 2</th>
+                    <th>Tuần 3</th>
+                    <th>Tuần 4</th>
+                    <th>Tuần 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="summary-row">
+                    <td class="col-first text-dark">Tất cả người dùng</td>
+                    <td class="summary-val">100,0%</td>
+                    <td class="summary-val">10,5%</td>
+                    <td class="summary-val">6,0%</td>
+                    <td class="summary-val">4,5%</td>
+                    <td class="summary-val">3,7%</td>
+                    <td class="summary-val">3,2%</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">16 thg 8 - 22 thg 8</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 0" data-users="4.199" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 1" data-users="440" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 2" data-users="251" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 3" data-users="188" data-pct="4,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 4" data-users="155" data-pct="3,7%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-1 hover-trigger" data-date="16 thg 8 - 22 thg 8" data-week="Tuần 5" data-users="134" data-pct="3,2%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">23 thg 8 - 29 thg 8</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 0" data-users="4.295" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 1" data-users="450" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 2" data-users="257" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 3" data-users="193" data-pct="4,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="23 thg 8 - 29 thg 8" data-week="Tuần 4" data-users="158" data-pct="3,7%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">30 thg 8 - 5 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 0" data-users="4.810" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 1" data-users="505" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 2" data-users="288" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-2 hover-trigger" data-date="30 thg 8 - 5 thg 9" data-week="Tuần 3" data-users="216" data-pct="4,5%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">6 thg 9 - 12 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="6 thg 9 - 12 thg 9" data-week="Tuần 0" data-users="5.105" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="6 thg 9 - 12 thg 9" data-week="Tuần 1" data-users="536" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-3 hover-trigger" data-date="6 thg 9 - 12 thg 9" data-week="Tuần 2" data-users="306" data-pct="6,0%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark">13 thg 9 - 19 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="13 thg 9 - 19 thg 9" data-week="Tuần 0" data-users="5.320" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell heat-lvl-4 hover-trigger" data-date="13 thg 9 - 19 thg 9" data-week="Tuần 1" data-users="558" data-pct="10,5%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="col-first text-dark border-bottom-0">20 thg 9 - 26 thg 9</td>
+                    <td class="heat-cell heat-lvl-5 hover-trigger" data-date="20 thg 9 - 26 thg 9" data-week="Tuần 0" data-users="5.600" data-pct="100%">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                    <td class="heat-cell empty-cell">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card-footer bg-white border-0 px-4 pt-3 pb-4 d-flex justify-content-between align-items-end">
+        <div class="text-secondary" style="font-size: 14px;">
+            6 tuần kết thúc vào ngày thg 9<br>26
+        </div>
+        <a href="#" class="view-link d-inline-flex align-items-center gap-2">
+            Xem tỷ lệ giữ chân người dùng <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+
+</div>
+
+<div class="cohort-popover shadow" id="cohortPopover">
+    <div class="pop-header" id="popHeader">23 thg 8 - 29 thg 8 • Tuần 0</div>
+    
+    <div class="pop-row mt-3">
+        <span class="pop-label">Người dùng</span>
+        <span class="pop-val" id="popUsers">4.295</span>
+    </div>
+    
+    <div class="pop-row mt-1">
+        <span class="pop-label-sub" id="popRetention">Tỷ lệ giữ chân người dùng: 100%</span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="card18.js"></script>
+</body>
+</html>
