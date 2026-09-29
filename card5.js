@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Funnel Toggle Switch
     const funnelToggle = document.getElementById('funnelToggle');
     const funnelArea = document.querySelector('.funnel-grid');
     if (funnelToggle && funnelArea) {
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Search Filter
     const searchInput = document.getElementById('searchInput5') || document.querySelector('.table-search input');
     const tableRows = document.querySelectorAll('.data-row');
     const paginationInfo = document.getElementById('paginationInfo5');
@@ -33,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. Rows per page Dropdown Selection
     const pageDropItems = document.querySelectorAll('.custom-pagination-menu .dropdown-item');
     const rowsPerPageText = document.getElementById('rowsPerPageText5');
 

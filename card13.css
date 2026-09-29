@@ -35,7 +35,7 @@ body {
     background-color: #f8f9fa;
 }
 
-.chart-container {
+.analytic-activity-card .chart-container {
     width: calc(100% - 90px);
 }
 

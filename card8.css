@@ -10,6 +10,13 @@ body {
     overflow: hidden;
 }
 
+.detailed-card .chart-container {
+    height: auto !important;
+    min-height: 330px;
+    overflow: visible !important;
+    width: 100% !important;
+}
+
 .card-main-title {
     font-size: 15px;
     font-weight: 400;

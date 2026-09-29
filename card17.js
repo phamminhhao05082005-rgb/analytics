@@ -1,5 +1,5 @@
 google.charts.load('current', {
-    'packages':['geochart']
+    'packages': ['geochart']
 });
 google.charts.setOnLoadCallback(drawRegionsMap);
 
@@ -22,7 +22,7 @@ function drawRegionsMap() {
     ]);
 
     var options = {
-        colorAxis: {colors: ['#c6d8f9', '#4285f4', '#2a56c6']},
+        colorAxis: { colors: ['#c6d8f9', '#4285f4', '#2a56c6'] },
         backgroundColor: 'transparent',
         datalessRegionColor: '#f1f3f4',
         defaultColor: '#f1f3f4',
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const zoomInBtn = document.getElementById('zoomInBtn');
     const zoomOutBtn = document.getElementById('zoomOutBtn');
     const wrapper = document.getElementById('mapWrapper');
-    
+
     let currentScale = 1;
     let isDragging = false;
     let startX, startY;

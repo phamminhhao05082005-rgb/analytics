@@ -4,8 +4,9 @@ body {
 }
 
 .insight-card {
-    width: 330px;
-    height: 550px;
+    width: 100%;
+    max-width: 480px;
+    min-height: 580px;
     border: 1px solid #dadce0;
     border-radius: 8px;
     overflow: hidden;
@@ -51,9 +52,11 @@ body {
     font-weight: 500;
 }
 
-.chart-container {
-    height: 190px;
-    overflow: hidden;
+.insight-card .chart-container,
+.insight-offcanvas .chart-container {
+    height: 195px;
+    width: 100%;
+    position: relative;
 }
 
 .chart-label {
