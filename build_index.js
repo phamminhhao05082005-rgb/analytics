@@ -826,6 +826,12 @@ categories.forEach(cat => {
         const rawHtml = fs.readFileSync(path.join(DIR, item.htmlFile), 'utf-8');
         const componentHtml = extractComponentHtml(rawHtml);
         let previewHtml = componentHtml;
+        if (item.sampleId === 'card-mau-4') {
+            previewHtml = previewHtml
+                .replace(/viewBox="0 0 1000 300"/g, 'viewBox="0 0 1025 300"')
+                .replace(/x2="950"/g, 'x2="975"')
+                .replace(/<text x="965"/g, '<text x="982"');
+        }
         if (item.sampleId === 'card-mau-8') {
             previewHtml = previewHtml
                 .replace(/id="interactiveLayer"/g, 'id="interactiveLayer8"')
@@ -883,6 +889,12 @@ categories.forEach(cat => {
                 .replace(/id="nextPageBtn"/g, 'id="nextPageBtn2"')
                 .replace(/id="lastPageBtn"/g, 'id="lastPageBtn2"')
                 .replace(/id="pageInfo"/g, 'id="pageInfo2"');
+        }
+        if (item.sampleId === 'popover-mau-1') {
+            previewHtml = previewHtml
+                .replace(/id="searchInput"/g, 'id="searchInputPopover1"')
+                .replace(/id="searchBoxTrigger"/g, 'id="searchBoxTriggerPopover1"')
+                .replace(/id="searchPopover"/g, 'id="searchPopoverPopover1"');
         }
         const cssContent = item.cssFile ? fs.readFileSync(path.join(DIR, item.cssFile), 'utf-8') : '';
         const jsContent = item.jsFile ? fs.readFileSync(path.join(DIR, item.jsFile), 'utf-8') : '';

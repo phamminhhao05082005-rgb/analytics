@@ -2206,6 +2206,59 @@ document.addEventListener("DOMContentLoaded", () => {
         renderTable2();
     }
 
+    // U1. Popover 1 (Analytics Search Popover)
+    const popover1Preview = document.getElementById('preview-popover1');
+    if (popover1Preview) {
+        const p1Input = popover1Preview.querySelector('#searchInputPopover1') || popover1Preview.querySelector('#searchInput');
+        const p1Box = popover1Preview.querySelector('#searchBoxTriggerPopover1') || popover1Preview.querySelector('#searchBoxTrigger');
+        const p1Popover = popover1Preview.querySelector('#searchPopoverPopover1') || popover1Preview.querySelector('#searchPopover');
+
+        if (p1Input && p1Box && p1Popover) {
+            const openP1 = () => {
+                p1Popover.classList.add('show');
+                p1Box.classList.add('active');
+            };
+
+            const closeP1 = () => {
+                p1Popover.classList.remove('show');
+                p1Box.classList.remove('active');
+            };
+
+            p1Input.addEventListener('focus', openP1);
+
+            p1Box.addEventListener('click', (e) => {
+                if (e.target.closest('.feedback-link')) return;
+                p1Input.focus();
+                openP1();
+            });
+
+            document.addEventListener('click', (e) => {
+                const isInside = p1Box.contains(e.target) || p1Popover.contains(e.target);
+                if (!isInside) {
+                    closeP1();
+                }
+            });
+
+            p1Popover.querySelectorAll('.suggestion-item').forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const text = item.querySelector('span')?.textContent;
+                    if (text) {
+                        p1Input.value = text.trim();
+                        closeP1();
+                    }
+                });
+            });
+
+            const moreLink = p1Popover.querySelector('.more-suggestions-link');
+            if (moreLink) {
+                moreLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                });
+            }
+        }
+    }
+
     // V. Popover 3 (Analytics Variables Panel Toggle)
     const popover3Preview = document.getElementById('preview-popover3');
     if (popover3Preview) {

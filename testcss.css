@@ -410,6 +410,18 @@ body > .container-fluid > .row > main.main-content {
     overflow-x: auto;
 }
 
+#preview-card4 .detailed-card {
+    min-width: 1050px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+#preview-card8 .analytics-card {
+    min-width: 1050px;
+    width: 100%;
+    max-width: 1200px;
+}
+
 /* Carousel 1 */
 #preview-carousel1 {
     background-color: #f8f9fa;
@@ -508,7 +520,7 @@ body > .container-fluid > .row > main.main-content {
 /* Popover 1 */
 #preview-popover1 {
     background-color: #f1f3f4;
-    min-height: 480px;
+    min-height: 520px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -517,6 +529,56 @@ body > .container-fluid > .row > main.main-content {
     position: relative;
     overflow: visible !important;
     border-radius: 0 0 12px 12px;
+}
+
+#preview-popover1 .search-box {
+    border: 1px solid transparent;
+}
+
+#preview-popover1 .search-box:focus-within {
+    border-color: transparent;
+    box-shadow: none;
+}
+
+#preview-popover1 .search-box.active {
+    background-color: #ffffff !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+#preview-popover1 .search-icon {
+    position: static !important;
+    transform: none !important;
+    font-size: 20px !important;
+    color: #5f6368 !important;
+    margin-right: 12px !important;
+    top: auto !important;
+    left: auto !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    line-height: 1 !important;
+}
+
+#preview-popover1 .search-box input,
+#preview-popover1 .search-box .search-input {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    width: 100% !important;
+    font-size: 16px !important;
+    color: #202124 !important;
+}
+
+#preview-popover1 .search-box input:focus,
+#preview-popover1 .search-box .search-input:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Sidebar 1 Preview (Cách ly container để không chiếm toàn màn hình) */
@@ -579,6 +641,22 @@ body > .container-fluid > .row > main.main-content {
     padding: 0;
     border-radius: 0 0 12px 12px;
     overflow: visible;
+}
+
+#preview-topbar1 .search-icon {
+    position: static !important;
+    transform: none !important;
+    margin-right: 12px !important;
+}
+
+#preview-topbar1 .search-box input,
+#preview-topbar1 .search-box .search-input {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
 }
 
 /* Carousel 2 Preview */
