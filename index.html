@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="dropdown2.css">
     <link rel="stylesheet" href="modal1.css">
     <link rel="stylesheet" href="modal2.css">
+    <link rel="stylesheet" href="modal3.css">
     <link rel="stylesheet" href="offcanvas1.css">
     <link rel="stylesheet" href="offcanvas2.css">
     <link rel="stylesheet" href="offcanvas3.css">
@@ -64,6 +65,8 @@
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
     <link rel="stylesheet" href="breadcrumb1.css">
+    <link rel="stylesheet" href="breadcrumb2.css">
+    <link rel="stylesheet" href="breadcrumb3.css">
 
     <!-- CSS Gốc Layout & Navigation Portal -->
     <link rel="stylesheet" href="testcss.css">
@@ -18014,6 +18017,7 @@ document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#modal-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Account Selector Modal</a>
                                 <a href="#modal-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Analytics Add User Modal</a>
+                                <a href="#modal-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Analytics Filter Modal</a>
                             </div>
                         </div>
 
@@ -19240,6 +19244,648 @@ document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
                                 </div>
                             </div>
                             
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 3: Analytics Filter Modal (Hộp thoại tạo bộ lọc phân tích điều kiện phương diện & kiểu khớp) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="modal-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Filter Modal (Hộp thoại tạo bộ lọc phân tích điều kiện phương diện & kiểu khớp)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-modal3">
+                                    <button class="btn btn-add-filter" type="button" data-bs-toggle="modal" data-bs-target="#filterModal">
+    Thêm bộ lọc <i class="bi bi-plus fs-5"></i>
+</button>
+
+<div class="modal fade" id="filterModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered custom-modal-dialog">
+        <div class="modal-content custom-modal-content shadow">
+            
+            <div class="modal-header border-bottom py-2 px-3">
+                <div class="d-flex align-items-center gap-3 w-100">
+                    <button type="button" class="btn btn-close-custom shadow-none" data-bs-dismiss="modal">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <span class="modal-title-text flex-grow-1">Tạo bộ lọc</span>
+                    <button type="button" class="btn btn-close-custom shadow-none" data-bs-dismiss="modal">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="modal-body p-0 d-flex flex-column custom-scrollbar">
+                <div class="flex-grow-1 p-3">
+                    <div class="section-label mb-2">ĐIỀU KIỆN (TẠO TỐI ĐA 5)</div>
+                    
+                    <div class="filter-condition-card">
+                        
+                        <div class="form-group mb-3 position-relative">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <label class="form-label mb-0">Phương diện</label>
+                                <i class="bi bi-trash cursor-pointer text-secondary" id="clearBtn"></i>
+                            </div>
+                            
+                            <div class="custom-select-wrapper" id="dimSelectWrapper">
+                                <div class="custom-select-trigger" id="dimTrigger">
+                                    <span class="select-text">Chọn phương diện</span>
+                                    <i class="bi bi-caret-down-fill select-caret"></i>
+                                </div>
+                                <div class="custom-options-menu custom-scrollbar shadow">
+                                    <div class="menu-header px-3 py-2 border-bottom">
+                                        <button class="btn btn-outline-secondary btn-sm rounded-pill w-100 d-flex justify-content-start align-items-center gap-2">
+                                            <i class="bi bi-funnel"></i> Bộ lọc Trên nhiều kênh
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="menu-group-title">Chung</div>
+                                    <div class="custom-option nested-option" data-value="Tên bộ lọc dữ liệu thử nghiệm">Tên bộ lọc dữ liệu thử nghiệm</div>
+                                    <div class="custom-option nested-option" data-value="Giá trị lâu dài của người dùng">Giá trị lâu dài của người dùng</div>
+                                    <div class="custom-option nested-option" data-value="Ngày truy cập lần đầu">Ngày truy cập lần đầu</div>
+                                    
+                                    <div class="menu-group-title mt-2">Giờ</div>
+                                    <div class="custom-option nested-option" data-value="Ngày đầu tiên của phiên">Ngày đầu tiên của phiên</div>
+                                    <div class="custom-option nested-option" data-value="Giờ">Giờ</div>
+                                    <div class="custom-option nested-option" data-value="Ngày">Ngày</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3 position-relative">
+                            <label class="form-label d-flex align-items-center gap-1 mb-1">
+                                Loại Đối sánh <i class="bi bi-question-circle text-secondary" style="font-size: 13px;"></i>
+                            </label>
+                            
+                            <div class="custom-select-wrapper" id="matchSelectWrapper">
+                                <div class="custom-select-trigger" id="matchTrigger">
+                                    <span class="select-text">Chọn kiểu khớp</span>
+                                    <i class="bi bi-caret-down-fill select-caret"></i>
+                                </div>
+                                <div class="custom-options-menu custom-scrollbar shadow">
+                                    <div class="custom-option" data-value="khớp chính xác">khớp chính xác</div>
+                                    <div class="custom-option" data-value="chứa">chứa</div>
+                                    <div class="custom-option" data-value="bắt đầu bằng">bắt đầu bằng</div>
+                                    <div class="custom-option" data-value="kết thúc bằng">kết thúc bằng</div>
+                                    <div class="custom-option" data-value="khớp với biểu thức chính quy">khớp với biểu thức chính quy</div>
+                                    <div class="custom-option" data-value="khớp với một phần biểu thức">khớp với một phần biểu thức</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <label class="form-label mb-1">Giá trị</label>
+                            <input type="text" class="form-control custom-input" id="valueInput" placeholder="Nhập giá trị phương diện">
+                        </div>
+                        
+                        <div class="add-condition-footer border-top mt-3 pt-3 text-center">
+                            <button class="btn btn-link text-decoration-none add-condition-btn d-inline-flex align-items-center gap-1">
+                                <i class="bi bi-plus-lg"></i> Thêm điều kiện mới
+                            </button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-footer border-top p-3 d-flex justify-content-end bg-white">
+                <button class="btn btn-apply" id="applyBtn" disabled>Áp dụng</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-modal3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-modal3">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Hộp thoại tạo bộ lọc phân tích Google Analytics với dropdown chọn phương diện (Chung, Giờ...), kiểu khớp (khớp chính xác, chứa...) và ô nhập giá trị. Cần script <code>modal3.js</code> để kích hoạt chọn phương diện, tính năng xóa form và tự động kích hoạt nút "Áp dụng" khi đủ dữ liệu.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_modal3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-modal3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-modal3">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Filter Modal&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS modal3.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-modal3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-modal3">&lt;button class=&quot;btn btn-add-filter&quot; type=&quot;button&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#filterModal&quot;&gt;
+    Thêm bộ lọc &lt;i class=&quot;bi bi-plus fs-5&quot;&gt;&lt;/i&gt;
+&lt;/button&gt;
+
+&lt;div class=&quot;modal fade&quot; id=&quot;filterModal&quot; tabindex=&quot;-1&quot; aria-hidden=&quot;true&quot;&gt;
+    &lt;div class=&quot;modal-dialog modal-dialog-centered custom-modal-dialog&quot;&gt;
+        &lt;div class=&quot;modal-content custom-modal-content shadow&quot;&gt;
+            
+            &lt;div class=&quot;modal-header border-bottom py-2 px-3&quot;&gt;
+                &lt;div class=&quot;d-flex align-items-center gap-3 w-100&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-close-custom shadow-none&quot; data-bs-dismiss=&quot;modal&quot;&gt;
+                        &lt;i class=&quot;bi bi-arrow-left&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;modal-title-text flex-grow-1&quot;&gt;Tạo bộ lọc&lt;/span&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-close-custom shadow-none&quot; data-bs-dismiss=&quot;modal&quot;&gt;
+                        &lt;i class=&quot;bi bi-x-lg&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;modal-body p-0 d-flex flex-column custom-scrollbar&quot;&gt;
+                &lt;div class=&quot;flex-grow-1 p-3&quot;&gt;
+                    &lt;div class=&quot;section-label mb-2&quot;&gt;ĐIỀU KIỆN (TẠO TỐI ĐA 5)&lt;/div&gt;
+                    
+                    &lt;div class=&quot;filter-condition-card&quot;&gt;
+                        
+                        &lt;div class=&quot;form-group mb-3 position-relative&quot;&gt;
+                            &lt;div class=&quot;d-flex justify-content-between align-items-center mb-1&quot;&gt;
+                                &lt;label class=&quot;form-label mb-0&quot;&gt;Phương diện&lt;/label&gt;
+                                &lt;i class=&quot;bi bi-trash cursor-pointer text-secondary&quot; id=&quot;clearBtn&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                            
+                            &lt;div class=&quot;custom-select-wrapper&quot; id=&quot;dimSelectWrapper&quot;&gt;
+                                &lt;div class=&quot;custom-select-trigger&quot; id=&quot;dimTrigger&quot;&gt;
+                                    &lt;span class=&quot;select-text&quot;&gt;Chọn phương diện&lt;/span&gt;
+                                    &lt;i class=&quot;bi bi-caret-down-fill select-caret&quot;&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;custom-options-menu custom-scrollbar shadow&quot;&gt;
+                                    &lt;div class=&quot;menu-header px-3 py-2 border-bottom&quot;&gt;
+                                        &lt;button class=&quot;btn btn-outline-secondary btn-sm rounded-pill w-100 d-flex justify-content-start align-items-center gap-2&quot;&gt;
+                                            &lt;i class=&quot;bi bi-funnel&quot;&gt;&lt;/i&gt; Bộ lọc Trên nhiều kênh
+                                        &lt;/button&gt;
+                                    &lt;/div&gt;
+                                    
+                                    &lt;div class=&quot;menu-group-title&quot;&gt;Chung&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option nested-option&quot; data-value=&quot;Tên bộ lọc dữ liệu thử nghiệm&quot;&gt;Tên bộ lọc dữ liệu thử nghiệm&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option nested-option&quot; data-value=&quot;Giá trị lâu dài của người dùng&quot;&gt;Giá trị lâu dài của người dùng&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option nested-option&quot; data-value=&quot;Ngày truy cập lần đầu&quot;&gt;Ngày truy cập lần đầu&lt;/div&gt;
+                                    
+                                    &lt;div class=&quot;menu-group-title mt-2&quot;&gt;Giờ&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option nested-option&quot; data-value=&quot;Ngày đầu tiên của phiên&quot;&gt;Ngày đầu tiên của phiên&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option nested-option&quot; data-value=&quot;Giờ&quot;&gt;Giờ&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option nested-option&quot; data-value=&quot;Ngày&quot;&gt;Ngày&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;form-group mb-3 position-relative&quot;&gt;
+                            &lt;label class=&quot;form-label d-flex align-items-center gap-1 mb-1&quot;&gt;
+                                Loại Đối sánh &lt;i class=&quot;bi bi-question-circle text-secondary&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;/i&gt;
+                            &lt;/label&gt;
+                            
+                            &lt;div class=&quot;custom-select-wrapper&quot; id=&quot;matchSelectWrapper&quot;&gt;
+                                &lt;div class=&quot;custom-select-trigger&quot; id=&quot;matchTrigger&quot;&gt;
+                                    &lt;span class=&quot;select-text&quot;&gt;Chọn kiểu khớp&lt;/span&gt;
+                                    &lt;i class=&quot;bi bi-caret-down-fill select-caret&quot;&gt;&lt;/i&gt;
+                                &lt;/div&gt;
+                                &lt;div class=&quot;custom-options-menu custom-scrollbar shadow&quot;&gt;
+                                    &lt;div class=&quot;custom-option&quot; data-value=&quot;khớp chính xác&quot;&gt;khớp chính xác&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option&quot; data-value=&quot;chứa&quot;&gt;chứa&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option&quot; data-value=&quot;bắt đầu bằng&quot;&gt;bắt đầu bằng&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option&quot; data-value=&quot;kết thúc bằng&quot;&gt;kết thúc bằng&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option&quot; data-value=&quot;khớp với biểu thức chính quy&quot;&gt;khớp với biểu thức chính quy&lt;/div&gt;
+                                    &lt;div class=&quot;custom-option&quot; data-value=&quot;khớp với một phần biểu thức&quot;&gt;khớp với một phần biểu thức&lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class=&quot;form-group mb-0&quot;&gt;
+                            &lt;label class=&quot;form-label mb-1&quot;&gt;Giá trị&lt;/label&gt;
+                            &lt;input type=&quot;text&quot; class=&quot;form-control custom-input&quot; id=&quot;valueInput&quot; placeholder=&quot;Nhập giá trị phương diện&quot;&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;div class=&quot;add-condition-footer border-top mt-3 pt-3 text-center&quot;&gt;
+                            &lt;button class=&quot;btn btn-link text-decoration-none add-condition-btn d-inline-flex align-items-center gap-1&quot;&gt;
+                                &lt;i class=&quot;bi bi-plus-lg&quot;&gt;&lt;/i&gt; Thêm điều kiện mới
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                        
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;modal-footer border-top p-3 d-flex justify-content-end bg-white&quot;&gt;
+                &lt;button class=&quot;btn btn-apply&quot; id=&quot;applyBtn&quot; disabled&gt;Áp dụng&lt;/button&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-modal3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-modal3">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.btn-add-filter {
+    background-color: #ffffff;
+    border: 1px dashed #9aa0a6;
+    border-radius: 20px;
+    color: #1a73e8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 16px 6px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background-color 0.2s;
+}
+
+.btn-add-filter:hover {
+    background-color: #f8f9fa;
+    border-color: #5f6368;
+    color: #174ea6;
+}
+
+.btn-add-filter i {
+    color: #5f6368;
+}
+
+.custom-modal-dialog {
+    max-width: 400px;
+}
+
+.custom-modal-content {
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+}
+
+.modal-header {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.modal-title-text {
+    font-size: 16px;
+    color: #3c4043;
+    font-weight: 400;
+}
+
+.btn-close-custom {
+    color: #5f6368;
+    padding: 6px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-close-custom:hover {
+    background-color: #f1f3f4;
+    border-radius: 50%;
+}
+
+.section-label {
+    font-size: 11px;
+    color: #5f6368;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-condition-card {
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 16px 16px 12px 16px;
+    background-color: #ffffff;
+}
+
+.form-label {
+    font-size: 13px;
+    color: #3c4043;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    user-select: none;
+}
+
+.custom-select-trigger {
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-select-trigger:focus, .custom-select-wrapper.open .custom-select-trigger {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 0 1px #1a73e8;
+}
+
+.select-text {
+    font-size: 14px;
+    color: #202124;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.select-caret {
+    font-size: 10px;
+    color: #202124;
+}
+
+.custom-options-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-top: 4px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1060;
+    display: none;
+}
+
+.custom-select-wrapper.open .custom-options-menu {
+    display: block;
+}
+
+.menu-group-title {
+    font-size: 14px;
+    color: #202124;
+    padding: 8px 16px 8px 16px;
+    font-weight: 400;
+}
+
+.custom-option {
+    font-size: 14px;
+    color: #202124;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.nested-option {
+    padding-left: 32px;
+}
+
+.custom-option:hover {
+    background-color: #f1f3f4;
+}
+
+.custom-option.selected {
+    background-color: #e8eaed;
+}
+
+.custom-input {
+    font-size: 14px;
+    color: #202124;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.custom-input:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 1px #1a73e8;
+}
+
+.custom-input::placeholder {
+    color: #5f6368;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.add-condition-btn {
+    font-size: 14px;
+    color: #a8c7fa; 
+    font-weight: 500;
+}
+
+.add-condition-btn:hover {
+    color: #8ab4f8;
+}
+
+.btn-apply {
+    background-color: #e8eaed;
+    color: #9aa0a6;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
+    cursor: not-allowed;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-apply.active {
+    background-color: #1a73e8;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-apply.active:hover {
+    background-color: #1b66c9;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-modal3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-modal3">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const dimWrapper = document.getElementById(&#039;dimSelectWrapper&#039;);
+    const matchWrapper = document.getElementById(&#039;matchSelectWrapper&#039;);
+    const valueInput = document.getElementById(&#039;valueInput&#039;);
+    const clearBtn = document.getElementById(&#039;clearBtn&#039;);
+    const applyBtn = document.getElementById(&#039;applyBtn&#039;);
+
+    function checkFormStatus() {
+        const dimText = document.querySelector(&#039;#dimTrigger .select-text&#039;).textContent;
+        const matchText = document.querySelector(&#039;#matchTrigger .select-text&#039;).textContent;
+        const valText = valueInput.value.trim();
+
+        if (dimText !== &#039;Chọn phương diện&#039; &amp;&amp; matchText !== &#039;Chọn kiểu khớp&#039; &amp;&amp; valText !== &#039;&#039;) {
+            applyBtn.classList.add(&#039;active&#039;);
+            applyBtn.removeAttribute(&#039;disabled&#039;);
+        } else {
+            applyBtn.classList.remove(&#039;active&#039;);
+            applyBtn.setAttribute(&#039;disabled&#039;, &#039;true&#039;);
+        }
+    }
+
+    function setupCustomDropdown(wrapperId, defaultText) {
+        const wrapper = document.getElementById(wrapperId);
+        const trigger = wrapper.querySelector(&#039;.custom-select-trigger&#039;);
+        const textSpan = trigger.querySelector(&#039;.select-text&#039;);
+        const options = wrapper.querySelectorAll(&#039;.custom-option&#039;);
+
+        trigger.addEventListener(&#039;click&#039;, (e) =&gt; {
+            e.stopPropagation();
+            const isOpen = wrapper.classList.contains(&#039;open&#039;);
+            document.querySelectorAll(&#039;.custom-select-wrapper&#039;).forEach(w =&gt; w.classList.remove(&#039;open&#039;));
+            if (!isOpen) wrapper.classList.add(&#039;open&#039;);
+        });
+
+        options.forEach(opt =&gt; {
+            opt.addEventListener(&#039;click&#039;, (e) =&gt; {
+                e.stopPropagation();
+                options.forEach(o =&gt; o.classList.remove(&#039;selected&#039;));
+                opt.classList.add(&#039;selected&#039;);
+                textSpan.textContent = opt.getAttribute(&#039;data-value&#039;);
+                wrapper.classList.remove(&#039;open&#039;);
+                checkFormStatus();
+            });
+        });
+
+        wrapper.resetDropdown = () =&gt; {
+            options.forEach(o =&gt; o.classList.remove(&#039;selected&#039;));
+            textSpan.textContent = defaultText;
+        };
+    }
+
+    setupCustomDropdown(&#039;dimSelectWrapper&#039;, &#039;Chọn phương diện&#039;);
+    setupCustomDropdown(&#039;matchSelectWrapper&#039;, &#039;Chọn kiểu khớp&#039;);
+
+    valueInput.addEventListener(&#039;input&#039;, checkFormStatus);
+
+    document.addEventListener(&#039;click&#039;, () =&gt; {
+        document.querySelectorAll(&#039;.custom-select-wrapper&#039;).forEach(w =&gt; w.classList.remove(&#039;open&#039;));
+    });
+
+    clearBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        dimWrapper.resetDropdown();
+        matchWrapper.resetDropdown();
+        valueInput.value = &#039;&#039;;
+        checkFormStatus();
+    });
+});</code></pre>
+                                </div>
+                            </div>
                         </section>
                         
                     </div>
@@ -27785,6 +28431,8 @@ document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#breadcrumb-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Analytics Attribution Breadcrumb</a>
+                                <a href="#breadcrumb-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Analytics Attribution Pill Chain</a>
+                                <a href="#breadcrumb-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Analytics Attribution Segmented Track</a>
                             </div>
                         </div>
 
@@ -27806,7 +28454,7 @@ document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
                                     </span>
                                     <span class="badge bg-light text-secondary border">Interactive</span>
                                 </div>
-                                <div class="preview-container p-4" id="preview-breadcrumb1">
+                                <div class="preview-container p-4 bg-light d-flex justify-content-center" id="preview-breadcrumb1">
                                     <div class="attribution-container p-4 w-100 d-flex overflow-x-auto custom-scrollbar">
     
     <div class="chevron-step text-step">
@@ -28098,6 +28746,556 @@ document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
 
 .custom-scrollbar::-webkit-scrollbar {
     height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 2: Analytics Attribution Pill Chain (Chuỗi điểm tiếp xúc dạng thẻ bo tròn tách rời kèm tỷ lệ & nút hoàn tất) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="breadcrumb-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Attribution Pill Chain (Chuỗi điểm tiếp xúc dạng thẻ bo tròn tách rời kèm tỷ lệ & nút hoàn tất)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4 bg-light d-flex justify-content-center" id="preview-breadcrumb2">
+                                    <div class="w-100" style="max-width: 1200px;">
+    <div class="style1-container d-flex align-items-center gap-3 w-100 overflow-x-auto pb-3 custom-scrollbar">
+        <div class="s1-item">
+            <span class="s1-text">Những điểm tiếp xúc ở đầu</span>
+            <span class="s1-badge">5.48%</span>
+        </div>
+        
+        <i class="bi bi-chevron-right text-secondary fs-5"></i>
+        
+        <div class="s1-item">
+            <span class="s1-text">Những điểm tiếp xúc ở giữa</span>
+            <span class="s1-badge">3.25%</span>
+        </div>
+        
+        <i class="bi bi-chevron-right text-secondary fs-5"></i>
+        
+        <div class="s1-item">
+            <span class="s1-text">Những điểm tiếp xúc ở cuối</span>
+            <span class="s1-badge">91.27%</span>
+        </div>
+        
+        <i class="bi bi-chevron-right text-secondary fs-5"></i>
+        
+        <div class="s1-check">
+            <i class="bi bi-check"></i>
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-breadcrumb2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-breadcrumb2">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Chuỗi thanh điều hướng tiến trình phân bổ chuyển đổi thiết kế dạng các thẻ pill bo tròn độc lập (border-radius: 50px), hiệu ứng hover đổi viền xanh Google (#4285f4) và nút tick hoàn thành dạng tròn nổi bật. Hỗ trợ cuộn ngang thanh cuộn mượt mà với <code>.custom-scrollbar</code>.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_breadcrumb2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-breadcrumb2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-breadcrumb2">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Attribution Pill Chain&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS breadcrumb2.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-breadcrumb2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-breadcrumb2">&lt;div class=&quot;w-100&quot; style=&quot;max-width: 1200px;&quot;&gt;
+    &lt;div class=&quot;style1-container d-flex align-items-center gap-3 w-100 overflow-x-auto pb-3 custom-scrollbar&quot;&gt;
+        &lt;div class=&quot;s1-item&quot;&gt;
+            &lt;span class=&quot;s1-text&quot;&gt;Những điểm tiếp xúc ở đầu&lt;/span&gt;
+            &lt;span class=&quot;s1-badge&quot;&gt;5.48%&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;i class=&quot;bi bi-chevron-right text-secondary fs-5&quot;&gt;&lt;/i&gt;
+        
+        &lt;div class=&quot;s1-item&quot;&gt;
+            &lt;span class=&quot;s1-text&quot;&gt;Những điểm tiếp xúc ở giữa&lt;/span&gt;
+            &lt;span class=&quot;s1-badge&quot;&gt;3.25%&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;i class=&quot;bi bi-chevron-right text-secondary fs-5&quot;&gt;&lt;/i&gt;
+        
+        &lt;div class=&quot;s1-item&quot;&gt;
+            &lt;span class=&quot;s1-text&quot;&gt;Những điểm tiếp xúc ở cuối&lt;/span&gt;
+            &lt;span class=&quot;s1-badge&quot;&gt;91.27%&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;i class=&quot;bi bi-chevron-right text-secondary fs-5&quot;&gt;&lt;/i&gt;
+        
+        &lt;div class=&quot;s1-check&quot;&gt;
+            &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-breadcrumb2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-breadcrumb2">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.style1-container {
+    padding: 4px;
+}
+
+.s1-item {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    flex-shrink: 0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.s1-item:hover {
+    border-color: #4285f4;
+    box-shadow: 0 2px 6px rgba(66,133,244,0.15);
+}
+
+.s1-text {
+    font-size: 14px;
+    color: #202124;
+    border-bottom: 1px dashed #9aa0a6;
+    padding-bottom: 1px;
+}
+
+.s1-badge {
+    background-color: #3c4043;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    line-height: 1.2;
+}
+
+.s1-check {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4285f4;
+    color: #ffffff;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(66,133,244,0.3);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.s1-check:hover {
+    background-color: #3367d6;
+    transform: scale(1.05);
+}
+
+.s1-check i {
+    font-size: 24px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #dadce0;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #bdc1c6;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 3: Analytics Attribution Segmented Track (Thanh điểm tiếp xúc dạng thanh liền mạch phân đoạn kèm badge tỷ lệ) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="breadcrumb-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-info text-dark px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Attribution Segmented Track (Thanh điểm tiếp xúc dạng thanh liền mạch phân đoạn kèm badge tỷ lệ)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container p-4 bg-light d-flex justify-content-center" id="preview-breadcrumb3">
+                                    <div class="w-100" style="max-width: 1200px;">
+    <div class="style2-container d-flex align-items-center w-100 overflow-x-auto pb-3 custom-scrollbar">
+        <div class="s2-track d-flex">
+            <div class="s2-item">
+                <span class="s2-text">Những điểm tiếp xúc ở đầu</span>
+                <span class="s2-badge">5.48%</span>
+            </div>
+            
+            <div class="s2-divider"></div>
+            
+            <div class="s2-item">
+                <span class="s2-text">Những điểm tiếp xúc ở giữa</span>
+                <span class="s2-badge">3.25%</span>
+            </div>
+            
+            <div class="s2-divider"></div>
+            
+            <div class="s2-item">
+                <span class="s2-text">Những điểm tiếp xúc ở cuối</span>
+                <span class="s2-badge">91.27%</span>
+            </div>
+            
+            <div class="s2-divider"></div>
+            
+            <div class="s2-check-container">
+                <div class="s2-check-inner">
+                    <i class="bi bi-check"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-breadcrumb3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-breadcrumb3">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Thanh tiến trình phân bổ điểm tiếp xúc thiết kế dạng track liền mạch nguyên khối (Segmented Track) chia ô bằng các đường ngăn cách <code>.s2-divider</code>, tích hợp badge tỷ lệ phần trăm bo góc và icon tick tròn hoàn tất ở cuối thanh.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_breadcrumb3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-breadcrumb3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-breadcrumb3">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Attribution Segmented Track&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS breadcrumb3.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-breadcrumb3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-breadcrumb3">&lt;div class=&quot;w-100&quot; style=&quot;max-width: 1200px;&quot;&gt;
+    &lt;div class=&quot;style2-container d-flex align-items-center w-100 overflow-x-auto pb-3 custom-scrollbar&quot;&gt;
+        &lt;div class=&quot;s2-track d-flex&quot;&gt;
+            &lt;div class=&quot;s2-item&quot;&gt;
+                &lt;span class=&quot;s2-text&quot;&gt;Những điểm tiếp xúc ở đầu&lt;/span&gt;
+                &lt;span class=&quot;s2-badge&quot;&gt;5.48%&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;s2-divider&quot;&gt;&lt;/div&gt;
+            
+            &lt;div class=&quot;s2-item&quot;&gt;
+                &lt;span class=&quot;s2-text&quot;&gt;Những điểm tiếp xúc ở giữa&lt;/span&gt;
+                &lt;span class=&quot;s2-badge&quot;&gt;3.25%&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;s2-divider&quot;&gt;&lt;/div&gt;
+            
+            &lt;div class=&quot;s2-item&quot;&gt;
+                &lt;span class=&quot;s2-text&quot;&gt;Những điểm tiếp xúc ở cuối&lt;/span&gt;
+                &lt;span class=&quot;s2-badge&quot;&gt;91.27%&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;s2-divider&quot;&gt;&lt;/div&gt;
+            
+            &lt;div class=&quot;s2-check-container&quot;&gt;
+                &lt;div class=&quot;s2-check-inner&quot;&gt;
+                    &lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-breadcrumb3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-breadcrumb3">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.style2-container {
+    padding: 4px;
+}
+
+.s2-track {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    flex-shrink: 0;
+}
+
+.s2-item {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.s2-item:hover {
+    background-color: #f8f9fa;
+}
+
+.s2-item:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.s2-divider {
+    width: 1px;
+    background-color: #dadce0;
+    margin: 8px 0;
+}
+
+.s2-text {
+    font-size: 14px;
+    color: #202124;
+    border-bottom: 1px dashed #9aa0a6;
+    padding-bottom: 1px;
+}
+
+.s2-badge {
+    background-color: #f1f3f4;
+    color: #202124;
+    border: 1px solid #dadce0;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    line-height: 1.2;
+}
+
+.s2-check-container {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.s2-check-inner {
+    width: 24px;
+    height: 24px;
+    background-color: #4285f4;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s2-check-inner i {
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
     background: transparent;

@@ -533,6 +533,18 @@ const categories = [
                 previewId: 'preview-modal2',
                 previewClass: '',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Hộp thoại phân quyền toàn diện kích thước 90vw x 90vh với đầy đủ danh sách vai trò chuẩn (Quản trị viên, Người chỉnh sửa, Người xem...) và các quy định hạn chế dữ liệu tài sản. Bấm nút trong bản xem trước để mở Modal.'
+            },
+            {
+                sampleId: 'modal-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-success',
+                title: 'Analytics Filter Modal (Hộp thoại tạo bộ lọc phân tích điều kiện phương diện & kiểu khớp)',
+                htmlFile: 'modal3.html',
+                cssFile: 'modal3.css',
+                jsFile: 'modal3.js',
+                previewId: 'preview-modal3',
+                previewClass: '',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Hộp thoại tạo bộ lọc phân tích Google Analytics với dropdown chọn phương diện (Chung, Giờ...), kiểu khớp (khớp chính xác, chứa...) và ô nhập giá trị. Cần script <code>modal3.js</code> để kích hoạt chọn phương diện, tính năng xóa form và tự động kích hoạt nút "Áp dụng" khi đủ dữ liệu.'
             }
         ]
     },
@@ -793,8 +805,32 @@ const categories = [
                 cssFile: 'breadcrumb1.css',
                 jsFile: null,
                 previewId: 'preview-breadcrumb1',
-                previewClass: 'p-4',
+                previewClass: 'p-4 bg-light d-flex justify-content-center',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Component breadcrumb thiết kế theo dạng mũi tên liên hoàn (Chevron shape) sử dụng kỹ thuật pseudo-elements <code>::before</code> và <code>::after</code> với góc xiên 45 độ, hiển thị các điểm tiếp xúc đầu, giữa và cuối kèm tỷ lệ phần trăm phân bổ.'
+            },
+            {
+                sampleId: 'breadcrumb-mau-2',
+                badgeText: 'Mẫu 2',
+                badgeClass: 'text-bg-primary',
+                title: 'Analytics Attribution Pill Chain (Chuỗi điểm tiếp xúc dạng thẻ bo tròn tách rời kèm tỷ lệ & nút hoàn tất)',
+                htmlFile: 'breadcrumb2.html',
+                cssFile: 'breadcrumb2.css',
+                jsFile: null,
+                previewId: 'preview-breadcrumb2',
+                previewClass: 'p-4 bg-light d-flex justify-content-center',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Chuỗi thanh điều hướng tiến trình phân bổ chuyển đổi thiết kế dạng các thẻ pill bo tròn độc lập (border-radius: 50px), hiệu ứng hover đổi viền xanh Google (#4285f4) và nút tick hoàn thành dạng tròn nổi bật. Hỗ trợ cuộn ngang thanh cuộn mượt mà với <code>.custom-scrollbar</code>.'
+            },
+            {
+                sampleId: 'breadcrumb-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-info text-dark',
+                title: 'Analytics Attribution Segmented Track (Thanh điểm tiếp xúc dạng thanh liền mạch phân đoạn kèm badge tỷ lệ)',
+                htmlFile: 'breadcrumb3.html',
+                cssFile: 'breadcrumb3.css',
+                jsFile: null,
+                previewId: 'preview-breadcrumb3',
+                previewClass: 'p-4 bg-light d-flex justify-content-center',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Thanh tiến trình phân bổ điểm tiếp xúc thiết kế dạng track liền mạch nguyên khối (Segmented Track) chia ô bằng các đường ngăn cách <code>.s2-divider</code>, tích hợp badge tỷ lệ phần trăm bo góc và icon tick tròn hoàn tất ở cuối thanh.'
             }
         ]
     }
@@ -1135,6 +1171,7 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="dropdown2.css">
     <link rel="stylesheet" href="modal1.css">
     <link rel="stylesheet" href="modal2.css">
+    <link rel="stylesheet" href="modal3.css">
     <link rel="stylesheet" href="offcanvas1.css">
     <link rel="stylesheet" href="offcanvas2.css">
     <link rel="stylesheet" href="offcanvas3.css">
@@ -1151,6 +1188,8 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="tabs1.css">
     <link rel="stylesheet" href="topbar1.css">
     <link rel="stylesheet" href="breadcrumb1.css">
+    <link rel="stylesheet" href="breadcrumb2.css">
+    <link rel="stylesheet" href="breadcrumb3.css">
 
     <!-- CSS Gốc Layout & Navigation Portal -->
     <link rel="stylesheet" href="testcss.css">

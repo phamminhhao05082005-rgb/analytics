@@ -2536,6 +2536,81 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Modal 3 (Analytics Filter Modal)
+    const filterModal = document.getElementById('filterModal');
+    if (filterModal) {
+        const dimWrapper = filterModal.querySelector('#dimSelectWrapper');
+        const matchWrapper = filterModal.querySelector('#matchSelectWrapper');
+        const valueInput = filterModal.querySelector('#valueInput');
+        const clearBtn = filterModal.querySelector('#clearBtn');
+        const applyBtn = filterModal.querySelector('#applyBtn');
+
+        function checkFormStatus() {
+            const dimText = filterModal.querySelector('#dimTrigger .select-text')?.textContent;
+            const matchText = filterModal.querySelector('#matchTrigger .select-text')?.textContent;
+            const valText = valueInput ? valueInput.value.trim() : '';
+
+            if (dimText !== 'Chọn phương diện' && matchText !== 'Chọn kiểu khớp' && valText !== '') {
+                applyBtn?.classList.add('active');
+                applyBtn?.removeAttribute('disabled');
+            } else {
+                applyBtn?.classList.remove('active');
+                applyBtn?.setAttribute('disabled', 'true');
+            }
+        }
+
+        function setupCustomDropdown(wrapperId, defaultText) {
+            const wrapper = filterModal.querySelector('#' + wrapperId);
+            if (!wrapper) return;
+            const trigger = wrapper.querySelector('.custom-select-trigger');
+            const textSpan = trigger?.querySelector('.select-text');
+            const options = wrapper.querySelectorAll('.custom-option');
+
+            trigger?.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = wrapper.classList.contains('open');
+                filterModal.querySelectorAll('.custom-select-wrapper').forEach(w => w.classList.remove('open'));
+                if (!isOpen) wrapper.classList.add('open');
+            });
+
+            options.forEach(opt => {
+                opt.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    options.forEach(o => o.classList.remove('selected'));
+                    opt.classList.add('selected');
+                    if (textSpan) textSpan.textContent = opt.getAttribute('data-value');
+                    wrapper.classList.remove('open');
+                    checkFormStatus();
+                });
+            });
+
+            wrapper.resetDropdown = () => {
+                options.forEach(o => o.classList.remove('selected'));
+                if (textSpan) textSpan.textContent = defaultText;
+            };
+        }
+
+        setupCustomDropdown('dimSelectWrapper', 'Chọn phương diện');
+        setupCustomDropdown('matchSelectWrapper', 'Chọn kiểu khớp');
+
+        if (valueInput) {
+            valueInput.addEventListener('input', checkFormStatus);
+        }
+
+        document.addEventListener('click', () => {
+            filterModal.querySelectorAll('.custom-select-wrapper').forEach(w => w.classList.remove('open'));
+        });
+
+        if (clearBtn && dimWrapper && matchWrapper && valueInput) {
+            clearBtn.addEventListener('click', () => {
+                dimWrapper.resetDropdown?.();
+                matchWrapper.resetDropdown?.();
+                valueInput.value = '';
+                checkFormStatus();
+            });
+        }
+    }
+
     // M. Đồng bộ URL Hash
     setupTabHashSync();
 });
