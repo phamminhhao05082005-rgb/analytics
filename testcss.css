@@ -349,6 +349,8 @@ body > .container-fluid > .row > main.main-content {
 .preview-card:has(#preview-popover1),
 .preview-card:has(#preview-dropdown1),
 .preview-card:has(#preview-dropdown2),
+.preview-card:has(#preview-dropdown3),
+.preview-card:has(#preview-dropdown4),
 .preview-card:has(#preview-card4),
 .preview-card:has(#preview-card6),
 .preview-card:has(#preview-card8),
@@ -514,6 +516,148 @@ body > .container-fluid > .row > main.main-content {
     border-radius: 0 0 12px 12px;
 }
 
+#preview-dropdown3 {
+    background-color: #f1f3f4;
+    min-height: 560px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible !important;
+    border-radius: 0 0 12px 12px;
+}
+
+#preview-dropdown3 .custom-dropdown-menu {
+    width: 420px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+    border: 1px solid #dadce0 !important;
+}
+
+#preview-dropdown3 .search-input {
+    font-size: 14px !important;
+    color: #202124 !important;
+    height: auto !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+#preview-dropdown3 .btn-apply {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #9aa0a6 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: color 0.2s;
+}
+
+#preview-dropdown3 .btn-apply.active {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1a73e8 !important;
+    cursor: pointer !important;
+}
+
+#preview-dropdown3 .btn-apply.active:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #174ea6 !important;
+}
+
+#preview-dropdown3 .btn-cancel {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1a73e8 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transition: color 0.2s;
+}
+
+#preview-dropdown3 .btn-cancel:hover {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #174ea6 !important;
+}
+
+#preview-dropdown4 {
+    background-color: #f1f3f4;
+    min-height: 680px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    position: relative;
+    overflow: visible !important;
+    border-radius: 0 0 12px 12px;
+}
+
+#preview-dropdown4 .settings-dropdown-menu {
+    width: 600px !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    border: 1px solid #dadce0 !important;
+    border-radius: 8px !important;
+}
+
+#preview-dropdown4 .btn-apply {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1a73e8 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 4px 8px !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+#preview-dropdown4 .btn-apply:disabled {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #9aa0a6 !important;
+    cursor: not-allowed !important;
+}
+
+#preview-dropdown4 .btn-apply:not(:disabled):hover {
+    background-color: #f8f9fa !important;
+    color: #174ea6 !important;
+}
+
+#preview-dropdown4 .btn-cancel {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #1a73e8 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 4px 8px !important;
+    box-shadow: none !important;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+#preview-dropdown4 .btn-cancel:hover {
+    background-color: #f8f9fa !important;
+    color: #174ea6 !important;
+}
+
 /* Modal 1 */
 #preview-modal1 {
     background-color: #f8fafc;
@@ -548,6 +692,13 @@ body > .container-fluid > .row > main.main-content {
     border-radius: 0 0 12px 12px;
     padding: 2rem 1.5rem;
     overflow-x: auto;
+}
+
+#preview-tabs1 .custom-dropdown-menu {
+    width: auto !important;
+    min-width: 200px !important;
+    padding: 6px 0 !important;
+    overflow: visible !important;
 }
 
 /* Popover 1 */

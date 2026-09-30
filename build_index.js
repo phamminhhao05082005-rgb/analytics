@@ -472,7 +472,7 @@ const categories = [
         id: 'tab-dropdowns',
         btnId: 'tab-dropdowns-btn',
         title: '4. Dropdown Components',
-        desc: 'Các menu thả xuống cho Apps Launcher và Quản lý tài khoản cá nhân',
+        desc: 'Các menu thả xuống cho Apps Launcher, Quản lý tài khoản cá nhân, Chọn lượt chuyển đổi và Cài đặt phân bổ',
         icon: 'bi-menu-button-wide-fill text-danger',
         active: false,
         items: [
@@ -499,6 +499,30 @@ const categories = [
                 previewId: 'preview-dropdown2',
                 previewClass: '',
                 depNote: '<strong>Lưu ý cho Dev:</strong> Menu quản lý tài khoản hiển thị avatar màu cùng liên kết chính sách và các thao tác tài khoản nhanh.'
+            },
+            {
+                sampleId: 'dropdown-mau-3',
+                badgeText: 'Mẫu 3',
+                badgeClass: 'text-bg-warning text-dark',
+                title: 'Analytics Conversions Dropdown (Menu chọn các hành động chuyển đổi đa cấp có tìm kiếm & checkbox)',
+                htmlFile: 'dropdown3.html',
+                cssFile: 'dropdown3.css',
+                jsFile: 'dropdown3.js',
+                previewId: 'preview-dropdown3',
+                previewClass: '',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Menu chọn lượt chuyển đổi đa cấp tích hợp ô tìm kiếm lọc nhanh danh mục tức thì, hộp thông báo hướng dẫn phân bổ tài sản, nhóm danh mục thu gọn/mở rộng bằng icon chevron, checkbox cha/con tự động đồng bộ trạng thái bán phần (indeterminate) và nút Áp dụng/Hủy. Cần nhúng file <code>dropdown3.js</code> để kích hoạt tương tác.'
+            },
+            {
+                sampleId: 'dropdown-mau-4',
+                badgeText: 'Mẫu 4',
+                badgeClass: 'text-bg-info text-white',
+                title: 'Analytics Conversion Settings Dropdown (Menu cấu hình mô hình phân bổ và thời điểm phân bổ chuyển đổi)',
+                htmlFile: 'dropdown4.html',
+                cssFile: 'dropdown4.css',
+                jsFile: 'dropdown4.js',
+                previewId: 'preview-dropdown4',
+                previewClass: '',
+                depNote: '<strong>Lưu ý cho Dev:</strong> Menu cấu hình cài đặt chuyển đổi đa tiêu chí gồm kênh đóng góp, các nhóm radio chọn mô hình phân bổ (Dựa trên dữ liệu, Lượt nhấp cuối cùng) và thời điểm phân bổ (theo thời gian chuyển đổi, theo thời gian tương tác) với hiệu ứng background tròn nổi bật khi active. Tự động kiểm tra thay đổi để kích hoạt nút Áp dụng và khôi phục trạng thái ban đầu khi Hủy hoặc đóng menu. Cần nhúng file <code>dropdown4.js</code> để kích hoạt tương tác.'
             }
         ]
     },
@@ -1169,6 +1193,8 @@ const fullHtml = `<!DOCTYPE html>
     <link rel="stylesheet" href="carousel3.css">
     <link rel="stylesheet" href="dropdown1.css">
     <link rel="stylesheet" href="dropdown2.css">
+    <link rel="stylesheet" href="dropdown3.css">
+    <link rel="stylesheet" href="dropdown4.css">
     <link rel="stylesheet" href="modal1.css">
     <link rel="stylesheet" href="modal2.css">
     <link rel="stylesheet" href="modal3.css">

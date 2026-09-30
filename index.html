@@ -46,6 +46,8 @@
     <link rel="stylesheet" href="carousel3.css">
     <link rel="stylesheet" href="dropdown1.css">
     <link rel="stylesheet" href="dropdown2.css">
+    <link rel="stylesheet" href="dropdown3.css">
+    <link rel="stylesheet" href="dropdown4.css">
     <link rel="stylesheet" href="modal1.css">
     <link rel="stylesheet" href="modal2.css">
     <link rel="stylesheet" href="modal3.css">
@@ -17269,11 +17271,13 @@ document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
                         <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
                             <div>
                                 <h1 class="h3 fw-bold mb-1">4. Dropdown Components</h1>
-                                <p class="text-muted mb-0 small">Các menu thả xuống cho Apps Launcher và Quản lý tài khoản cá nhân</p>
+                                <p class="text-muted mb-0 small">Các menu thả xuống cho Apps Launcher, Quản lý tài khoản cá nhân, Chọn lượt chuyển đổi và Cài đặt phân bổ</p>
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#dropdown-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Apps Dropdown</a>
                                 <a href="#dropdown-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Profile Dropdown</a>
+                                <a href="#dropdown-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Analytics Conversions Dropdown</a>
+                                <a href="#dropdown-mau-4" class="btn btn-sm btn-outline-secondary">Mẫu 4: Analytics Conversion Settings Dropdown</a>
                             </div>
                         </div>
 
@@ -17999,6 +18003,1156 @@ document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
                                 </div>
                             </div>
                             
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 3: Analytics Conversions Dropdown (Menu chọn các hành động chuyển đổi đa cấp có tìm kiếm & checkbox) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="dropdown-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Conversions Dropdown (Menu chọn các hành động chuyển đổi đa cấp có tìm kiếm & checkbox)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-dropdown3">
+                                    <div class="d-flex gap-2 align-items-center">
+    
+    <div class="dropdown custom-dropdown-container">
+        <button class="btn btn-dropdown-trigger d-flex justify-content-between align-items-center gap-2" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+            <span id="selectedCountText">1 lượt chuyển đổi</span>
+            <i class="bi bi-caret-down-fill" style="font-size: 10px;"></i>
+        </button>
+        
+        <div class="dropdown-menu custom-dropdown-menu shadow" aria-labelledby="dropdownMenuButton">
+            
+            <div class="search-container d-flex align-items-center px-3 py-2 border-bottom">
+                <input type="text" class="form-control shadow-none border-0 p-0 search-input" id="searchConversion" placeholder="Tìm kiếm">
+                <i class="bi bi-search text-secondary ms-2"></i>
+            </div>
+            
+            <div class="info-box px-3 py-2 border-bottom">
+                Khi bạn chọn Google Analytics, báo cáo này chỉ cho thấy dữ liệu về các lượt chuyển đổi của tài sản này, được phân bổ trên cả kênh có tính phí và kênh tự nhiên.
+            </div>
+            
+            <div class="list-container custom-scrollbar py-1">
+                
+                <div class="conv-group">
+                    <div class="group-header d-flex justify-content-between align-items-center px-3 py-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="checkbox" class="custom-cb conv-checkbox parent-cb">
+                            <i class="bi bi-cart2 text-secondary fs-5"></i>
+                            <span class="parent-label-text">Thêm vào giỏ hàng</span>
+                        </div>
+                        <i class="bi bi-chevron-up text-dark fs-6 group-chevron cursor-pointer px-2 py-1"></i>
+                    </div>
+                    <div class="group-children pb-2">
+                        <div class="child-item d-flex align-items-start gap-2 px-3 py-2">
+                            <input type="checkbox" class="custom-cb conv-checkbox child-cb mt-1">
+                            <span class="child-label-text">GA4 - Google Merchandise Store (web) add_to_cart (All web...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conv-group">
+                    <div class="group-header d-flex justify-content-between align-items-center px-3 py-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="checkbox" class="custom-cb conv-checkbox parent-cb">
+                            <i class="bi bi-credit-card text-secondary fs-5"></i>
+                            <span class="parent-label-text">Mua hàng</span>
+                        </div>
+                        <i class="bi bi-chevron-up text-dark fs-6 group-chevron cursor-pointer px-2 py-1"></i>
+                    </div>
+                    <div class="group-children pb-2">
+                        <div class="child-item d-flex align-items-start gap-2 px-3 py-2">
+                            <input type="checkbox" class="custom-cb conv-checkbox child-cb mt-1">
+                            <span class="child-label-text">GA4 - Google Merchandise Store (web) purchase (All websit...</span>
+                        </div>
+                        <div class="child-item d-flex align-items-start gap-2 px-3 py-2">
+                            <input type="checkbox" class="custom-cb conv-checkbox child-cb mt-1">
+                            <span class="child-label-text">GA4 - Google Merch Shop (web) xyz (All websites)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conv-group">
+                    <div class="group-header d-flex justify-content-between align-items-center px-3 py-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <input type="checkbox" class="custom-cb conv-checkbox parent-cb" checked>
+                            <i class="bi bi-bullseye text-secondary fs-5"></i>
+                            <span class="parent-label-text">Khác</span>
+                        </div>
+                        <i class="bi bi-chevron-up text-dark fs-6 group-chevron cursor-pointer px-2 py-1"></i>
+                    </div>
+                    <div class="group-children pb-2">
+                        <div class="child-item d-flex align-items-start gap-2 px-3 py-2">
+                            <input type="checkbox" class="custom-cb conv-checkbox child-cb mt-1" checked>
+                            <span class="child-label-text">GA4 - Google Merchandise Store (web) add_payment_info (...</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="dropdown-footer border-top px-3 py-2 d-flex justify-content-between align-items-center bg-white">
+                <button class="btn btn-link text-decoration-none p-0 d-flex align-items-center gap-1 btn-create-action">
+                    <i class="bi bi-plus"></i> Tạo hành động chuyển đổi
+                </button>
+                <div class="d-flex gap-3">
+                    <button class="btn btn-cancel p-0" id="cancelConvBtn">Hủy</button>
+                    <button class="btn btn-apply p-0" id="applyConvBtn" disabled>Áp dụng</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-dropdown3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-dropdown3">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Menu chọn lượt chuyển đổi đa cấp tích hợp ô tìm kiếm lọc nhanh danh mục tức thì, hộp thông báo hướng dẫn phân bổ tài sản, nhóm danh mục thu gọn/mở rộng bằng icon chevron, checkbox cha/con tự động đồng bộ trạng thái bán phần (indeterminate) và nút Áp dụng/Hủy. Cần nhúng file <code>dropdown3.js</code> để kích hoạt tương tác.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_dropdown3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-dropdown3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-dropdown3">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Conversions Dropdown&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS dropdown3.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-dropdown3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-dropdown3">&lt;div class=&quot;d-flex gap-2 align-items-center&quot;&gt;
+    
+    &lt;div class=&quot;dropdown custom-dropdown-container&quot;&gt;
+        &lt;button class=&quot;btn btn-dropdown-trigger d-flex justify-content-between align-items-center gap-2&quot; type=&quot;button&quot; id=&quot;dropdownMenuButton&quot; data-bs-toggle=&quot;dropdown&quot; data-bs-auto-close=&quot;outside&quot; aria-expanded=&quot;false&quot;&gt;
+            &lt;span id=&quot;selectedCountText&quot;&gt;1 lượt chuyển đổi&lt;/span&gt;
+            &lt;i class=&quot;bi bi-caret-down-fill&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        
+        &lt;div class=&quot;dropdown-menu custom-dropdown-menu shadow&quot; aria-labelledby=&quot;dropdownMenuButton&quot;&gt;
+            
+            &lt;div class=&quot;search-container d-flex align-items-center px-3 py-2 border-bottom&quot;&gt;
+                &lt;input type=&quot;text&quot; class=&quot;form-control shadow-none border-0 p-0 search-input&quot; id=&quot;searchConversion&quot; placeholder=&quot;Tìm kiếm&quot;&gt;
+                &lt;i class=&quot;bi bi-search text-secondary ms-2&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;info-box px-3 py-2 border-bottom&quot;&gt;
+                Khi bạn chọn Google Analytics, báo cáo này chỉ cho thấy dữ liệu về các lượt chuyển đổi của tài sản này, được phân bổ trên cả kênh có tính phí và kênh tự nhiên.
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;list-container custom-scrollbar py-1&quot;&gt;
+                
+                &lt;div class=&quot;conv-group&quot;&gt;
+                    &lt;div class=&quot;group-header d-flex justify-content-between align-items-center px-3 py-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;custom-cb conv-checkbox parent-cb&quot;&gt;
+                            &lt;i class=&quot;bi bi-cart2 text-secondary fs-5&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;parent-label-text&quot;&gt;Thêm vào giỏ hàng&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-chevron-up text-dark fs-6 group-chevron cursor-pointer px-2 py-1&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group-children pb-2&quot;&gt;
+                        &lt;div class=&quot;child-item d-flex align-items-start gap-2 px-3 py-2&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;custom-cb conv-checkbox child-cb mt-1&quot;&gt;
+                            &lt;span class=&quot;child-label-text&quot;&gt;GA4 - Google Merchandise Store (web) add_to_cart (All web...&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;conv-group&quot;&gt;
+                    &lt;div class=&quot;group-header d-flex justify-content-between align-items-center px-3 py-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;custom-cb conv-checkbox parent-cb&quot;&gt;
+                            &lt;i class=&quot;bi bi-credit-card text-secondary fs-5&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;parent-label-text&quot;&gt;Mua hàng&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-chevron-up text-dark fs-6 group-chevron cursor-pointer px-2 py-1&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group-children pb-2&quot;&gt;
+                        &lt;div class=&quot;child-item d-flex align-items-start gap-2 px-3 py-2&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;custom-cb conv-checkbox child-cb mt-1&quot;&gt;
+                            &lt;span class=&quot;child-label-text&quot;&gt;GA4 - Google Merchandise Store (web) purchase (All websit...&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;child-item d-flex align-items-start gap-2 px-3 py-2&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;custom-cb conv-checkbox child-cb mt-1&quot;&gt;
+                            &lt;span class=&quot;child-label-text&quot;&gt;GA4 - Google Merch Shop (web) xyz (All websites)&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;conv-group&quot;&gt;
+                    &lt;div class=&quot;group-header d-flex justify-content-between align-items-center px-3 py-2&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;custom-cb conv-checkbox parent-cb&quot; checked&gt;
+                            &lt;i class=&quot;bi bi-bullseye text-secondary fs-5&quot;&gt;&lt;/i&gt;
+                            &lt;span class=&quot;parent-label-text&quot;&gt;Khác&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-chevron-up text-dark fs-6 group-chevron cursor-pointer px-2 py-1&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;group-children pb-2&quot;&gt;
+                        &lt;div class=&quot;child-item d-flex align-items-start gap-2 px-3 py-2&quot;&gt;
+                            &lt;input type=&quot;checkbox&quot; class=&quot;custom-cb conv-checkbox child-cb mt-1&quot; checked&gt;
+                            &lt;span class=&quot;child-label-text&quot;&gt;GA4 - Google Merchandise Store (web) add_payment_info (...&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;dropdown-footer border-top px-3 py-2 d-flex justify-content-between align-items-center bg-white&quot;&gt;
+                &lt;button class=&quot;btn btn-link text-decoration-none p-0 d-flex align-items-center gap-1 btn-create-action&quot;&gt;
+                    &lt;i class=&quot;bi bi-plus&quot;&gt;&lt;/i&gt; Tạo hành động chuyển đổi
+                &lt;/button&gt;
+                &lt;div class=&quot;d-flex gap-3&quot;&gt;
+                    &lt;button class=&quot;btn btn-cancel p-0&quot; id=&quot;cancelConvBtn&quot;&gt;Hủy&lt;/button&gt;
+                    &lt;button class=&quot;btn btn-apply p-0&quot; id=&quot;applyConvBtn&quot; disabled&gt;Áp dụng&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-dropdown3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-dropdown3">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.btn-dropdown-trigger {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-dropdown-trigger:hover, .btn-dropdown-trigger[aria-expanded=&quot;true&quot;] {
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.custom-dropdown-menu {
+    width: 420px;
+    padding: 0;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-top: 6px !important;
+    overflow: hidden;
+}
+
+.search-input {
+    font-size: 14px;
+    color: #202124;
+}
+
+.search-input::placeholder {
+    color: #5f6368;
+}
+
+.search-input:focus {
+    box-shadow: none;
+}
+
+.info-box {
+    background-color: #f8f9fa;
+    font-size: 13px;
+    color: #3c4043;
+    line-height: 1.4;
+}
+
+.list-container {
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.group-header {
+    transition: background-color 0.2s;
+}
+
+.parent-label-text {
+    font-size: 14px;
+    color: #3c4043;
+    font-weight: 400;
+}
+
+.child-item {
+    padding-left: 44px !important;
+    transition: background-color 0.2s;
+}
+
+.child-item:hover {
+    background-color: #f8f9fa;
+}
+
+.child-label-text {
+    font-size: 14px;
+    color: #3c4043;
+    line-height: 1.4;
+}
+
+.custom-cb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #5f6368;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.1s, border-color 0.1s;
+}
+
+.custom-cb:checked, .custom-cb:indeterminate {
+    background-color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+.custom-cb:checked::after {
+    content: &#039;&#039;;
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-cb:indeterminate::after {
+    content: &#039;&#039;;
+    position: absolute;
+    left: 3px;
+    top: 6px;
+    width: 8px;
+    height: 2px;
+    background-color: white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.dropdown-footer {
+    height: 52px;
+}
+
+.btn-create-action {
+    color: #9aa0a6;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.btn-cancel {
+    color: #1a73e8;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+}
+
+.btn-cancel:hover {
+    color: #174ea6;
+}
+
+.btn-apply {
+    color: #9aa0a6;
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    cursor: not-allowed;
+    transition: color 0.2s;
+}
+
+.btn-apply.active {
+    color: #1a73e8;
+    cursor: pointer;
+}
+
+.btn-apply.active:hover {
+    color: #174ea6;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-dropdown3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-dropdown3">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const dropdownBtn = document.getElementById(&#039;dropdownMenuButton&#039;);
+    const btnText = document.getElementById(&#039;selectedCountText&#039;);
+    const searchInput = document.getElementById(&#039;searchConversion&#039;);
+    const applyBtn = document.getElementById(&#039;applyConvBtn&#039;);
+    const cancelBtn = document.getElementById(&#039;cancelConvBtn&#039;);
+    const checkboxes = document.querySelectorAll(&#039;.conv-checkbox&#039;);
+    const groups = document.querySelectorAll(&#039;.conv-group&#039;);
+    const bsDropdown = new bootstrap.Dropdown(dropdownBtn);
+
+    let savedState = Array.from(checkboxes).map(cb =&gt; cb.checked);
+
+    function updateParentStates() {
+        groups.forEach(group =&gt; {
+            const parentCb = group.querySelector(&#039;.parent-cb&#039;);
+            const childCbs = Array.from(group.querySelectorAll(&#039;.child-cb&#039;));
+            if(childCbs.length === 0) return;
+
+            const checkedCount = childCbs.filter(cb =&gt; cb.checked).length;
+            if (checkedCount === 0) {
+                parentCb.checked = false;
+                parentCb.indeterminate = false;
+            } else if (checkedCount === childCbs.length) {
+                parentCb.checked = true;
+                parentCb.indeterminate = false;
+            } else {
+                parentCb.checked = false;
+                parentCb.indeterminate = true;
+            }
+        });
+    }
+
+    function checkApplyState() {
+        const currentState = Array.from(checkboxes).map(cb =&gt; cb.checked);
+        const isChanged = currentState.some((val, i) =&gt; val !== savedState[i]);
+        if (isChanged) {
+            applyBtn.classList.add(&#039;active&#039;);
+            applyBtn.removeAttribute(&#039;disabled&#039;);
+        } else {
+            applyBtn.classList.remove(&#039;active&#039;);
+            applyBtn.setAttribute(&#039;disabled&#039;, &#039;true&#039;);
+        }
+    }
+
+    function getSelectedCount() {
+        return document.querySelectorAll(&#039;.child-cb:checked&#039;).length;
+    }
+
+    function updateTriggerText() {
+        btnText.textContent = getSelectedCount() + &#039; lượt chuyển đổi&#039;;
+    }
+
+    groups.forEach(group =&gt; {
+        const parentCb = group.querySelector(&#039;.parent-cb&#039;);
+        const childCbs = group.querySelectorAll(&#039;.child-cb&#039;);
+        const chevron = group.querySelector(&#039;.group-chevron&#039;);
+        const childrenContainer = group.querySelector(&#039;.group-children&#039;);
+
+        parentCb.addEventListener(&#039;change&#039;, (e) =&gt; {
+            childCbs.forEach(cb =&gt; cb.checked = e.target.checked);
+            updateParentStates();
+            checkApplyState();
+        });
+
+        childCbs.forEach(cb =&gt; {
+            cb.addEventListener(&#039;change&#039;, () =&gt; {
+                updateParentStates();
+                checkApplyState();
+            });
+        });
+
+        chevron.addEventListener(&#039;click&#039;, (e) =&gt; {
+            e.stopPropagation();
+            const isExpanded = childrenContainer.style.display !== &#039;none&#039;;
+            childrenContainer.style.display = isExpanded ? &#039;none&#039; : &#039;block&#039;;
+            chevron.classList.toggle(&#039;bi-chevron-up&#039;, !isExpanded);
+            chevron.classList.toggle(&#039;bi-chevron-down&#039;, isExpanded);
+        });
+    });
+
+    searchInput.addEventListener(&#039;input&#039;, (e) =&gt; {
+        const term = e.target.value.toLowerCase();
+        groups.forEach(group =&gt; {
+            let hasVisibleChild = false;
+            const children = group.querySelectorAll(&#039;.child-item&#039;);
+            children.forEach(child =&gt; {
+                const text = child.querySelector(&#039;.child-label-text&#039;).textContent.toLowerCase();
+                if (text.includes(term)) {
+                    child.style.display = &#039;flex&#039;;
+                    hasVisibleChild = true;
+                } else {
+                    child.style.display = &#039;none&#039;;
+                }
+            });
+
+            const parentText = group.querySelector(&#039;.parent-label-text&#039;).textContent.toLowerCase();
+            if (parentText.includes(term) || hasVisibleChild) {
+                group.style.display = &#039;block&#039;;
+                if (parentText.includes(term) &amp;&amp; !hasVisibleChild) {
+                    children.forEach(child =&gt; child.style.display = &#039;flex&#039;);
+                }
+            } else {
+                group.style.display = &#039;none&#039;;
+            }
+        });
+    });
+
+    applyBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        savedState = Array.from(checkboxes).map(cb =&gt; cb.checked);
+        updateTriggerText();
+        checkApplyState();
+        bsDropdown.hide();
+    });
+
+    cancelBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        checkboxes.forEach((cb, index) =&gt; {
+            cb.checked = savedState[index];
+        });
+        updateParentStates();
+        checkApplyState();
+        bsDropdown.hide();
+    });
+
+    dropdownBtn.addEventListener(&#039;show.bs.dropdown&#039;, () =&gt; {
+        searchInput.value = &#039;&#039;;
+        searchInput.dispatchEvent(new Event(&#039;input&#039;));
+    });
+
+    updateParentStates();
+    updateTriggerText();
+});</code></pre>
+                                </div>
+                            </div>
+                        </section>
+                        <hr class="my-5 border-2 border-secondary-subtle">
+                        <!-- ---------------------------------------------- -->
+                        <!-- Mẫu 4: Analytics Conversion Settings Dropdown (Menu cấu hình mô hình phân bổ và thời điểm phân bổ chuyển đổi) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="dropdown-mau-4" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 4</span>
+                                <h2 class="h5 fw-bold mb-0">Analytics Conversion Settings Dropdown (Menu cấu hình mô hình phân bổ và thời điểm phân bổ chuyển đổi)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="preview-container " id="preview-dropdown4">
+                                    <div class="dropdown custom-dropdown-container">
+    <button class="btn btn-settings-trigger d-flex align-items-center gap-2 shadow-none" type="button" id="settingsDropdownBtn" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+        <span id="triggerChannel">Có tính phí và không tính phí</span>
+        <span class="trigger-divider">|</span>
+        <span id="triggerModel">Dựa trên dữ liệu</span>
+        <i class="bi bi-caret-down-fill ms-1" style="font-size: 10px;"></i>
+    </button>
+    
+    <div class="dropdown-menu settings-dropdown-menu shadow" aria-labelledby="settingsDropdownBtn">
+        
+        <div class="px-4 py-3">
+            <h5 class="settings-main-title mb-1">Cài đặt chuyển đổi</h5>
+            <p class="settings-desc mb-0">Bạn có thể quản lý chế độ cài đặt của từng lượt chuyển đổi trong tài khoản Google Ads này hoặc trong Google Analytics.</p>
+        </div>
+        
+        <div class="dropdown-divider m-0"></div>
+        
+        <div class="px-4 py-3">
+            <div class="d-flex align-items-center gap-1 mb-2">
+                <span class="section-label">Kênh đủ điều kiện nhận giá trị đóng góp cho lượt chuyển đổi</span>
+                <i class="bi bi-question-circle text-secondary question-icon"></i>
+            </div>
+            <div class="static-value-text fw-medium">Có tính phí và không tính phí</div>
+        </div>
+        
+        <div class="dropdown-divider m-0"></div>
+        
+        <div class="px-4 py-3">
+            <div class="d-flex align-items-center gap-1 mb-3">
+                <span class="section-label">Mô hình phân bổ</span>
+                <i class="bi bi-question-circle text-secondary question-icon"></i>
+            </div>
+            
+            <div class="d-flex gap-4">
+                <label class="radio-container d-flex align-items-center gap-2">
+                    <input type="radio" name="attrModel" value="Dựa trên dữ liệu" class="custom-ga-radio" checked>
+                    <i class="bi bi-bar-chart-fill text-secondary opacity-75 fs-6"></i>
+                    <span class="radio-label-text">Dựa trên dữ liệu</span>
+                </label>
+                
+                <label class="radio-container d-flex align-items-center gap-2">
+                    <input type="radio" name="attrModel" value="Lượt nhấp cuối cùng" class="custom-ga-radio">
+                    <i class="bi bi-bar-chart text-secondary opacity-75 fs-6"></i>
+                    <span class="radio-label-text">Lượt nhấp cuối cùng</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="dropdown-divider m-0"></div>
+        
+        <div class="px-4 py-3">
+            <div class="d-flex align-items-center gap-1 mb-3">
+                <span class="section-label">Thời điểm phân bổ</span>
+                <i class="bi bi-question-circle text-secondary question-icon"></i>
+            </div>
+            
+            <div class="d-flex gap-4">
+                <label class="radio-container d-flex align-items-center gap-2 position-relative">
+                    <div class="highlight-bg"></div>
+                    <input type="radio" name="attrTime" value="theo thời gian chuyển đổi" class="custom-ga-radio">
+                    <span class="radio-label-text">theo thời gian chuyển đổi</span>
+                </label>
+                
+                <label class="radio-container d-flex align-items-center gap-2 position-relative">
+                    <div class="highlight-bg"></div>
+                    <input type="radio" name="attrTime" value="theo thời gian tương tác" class="custom-ga-radio" checked>
+                    <span class="radio-label-text">theo thời gian tương tác</span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="px-4 py-3 d-flex justify-content-end gap-3 mt-1">
+            <button class="btn btn-action-text btn-cancel px-2 py-1 shadow-none" id="cancelSettingsBtn">Hủy</button>
+            <button class="btn btn-action-text btn-apply px-2 py-1 shadow-none" id="applySettingsBtn" disabled>Ứng tuyển</button>
+        </div>
+        
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-dropdown4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-dropdown4">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+&lt;!-- 2. Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý cho Dev:</strong> Menu cấu hình cài đặt chuyển đổi đa tiêu chí gồm kênh đóng góp, các nhóm radio chọn mô hình phân bổ (Dựa trên dữ liệu, Lượt nhấp cuối cùng) và thời điểm phân bổ (theo thời gian chuyển đổi, theo thời gian tương tác) với hiệu ứng background tròn nổi bật khi active. Tự động kiểm tra thay đổi để kích hoạt nút Áp dụng và khôi phục trạng thái ban đầu khi Hủy hoặc đóng menu. Cần nhúng file <code>dropdown4.js</code> để kích hoạt tương tác.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_dropdown4.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-dropdown4', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-dropdown4">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;vi&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Test Analytics Conversion Settings Dropdown&lt;/title&gt;
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+    &lt;style&gt;
+/* Dán CSS dropdown4.css vào đây */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&quot;p-4 bg-light&quot;&gt;
+    &lt;!-- Dán HTML của component vào đây --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-dropdown4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-dropdown4">&lt;div class=&quot;dropdown custom-dropdown-container&quot;&gt;
+    &lt;button class=&quot;btn btn-settings-trigger d-flex align-items-center gap-2 shadow-none&quot; type=&quot;button&quot; id=&quot;settingsDropdownBtn&quot; data-bs-toggle=&quot;dropdown&quot; data-bs-auto-close=&quot;outside&quot; aria-expanded=&quot;false&quot;&gt;
+        &lt;span id=&quot;triggerChannel&quot;&gt;Có tính phí và không tính phí&lt;/span&gt;
+        &lt;span class=&quot;trigger-divider&quot;&gt;|&lt;/span&gt;
+        &lt;span id=&quot;triggerModel&quot;&gt;Dựa trên dữ liệu&lt;/span&gt;
+        &lt;i class=&quot;bi bi-caret-down-fill ms-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    
+    &lt;div class=&quot;dropdown-menu settings-dropdown-menu shadow&quot; aria-labelledby=&quot;settingsDropdownBtn&quot;&gt;
+        
+        &lt;div class=&quot;px-4 py-3&quot;&gt;
+            &lt;h5 class=&quot;settings-main-title mb-1&quot;&gt;Cài đặt chuyển đổi&lt;/h5&gt;
+            &lt;p class=&quot;settings-desc mb-0&quot;&gt;Bạn có thể quản lý chế độ cài đặt của từng lượt chuyển đổi trong tài khoản Google Ads này hoặc trong Google Analytics.&lt;/p&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;dropdown-divider m-0&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;px-4 py-3&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center gap-1 mb-2&quot;&gt;
+                &lt;span class=&quot;section-label&quot;&gt;Kênh đủ điều kiện nhận giá trị đóng góp cho lượt chuyển đổi&lt;/span&gt;
+                &lt;i class=&quot;bi bi-question-circle text-secondary question-icon&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;static-value-text fw-medium&quot;&gt;Có tính phí và không tính phí&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;dropdown-divider m-0&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;px-4 py-3&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center gap-1 mb-3&quot;&gt;
+                &lt;span class=&quot;section-label&quot;&gt;Mô hình phân bổ&lt;/span&gt;
+                &lt;i class=&quot;bi bi-question-circle text-secondary question-icon&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;d-flex gap-4&quot;&gt;
+                &lt;label class=&quot;radio-container d-flex align-items-center gap-2&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;attrModel&quot; value=&quot;Dựa trên dữ liệu&quot; class=&quot;custom-ga-radio&quot; checked&gt;
+                    &lt;i class=&quot;bi bi-bar-chart-fill text-secondary opacity-75 fs-6&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;radio-label-text&quot;&gt;Dựa trên dữ liệu&lt;/span&gt;
+                &lt;/label&gt;
+                
+                &lt;label class=&quot;radio-container d-flex align-items-center gap-2&quot;&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;attrModel&quot; value=&quot;Lượt nhấp cuối cùng&quot; class=&quot;custom-ga-radio&quot;&gt;
+                    &lt;i class=&quot;bi bi-bar-chart text-secondary opacity-75 fs-6&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;radio-label-text&quot;&gt;Lượt nhấp cuối cùng&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;dropdown-divider m-0&quot;&gt;&lt;/div&gt;
+        
+        &lt;div class=&quot;px-4 py-3&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center gap-1 mb-3&quot;&gt;
+                &lt;span class=&quot;section-label&quot;&gt;Thời điểm phân bổ&lt;/span&gt;
+                &lt;i class=&quot;bi bi-question-circle text-secondary question-icon&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&quot;d-flex gap-4&quot;&gt;
+                &lt;label class=&quot;radio-container d-flex align-items-center gap-2 position-relative&quot;&gt;
+                    &lt;div class=&quot;highlight-bg&quot;&gt;&lt;/div&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;attrTime&quot; value=&quot;theo thời gian chuyển đổi&quot; class=&quot;custom-ga-radio&quot;&gt;
+                    &lt;span class=&quot;radio-label-text&quot;&gt;theo thời gian chuyển đổi&lt;/span&gt;
+                &lt;/label&gt;
+                
+                &lt;label class=&quot;radio-container d-flex align-items-center gap-2 position-relative&quot;&gt;
+                    &lt;div class=&quot;highlight-bg&quot;&gt;&lt;/div&gt;
+                    &lt;input type=&quot;radio&quot; name=&quot;attrTime&quot; value=&quot;theo thời gian tương tác&quot; class=&quot;custom-ga-radio&quot; checked&gt;
+                    &lt;span class=&quot;radio-label-text&quot;&gt;theo thời gian tương tác&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;px-4 py-3 d-flex justify-content-end gap-3 mt-1&quot;&gt;
+            &lt;button class=&quot;btn btn-action-text btn-cancel px-2 py-1 shadow-none&quot; id=&quot;cancelSettingsBtn&quot;&gt;Hủy&lt;/button&gt;
+            &lt;button class=&quot;btn btn-action-text btn-apply px-2 py-1 shadow-none&quot; id=&quot;applySettingsBtn&quot; disabled&gt;Ứng tuyển&lt;/button&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-dropdown4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-dropdown4">body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.btn-settings-trigger {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-settings-trigger:hover, .btn-settings-trigger[aria-expanded=&quot;true&quot;] {
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.trigger-divider {
+    color: #dadce0;
+    font-weight: 300;
+}
+
+.settings-dropdown-menu {
+    width: 600px;
+    padding: 0;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-top: 8px !important;
+}
+
+.settings-main-title {
+    font-size: 18px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.settings-desc {
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.dropdown-divider {
+    border-color: #f1f3f4;
+}
+
+.section-label {
+    font-size: 13px;
+    color: #5f6368;
+}
+
+.question-icon {
+    font-size: 14px;
+    cursor: help;
+}
+
+.static-value-text {
+    font-size: 14px;
+    color: #202124;
+}
+
+.radio-container {
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-ga-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5f6368;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+    z-index: 2;
+}
+
+.custom-ga-radio:checked {
+    border-color: #1a73e8;
+    border-width: 2px;
+}
+
+.custom-ga-radio:checked::after {
+    content: &#039;&#039;;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #1a73e8;
+    border-radius: 50%;
+}
+
+.radio-label-text {
+    font-size: 14px;
+    color: #202124;
+    z-index: 2;
+}
+
+.highlight-bg {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #e8f0fe;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.custom-ga-radio:checked ~ .highlight-bg,
+input[name=&quot;attrTime&quot;]:checked ~ .radio-label-text + .highlight-bg,
+input[name=&quot;attrTime&quot;]:checked + .highlight-bg,
+input[name=&quot;attrTime&quot;]:checked ~ span {
+}
+
+input[name=&quot;attrTime&quot;]:checked ~ .radio-label-text {
+}
+
+.radio-container:has(input[name=&quot;attrTime&quot;]:checked) .highlight-bg {
+    opacity: 1;
+}
+
+.btn-action-text {
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    transition: color 0.2s, background-color 0.2s;
+    border-radius: 4px;
+}
+
+.btn-cancel {
+    color: #1a73e8;
+}
+
+.btn-cancel:hover {
+    background-color: #f8f9fa;
+    color: #174ea6;
+}
+
+.btn-apply {
+    color: #1a73e8;
+}
+
+.btn-apply:disabled {
+    color: #9aa0a6;
+    cursor: not-allowed;
+    background: transparent;
+}
+
+.btn-apply:not(:disabled):hover {
+    background-color: #f8f9fa;
+    color: #174ea6;
+}</code></pre>
+                                </div>
+                            </div>
+                            
+                            <!-- Khối 3: NỘI DUNG JAVASCRIPT -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-dropdown4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-dropdown4">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const dropdownBtn = document.getElementById(&#039;settingsDropdownBtn&#039;);
+    const triggerModel = document.getElementById(&#039;triggerModel&#039;);
+    const applyBtn = document.getElementById(&#039;applySettingsBtn&#039;);
+    const cancelBtn = document.getElementById(&#039;cancelSettingsBtn&#039;);
+    const radios = document.querySelectorAll(&#039;.custom-ga-radio&#039;);
+    const bsDropdown = new bootstrap.Dropdown(dropdownBtn);
+
+    let savedState = {
+        attrModel: document.querySelector(&#039;input[name=&quot;attrModel&quot;]:checked&#039;).value,
+        attrTime: document.querySelector(&#039;input[name=&quot;attrTime&quot;]:checked&#039;).value
+    };
+
+    function checkChanges() {
+        const currentModel = document.querySelector(&#039;input[name=&quot;attrModel&quot;]:checked&#039;).value;
+        const currentTime = document.querySelector(&#039;input[name=&quot;attrTime&quot;]:checked&#039;).value;
+
+        if (currentModel !== savedState.attrModel || currentTime !== savedState.attrTime) {
+            applyBtn.removeAttribute(&#039;disabled&#039;);
+        } else {
+            applyBtn.setAttribute(&#039;disabled&#039;, &#039;true&#039;);
+        }
+    }
+
+    function restoreState() {
+        document.querySelector(`input[name=&quot;attrModel&quot;][value=&quot;${savedState.attrModel}&quot;]`).checked = true;
+        document.querySelector(`input[name=&quot;attrTime&quot;][value=&quot;${savedState.attrTime}&quot;]`).checked = true;
+        checkChanges();
+    }
+
+    radios.forEach(radio =&gt; {
+        radio.addEventListener(&#039;change&#039;, checkChanges);
+    });
+
+    applyBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        savedState.attrModel = document.querySelector(&#039;input[name=&quot;attrModel&quot;]:checked&#039;).value;
+        savedState.attrTime = document.querySelector(&#039;input[name=&quot;attrTime&quot;]:checked&#039;).value;
+        
+        triggerModel.textContent = savedState.attrModel;
+        
+        checkChanges();
+        bsDropdown.hide();
+    });
+
+    cancelBtn.addEventListener(&#039;click&#039;, () =&gt; {
+        restoreState();
+        bsDropdown.hide();
+    });
+    
+    dropdownBtn.addEventListener(&#039;hidden.bs.dropdown&#039;, () =&gt; {
+        restoreState();
+    });
+});</code></pre>
+                                </div>
+                            </div>
                         </section>
                         
                     </div>

@@ -2611,6 +2611,231 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Dropdown 3 (Analytics Conversions Dropdown)
+    const dropdown3Preview = document.getElementById('preview-dropdown3');
+    if (dropdown3Preview) {
+        const dropdownBtn3 = dropdown3Preview.querySelector('#dropdownMenuButton');
+        const btnText3 = dropdown3Preview.querySelector('#selectedCountText');
+        const searchInput3 = dropdown3Preview.querySelector('#searchConversion');
+        const applyBtn3 = dropdown3Preview.querySelector('#applyConvBtn');
+        const cancelBtn3 = dropdown3Preview.querySelector('#cancelConvBtn');
+        const checkboxes3 = dropdown3Preview.querySelectorAll('.conv-checkbox');
+        const groups3 = dropdown3Preview.querySelectorAll('.conv-group');
+        const bsDropdown3 = dropdownBtn3 ? bootstrap.Dropdown.getOrCreateInstance(dropdownBtn3) : null;
+
+        let savedState3 = Array.from(checkboxes3).map(cb => cb.checked);
+
+        function updateParentStates3() {
+            groups3.forEach(group => {
+                const parentCb = group.querySelector('.parent-cb');
+                const childCbs = Array.from(group.querySelectorAll('.child-cb'));
+                if (childCbs.length === 0 || !parentCb) return;
+
+                const checkedCount = childCbs.filter(cb => cb.checked).length;
+                if (checkedCount === 0) {
+                    parentCb.checked = false;
+                    parentCb.indeterminate = false;
+                } else if (checkedCount === childCbs.length) {
+                    parentCb.checked = true;
+                    parentCb.indeterminate = false;
+                } else {
+                    parentCb.checked = false;
+                    parentCb.indeterminate = true;
+                }
+            });
+        }
+
+        function checkApplyState3() {
+            if (!applyBtn3) return;
+            const currentState = Array.from(checkboxes3).map(cb => cb.checked);
+            const isChanged = currentState.some((val, i) => val !== savedState3[i]);
+            if (isChanged) {
+                applyBtn3.classList.add('active');
+                applyBtn3.removeAttribute('disabled');
+            } else {
+                applyBtn3.classList.remove('active');
+                applyBtn3.setAttribute('disabled', 'true');
+            }
+        }
+
+        function getSelectedCount3() {
+            return dropdown3Preview.querySelectorAll('.child-cb:checked').length;
+        }
+
+        function updateTriggerText3() {
+            if (btnText3) {
+                btnText3.textContent = getSelectedCount3() + ' lượt chuyển đổi';
+            }
+        }
+
+        groups3.forEach(group => {
+            const parentCb = group.querySelector('.parent-cb');
+            const childCbs = group.querySelectorAll('.child-cb');
+            const chevron = group.querySelector('.group-chevron');
+            const childrenContainer = group.querySelector('.group-children');
+
+            if (parentCb) {
+                parentCb.addEventListener('change', (e) => {
+                    childCbs.forEach(cb => cb.checked = e.target.checked);
+                    updateParentStates3();
+                    checkApplyState3();
+                });
+            }
+
+            childCbs.forEach(cb => {
+                cb.addEventListener('change', () => {
+                    updateParentStates3();
+                    checkApplyState3();
+                });
+            });
+
+            if (chevron && childrenContainer) {
+                chevron.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isExpanded = childrenContainer.style.display !== 'none';
+                    childrenContainer.style.display = isExpanded ? 'none' : 'block';
+                    chevron.classList.toggle('bi-chevron-up', !isExpanded);
+                    chevron.classList.toggle('bi-chevron-down', isExpanded);
+                });
+            }
+        });
+
+        if (searchInput3) {
+            searchInput3.addEventListener('input', (e) => {
+                const term = e.target.value.toLowerCase();
+                groups3.forEach(group => {
+                    let hasVisibleChild = false;
+                    const children = group.querySelectorAll('.child-item');
+                    children.forEach(child => {
+                        const labelEl = child.querySelector('.child-label-text');
+                        const text = labelEl ? labelEl.textContent.toLowerCase() : '';
+                        if (text.includes(term)) {
+                            child.style.display = 'flex';
+                            hasVisibleChild = true;
+                        } else {
+                            child.style.display = 'none';
+                        }
+                    });
+
+                    const parentLabelEl = group.querySelector('.parent-label-text');
+                    const parentText = parentLabelEl ? parentLabelEl.textContent.toLowerCase() : '';
+                    if (parentText.includes(term) || hasVisibleChild) {
+                        group.style.display = 'block';
+                        if (parentText.includes(term) && !hasVisibleChild) {
+                            children.forEach(child => child.style.display = 'flex');
+                        }
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        if (applyBtn3) {
+            applyBtn3.addEventListener('click', () => {
+                savedState3 = Array.from(checkboxes3).map(cb => cb.checked);
+                updateTriggerText3();
+                checkApplyState3();
+                if (bsDropdown3) bsDropdown3.hide();
+            });
+        }
+
+        if (cancelBtn3) {
+            cancelBtn3.addEventListener('click', () => {
+                checkboxes3.forEach((cb, index) => {
+                    cb.checked = savedState3[index];
+                });
+                updateParentStates3();
+                checkApplyState3();
+                if (bsDropdown3) bsDropdown3.hide();
+            });
+        }
+
+        if (dropdownBtn3) {
+            dropdownBtn3.addEventListener('show.bs.dropdown', () => {
+                if (searchInput3) {
+                    searchInput3.value = '';
+                    searchInput3.dispatchEvent(new Event('input'));
+                }
+            });
+        }
+
+        updateParentStates3();
+        updateTriggerText3();
+    }
+
+    // Dropdown 4 (Analytics Conversion Settings Dropdown)
+    const dropdown4Preview = document.getElementById('preview-dropdown4');
+    if (dropdown4Preview) {
+        const dropdownBtn4 = dropdown4Preview.querySelector('#settingsDropdownBtn');
+        const triggerModel4 = dropdown4Preview.querySelector('#triggerModel');
+        const applyBtn4 = dropdown4Preview.querySelector('#applySettingsBtn');
+        const cancelBtn4 = dropdown4Preview.querySelector('#cancelSettingsBtn');
+        const radios4 = dropdown4Preview.querySelectorAll('.custom-ga-radio');
+        const bsDropdown4 = dropdownBtn4 ? bootstrap.Dropdown.getOrCreateInstance(dropdownBtn4) : null;
+
+        const initialModel = dropdown4Preview.querySelector('input[name="attrModel"]:checked')?.value || 'Dựa trên dữ liệu';
+        const initialTime = dropdown4Preview.querySelector('input[name="attrTime"]:checked')?.value || 'theo thời gian tương tác';
+
+        let savedState4 = {
+            attrModel: initialModel,
+            attrTime: initialTime
+        };
+
+        function checkChanges4() {
+            if (!applyBtn4) return;
+            const currentModelEl = dropdown4Preview.querySelector('input[name="attrModel"]:checked');
+            const currentTimeEl = dropdown4Preview.querySelector('input[name="attrTime"]:checked');
+            const currentModel = currentModelEl ? currentModelEl.value : '';
+            const currentTime = currentTimeEl ? currentTimeEl.value : '';
+
+            if (currentModel !== savedState4.attrModel || currentTime !== savedState4.attrTime) {
+                applyBtn4.removeAttribute('disabled');
+            } else {
+                applyBtn4.setAttribute('disabled', 'true');
+            }
+        }
+
+        function restoreState4() {
+            const modelRadio = dropdown4Preview.querySelector(`input[name="attrModel"][value="${savedState4.attrModel}"]`);
+            const timeRadio = dropdown4Preview.querySelector(`input[name="attrTime"][value="${savedState4.attrTime}"]`);
+            if (modelRadio) modelRadio.checked = true;
+            if (timeRadio) timeRadio.checked = true;
+            checkChanges4();
+        }
+
+        radios4.forEach(radio => {
+            radio.addEventListener('change', checkChanges4);
+        });
+
+        if (applyBtn4) {
+            applyBtn4.addEventListener('click', () => {
+                const checkedModel = dropdown4Preview.querySelector('input[name="attrModel"]:checked');
+                const checkedTime = dropdown4Preview.querySelector('input[name="attrTime"]:checked');
+                if (checkedModel) savedState4.attrModel = checkedModel.value;
+                if (checkedTime) savedState4.attrTime = checkedTime.value;
+
+                if (triggerModel4) triggerModel4.textContent = savedState4.attrModel;
+
+                checkChanges4();
+                if (bsDropdown4) bsDropdown4.hide();
+            });
+        }
+
+        if (cancelBtn4) {
+            cancelBtn4.addEventListener('click', () => {
+                restoreState4();
+                if (bsDropdown4) bsDropdown4.hide();
+            });
+        }
+
+        if (dropdownBtn4) {
+            dropdownBtn4.addEventListener('hidden.bs.dropdown', () => {
+                restoreState4();
+            });
+        }
+    }
+
     // M. Đồng bộ URL Hash
     setupTabHashSync();
 });

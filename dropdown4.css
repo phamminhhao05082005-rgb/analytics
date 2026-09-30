@@ -1,0 +1,169 @@
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+}
+
+.btn-settings-trigger {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-settings-trigger:hover, .btn-settings-trigger[aria-expanded="true"] {
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.trigger-divider {
+    color: #dadce0;
+    font-weight: 300;
+}
+
+.settings-dropdown-menu {
+    width: 600px;
+    padding: 0;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin-top: 8px !important;
+}
+
+.settings-main-title {
+    font-size: 18px;
+    color: #202124;
+    font-weight: 400;
+}
+
+.settings-desc {
+    font-size: 13px;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.dropdown-divider {
+    border-color: #f1f3f4;
+}
+
+.section-label {
+    font-size: 13px;
+    color: #5f6368;
+}
+
+.question-icon {
+    font-size: 14px;
+    cursor: help;
+}
+
+.static-value-text {
+    font-size: 14px;
+    color: #202124;
+}
+
+.radio-container {
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-ga-radio {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #5f6368;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+    z-index: 2;
+}
+
+.custom-ga-radio:checked {
+    border-color: #1a73e8;
+    border-width: 2px;
+}
+
+.custom-ga-radio:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #1a73e8;
+    border-radius: 50%;
+}
+
+.radio-label-text {
+    font-size: 14px;
+    color: #202124;
+    z-index: 2;
+}
+
+.highlight-bg {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #e8f0fe;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.custom-ga-radio:checked ~ .highlight-bg,
+input[name="attrTime"]:checked ~ .radio-label-text + .highlight-bg,
+input[name="attrTime"]:checked + .highlight-bg,
+input[name="attrTime"]:checked ~ span {
+}
+
+input[name="attrTime"]:checked ~ .radio-label-text {
+}
+
+.radio-container:has(input[name="attrTime"]:checked) .highlight-bg {
+    opacity: 1;
+}
+
+.btn-action-text {
+    font-size: 14px;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    transition: color 0.2s, background-color 0.2s;
+    border-radius: 4px;
+}
+
+.btn-cancel {
+    color: #1a73e8;
+}
+
+.btn-cancel:hover {
+    background-color: #f8f9fa;
+    color: #174ea6;
+}
+
+.btn-apply {
+    color: #1a73e8;
+}
+
+.btn-apply:disabled {
+    color: #9aa0a6;
+    cursor: not-allowed;
+    background: transparent;
+}
+
+.btn-apply:not(:disabled):hover {
+    background-color: #f8f9fa;
+    color: #174ea6;
+}
